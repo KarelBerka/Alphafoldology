@@ -1,0 +1,4006 @@
+{
+  "openfold": [
+    "aqlaboratory/openfold",
+    200
+  ],
+  "rosettafold2na": [
+    "uw-ipd/RoseTTAFold2NA",
+    200
+  ],
+  "boltz1": [
+    "jwohlwend/boltz",
+    200
+  ],
+  "colabfold": [
+    "sokrypton/ColabFold",
+    200
+  ],
+  "rosettafold": [
+    "RosettaCommons/RoseTTAFold",
+    200
+  ],
+  "chai1": [
+    "chaidiscovery/chai-lab",
+    200
+  ],
+  "alphafold3": [
+    "google-deepmind/alphafold3",
+    200
+  ],
+  "helixfold": [
+    "PaddlePaddle/PaddleHelix",
+    200
+  ],
+  "alphafold1": [
+    "google-deepmind/alphafold",
+    200
+  ],
+  "alphafold2": [
+    "google-deepmind/alphafold",
+    200
+  ],
+  "esmfold": [
+    "facebookresearch/esm",
+    200
+  ],
+  "omegafold": [
+    "HeliXonProtein/OmegaFold",
+    200
+  ],
+  "unifold": [
+    "dptech-corp/Uni-Fold",
+    200
+  ],
+  "unifold_multimer": [
+    "dptech-corp/Uni-Fold",
+    200
+  ],
+  "lightfold": [
+    "iGene-Discovery/LightFold",
+    404
+  ],
+  "deepmsa2": [
+    "cangyuzh/DeepMSA2",
+    404
+  ],
+  "deepmsa": [
+    "cangyuzh/DeepMSA",
+    404
+  ],
+  "speach_af": [
+    "harmslab/speach_af",
+    404
+  ],
+  "colabfold_local": [
+    "ostrokach/colabfold-local",
+    404
+  ],
+  "af2_cluster": [
+    "waynative/AF2-Cluster",
+    404
+  ],
+  "esm_if1": [
+    "facebookresearch/esm",
+    200
+  ],
+  "fastfold": [
+    "hpcaitech/FastFold",
+    200
+  ],
+  "rfdiffusion": [
+    "RosettaCommons/RFdiffusion",
+    200
+  ],
+  "pifold": [
+    "gao-lab/PiFold",
+    404
+  ],
+  "protgpt2": [
+    "nromano-chem/ProtGPT2",
+    404
+  ],
+  "ligandmpnn": [
+    "dauparas/LigandMPNN",
+    200
+  ],
+  "colabdesign": [
+    "sokrypton/ColabDesign",
+    200
+  ],
+  "chroma": [
+    "generatebio/chroma",
+    200
+  ],
+  "proteinmpnn": [
+    "dauparas/ProteinMPNN",
+    200
+  ],
+  "esm2": [
+    "facebookresearch/esm",
+    200
+  ],
+  "bindcraft": [
+    "martinpacesa/BindCraft",
+    200
+  ],
+  "esm1v": [
+    "facebookresearch/esm",
+    200
+  ],
+  "ovo": [
+    "MSDLLCpapers/ovo",
+    200
+  ],
+  "proteingenerator": [
+    "uw-ipd/ProteinGenerator",
+    404
+  ],
+  "evoprotgrad": [
+    "wittmannlab/EvoProtGrad",
+    404
+  ],
+  "viper": [
+    "harmslab/viper",
+    404
+  ],
+  "soluprot": [
+    "loschmidt/soluprot",
+    404
+  ],
+  "progen": [
+    "salesforce/progen",
+    200
+  ],
+  "evodiff": [
+    "microsoft/evodiff",
+    200
+  ],
+  "rfdesign": [
+    "RosettaCommons/RFdesign",
+    200
+  ],
+  "esm_finetune": [
+    "wittmannlab/esm-finetune",
+    404
+  ],
+  "mutcompute": [
+    "utexas-bme/MutCompute",
+    404
+  ],
+  "alphamissense": [
+    "google-deepmind/alphamissense",
+    200
+  ],
+  "usalign": [
+    "zhang-lab-comp-bio/USalign",
+    404
+  ],
+  "tmalign": [
+    "zhang-lab-comp-bio/TM-align",
+    404
+  ],
+  "foldseek_multimer": [
+    "steineggerlab/foldseek",
+    200
+  ],
+  "foldseek": [
+    "steineggerlab/foldseek",
+    200
+  ],
+  "dali": [
+    "leholm/dali",
+    404
+  ],
+  "diffdock_pp": [
+    "gcorso/DiffDock-PP",
+    404
+  ],
+  "deepsequence": [
+    "debbiemarkslab/DeepSequence",
+    200
+  ],
+  "flowdock": [
+    "generatebio/flowdock",
+    404
+  ],
+  "foldcomp": [
+    "steineggerlab/foldcomp",
+    200
+  ],
+  "diffdock": [
+    "gcorso/DiffDock",
+    200
+  ],
+  "diffdock_l": [
+    "gcorso/DiffDock",
+    200
+  ],
+  "dynamicbind": [
+    "luost26/DynamicBind",
+    404
+  ],
+  "equibind": [
+    "hannes-stark/EquiBind",
+    404
+  ],
+  "tankbind": [
+    "bing1018/TankBind",
+    404
+  ],
+  "fabind": [
+    "susuSUSUsusu/FABind",
+    404
+  ],
+  "af2complex": [
+    "gzhang2016/af2complex",
+    404
+  ],
+  "folddock": [
+    "mElofssonlab/FoldDock",
+    404
+  ],
+  "rosettafold_aa": [
+    "baker-laboratory/RoseTTAFold-All-Atom",
+    200
+  ],
+  "igfold": [
+    "corydillon/IgFold",
+    404
+  ],
+  "abfold": [
+    "uw-ipd/AbFold",
+    404
+  ],
+  "nanobodyfold": [
+    "chaconlab/NanobodyFold",
+    404
+  ],
+  "lyra": [
+    "chaconlab/lyra",
+    404
+  ],
+  "tcr_fold": [
+    "ostrokach/tcr-fold",
+    404
+  ],
+  "unidock": [
+    "dptech-corp/Uni-Dock",
+    200
+  ],
+  "alphatcr": [
+    "debbiemarkslab/AlphaTCR",
+    404
+  ],
+  "rfantibody": [
+    "uw-ipd/RFantibody",
+    404
+  ],
+  "alphapulldown": [
+    "KosinskiLab/AlphaPulldown",
+    200
+  ],
+  "phenix_alphafold": [
+    "phenix-project/phenix",
+    404
+  ],
+  "cryofold": [
+    "uw-ipd/CryoFold",
+    404
+  ],
+  "deepfold_em": [
+    "kiharalab/DeepFold-EM",
+    404
+  ],
+  "af2_em": [
+    "mElofssonlab/AF2-EM",
+    404
+  ],
+  "phaser_alphafold": [
+    "phaser-project/phaser",
+    404
+  ],
+  "mrbump": [
+    "ccp4/mrbump",
+    404
+  ],
+  "ample": [
+    "ccp4/ample",
+    404
+  ],
+  "simbad": [
+    "ccp4/simbad",
+    404
+  ],
+  "diffab": [
+    "luost26/diffab",
+    200
+  ],
+  "alphafolddb": [
+    "google-deepmind/alphafold",
+    200
+  ],
+  "esm_atlas": [
+    "facebookresearch/esm",
+    200
+  ],
+  "foldcomp_db": [
+    "steineggerlab/foldcomp",
+    200
+  ],
+  "cryoread": [
+    "kiharalab/CryoREAD",
+    200
+  ],
+  "rocket": [
+    "alisiafadini/ROCKET",
+    200
+  ],
+  "esmfold_db": [
+    "facebookresearch/esm",
+    200
+  ],
+  "isolde": [
+    "tristanic/isolde",
+    200
+  ],
+  "fpocket_afdb": [
+    "fpocket/fpocket",
+    404
+  ],
+  "pocketminer": [
+    "debbiemarkslab/PocketMiner",
+    404
+  ],
+  "pocketomics": [
+    "uw-ipd/pocketomics",
+    404
+  ],
+  "esm_design": [
+    "facebookresearch/esm",
+    200
+  ],
+  "alphafill": [
+    "PDB-REDO/alphafill",
+    200
+  ],
+  "alphafill_db": [
+    "PDB-REDO/alphafill",
+    200
+  ],
+  "alphamap": [
+    "KusterLab/AlphaMap",
+    404
+  ],
+  "alphacharges": [
+    "sb-ncbr/AlphaCharges",
+    200
+  ],
+  "flowscan": [
+    "alpha-biology/flowscan",
+    404
+  ],
+  "modelcraft": [
+    "ccp4/modelcraft",
+    404
+  ],
+  "interactoptimizer_2": [
+    "alpha-biology/interactoptimizer_2",
+    404
+  ],
+  "seqalign": [
+    "alpha-biology/seqalign",
+    404
+  ],
+  "bindingnet": [
+    "alpha-biology/bindingnet",
+    404
+  ],
+  "flowsearch_3": [
+    "alpha-biology/flowsearch_3",
+    404
+  ],
+  "chimerax_alphafold": [
+    "RBVI/ChimeraX",
+    200
+  ],
+  "localcolabfold": [
+    "YoshitakaMo/localcolabfold",
+    200
+  ],
+  "interactlink": [
+    "alpha-biology/interactlink",
+    404
+  ],
+  "esmdesign": [
+    "alpha-biology/esmdesign",
+    404
+  ],
+  "pymol_alphafold": [
+    "schrodinger/pymol-open-source",
+    200
+  ],
+  "phenixoptimizer_2": [
+    "alpha-biology/phenixoptimizer_2",
+    404
+  ],
+  "helixmap_3": [
+    "alpha-biology/helixmap_3",
+    404
+  ],
+  "probench": [
+    "alpha-biology/probench",
+    404
+  ],
+  "cryorefine": [
+    "alpha-biology/cryorefine",
+    404
+  ],
+  "bindinggan_3": [
+    "alpha-biology/bindinggan_3",
+    404
+  ],
+  "bindingsim_4": [
+    "alpha-biology/bindingsim_4",
+    404
+  ],
+  "seqcharge_3": [
+    "alpha-biology/seqcharge_3",
+    404
+  ],
+  "modelmetrics": [
+    "alpha-biology/modelmetrics",
+    404
+  ],
+  "phenixdesign_2": [
+    "alpha-biology/phenixdesign_2",
+    404
+  ],
+  "interactab": [
+    "alpha-biology/interactab",
+    404
+  ],
+  "foldem": [
+    "alpha-biology/foldem",
+    404
+  ],
+  "biogan_2": [
+    "alpha-biology/biogan_2",
+    404
+  ],
+  "seqalign_v1": [
+    "alpha-biology/seqalign_v1",
+    404
+  ],
+  "ligandgpt": [
+    "alpha-biology/ligandgpt",
+    404
+  ],
+  "chemcomplex": [
+    "alpha-biology/chemcomplex",
+    404
+  ],
+  "unibert": [
+    "alpha-biology/unibert",
+    404
+  ],
+  "flowdiffusion": [
+    "alpha-biology/flowdiffusion",
+    404
+  ],
+  "multisim": [
+    "alpha-biology/multisim",
+    404
+  ],
+  "unibench_3": [
+    "alpha-biology/unibench_3",
+    404
+  ],
+  "activempnn": [
+    "alpha-biology/activempnn",
+    404
+  ],
+  "affinitypredict_3": [
+    "alpha-biology/affinitypredict_3",
+    404
+  ],
+  "quickmpnn": [
+    "alpha-biology/quickmpnn",
+    404
+  ],
+  "helixfill": [
+    "alpha-biology/helixfill",
+    404
+  ],
+  "optfill": [
+    "alpha-biology/optfill",
+    404
+  ],
+  "quickoptimizer": [
+    "alpha-biology/quickoptimizer",
+    404
+  ],
+  "chemab_3": [
+    "alpha-biology/chemab_3",
+    404
+  ],
+  "activesense": [
+    "alpha-biology/activesense",
+    404
+  ],
+  "opengraph": [
+    "alpha-biology/opengraph",
+    404
+  ],
+  "promodel": [
+    "alpha-biology/promodel",
+    404
+  ],
+  "progen2": [
+    "salesforce/progen2",
+    -1
+  ],
+  "protsense": [
+    "alpha-biology/protsense",
+    404
+  ],
+  "diffbert": [
+    "alpha-biology/diffbert",
+    404
+  ],
+  "dockgan": [
+    "alpha-biology/dockgan",
+    404
+  ],
+  "structgan_2": [
+    "alpha-biology/structgan_2",
+    404
+  ],
+  "helixgpt": [
+    "alpha-biology/helixgpt",
+    404
+  ],
+  "unigraph": [
+    "alpha-biology/unigraph",
+    404
+  ],
+  "openfilter": [
+    "alpha-biology/openfilter",
+    404
+  ],
+  "interactsolver": [
+    "alpha-biology/interactsolver",
+    404
+  ],
+  "alphabert": [
+    "alpha-biology/alphabert",
+    404
+  ],
+  "activebert": [
+    "alpha-biology/activebert",
+    404
+  ],
+  "foldtcr": [
+    "alpha-biology/foldtcr",
+    404
+  ],
+  "affinityfind_3": [
+    "alpha-biology/affinityfind_3",
+    404
+  ],
+  "alphafind": [
+    "Coda-Research-Group/AlphaFind",
+    200
+  ],
+  "alphafind2_tool": [
+    "Coda-Research-Group/AlphaFind",
+    200
+  ],
+  "flowbert": [
+    "alpha-biology/flowbert",
+    404
+  ],
+  "esmfilter": [
+    "alpha-biology/esmfilter",
+    404
+  ],
+  "ligandscan_4": [
+    "alpha-biology/ligandscan_4",
+    404
+  ],
+  "prodesign": [
+    "alpha-biology/prodesign",
+    404
+  ],
+  "helixgan": [
+    "alpha-biology/helixgan",
+    404
+  ],
+  "opendock": [
+    "alpha-biology/opendock",
+    404
+  ],
+  "dynamicfill": [
+    "alpha-biology/dynamicfill",
+    404
+  ],
+  "diffab_v2": [
+    "alpha-biology/diffab_v2",
+    404
+  ],
+  "multigpt": [
+    "alpha-biology/multigpt",
+    404
+  ],
+  "phenixmodel": [
+    "alpha-biology/phenixmodel",
+    404
+  ],
+  "ligandgan_4": [
+    "alpha-biology/ligandgan_4",
+    404
+  ],
+  "multidock_3": [
+    "alpha-biology/multidock_3",
+    404
+  ],
+  "affinityem": [
+    "alpha-biology/affinityem",
+    404
+  ],
+  "chemsim": [
+    "alpha-biology/chemsim",
+    404
+  ],
+  "geompredict": [
+    "alpha-biology/geompredict",
+    404
+  ],
+  "interactmetrics": [
+    "alpha-biology/interactmetrics",
+    404
+  ],
+  "gengraph_2": [
+    "alpha-biology/gengraph_2",
+    404
+  ],
+  "deepnet": [
+    "alpha-biology/deepnet",
+    404
+  ],
+  "multiab_3": [
+    "alpha-biology/multiab_3",
+    404
+  ],
+  "residuemetrics": [
+    "alpha-biology/residuemetrics",
+    404
+  ],
+  "alpharefine": [
+    "alpha-biology/alpharefine",
+    404
+  ],
+  "esmscore": [
+    "alpha-biology/esmscore",
+    404
+  ],
+  "smartsearch": [
+    "alpha-biology/smartsearch",
+    404
+  ],
+  "symmetrysolver_3": [
+    "alpha-biology/symmetrysolver_3",
+    404
+  ],
+  "bindingmap": [
+    "alpha-biology/bindingmap",
+    404
+  ],
+  "structtcr_2": [
+    "alpha-biology/structtcr_2",
+    404
+  ],
+  "foldvae": [
+    "alpha-biology/foldvae",
+    404
+  ],
+  "optsense": [
+    "alpha-biology/optsense",
+    404
+  ],
+  "esmab_4": [
+    "alpha-biology/esmab_4",
+    404
+  ],
+  "pocketmpnn": [
+    "alpha-biology/pocketmpnn",
+    404
+  ],
+  "pocketlink": [
+    "alpha-biology/pocketlink",
+    404
+  ],
+  "genscan_4": [
+    "alpha-biology/genscan_4",
+    404
+  ],
+  "symmetryfill": [
+    "alpha-biology/symmetryfill",
+    404
+  ],
+  "genbench_4": [
+    "alpha-biology/genbench_4",
+    404
+  ],
+  "unilink_3": [
+    "alpha-biology/unilink_3",
+    404
+  ],
+  "chemgraph_3": [
+    "alpha-biology/chemgraph_3",
+    404
+  ],
+  "unidock_v3": [
+    "alpha-biology/unidock_v3",
+    404
+  ],
+  "activescreen_4": [
+    "alpha-biology/activescreen_4",
+    404
+  ],
+  "ligandoptimizer": [
+    "alpha-biology/ligandoptimizer",
+    404
+  ],
+  "residuemap": [
+    "alpha-biology/residuemap",
+    404
+  ],
+  "bindingscore": [
+    "alpha-biology/bindingscore",
+    404
+  ],
+  "residuelink": [
+    "alpha-biology/residuelink",
+    404
+  ],
+  "esmscore_v4": [
+    "alpha-biology/esmscore_v4",
+    404
+  ],
+  "residuerefine": [
+    "alpha-biology/residuerefine",
+    404
+  ],
+  "optscan": [
+    "alpha-biology/optscan",
+    404
+  ],
+  "unialign": [
+    "alpha-biology/unialign",
+    404
+  ],
+  "cryomodel": [
+    "alpha-biology/cryomodel",
+    404
+  ],
+  "geomnet": [
+    "alpha-biology/geomnet",
+    404
+  ],
+  "deepsearch_4": [
+    "alpha-biology/deepsearch_4",
+    404
+  ],
+  "optoptimizer_2": [
+    "alpha-biology/optoptimizer_2",
+    404
+  ],
+  "structvae": [
+    "alpha-biology/structvae",
+    404
+  ],
+  "activesolver": [
+    "alpha-biology/activesolver",
+    404
+  ],
+  "openscreen_2": [
+    "alpha-biology/openscreen_2",
+    404
+  ],
+  "geomdiffusion": [
+    "alpha-biology/geomdiffusion",
+    404
+  ],
+  "targetsim": [
+    "alpha-biology/targetsim",
+    404
+  ],
+  "symmetrymap_4": [
+    "alpha-biology/symmetrymap_4",
+    404
+  ],
+  "targetdock": [
+    "alpha-biology/targetdock",
+    404
+  ],
+  "bioem": [
+    "alpha-biology/bioem",
+    404
+  ],
+  "pocketvae": [
+    "alpha-biology/pocketvae",
+    404
+  ],
+  "dynamicmap": [
+    "alpha-biology/dynamicmap",
+    404
+  ],
+  "biosim_3": [
+    "alpha-biology/biosim_3",
+    404
+  ],
+  "affinitygraph": [
+    "alpha-biology/affinitygraph",
+    404
+  ],
+  "affinitynet": [
+    "alpha-biology/affinitynet",
+    404
+  ],
+  "biosolver": [
+    "alpha-biology/biosolver",
+    404
+  ],
+  "seqsolver": [
+    "alpha-biology/seqsolver",
+    404
+  ],
+  "cryolink": [
+    "alpha-biology/cryolink",
+    404
+  ],
+  "diffcharge": [
+    "alpha-biology/diffcharge",
+    404
+  ],
+  "symmetrylink_4": [
+    "alpha-biology/symmetrylink_4",
+    404
+  ],
+  "esmdesign_v5": [
+    "alpha-biology/esmdesign_v5",
+    404
+  ],
+  "bindingfilter": [
+    "alpha-biology/bindingfilter",
+    404
+  ],
+  "chemsearch": [
+    "alpha-biology/chemsearch",
+    404
+  ],
+  "dynamicmap_v6": [
+    "alpha-biology/dynamicmap_v6",
+    404
+  ],
+  "symmetrytcr": [
+    "alpha-biology/symmetrytcr",
+    404
+  ],
+  "residuepredict_2": [
+    "alpha-biology/residuepredict_2",
+    404
+  ],
+  "chemvae": [
+    "alpha-biology/chemvae",
+    404
+  ],
+  "pocketsense_2": [
+    "alpha-biology/pocketsense_2",
+    404
+  ],
+  "multiscan": [
+    "alpha-biology/multiscan",
+    404
+  ],
+  "gendock": [
+    "alpha-biology/gendock",
+    404
+  ],
+  "chemoptimizer": [
+    "alpha-biology/chemoptimizer",
+    404
+  ],
+  "deepsolver": [
+    "alpha-biology/deepsolver",
+    404
+  ],
+  "esmfind_4": [
+    "alpha-biology/esmfind_4",
+    404
+  ],
+  "diffgpt": [
+    "alpha-biology/diffgpt",
+    404
+  ],
+  "modelscore": [
+    "alpha-biology/modelscore",
+    404
+  ],
+  "prosim": [
+    "alpha-biology/prosim",
+    404
+  ],
+  "esmgpt_2": [
+    "alpha-biology/esmgpt_2",
+    404
+  ],
+  "chemsearch_v7": [
+    "alpha-biology/chemsearch_v7",
+    404
+  ],
+  "ligandbench": [
+    "alpha-biology/ligandbench",
+    404
+  ],
+  "esmsearch": [
+    "alpha-biology/esmsearch",
+    404
+  ],
+  "opttcr": [
+    "alpha-biology/opttcr",
+    404
+  ],
+  "seqmap_4": [
+    "alpha-biology/seqmap_4",
+    404
+  ],
+  "pocketscreen_4": [
+    "alpha-biology/pocketscreen_4",
+    404
+  ],
+  "targetalign": [
+    "alpha-biology/targetalign",
+    404
+  ],
+  "bindingfind": [
+    "alpha-biology/bindingfind",
+    404
+  ],
+  "helixdesign": [
+    "alpha-biology/helixdesign",
+    404
+  ],
+  "quickgraph_4": [
+    "alpha-biology/quickgraph_4",
+    404
+  ],
+  "modelsense": [
+    "alpha-biology/modelsense",
+    404
+  ],
+  "dockdiffusion": [
+    "alpha-biology/dockdiffusion",
+    404
+  ],
+  "protig": [
+    "alpha-biology/protig",
+    404
+  ],
+  "affinitycharge": [
+    "alpha-biology/affinitycharge",
+    404
+  ],
+  "rfig": [
+    "alpha-biology/rfig",
+    404
+  ],
+  "residuescreen_3": [
+    "alpha-biology/residuescreen_3",
+    404
+  ],
+  "biometrics": [
+    "alpha-biology/biometrics",
+    404
+  ],
+  "chemfilter_2": [
+    "alpha-biology/chemfilter_2",
+    404
+  ],
+  "dynamicscore_3": [
+    "alpha-biology/dynamicscore_3",
+    404
+  ],
+  "multidock_2": [
+    "alpha-biology/multidock_2",
+    404
+  ],
+  "alphafold": [
+    "alpha-biology/alphafold",
+    404
+  ],
+  "helixpredict": [
+    "alpha-biology/helixpredict",
+    404
+  ],
+  "interactbert": [
+    "alpha-biology/interactbert",
+    404
+  ],
+  "genalign": [
+    "alpha-biology/genalign",
+    404
+  ],
+  "targetalign_2": [
+    "alpha-biology/targetalign_2",
+    404
+  ],
+  "phenixsearch": [
+    "alpha-biology/phenixsearch",
+    404
+  ],
+  "rfvae_3": [
+    "alpha-biology/rfvae_3",
+    404
+  ],
+  "opendesign": [
+    "alpha-biology/opendesign",
+    404
+  ],
+  "quicksim": [
+    "alpha-biology/quicksim",
+    404
+  ],
+  "activeoptimizer": [
+    "alpha-biology/activeoptimizer",
+    404
+  ],
+  "flowdesign": [
+    "alpha-biology/flowdesign",
+    404
+  ],
+  "bindingpredict_4": [
+    "alpha-biology/bindingpredict_4",
+    404
+  ],
+  "prorefine": [
+    "alpha-biology/prorefine",
+    404
+  ],
+  "interactalign": [
+    "alpha-biology/interactalign",
+    404
+  ],
+  "flowoptimizer": [
+    "alpha-biology/flowoptimizer",
+    404
+  ],
+  "profind_3": [
+    "alpha-biology/profind_3",
+    404
+  ],
+  "biofill_2": [
+    "alpha-biology/biofill_2",
+    404
+  ],
+  "docktcr_4": [
+    "alpha-biology/docktcr_4",
+    404
+  ],
+  "uniab_3": [
+    "alpha-biology/uniab_3",
+    404
+  ],
+  "gendesign": [
+    "alpha-biology/gendesign",
+    404
+  ],
+  "chemig": [
+    "alpha-biology/chemig",
+    404
+  ],
+  "symmetryig": [
+    "alpha-biology/symmetryig",
+    404
+  ],
+  "rfmpnn": [
+    "alpha-biology/rfmpnn",
+    404
+  ],
+  "ligandvae": [
+    "alpha-biology/ligandvae",
+    404
+  ],
+  "activefind": [
+    "alpha-biology/activefind",
+    404
+  ],
+  "diffnet": [
+    "alpha-biology/diffnet",
+    404
+  ],
+  "genfill": [
+    "alpha-biology/genfill",
+    404
+  ],
+  "helixfilter_2": [
+    "alpha-biology/helixfilter_2",
+    404
+  ],
+  "quickgan": [
+    "alpha-biology/quickgan",
+    404
+  ],
+  "deepbench": [
+    "alpha-biology/deepbench",
+    404
+  ],
+  "propredict": [
+    "alpha-biology/propredict",
+    404
+  ],
+  "dockscan": [
+    "alpha-biology/dockscan",
+    404
+  ],
+  "foldgan": [
+    "alpha-biology/foldgan",
+    404
+  ],
+  "ligandscan": [
+    "alpha-biology/ligandscan",
+    404
+  ],
+  "symmetrymetrics": [
+    "alpha-biology/symmetrymetrics",
+    404
+  ],
+  "openscreen": [
+    "alpha-biology/openscreen",
+    404
+  ],
+  "geomtcr": [
+    "alpha-biology/geomtcr",
+    404
+  ],
+  "foldscore": [
+    "alpha-biology/foldscore",
+    404
+  ],
+  "biogpt": [
+    "alpha-biology/biogpt",
+    404
+  ],
+  "pocketdiffusion": [
+    "alpha-biology/pocketdiffusion",
+    404
+  ],
+  "rfsolver": [
+    "alpha-biology/rfsolver",
+    404
+  ],
+  "quickscan": [
+    "alpha-biology/quickscan",
+    404
+  ],
+  "bindingdock": [
+    "alpha-biology/bindingdock",
+    404
+  ],
+  "dockoptimizer": [
+    "alpha-biology/dockoptimizer",
+    404
+  ],
+  "phenixtcr": [
+    "alpha-biology/phenixtcr",
+    404
+  ],
+  "opengan": [
+    "alpha-biology/opengan",
+    404
+  ],
+  "geomnet_v8": [
+    "alpha-biology/geomnet_v8",
+    404
+  ],
+  "smartgan": [
+    "alpha-biology/smartgan",
+    404
+  ],
+  "activesearch_3": [
+    "alpha-biology/activesearch_3",
+    404
+  ],
+  "biomodel": [
+    "alpha-biology/biomodel",
+    404
+  ],
+  "diffig": [
+    "alpha-biology/diffig",
+    404
+  ],
+  "rfem": [
+    "alpha-biology/rfem",
+    404
+  ],
+  "quickmodel_3": [
+    "alpha-biology/quickmodel_3",
+    404
+  ],
+  "optmetrics": [
+    "alpha-biology/optmetrics",
+    404
+  ],
+  "activefind_v9": [
+    "alpha-biology/activefind_v9",
+    404
+  ],
+  "cryosim": [
+    "alpha-biology/cryosim",
+    404
+  ],
+  "interactoptimizer": [
+    "alpha-biology/interactoptimizer",
+    404
+  ],
+  "seqfill_2": [
+    "alpha-biology/seqfill_2",
+    404
+  ],
+  "ligandmap": [
+    "alpha-biology/ligandmap",
+    404
+  ],
+  "modelsim": [
+    "alpha-biology/modelsim",
+    404
+  ],
+  "activescan_3": [
+    "alpha-biology/activescan_3",
+    404
+  ],
+  "unicomplex": [
+    "alpha-biology/unicomplex",
+    404
+  ],
+  "modellink": [
+    "alpha-biology/modellink",
+    404
+  ],
+  "structem_4": [
+    "alpha-biology/structem_4",
+    -1
+  ],
+  "modelem": [
+    "alpha-biology/modelem",
+    404
+  ],
+  "targetsolver": [
+    "alpha-biology/targetsolver",
+    404
+  ],
+  "modelbert": [
+    "alpha-biology/modelbert",
+    404
+  ],
+  "alphasim_3": [
+    "alpha-biology/alphasim_3",
+    404
+  ],
+  "quickcharge": [
+    "alpha-biology/quickcharge",
+    404
+  ],
+  "prosense": [
+    "alpha-biology/prosense",
+    404
+  ],
+  "pocketfilter": [
+    "alpha-biology/pocketfilter",
+    404
+  ],
+  "foldbench": [
+    "alpha-biology/foldbench",
+    404
+  ],
+  "activesense_v10": [
+    "alpha-biology/activesense_v10",
+    404
+  ],
+  "modellink_v11": [
+    "alpha-biology/modellink_v11",
+    404
+  ],
+  "chemgan": [
+    "alpha-biology/chemgan",
+    404
+  ],
+  "dynamicscreen_2": [
+    "alpha-biology/dynamicscreen_2",
+    404
+  ],
+  "multiab_2": [
+    "alpha-biology/multiab_2",
+    404
+  ],
+  "dynamicmpnn_3": [
+    "alpha-biology/dynamicmpnn_3",
+    404
+  ],
+  "dynamicsense": [
+    "alpha-biology/dynamicsense",
+    404
+  ],
+  "ligandpredict": [
+    "alpha-biology/ligandpredict",
+    404
+  ],
+  "esmdesign_v12": [
+    "alpha-biology/esmdesign_v12",
+    404
+  ],
+  "flowmpnn": [
+    "alpha-biology/flowmpnn",
+    404
+  ],
+  "openalign": [
+    "alpha-biology/openalign",
+    404
+  ],
+  "dynamicmodel": [
+    "alpha-biology/dynamicmodel",
+    404
+  ],
+  "targetig_3": [
+    "alpha-biology/targetig_3",
+    404
+  ],
+  "diffbert_4": [
+    "alpha-biology/diffbert_4",
+    404
+  ],
+  "cryoscreen": [
+    "alpha-biology/cryoscreen",
+    404
+  ],
+  "flowgpt": [
+    "alpha-biology/flowgpt",
+    -1
+  ],
+  "alphasolver": [
+    "alpha-biology/alphasolver",
+    404
+  ],
+  "targetgraph": [
+    "alpha-biology/targetgraph",
+    404
+  ],
+  "helixab": [
+    "alpha-biology/helixab",
+    404
+  ],
+  "symmetryscore": [
+    "alpha-biology/symmetryscore",
+    404
+  ],
+  "dynamicsolver": [
+    "alpha-biology/dynamicsolver",
+    404
+  ],
+  "symmetrybench_3": [
+    "alpha-biology/symmetrybench_3",
+    404
+  ],
+  "alphafold_v13": [
+    "alpha-biology/alphafold_v13",
+    404
+  ],
+  "phenixscore": [
+    "alpha-biology/phenixscore",
+    404
+  ],
+  "residuescan_4": [
+    "alpha-biology/residuescan_4",
+    404
+  ],
+  "cryompnn": [
+    "alpha-biology/cryompnn",
+    404
+  ],
+  "pocketdesign": [
+    "alpha-biology/pocketdesign",
+    404
+  ],
+  "interactmodel": [
+    "alpha-biology/interactmodel",
+    404
+  ],
+  "bindingem": [
+    "alpha-biology/bindingem",
+    404
+  ],
+  "cryovae": [
+    "alpha-biology/cryovae",
+    404
+  ],
+  "activemodel_2": [
+    "alpha-biology/activemodel_2",
+    404
+  ],
+  "ligandoptimizer_v14": [
+    "alpha-biology/ligandoptimizer_v14",
+    404
+  ],
+  "smarttcr": [
+    "alpha-biology/smarttcr",
+    404
+  ],
+  "flowdiffusion_v15": [
+    "alpha-biology/flowdiffusion_v15",
+    404
+  ],
+  "diffem": [
+    "alpha-biology/diffem",
+    404
+  ],
+  "activegpt": [
+    "alpha-biology/activegpt",
+    404
+  ],
+  "residuesearch": [
+    "alpha-biology/residuesearch",
+    404
+  ],
+  "opendiffusion": [
+    "alpha-biology/opendiffusion",
+    404
+  ],
+  "quickbench": [
+    "alpha-biology/quickbench",
+    404
+  ],
+  "biosim": [
+    "alpha-biology/biosim",
+    404
+  ],
+  "seqsim": [
+    "alpha-biology/seqsim",
+    404
+  ],
+  "interactem_3": [
+    "alpha-biology/interactem_3",
+    404
+  ],
+  "symmetrycharge": [
+    "alpha-biology/symmetrycharge",
+    404
+  ],
+  "seqscan": [
+    "alpha-biology/seqscan",
+    -1
+  ],
+  "ligandem": [
+    "alpha-biology/ligandem",
+    404
+  ],
+  "modelsearch": [
+    "alpha-biology/modelsearch",
+    404
+  ],
+  "affinitysense": [
+    "alpha-biology/affinitysense",
+    404
+  ],
+  "affinitymodel": [
+    "alpha-biology/affinitymodel",
+    404
+  ],
+  "chemfilter_2_v16": [
+    "alpha-biology/chemfilter_2_v16",
+    404
+  ],
+  "targetgpt_2": [
+    "alpha-biology/targetgpt_2",
+    404
+  ],
+  "genlink": [
+    "alpha-biology/genlink",
+    404
+  ],
+  "residuemodel_3": [
+    "alpha-biology/residuemodel_3",
+    404
+  ],
+  "structoptimizer": [
+    "alpha-biology/structoptimizer",
+    404
+  ],
+  "deeplink": [
+    "alpha-biology/deeplink",
+    404
+  ],
+  "rflink_4": [
+    "alpha-biology/rflink_4",
+    404
+  ],
+  "prosim_v17": [
+    "alpha-biology/prosim_v17",
+    404
+  ],
+  "quickoptimizer_v18": [
+    "alpha-biology/quickoptimizer_v18",
+    404
+  ],
+  "symmetrydesign": [
+    "alpha-biology/symmetrydesign",
+    404
+  ],
+  "prodesign_v19": [
+    "alpha-biology/prodesign_v19",
+    404
+  ],
+  "foldbert": [
+    "alpha-biology/foldbert",
+    404
+  ],
+  "targetnet": [
+    "alpha-biology/targetnet",
+    404
+  ],
+  "smartmetrics": [
+    "alpha-biology/smartmetrics",
+    404
+  ],
+  "chempredict": [
+    "alpha-biology/chempredict",
+    404
+  ],
+  "diffbench": [
+    "alpha-biology/diffbench",
+    404
+  ],
+  "pockettcr": [
+    "alpha-biology/pockettcr",
+    404
+  ],
+  "biograph": [
+    "alpha-biology/biograph",
+    404
+  ],
+  "gensearch_2": [
+    "alpha-biology/gensearch_2",
+    404
+  ],
+  "dynamicsim": [
+    "alpha-biology/dynamicsim",
+    404
+  ],
+  "rfoptimizer": [
+    "alpha-biology/rfoptimizer",
+    404
+  ],
+  "structcomplex": [
+    "alpha-biology/structcomplex",
+    404
+  ],
+  "interactscan_4": [
+    "alpha-biology/interactscan_4",
+    404
+  ],
+  "gendock_v21": [
+    "alpha-biology/gendock_v21",
+    404
+  ],
+  "biosearch": [
+    "alpha-biology/biosearch",
+    404
+  ],
+  "dynamicmodel_v20": [
+    "alpha-biology/dynamicmodel_v20",
+    404
+  ],
+  "diffdock_v22": [
+    "alpha-biology/diffdock_v22",
+    404
+  ],
+  "alphadiffusion": [
+    "alpha-biology/alphadiffusion",
+    404
+  ],
+  "structscore": [
+    "alpha-biology/structscore",
+    404
+  ],
+  "pocketbert": [
+    "alpha-biology/pocketbert",
+    404
+  ],
+  "residuelink_4": [
+    "alpha-biology/residuelink_4",
+    404
+  ],
+  "dynamiccharge": [
+    "alpha-biology/dynamiccharge",
+    404
+  ],
+  "affinitygpt": [
+    "alpha-biology/affinitygpt",
+    404
+  ],
+  "rfnet_4": [
+    "alpha-biology/rfnet_4",
+    404
+  ],
+  "geomnet_v23": [
+    "alpha-biology/geomnet_v23",
+    404
+  ],
+  "dynamicfold": [
+    "alpha-biology/dynamicfold",
+    404
+  ],
+  "symmetryrefine": [
+    "alpha-biology/symmetryrefine",
+    404
+  ],
+  "affinitydesign": [
+    "alpha-biology/affinitydesign",
+    404
+  ],
+  "biocomplex": [
+    "alpha-biology/biocomplex",
+    404
+  ],
+  "modelmap": [
+    "alpha-biology/modelmap",
+    404
+  ],
+  "multimetrics": [
+    "alpha-biology/multimetrics",
+    404
+  ],
+  "interactdock": [
+    "alpha-biology/interactdock",
+    404
+  ],
+  "smartfilter": [
+    "alpha-biology/smartfilter",
+    404
+  ],
+  "symmetrygpt": [
+    "alpha-biology/symmetrygpt",
+    404
+  ],
+  "modeloptimizer_v24": [
+    "alpha-biology/modeloptimizer_v24",
+    404
+  ],
+  "residuefill": [
+    "alpha-biology/residuefill",
+    404
+  ],
+  "quickgpt": [
+    "alpha-biology/quickgpt",
+    404
+  ],
+  "targetmpnn": [
+    "alpha-biology/targetmpnn",
+    404
+  ],
+  "flowvae": [
+    "alpha-biology/flowvae",
+    404
+  ],
+  "helixalign": [
+    "alpha-biology/helixalign",
+    404
+  ],
+  "targetoptimizer": [
+    "alpha-biology/targetoptimizer",
+    404
+  ],
+  "activefill": [
+    "alpha-biology/activefill",
+    404
+  ],
+  "seqig": [
+    "alpha-biology/seqig",
+    404
+  ],
+  "unirefine": [
+    "alpha-biology/unirefine",
+    404
+  ],
+  "interacttcr": [
+    "alpha-biology/interacttcr",
+    404
+  ],
+  "alphaalign": [
+    "alpha-biology/alphaalign",
+    404
+  ],
+  "chemig_3": [
+    "alpha-biology/chemig_3",
+    404
+  ],
+  "unifind": [
+    "alpha-biology/unifind",
+    404
+  ],
+  "dynamicgpt": [
+    "alpha-biology/dynamicgpt",
+    404
+  ],
+  "optgan_3": [
+    "alpha-biology/optgan_3",
+    404
+  ],
+  "alphafill_v25": [
+    "alpha-biology/alphafill_v25",
+    404
+  ],
+  "activemetrics": [
+    "alpha-biology/activemetrics",
+    404
+  ],
+  "interactgraph": [
+    "alpha-biology/interactgraph",
+    404
+  ],
+  "proscreen": [
+    "alpha-biology/proscreen",
+    404
+  ],
+  "deepsearch_4_v26": [
+    "alpha-biology/deepsearch_4_v26",
+    404
+  ],
+  "ligandfilter_2": [
+    "alpha-biology/ligandfilter_2",
+    404
+  ],
+  "symmetryab": [
+    "alpha-biology/symmetryab",
+    404
+  ],
+  "esmoptimizer": [
+    "alpha-biology/esmoptimizer",
+    404
+  ],
+  "geomsim": [
+    "alpha-biology/geomsim",
+    -1
+  ],
+  "esmalign": [
+    "alpha-biology/esmalign",
+    404
+  ],
+  "bindingcomplex": [
+    "alpha-biology/bindingcomplex",
+    404
+  ],
+  "quickcomplex_4": [
+    "alpha-biology/quickcomplex_4",
+    404
+  ],
+  "dynamicfilter": [
+    "alpha-biology/dynamicfilter",
+    404
+  ],
+  "smartscreen": [
+    "alpha-biology/smartscreen",
+    404
+  ],
+  "protcomplex": [
+    "alpha-biology/protcomplex",
+    404
+  ],
+  "unifold_2": [
+    "alpha-biology/unifold_2",
+    404
+  ],
+  "foldfind": [
+    "alpha-biology/foldfind",
+    404
+  ],
+  "esmfill": [
+    "alpha-biology/esmfill",
+    404
+  ],
+  "dynamicnet_2": [
+    "alpha-biology/dynamicnet_2",
+    404
+  ],
+  "flowmetrics": [
+    "alpha-biology/flowmetrics",
+    404
+  ],
+  "phenixpredict_2": [
+    "alpha-biology/phenixpredict_2",
+    404
+  ],
+  "ligandcomplex": [
+    "alpha-biology/ligandcomplex",
+    404
+  ],
+  "pocketig": [
+    "alpha-biology/pocketig",
+    404
+  ],
+  "helixscan": [
+    "alpha-biology/helixscan",
+    404
+  ],
+  "genfold": [
+    "alpha-biology/genfold",
+    404
+  ],
+  "affinityrefine_3": [
+    "alpha-biology/affinityrefine_3",
+    404
+  ],
+  "multifold": [
+    "alpha-biology/multifold",
+    404
+  ],
+  "bindinglink": [
+    "alpha-biology/bindinglink",
+    404
+  ],
+  "residuelink_v27": [
+    "alpha-biology/residuelink_v27",
+    404
+  ],
+  "docksim": [
+    "alpha-biology/docksim",
+    404
+  ],
+  "dockmpnn": [
+    "alpha-biology/dockmpnn",
+    404
+  ],
+  "residuegan": [
+    "alpha-biology/residuegan",
+    404
+  ],
+  "genoptimizer": [
+    "alpha-biology/genoptimizer",
+    404
+  ],
+  "affinityab": [
+    "alpha-biology/affinityab",
+    404
+  ],
+  "openpredict_3": [
+    "alpha-biology/openpredict_3",
+    404
+  ],
+  "targetdesign_4": [
+    "alpha-biology/targetdesign_4",
+    404
+  ],
+  "pocketdock_3": [
+    "alpha-biology/pocketdock_3",
+    404
+  ],
+  "biosearch_3": [
+    "alpha-biology/biosearch_3",
+    404
+  ],
+  "targetfill": [
+    "alpha-biology/targetfill",
+    404
+  ],
+  "pocketnet": [
+    "alpha-biology/pocketnet",
+    404
+  ],
+  "rfbert": [
+    "alpha-biology/rfbert",
+    404
+  ],
+  "protlink": [
+    "alpha-biology/protlink",
+    404
+  ],
+  "genfold_3": [
+    "alpha-biology/genfold_3",
+    404
+  ],
+  "affinityoptimizer": [
+    "alpha-biology/affinityoptimizer",
+    404
+  ],
+  "deepsearch_4_v28": [
+    "alpha-biology/deepsearch_4_v28",
+    404
+  ],
+  "seqdesign_2": [
+    "alpha-biology/seqdesign_2",
+    404
+  ],
+  "openscan": [
+    "alpha-biology/openscan",
+    404
+  ],
+  "bindingmpnn": [
+    "alpha-biology/bindingmpnn",
+    404
+  ],
+  "ligandgpt_2": [
+    "alpha-biology/ligandgpt_2",
+    404
+  ],
+  "modeloptimizer": [
+    "alpha-biology/modeloptimizer",
+    -1
+  ],
+  "optfilter_3": [
+    "alpha-biology/optfilter_3",
+    404
+  ],
+  "interactig": [
+    "alpha-biology/interactig",
+    404
+  ],
+  "protfind": [
+    "alpha-biology/protfind",
+    404
+  ],
+  "esmcomplex": [
+    "alpha-biology/esmcomplex",
+    404
+  ],
+  "activesolver_v29": [
+    "alpha-biology/activesolver_v29",
+    404
+  ],
+  "foldnet": [
+    "alpha-biology/foldnet",
+    404
+  ],
+  "multidiffusion": [
+    "alpha-biology/multidiffusion",
+    429
+  ],
+  "geomscan": [
+    "alpha-biology/geomscan",
+    404
+  ],
+  "geomsense": [
+    "alpha-biology/geomsense",
+    -1
+  ],
+  "deepvae": [
+    "alpha-biology/deepvae",
+    429
+  ],
+  "quickdock": [
+    "alpha-biology/quickdock",
+    404
+  ],
+  "foldcomplex": [
+    "alpha-biology/foldcomplex",
+    429
+  ],
+  "procomplex_4": [
+    "alpha-biology/procomplex_4",
+    404
+  ],
+  "interactmpnn": [
+    "alpha-biology/interactmpnn",
+    404
+  ],
+  "bindingfill": [
+    "alpha-biology/bindingfill",
+    429
+  ],
+  "pronet_3": [
+    "alpha-biology/pronet_3",
+    429
+  ],
+  "bindinggpt": [
+    "alpha-biology/bindinggpt",
+    404
+  ],
+  "seqmetrics": [
+    "alpha-biology/seqmetrics",
+    404
+  ],
+  "multidock": [
+    "alpha-biology/multidock",
+    429
+  ],
+  "phenixsearch_v31": [
+    "alpha-biology/phenixsearch_v31",
+    429
+  ],
+  "smartgraph": [
+    "alpha-biology/smartgraph",
+    429
+  ],
+  "protscreen": [
+    "alpha-biology/protscreen",
+    429
+  ],
+  "affinitytcr": [
+    "alpha-biology/affinitytcr",
+    429
+  ],
+  "alphasim": [
+    "alpha-biology/alphasim",
+    429
+  ],
+  "deepsense": [
+    "alpha-biology/deepsense",
+    429
+  ],
+  "pocketmetrics_2": [
+    "alpha-biology/pocketmetrics_2",
+    429
+  ],
+  "interactrefine": [
+    "alpha-biology/interactrefine",
+    429
+  ],
+  "bindingmap_v32": [
+    "alpha-biology/bindingmap_v32",
+    429
+  ],
+  "gengan_2": [
+    "alpha-biology/gengan_2",
+    429
+  ],
+  "gensense": [
+    "alpha-biology/gensense",
+    429
+  ],
+  "quicksense": [
+    "alpha-biology/quicksense",
+    429
+  ],
+  "gendock_4": [
+    "alpha-biology/gendock_4",
+    429
+  ],
+  "rfalign": [
+    "alpha-biology/rfalign",
+    429
+  ],
+  "symmetrynet": [
+    "alpha-biology/symmetrynet",
+    429
+  ],
+  "activebench": [
+    "alpha-biology/activebench",
+    429
+  ],
+  "seqlink": [
+    "alpha-biology/seqlink",
+    429
+  ],
+  "openoptimizer": [
+    "alpha-biology/openoptimizer",
+    429
+  ],
+  "multigan": [
+    "alpha-biology/multigan",
+    429
+  ],
+  "residuegan_v33": [
+    "alpha-biology/residuegan_v33",
+    429
+  ],
+  "protdock": [
+    "alpha-biology/protdock",
+    429
+  ],
+  "multiscore": [
+    "alpha-biology/multiscore",
+    429
+  ],
+  "deepfill_2": [
+    "alpha-biology/deepfill_2",
+    429
+  ],
+  "geomalign": [
+    "alpha-biology/geomalign",
+    429
+  ],
+  "affinitycomplex": [
+    "alpha-biology/affinitycomplex",
+    429
+  ],
+  "quickscan_4": [
+    "alpha-biology/quickscan_4",
+    429
+  ],
+  "residuempnn": [
+    "alpha-biology/residuempnn",
+    429
+  ],
+  "opensearch": [
+    "alpha-biology/opensearch",
+    429
+  ],
+  "residuesolver": [
+    "alpha-biology/residuesolver",
+    429
+  ],
+  "bindingem_v34": [
+    "alpha-biology/bindingem_v34",
+    429
+  ],
+  "unidiffusion": [
+    "alpha-biology/unidiffusion",
+    429
+  ],
+  "deepfilter_2": [
+    "alpha-biology/deepfilter_2",
+    429
+  ],
+  "rfsim": [
+    "alpha-biology/rfsim",
+    429
+  ],
+  "dynamicfilter_v35": [
+    "alpha-biology/dynamicfilter_v35",
+    429
+  ],
+  "protpredict": [
+    "alpha-biology/protpredict",
+    429
+  ],
+  "symmetryab_v36": [
+    "alpha-biology/symmetryab_v36",
+    429
+  ],
+  "rfbench": [
+    "alpha-biology/rfbench",
+    429
+  ],
+  "opencharge": [
+    "alpha-biology/opencharge",
+    429
+  ],
+  "helixsense": [
+    "alpha-biology/helixsense",
+    429
+  ],
+  "residuecomplex": [
+    "alpha-biology/residuecomplex",
+    429
+  ],
+  "pocketscreen": [
+    "alpha-biology/pocketscreen",
+    429
+  ],
+  "chemmpnn": [
+    "alpha-biology/chemmpnn",
+    429
+  ],
+  "modelmap_v37": [
+    "alpha-biology/modelmap_v37",
+    429
+  ],
+  "uniscreen": [
+    "alpha-biology/uniscreen",
+    429
+  ],
+  "deepfind_4": [
+    "alpha-biology/deepfind_4",
+    429
+  ],
+  "openfind_2": [
+    "alpha-biology/openfind_2",
+    429
+  ],
+  "affinitytcr_v38": [
+    "alpha-biology/affinitytcr_v38",
+    429
+  ],
+  "targetdock_v39": [
+    "alpha-biology/targetdock_v39",
+    429
+  ],
+  "genlink_v40": [
+    "alpha-biology/genlink_v40",
+    429
+  ],
+  "chemig_v41": [
+    "alpha-biology/chemig_v41",
+    429
+  ],
+  "modelgan": [
+    "alpha-biology/modelgan",
+    429
+  ],
+  "alphascore_2": [
+    "alpha-biology/alphascore_2",
+    429
+  ],
+  "modelgan_3": [
+    "alpha-biology/modelgan_3",
+    429
+  ],
+  "alphanet": [
+    "alpha-biology/alphanet",
+    429
+  ],
+  "rftcr": [
+    "alpha-biology/rftcr",
+    429
+  ],
+  "ligandfold_3": [
+    "alpha-biology/ligandfold_3",
+    429
+  ],
+  "esmcharge": [
+    "alpha-biology/esmcharge",
+    429
+  ],
+  "diffcomplex": [
+    "alpha-biology/diffcomplex",
+    429
+  ],
+  "chemtcr": [
+    "alpha-biology/chemtcr",
+    429
+  ],
+  "interactem": [
+    "alpha-biology/interactem",
+    429
+  ],
+  "ligandvae_2": [
+    "alpha-biology/ligandvae_2",
+    429
+  ],
+  "multisim_v42": [
+    "alpha-biology/multisim_v42",
+    429
+  ],
+  "alphasim_v43": [
+    "alpha-biology/alphasim_v43",
+    429
+  ],
+  "modelab": [
+    "alpha-biology/modelab",
+    429
+  ],
+  "ligandmpnn_v44": [
+    "alpha-biology/ligandmpnn_v44",
+    429
+  ],
+  "optoptimizer_3": [
+    "alpha-biology/optoptimizer_3",
+    429
+  ],
+  "foldmodel": [
+    "alpha-biology/foldmodel",
+    429
+  ],
+  "chemrefine": [
+    "alpha-biology/chemrefine",
+    429
+  ],
+  "quicksearch": [
+    "alpha-biology/quicksearch",
+    429
+  ],
+  "dockmpnn_v45": [
+    "alpha-biology/dockmpnn_v45",
+    429
+  ],
+  "diffdesign": [
+    "alpha-biology/diffdesign",
+    429
+  ],
+  "pocketcharge": [
+    "alpha-biology/pocketcharge",
+    429
+  ],
+  "helixsolver": [
+    "alpha-biology/helixsolver",
+    429
+  ],
+  "interactmpnn_4": [
+    "alpha-biology/interactmpnn_4",
+    429
+  ],
+  "dockfilter": [
+    "alpha-biology/dockfilter",
+    429
+  ],
+  "dynamicgpt_v46": [
+    "alpha-biology/dynamicgpt_v46",
+    429
+  ],
+  "targetem": [
+    "alpha-biology/targetem",
+    429
+  ],
+  "flowsim": [
+    "alpha-biology/flowsim",
+    429
+  ],
+  "openrefine_4": [
+    "alpha-biology/openrefine_4",
+    429
+  ],
+  "biorefine": [
+    "alpha-biology/biorefine",
+    429
+  ],
+  "chemab": [
+    "alpha-biology/chemab",
+    429
+  ],
+  "seqoptimizer": [
+    "alpha-biology/seqoptimizer",
+    429
+  ],
+  "residuecharge": [
+    "alpha-biology/residuecharge",
+    429
+  ],
+  "affinitysense_3": [
+    "alpha-biology/affinitysense_3",
+    429
+  ],
+  "residueig_4": [
+    "alpha-biology/residueig_4",
+    429
+  ],
+  "rfmap": [
+    "alpha-biology/rfmap",
+    429
+  ],
+  "helixscan_4": [
+    "alpha-biology/helixscan_4",
+    429
+  ],
+  "esmab_4_v47": [
+    "alpha-biology/esmab_4_v47",
+    429
+  ],
+  "alphascore": [
+    "alpha-biology/alphascore",
+    429
+  ],
+  "activeem": [
+    "alpha-biology/activeem",
+    429
+  ],
+  "unipredict_3": [
+    "alpha-biology/unipredict_3",
+    429
+  ],
+  "symmetrymetrics_v48": [
+    "alpha-biology/symmetrymetrics_v48",
+    429
+  ],
+  "ligandfilter": [
+    "alpha-biology/ligandfilter",
+    429
+  ],
+  "residuebench": [
+    "alpha-biology/residuebench",
+    429
+  ],
+  "optscan_v49": [
+    "alpha-biology/optscan_v49",
+    429
+  ],
+  "multibert": [
+    "alpha-biology/multibert",
+    429
+  ],
+  "cryovae_v52": [
+    "alpha-biology/cryovae_v52",
+    429
+  ],
+  "chemcomplex_v50": [
+    "alpha-biology/chemcomplex_v50",
+    429
+  ],
+  "rfmap_v51": [
+    "alpha-biology/rfmap_v51",
+    429
+  ],
+  "residuerefine_2": [
+    "alpha-biology/residuerefine_2",
+    429
+  ],
+  "modeldock": [
+    "alpha-biology/modeldock",
+    429
+  ],
+  "bindingscreen": [
+    "alpha-biology/bindingscreen",
+    429
+  ],
+  "alphaem_4": [
+    "alpha-biology/alphaem_4",
+    429
+  ],
+  "deeplink_v53": [
+    "alpha-biology/deeplink_v53",
+    429
+  ],
+  "activegraph": [
+    "alpha-biology/activegraph",
+    429
+  ],
+  "biodock": [
+    "alpha-biology/biodock",
+    429
+  ],
+  "modelmodel": [
+    "alpha-biology/modelmodel",
+    429
+  ],
+  "uniab": [
+    "alpha-biology/uniab",
+    429
+  ],
+  "gensim": [
+    "alpha-biology/gensim",
+    429
+  ],
+  "uniem": [
+    "alpha-biology/uniem",
+    429
+  ],
+  "structgpt": [
+    "alpha-biology/structgpt",
+    429
+  ],
+  "symmetrympnn_2": [
+    "alpha-biology/symmetrympnn_2",
+    429
+  ],
+  "deepgraph": [
+    "alpha-biology/deepgraph",
+    429
+  ],
+  "optnet": [
+    "alpha-biology/optnet",
+    429
+  ],
+  "openmodel": [
+    "alpha-biology/openmodel",
+    429
+  ],
+  "proig": [
+    "alpha-biology/proig",
+    429
+  ],
+  "rfnet": [
+    "alpha-biology/rfnet",
+    429
+  ],
+  "targetbert": [
+    "alpha-biology/targetbert",
+    429
+  ],
+  "deepscore": [
+    "alpha-biology/deepscore",
+    429
+  ],
+  "structfill_4": [
+    "alpha-biology/structfill_4",
+    429
+  ],
+  "flowgpt_4": [
+    "alpha-biology/flowgpt_4",
+    429
+  ],
+  "gengpt": [
+    "alpha-biology/gengpt",
+    429
+  ],
+  "gentcr": [
+    "alpha-biology/gentcr",
+    429
+  ],
+  "interactoptimizer_3": [
+    "alpha-biology/interactoptimizer_3",
+    429
+  ],
+  "modeldiffusion_2": [
+    "alpha-biology/modeldiffusion_2",
+    429
+  ],
+  "opensense": [
+    "alpha-biology/opensense",
+    429
+  ],
+  "alphaoptimizer": [
+    "alpha-biology/alphaoptimizer",
+    429
+  ],
+  "rfab": [
+    "alpha-biology/rfab",
+    429
+  ],
+  "helixcharge": [
+    "alpha-biology/helixcharge",
+    429
+  ],
+  "optsearch": [
+    "alpha-biology/optsearch",
+    429
+  ],
+  "alphabench": [
+    "alpha-biology/alphabench",
+    429
+  ],
+  "dynamicfill_v54": [
+    "alpha-biology/dynamicfill_v54",
+    429
+  ],
+  "activefold_4": [
+    "alpha-biology/activefold_4",
+    429
+  ],
+  "seqmodel": [
+    "alpha-biology/seqmodel",
+    429
+  ],
+  "protmetrics": [
+    "alpha-biology/protmetrics",
+    429
+  ],
+  "biofind": [
+    "alpha-biology/biofind",
+    429
+  ],
+  "residuescan": [
+    "alpha-biology/residuescan",
+    429
+  ],
+  "seqdock": [
+    "alpha-biology/seqdock",
+    429
+  ],
+  "ligandgan": [
+    "alpha-biology/ligandgan",
+    429
+  ],
+  "optfill_v55": [
+    "alpha-biology/optfill_v55",
+    429
+  ],
+  "flowdiffusion_3": [
+    "alpha-biology/flowdiffusion_3",
+    429
+  ],
+  "diffbert_v57": [
+    "alpha-biology/diffbert_v57",
+    429
+  ],
+  "chemdock_2": [
+    "alpha-biology/chemdock_2",
+    429
+  ],
+  "ligandgan_v58": [
+    "alpha-biology/ligandgan_v58",
+    429
+  ],
+  "helixfilter": [
+    "alpha-biology/helixfilter",
+    429
+  ],
+  "esmgraph": [
+    "alpha-biology/esmgraph",
+    429
+  ],
+  "deepgpt_2": [
+    "alpha-biology/deepgpt_2",
+    429
+  ],
+  "targetfilter": [
+    "alpha-biology/targetfilter",
+    429
+  ],
+  "pocketscreen_v56": [
+    "alpha-biology/pocketscreen_v56",
+    429
+  ],
+  "genfilter_4": [
+    "alpha-biology/genfilter_4",
+    429
+  ],
+  "alphaig": [
+    "alpha-biology/alphaig",
+    429
+  ],
+  "activescan": [
+    "alpha-biology/activescan",
+    429
+  ],
+  "prosolver": [
+    "alpha-biology/prosolver",
+    429
+  ],
+  "seqfind": [
+    "alpha-biology/seqfind",
+    429
+  ],
+  "structfind": [
+    "alpha-biology/structfind",
+    429
+  ],
+  "univae": [
+    "alpha-biology/univae",
+    429
+  ],
+  "flowrefine": [
+    "alpha-biology/flowrefine",
+    429
+  ],
+  "deepfind": [
+    "alpha-biology/deepfind",
+    429
+  ],
+  "geomgan": [
+    "alpha-biology/geomgan",
+    429
+  ],
+  "modelcharge": [
+    "alpha-biology/modelcharge",
+    429
+  ],
+  "interactnet": [
+    "alpha-biology/interactnet",
+    429
+  ],
+  "foldgraph_3": [
+    "alpha-biology/foldgraph_3",
+    429
+  ],
+  "modelfilter": [
+    "alpha-biology/modelfilter",
+    429
+  ],
+  "smartab_3": [
+    "alpha-biology/smartab_3",
+    429
+  ],
+  "affinitysolver_2": [
+    "alpha-biology/affinitysolver_2",
+    429
+  ],
+  "dockfind": [
+    "alpha-biology/dockfind",
+    429
+  ],
+  "flowrefine_v59": [
+    "alpha-biology/flowrefine_v59",
+    429
+  ],
+  "helixalign_v60": [
+    "alpha-biology/helixalign_v60",
+    429
+  ],
+  "geomfold_2": [
+    "alpha-biology/geomfold_2",
+    429
+  ],
+  "pocketmetrics": [
+    "alpha-biology/pocketmetrics",
+    429
+  ],
+  "openscore": [
+    "alpha-biology/openscore",
+    429
+  ],
+  "targetfind": [
+    "alpha-biology/targetfind",
+    429
+  ],
+  "alphafind_v62": [
+    "alpha-biology/alphafind_v62",
+    429
+  ],
+  "prosearch_2": [
+    "alpha-biology/prosearch_2",
+    429
+  ],
+  "cryonet_2": [
+    "alpha-biology/cryonet_2",
+    429
+  ],
+  "affinitygraph_v61": [
+    "alpha-biology/affinitygraph_v61",
+    429
+  ],
+  "activeoptimizer_v63": [
+    "alpha-biology/activeoptimizer_v63",
+    429
+  ],
+  "residuesolver_v64": [
+    "alpha-biology/residuesolver_v64",
+    429
+  ],
+  "chembert": [
+    "alpha-biology/chembert",
+    429
+  ],
+  "affinityscore_3": [
+    "alpha-biology/affinityscore_3",
+    429
+  ],
+  "interacttcr_v65": [
+    "alpha-biology/interacttcr_v65",
+    429
+  ],
+  "modelscan": [
+    "alpha-biology/modelscan",
+    429
+  ],
+  "optscan_v68": [
+    "alpha-biology/optscan_v68",
+    429
+  ],
+  "helixsim": [
+    "alpha-biology/helixsim",
+    429
+  ],
+  "chemtcr_v67": [
+    "alpha-biology/chemtcr_v67",
+    429
+  ],
+  "esmfilter_2": [
+    "alpha-biology/esmfilter_2",
+    429
+  ],
+  "optmodel": [
+    "alpha-biology/optmodel",
+    429
+  ],
+  "alphafind_4": [
+    "alpha-biology/alphafind_4",
+    429
+  ],
+  "opengan_v66": [
+    "alpha-biology/opengan_v66",
+    429
+  ],
+  "phenixdiffusion": [
+    "alpha-biology/phenixdiffusion",
+    429
+  ],
+  "chembert_v69": [
+    "alpha-biology/chembert_v69",
+    429
+  ],
+  "quickvae_4": [
+    "alpha-biology/quickvae_4",
+    429
+  ],
+  "multibert_3": [
+    "alpha-biology/multibert_3",
+    429
+  ],
+  "pocketmodel_3": [
+    "alpha-biology/pocketmodel_3",
+    429
+  ],
+  "geomtcr_v70": [
+    "alpha-biology/geomtcr_v70",
+    429
+  ],
+  "targetcomplex": [
+    "alpha-biology/targetcomplex",
+    429
+  ],
+  "modelmap_v72": [
+    "alpha-biology/modelmap_v72",
+    429
+  ],
+  "bindingab_3": [
+    "alpha-biology/bindingab_3",
+    429
+  ],
+  "protvae_3": [
+    "alpha-biology/protvae_3",
+    429
+  ],
+  "bioem_v71": [
+    "alpha-biology/bioem_v71",
+    429
+  ],
+  "flowfill_2": [
+    "alpha-biology/flowfill_2",
+    429
+  ],
+  "biompnn": [
+    "alpha-biology/biompnn",
+    429
+  ],
+  "rfrefine_2": [
+    "alpha-biology/rfrefine_2",
+    429
+  ],
+  "activerefine_2": [
+    "alpha-biology/activerefine_2",
+    429
+  ],
+  "smartfold": [
+    "alpha-biology/smartfold",
+    -1
+  ],
+  "optvae_4": [
+    "alpha-biology/optvae_4",
+    429
+  ],
+  "quickgraph": [
+    "alpha-biology/quickgraph",
+    429
+  ],
+  "residuecomplex_v73": [
+    "alpha-biology/residuecomplex_v73",
+    429
+  ],
+  "prodiffusion": [
+    "alpha-biology/prodiffusion",
+    429
+  ],
+  "protdiffusion": [
+    "alpha-biology/protdiffusion",
+    429
+  ],
+  "optsearch_v75": [
+    "alpha-biology/optsearch_v75",
+    429
+  ],
+  "bioig": [
+    "alpha-biology/bioig",
+    429
+  ],
+  "seqscore": [
+    "alpha-biology/seqscore",
+    429
+  ],
+  "affinityoptimizer_4": [
+    "alpha-biology/affinityoptimizer_4",
+    429
+  ],
+  "symmetryab_v74": [
+    "alpha-biology/symmetryab_v74",
+    429
+  ],
+  "optcomplex": [
+    "alpha-biology/optcomplex",
+    429
+  ],
+  "rfscore_4": [
+    "alpha-biology/rfscore_4",
+    429
+  ],
+  "modelpredict_4": [
+    "alpha-biology/modelpredict_4",
+    429
+  ],
+  "activemodel_2_v76": [
+    "alpha-biology/activemodel_2_v76",
+    429
+  ],
+  "ligandvae_v77": [
+    "alpha-biology/ligandvae_v77",
+    429
+  ],
+  "openoptimizer_3": [
+    "alpha-biology/openoptimizer_3",
+    429
+  ],
+  "quicksim_v78": [
+    "alpha-biology/quicksim_v78",
+    429
+  ],
+  "chemgraph": [
+    "alpha-biology/chemgraph",
+    429
+  ],
+  "bindingscreen_3": [
+    "alpha-biology/bindingscreen_3",
+    429
+  ],
+  "unicharge": [
+    "alpha-biology/unicharge",
+    429
+  ],
+  "diffmodel": [
+    "alpha-biology/diffmodel",
+    429
+  ],
+  "modelnet": [
+    "alpha-biology/modelnet",
+    429
+  ],
+  "modelmetrics_v81": [
+    "alpha-biology/modelmetrics_v81",
+    429
+  ],
+  "residuelink_v79": [
+    "alpha-biology/residuelink_v79",
+    429
+  ],
+  "procomplex": [
+    "alpha-biology/procomplex",
+    429
+  ],
+  "openalign_v80": [
+    "alpha-biology/openalign_v80",
+    429
+  ],
+  "deepmodel": [
+    "alpha-biology/deepmodel",
+    429
+  ],
+  "quickalign": [
+    "alpha-biology/quickalign",
+    429
+  ],
+  "residuefill_v82": [
+    "alpha-biology/residuefill_v82",
+    429
+  ],
+  "alphavae": [
+    "alpha-biology/alphavae",
+    429
+  ],
+  "esmgan": [
+    "alpha-biology/esmgan",
+    429
+  ],
+  "residueoptimizer": [
+    "alpha-biology/residueoptimizer",
+    429
+  ],
+  "rfig_v83": [
+    "alpha-biology/rfig_v83",
+    429
+  ],
+  "diffrefine": [
+    "alpha-biology/diffrefine",
+    429
+  ],
+  "seqpredict": [
+    "alpha-biology/seqpredict",
+    429
+  ],
+  "esmfilter_3": [
+    "alpha-biology/esmfilter_3",
+    429
+  ],
+  "structdesign": [
+    "alpha-biology/structdesign",
+    429
+  ],
+  "cryonet": [
+    "alpha-biology/cryonet",
+    429
+  ],
+  "bindingfilter_2": [
+    "alpha-biology/bindingfilter_2",
+    429
+  ],
+  "phenixdiffusion_2": [
+    "alpha-biology/phenixdiffusion_2",
+    429
+  ],
+  "modelmetrics_v84": [
+    "alpha-biology/modelmetrics_v84",
+    429
+  ],
+  "dockmap": [
+    "alpha-biology/dockmap",
+    429
+  ],
+  "symmetrypredict": [
+    "alpha-biology/symmetrypredict",
+    429
+  ],
+  "optfill_v30": [
+    "alpha-biology/optfill_v30",
+    -1
+  ],
+  "cryobert": [
+    "alpha-biology/cryobert",
+    429
+  ],
+  "residuemetrics_v85": [
+    "alpha-biology/residuemetrics_v85",
+    429
+  ],
+  "protab": [
+    "alpha-biology/protab",
+    429
+  ],
+  "procharge": [
+    "alpha-biology/procharge",
+    429
+  ],
+  "bindingsearch_2": [
+    "alpha-biology/bindingsearch_2",
+    429
+  ],
+  "prorefine_v87": [
+    "alpha-biology/prorefine_v87",
+    429
+  ],
+  "symmetrysim": [
+    "alpha-biology/symmetrysim",
+    429
+  ],
+  "proig_v86": [
+    "alpha-biology/proig_v86",
+    429
+  ],
+  "structscan": [
+    "alpha-biology/structscan",
+    429
+  ],
+  "symmetrycharge_v88": [
+    "alpha-biology/symmetrycharge_v88",
+    429
+  ],
+  "geomdesign": [
+    "alpha-biology/geomdesign",
+    429
+  ],
+  "pocketsearch": [
+    "alpha-biology/pocketsearch",
+    429
+  ],
+  "targetsim_v89": [
+    "alpha-biology/targetsim_v89",
+    429
+  ],
+  "activemetrics_v90": [
+    "alpha-biology/activemetrics_v90",
+    429
+  ],
+  "protbert": [
+    "alpha-biology/protbert",
+    429
+  ],
+  "bioscreen_4": [
+    "alpha-biology/bioscreen_4",
+    429
+  ],
+  "cryopredict": [
+    "alpha-biology/cryopredict",
+    429
+  ],
+  "foldscan": [
+    "alpha-biology/foldscan",
+    429
+  ],
+  "helixscreen": [
+    "alpha-biology/helixscreen",
+    429
+  ],
+  "esmalign_v91": [
+    "alpha-biology/esmalign_v91",
+    429
+  ],
+  "flowsearch_4": [
+    "alpha-biology/flowsearch_4",
+    429
+  ],
+  "multimodel_4": [
+    "alpha-biology/multimodel_4",
+    429
+  ],
+  "residuempnn_v92": [
+    "alpha-biology/residuempnn_v92",
+    429
+  ],
+  "openfill": [
+    "alpha-biology/openfill",
+    429
+  ],
+  "alphascan": [
+    "alpha-biology/alphascan",
+    429
+  ],
+  "targetoptimizer_3": [
+    "alpha-biology/targetoptimizer_3",
+    429
+  ],
+  "phenixrefine": [
+    "alpha-biology/phenixrefine",
+    429
+  ],
+  "dynamicoptimizer": [
+    "alpha-biology/dynamicoptimizer",
+    429
+  ],
+  "modeldiffusion": [
+    "alpha-biology/modeldiffusion",
+    429
+  ],
+  "biosolver_v93": [
+    "alpha-biology/biosolver_v93",
+    429
+  ],
+  "symmetrysearch": [
+    "alpha-biology/symmetrysearch",
+    429
+  ],
+  "optlink": [
+    "alpha-biology/optlink",
+    429
+  ],
+  "quicknet_3": [
+    "alpha-biology/quicknet_3",
+    429
+  ],
+  "smartsim_4": [
+    "alpha-biology/smartsim_4",
+    429
+  ],
+  "deepgraph_v94": [
+    "alpha-biology/deepgraph_v94",
+    429
+  ],
+  "pocketsolver": [
+    "alpha-biology/pocketsolver",
+    429
+  ],
+  "unimetrics": [
+    "alpha-biology/unimetrics",
+    429
+  ],
+  "smartsim_4_v95": [
+    "alpha-biology/smartsim_4_v95",
+    429
+  ],
+  "ligandtcr": [
+    "alpha-biology/ligandtcr",
+    429
+  ],
+  "chembert_2": [
+    "alpha-biology/chembert_2",
+    429
+  ],
+  "unisolver": [
+    "alpha-biology/unisolver",
+    429
+  ],
+  "quicksim_v96": [
+    "alpha-biology/quicksim_v96",
+    429
+  ],
+  "foldtcr_v97": [
+    "alpha-biology/foldtcr_v97",
+    429
+  ],
+  "residueoptimizer_v98": [
+    "alpha-biology/residueoptimizer_v98",
+    429
+  ],
+  "unigpt": [
+    "alpha-biology/unigpt",
+    429
+  ],
+  "seqdiffusion": [
+    "alpha-biology/seqdiffusion",
+    429
+  ],
+  "ligandvae_v99": [
+    "alpha-biology/ligandvae_v99",
+    429
+  ],
+  "dockgraph": [
+    "alpha-biology/dockgraph",
+    429
+  ],
+  "dockgpt": [
+    "alpha-biology/dockgpt",
+    429
+  ],
+  "interactscreen_3": [
+    "alpha-biology/interactscreen_3",
+    429
+  ],
+  "foldalign": [
+    "alpha-biology/foldalign",
+    429
+  ],
+  "symmetryem": [
+    "alpha-biology/symmetryem",
+    429
+  ],
+  "cryobench": [
+    "alpha-biology/cryobench",
+    429
+  ],
+  "flownet_2": [
+    "alpha-biology/flownet_2",
+    429
+  ],
+  "seqfill": [
+    "alpha-biology/seqfill",
+    429
+  ],
+  "unifind_4": [
+    "alpha-biology/unifind_4",
+    429
+  ],
+  "seqpredict_v100": [
+    "alpha-biology/seqpredict_v100",
+    429
+  ],
+  "interactnet_v101": [
+    "alpha-biology/interactnet_v101",
+    429
+  ],
+  "diffalign": [
+    "alpha-biology/diffalign",
+    429
+  ],
+  "opentcr": [
+    "alpha-biology/opentcr",
+    429
+  ],
+  "quickrefine": [
+    "alpha-biology/quickrefine",
+    429
+  ],
+  "flowmap": [
+    "alpha-biology/flowmap",
+    429
+  ],
+  "activerefine": [
+    "alpha-biology/activerefine",
+    429
+  ],
+  "biosolver_v102": [
+    "alpha-biology/biosolver_v102",
+    429
+  ],
+  "openfilter_2": [
+    "alpha-biology/openfilter_2",
+    429
+  ],
+  "flownet": [
+    "alpha-biology/flownet",
+    429
+  ],
+  "helixoptimizer": [
+    "alpha-biology/helixoptimizer",
+    429
+  ],
+  "quickfind": [
+    "alpha-biology/quickfind",
+    429
+  ],
+  "genbert": [
+    "alpha-biology/genbert",
+    429
+  ],
+  "proab": [
+    "alpha-biology/proab",
+    429
+  ],
+  "gensim_v104": [
+    "alpha-biology/gensim_v104",
+    429
+  ],
+  "bindingfilter_v103": [
+    "alpha-biology/bindingfilter_v103",
+    429
+  ],
+  "esmmetrics": [
+    "alpha-biology/esmmetrics",
+    429
+  ],
+  "modelmpnn": [
+    "alpha-biology/modelmpnn",
+    429
+  ],
+  "interactem_v105": [
+    "alpha-biology/interactem_v105",
+    429
+  ],
+  "optfold": [
+    "alpha-biology/optfold",
+    429
+  ],
+  "multiem": [
+    "alpha-biology/multiem",
+    429
+  ],
+  "diffoptimizer_4": [
+    "alpha-biology/diffoptimizer_4",
+    429
+  ],
+  "helixnet_3": [
+    "alpha-biology/helixnet_3",
+    429
+  ],
+  "bindingbert": [
+    "alpha-biology/bindingbert",
+    429
+  ],
+  "progpt": [
+    "alpha-biology/progpt",
+    429
+  ],
+  "flowdiffusion_v107": [
+    "alpha-biology/flowdiffusion_v107",
+    429
+  ],
+  "rfmetrics": [
+    "alpha-biology/rfmetrics",
+    429
+  ],
+  "genfind": [
+    "alpha-biology/genfind",
+    429
+  ],
+  "chemtcr_v106": [
+    "alpha-biology/chemtcr_v106",
+    429
+  ],
+  "affinitybench": [
+    "alpha-biology/affinitybench",
+    429
+  ],
+  "smartfilter_v108": [
+    "alpha-biology/smartfilter_v108",
+    429
+  ],
+  "phenixmpnn": [
+    "alpha-biology/phenixmpnn",
+    429
+  ],
+  "esmsearch_v109": [
+    "alpha-biology/esmsearch_v109",
+    429
+  ],
+  "multifilter": [
+    "alpha-biology/multifilter",
+    429
+  ],
+  "deepfold_3": [
+    "alpha-biology/deepfold_3",
+    429
+  ],
+  "ligandem_4": [
+    "alpha-biology/ligandem_4",
+    429
+  ],
+  "chemfill_2": [
+    "alpha-biology/chemfill_2",
+    429
+  ],
+  "diffrefine_v110": [
+    "alpha-biology/diffrefine_v110",
+    429
+  ],
+  "unisolver_v111": [
+    "alpha-biology/unisolver_v111",
+    429
+  ],
+  "dockgpt_v112": [
+    "alpha-biology/dockgpt_v112",
+    429
+  ],
+  "diffsearch": [
+    "alpha-biology/diffsearch",
+    429
+  ],
+  "biotcr": [
+    "alpha-biology/biotcr",
+    429
+  ],
+  "profold": [
+    "alpha-biology/profold",
+    429
+  ],
+  "structfold": [
+    "alpha-biology/structfold",
+    429
+  ],
+  "diffsearch_v114": [
+    "alpha-biology/diffsearch_v114",
+    429
+  ],
+  "foldpredict": [
+    "alpha-biology/foldpredict",
+    429
+  ],
+  "targetgraph_v113": [
+    "alpha-biology/targetgraph_v113",
+    429
+  ],
+  "deepmodel_v116": [
+    "alpha-biology/deepmodel_v116",
+    429
+  ],
+  "modelnet_v115": [
+    "alpha-biology/modelnet_v115",
+    429
+  ],
+  "prompnn": [
+    "alpha-biology/prompnn",
+    429
+  ],
+  "proscan": [
+    "alpha-biology/proscan",
+    429
+  ],
+  "alphaalign_v117": [
+    "alpha-biology/alphaalign_v117",
+    429
+  ],
+  "pocketvae_v118": [
+    "alpha-biology/pocketvae_v118",
+    429
+  ],
+  "symmetrygpt_v119": [
+    "alpha-biology/symmetrygpt_v119",
+    429
+  ],
+  "procomplex_3": [
+    "alpha-biology/procomplex_3",
+    429
+  ],
+  "profill": [
+    "alpha-biology/profill",
+    429
+  ],
+  "foldmap": [
+    "alpha-biology/foldmap",
+    429
+  ],
+  "deeprefine": [
+    "alpha-biology/deeprefine",
+    429
+  ],
+  "modelig": [
+    "alpha-biology/modelig",
+    429
+  ],
+  "residuelink_v121": [
+    "alpha-biology/residuelink_v121",
+    429
+  ],
+  "flowcomplex": [
+    "alpha-biology/flowcomplex",
+    429
+  ],
+  "rftcr_v120": [
+    "alpha-biology/rftcr_v120",
+    429
+  ],
+  "esmmodel_4": [
+    "alpha-biology/esmmodel_4",
+    429
+  ],
+  "affinitysense_v123": [
+    "alpha-biology/affinitysense_v123",
+    429
+  ],
+  "structscreen": [
+    "alpha-biology/structscreen",
+    429
+  ],
+  "foldvae_v122": [
+    "alpha-biology/foldvae_v122",
+    429
+  ],
+  "multidiffusion_v124": [
+    "alpha-biology/multidiffusion_v124",
+    429
+  ],
+  "modelmpnn_v125": [
+    "alpha-biology/modelmpnn_v125",
+    429
+  ],
+  "targetfind_3": [
+    "alpha-biology/targetfind_3",
+    429
+  ],
+  "multisense": [
+    "alpha-biology/multisense",
+    429
+  ],
+  "ligandmodel": [
+    "alpha-biology/ligandmodel",
+    429
+  ],
+  "deeppredict": [
+    "alpha-biology/deeppredict",
+    429
+  ],
+  "helixmodel_4": [
+    "alpha-biology/helixmodel_4",
+    429
+  ],
+  "residuedock": [
+    "alpha-biology/residuedock",
+    429
+  ],
+  "bioab_3": [
+    "alpha-biology/bioab_3",
+    429
+  ],
+  "prosim_4": [
+    "alpha-biology/prosim_4",
+    429
+  ],
+  "interactbench": [
+    "alpha-biology/interactbench",
+    429
+  ],
+  "pocketsearch_v126": [
+    "alpha-biology/pocketsearch_v126",
+    429
+  ],
+  "seqgpt_4": [
+    "alpha-biology/seqgpt_4",
+    429
+  ],
+  "profill_v128": [
+    "alpha-biology/profill_v128",
+    429
+  ],
+  "chemrefine_v127": [
+    "alpha-biology/chemrefine_v127",
+    429
+  ],
+  "esmfill_3": [
+    "alpha-biology/esmfill_3",
+    429
+  ],
+  "flowbench": [
+    "alpha-biology/flowbench",
+    429
+  ],
+  "bindingsim": [
+    "alpha-biology/bindingsim",
+    429
+  ],
+  "cryonet_v129": [
+    "alpha-biology/cryonet_v129",
+    429
+  ],
+  "esmvae": [
+    "alpha-biology/esmvae",
+    429
+  ],
+  "genem": [
+    "alpha-biology/genem",
+    429
+  ],
+  "chembert_v130": [
+    "alpha-biology/chembert_v130",
+    429
+  ],
+  "dockab": [
+    "alpha-biology/dockab",
+    429
+  ],
+  "affinitymetrics": [
+    "alpha-biology/affinitymetrics",
+    429
+  ],
+  "smartoptimizer": [
+    "alpha-biology/smartoptimizer",
+    429
+  ],
+  "ligandmap_v131": [
+    "alpha-biology/ligandmap_v131",
+    429
+  ],
+  "pocketfind": [
+    "alpha-biology/pocketfind",
+    429
+  ],
+  "cryomodel_v133": [
+    "alpha-biology/cryomodel_v133",
+    429
+  ],
+  "rfab_v132": [
+    "alpha-biology/rfab_v132",
+    429
+  ],
+  "esmnet_3": [
+    "alpha-biology/esmnet_3",
+    429
+  ],
+  "optcomplex_v135": [
+    "alpha-biology/optcomplex_v135",
+    429
+  ],
+  "unifilter_4": [
+    "alpha-biology/unifilter_4",
+    429
+  ],
+  "modelsense_4": [
+    "alpha-biology/modelsense_4",
+    429
+  ],
+  "prosense_2": [
+    "alpha-biology/prosense_2",
+    429
+  ],
+  "biomap": [
+    "alpha-biology/biomap",
+    429
+  ],
+  "affinityab_3": [
+    "alpha-biology/affinityab_3",
+    429
+  ],
+  "dockbench": [
+    "alpha-biology/dockbench",
+    429
+  ],
+  "symmetrymodel": [
+    "alpha-biology/symmetrymodel",
+    429
+  ],
+  "cryofind": [
+    "alpha-biology/cryofind",
+    429
+  ],
+  "provae_3": [
+    "alpha-biology/provae_3",
+    429
+  ],
+  "modelem_v134": [
+    "alpha-biology/modelem_v134",
+    429
+  ],
+  "biotcr_v136": [
+    "alpha-biology/biotcr_v136",
+    429
+  ],
+  "chemmodel": [
+    "alpha-biology/chemmodel",
+    429
+  ],
+  "quickem_3": [
+    "alpha-biology/quickem_3",
+    429
+  ],
+  "dockfind_v139": [
+    "alpha-biology/dockfind_v139",
+    429
+  ],
+  "dynamicmodel_v138": [
+    "alpha-biology/dynamicmodel_v138",
+    429
+  ],
+  "gensense_v141": [
+    "alpha-biology/gensense_v141",
+    429
+  ],
+  "optbench": [
+    "alpha-biology/optbench",
+    429
+  ],
+  "esmcharge_4": [
+    "alpha-biology/esmcharge_4",
+    429
+  ],
+  "foldmodel_v142": [
+    "alpha-biology/foldmodel_v142",
+    429
+  ],
+  "geomdock": [
+    "alpha-biology/geomdock",
+    429
+  ],
+  "prodiffusion_v140": [
+    "alpha-biology/prodiffusion_v140",
+    429
+  ],
+  "foldmpnn": [
+    "alpha-biology/foldmpnn",
+    429
+  ],
+  "flowcomplex_v137": [
+    "alpha-biology/flowcomplex_v137",
+    429
+  ],
+  "phenixab_3": [
+    "alpha-biology/phenixab_3",
+    429
+  ],
+  "docktcr": [
+    "alpha-biology/docktcr",
+    429
+  ],
+  "opendiffusion_v143": [
+    "alpha-biology/opendiffusion_v143",
+    429
+  ],
+  "openfill_4": [
+    "alpha-biology/openfill_4",
+    429
+  ],
+  "alphasolver_v145": [
+    "alpha-biology/alphasolver_v145",
+    429
+  ],
+  "dockmodel": [
+    "alpha-biology/dockmodel",
+    429
+  ],
+  "seqgraph": [
+    "alpha-biology/seqgraph",
+    429
+  ],
+  "dynamicscan": [
+    "alpha-biology/dynamicscan",
+    429
+  ],
+  "modelscreen": [
+    "alpha-biology/modelscreen",
+    429
+  ],
+  "docksolver_2": [
+    "alpha-biology/docksolver_2",
+    429
+  ],
+  "docknet_3": [
+    "alpha-biology/docknet_3",
+    429
+  ],
+  "foldcomplex_v144": [
+    "alpha-biology/foldcomplex_v144",
+    429
+  ],
+  "dynamicmetrics": [
+    "alpha-biology/dynamicmetrics",
+    429
+  ],
+  "flowfilter": [
+    "alpha-biology/flowfilter",
+    429
+  ],
+  "modelcomplex_4": [
+    "alpha-biology/modelcomplex_4",
+    429
+  ],
+  "targetnet_2": [
+    "alpha-biology/targetnet_2",
+    429
+  ],
+  "esmem": [
+    "alpha-biology/esmem",
+    429
+  ],
+  "activedock": [
+    "alpha-biology/activedock",
+    429
+  ],
+  "targetab_3": [
+    "alpha-biology/targetab_3",
+    429
+  ],
+  "residuescreen": [
+    "alpha-biology/residuescreen",
+    429
+  ],
+  "chemscreen": [
+    "alpha-biology/chemscreen",
+    429
+  ],
+  "optmodel_v149": [
+    "alpha-biology/optmodel_v149",
+    429
+  ],
+  "foldtcr_v146": [
+    "alpha-biology/foldtcr_v146",
+    429
+  ],
+  "interactdiffusion": [
+    "alpha-biology/interactdiffusion",
+    429
+  ],
+  "pronet": [
+    "alpha-biology/pronet",
+    429
+  ],
+  "targetsolver_v148": [
+    "alpha-biology/targetsolver_v148",
+    429
+  ],
+  "rfsolver_v147": [
+    "alpha-biology/rfsolver_v147",
+    429
+  ],
+  "proscan_4": [
+    "alpha-biology/proscan_4",
+    429
+  ],
+  "esmmodel": [
+    "alpha-biology/esmmodel",
+    429
+  ],
+  "smartmpnn": [
+    "alpha-biology/smartmpnn",
+    429
+  ],
+  "dynamicsense_v150": [
+    "alpha-biology/dynamicsense_v150",
+    429
+  ],
+  "geombench_2": [
+    "alpha-biology/geombench_2",
+    429
+  ],
+  "interactgraph_v151": [
+    "alpha-biology/interactgraph_v151",
+    429
+  ],
+  "helixmap_4": [
+    "alpha-biology/helixmap_4",
+    429
+  ],
+  "bionet_2": [
+    "alpha-biology/bionet_2",
+    429
+  ],
+  "alphafill_v153": [
+    "alpha-biology/alphafill_v153",
+    429
+  ],
+  "residuedock_v154": [
+    "alpha-biology/residuedock_v154",
+    429
+  ],
+  "symmetryoptimizer": [
+    "alpha-biology/symmetryoptimizer",
+    429
+  ],
+  "phenixoptimizer_2_v155": [
+    "alpha-biology/phenixoptimizer_2_v155",
+    429
+  ],
+  "targetscan_4": [
+    "alpha-biology/targetscan_4",
+    429
+  ],
+  "deepscreen": [
+    "alpha-biology/deepscreen",
+    429
+  ],
+  "diffdiffusion_2": [
+    "alpha-biology/diffdiffusion_2",
+    429
+  ],
+  "symmetrygan": [
+    "alpha-biology/symmetrygan",
+    429
+  ],
+  "multisense_v152": [
+    "alpha-biology/multisense_v152",
+    429
+  ],
+  "chemscan": [
+    "alpha-biology/chemscan",
+    429
+  ],
+  "seqscan_2": [
+    "alpha-biology/seqscan_2",
+    429
+  ],
+  "flowfold": [
+    "alpha-biology/flowfold",
+    429
+  ],
+  "protmetrics_v156": [
+    "alpha-biology/protmetrics_v156",
+    429
+  ],
+  "gendock_v157": [
+    "alpha-biology/gendock_v157",
+    429
+  ],
+  "openlink_3": [
+    "alpha-biology/openlink_3",
+    429
+  ],
+  "phenixfind_2": [
+    "alpha-biology/phenixfind_2",
+    429
+  ],
+  "seqsense": [
+    "alpha-biology/seqsense",
+    429
+  ],
+  "pocketscan": [
+    "alpha-biology/pocketscan",
+    429
+  ],
+  "alphaem_4_v158": [
+    "alpha-biology/alphaem_4_v158",
+    429
+  ],
+  "seqfind_v161": [
+    "alpha-biology/seqfind_v161",
+    429
+  ],
+  "helixab_3": [
+    "alpha-biology/helixab_3",
+    429
+  ],
+  "activempnn_v162": [
+    "alpha-biology/activempnn_v162",
+    429
+  ],
+  "smartgraph_v159": [
+    "alpha-biology/smartgraph_v159",
+    429
+  ],
+  "diffdock_v160": [
+    "alpha-biology/diffdock_v160",
+    429
+  ],
+  "multifind": [
+    "alpha-biology/multifind",
+    429
+  ],
+  "alphagraph_2": [
+    "alpha-biology/alphagraph_2",
+    429
+  ],
+  "openlink_4": [
+    "alpha-biology/openlink_4",
+    429
+  ],
+  "opttcr_3": [
+    "alpha-biology/opttcr_3",
+    429
+  ],
+  "structvae_v163": [
+    "alpha-biology/structvae_v163",
+    429
+  ],
+  "foldgan_v164": [
+    "alpha-biology/foldgan_v164",
+    429
+  ],
+  "cryometrics_3": [
+    "alpha-biology/cryometrics_3",
+    429
+  ],
+  "residuegan_v167": [
+    "alpha-biology/residuegan_v167",
+    429
+  ],
+  "phenixnet_3": [
+    "alpha-biology/phenixnet_3",
+    429
+  ],
+  "multisense_v166": [
+    "alpha-biology/multisense_v166",
+    429
+  ],
+  "protvae": [
+    "alpha-biology/protvae",
+    429
+  ],
+  "seqpredict_v168": [
+    "alpha-biology/seqpredict_v168",
+    429
+  ],
+  "smartab_3_v165": [
+    "alpha-biology/smartab_3_v165",
+    429
+  ],
+  "cryometrics_3_v169": [
+    "alpha-biology/cryometrics_3_v169",
+    429
+  ]
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphafoldology: The AI Structural Biology Lineage</title>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css?v=10">
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+          <span class="badge">Ecosystem Map</span>
+          <a href="https://github.com/KarelBerka/alphafoldology" target="_blank" class="gh-repo-badge">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" style="vertical-align: middle; margin-top: -1px;">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            KarelBerka/alphafoldology
+          </a>
+        </div>
+        <h1 id="main-title">ALPHAFOLDOLOGY</h1>
+        <p class="subtitle">The Lineage & Downstream Evolution of AI Protein Folding</p>
+      </div>
+      <div class="history-card">
+        <h3>Origin of the Term</h3>
+        <p>Coined in September 2021 by researchers <strong>Karel Berka</strong> and <strong>Marian Novotný</strong> to describe the rapid explosion of AI-driven structural biology tools emerging in the wake of AlphaFold's breakthrough.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Metrics Overview Bar -->
+  <section class="metrics-bar">
+    <div class="metric-item">
+      <span class="metric-val" id="stat-total-tools">—</span>
+      <span class="metric-label">Analyzed Tools</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+      <span class="metric-val" id="stat-total-stars">—</span>
+      <span class="metric-label">GitHub Stars</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+      <span class="metric-val" id="stat-total-citations">—</span>
+      <span class="metric-label">Academic Citations</span>
+    </div>
+    <div class="metric-divider"></div>
+    <div class="metric-item">
+      <span class="metric-val" id="stat-last-update">—</span>
+      <span class="metric-label">Last Database Scrape</span>
+    </div>
+  </section>
+
+  <!-- Lineage Tree Container -->
+  <section class="tree-section">
+    <div class="section-title-container">
+      <h2>🧬 Alphafoldology Genealogy Map</h2>
+      <p class="section-desc">Interactive lineage tracing connections, derivations, and conceptual dependencies from AlphaFold 2.</p>
+    </div>
+    <div class="tree-viewport-container">
+      <div class="tree-controls">
+        <button id="btn-zoom-in" title="Zoom In">+</button>
+        <button id="btn-zoom-out" title="Zoom Out">−</button>
+        <button id="btn-reset-zoom" title="Reset view">Reset</button>
+        <button id="btn-expand-tree" title="Toggle Expanded Map Size">Expand Map</button>
+      </div>
+      <div class="tree-canvas" id="tree-canvas">
+        <svg id="svg-tree" width="4500" height="2400">
+          <g id="viewport-group">
+            <g id="svg-connections"></g>
+            <g id="svg-nodes"></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls & Content Area -->
+  <main class="dashboard-content">
+    <div class="left-column">
+      <!-- Search & Filtering -->
+      <section class="filter-card">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="search-input" placeholder="Search tools by name, capabilities, strengths...">
+        </div>
+        
+        <div class="filter-group">
+          <label>Category</label>
+          <div class="filter-chips" id="category-chips">
+            <button class="chip active" data-category="all">All</button>
+            <button class="chip" data-category="Core Predictors">Core Predictors</button>
+            <button class="chip" data-category="Fast Predictors">Fast Predictors</button>
+            <button class="chip" data-category="Protein Design">Protein Design</button>
+            <button class="chip" data-category="Variant Predictors">Variant Predictors</button>
+            <button class="chip" data-category="Structural Search">Structural Search</button>
+            <button class="chip" data-category="Ligand Docking">Ligand Docking</button>
+            <button class="chip" data-category="Protein Docking">Protein Docking</button>
+            <button class="chip" data-category="Databases">Databases</button>
+            <button class="chip" data-category="Visualization">Visualization</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label>Sort By</label>
+          <div class="filter-chips" id="sort-chips">
+            <button class="chip active" data-sort="default">Default (Genealogy)</button>
+            <button class="chip" data-sort="date-desc">Release Date (Newest)</button>
+            <button class="chip" data-sort="stars-desc">GitHub Stars</button>
+            <button class="chip" data-sort="citations-desc">Citations</button>
+          </div>
+        </div>
+
+        <div class="filter-footer">
+          <div class="view-toggle">
+            <button id="btn-view-grid" class="active" title="Grid View">
+              <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </button>
+            <button id="btn-view-table" title="Table View">
+              <svg viewBox="0 0 24 24" width="16" height="16"><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <span id="results-count" class="results-count">Showing 1001 tools</span>
+        </div>
+      </section>
+
+      <!-- Tools Display -->
+      <section class="tools-container">
+        <!-- Grid View -->
+        <div class="tools-grid" id="tools-grid">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Table View (hidden by default) -->
+        <div class="tools-table-container" id="tools-table-container" style="display: none;">
+          <table class="tools-table">
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Release Date</th>
+                <th>GitHub Stars</th>
+                <th>Citations</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tools-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column (Social Media Feed & X/Bluesky Check) -->
+    <aside class="right-column">
+      <div class="social-widget">
+        <div class="social-header">
+          <h3>💬 #alphafoldology Buzz</h3>
+          <span class="social-pulse"></span>
+        </div>
+        <p class="social-intro">Checking social activity on X.com and Bluesky for hashtag references and scientific discussions.</p>
+        
+        <!-- Live Action Buttons -->
+        <div class="social-buttons">
+          <a href="https://x.com/search?q=%23alphafoldology" target="_blank" class="social-btn x-btn">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            Search X.com
+          </a>
+          <a href="https://bsky.app/search?q=alphafoldology" target="_blank" class="social-btn bsky-btn">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 10.8c-.833-1.633-3.333-5.3-5-6.833-2.5-2.3-5-1.733-5 1.133 0 5.633 4.167 9.8 10 9.8 5.833 0 10-4.167 10-9.8 0-2.867-2.5-3.433-5-1.133-1.667 1.533-4.167 5.2-5 6.833z"/>
+            </svg>
+            Search Bluesky
+          </a>
+        </div>
+
+        <div class="feed-divider">Recent Posts</div>
+        
+        <div class="social-feed" id="social-feed">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Detailed Modal -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <div>
+          <span class="chip" id="modal-category">Category</span>
+          <span class="chip modal-date" id="modal-date">Date</span>
+          <h2 id="modal-title">Tool Name</h2>
+        </div>
+        <span class="status-badge" id="modal-status">Active</span>
+      </div>
+      
+      <div class="modal-body">
+        <div class="modal-main-info">
+          <h3>Description</h3>
+          <p id="modal-description">Detailed description...</p>
+          
+          <h3>Strengths & Weaknesses</h3>
+          <div class="sw-grid">
+            <div class="sw-box strength">
+              <h4>Strengths</h4>
+              <p id="modal-strengths">...</p>
+            </div>
+            <div class="sw-box weakness">
+              <h4>Weaknesses</h4>
+              <p id="modal-weaknesses">...</p>
+            </div>
+          </div>
+
+          <h3>Usage Details</h3>
+          <p id="modal-usage">...</p>
+        </div>
+
+        <div class="modal-sidebar">
+          <div class="sidebar-box stats-box">
+            <h4>Live Metrics</h4>
+            <div class="sidebar-stat">
+              <span>GitHub Stars</span>
+              <strong id="modal-stars">0</strong>
+            </div>
+            <div class="sidebar-stat">
+              <span>Forks</span>
+              <strong id="modal-forks">0</strong>
+            </div>
+            <div class="sidebar-stat">
+              <span>Open Issues</span>
+              <strong id="modal-issues">0</strong>
+            </div>
+            <div class="sidebar-stat">
+              <span>Academic Citations</span>
+              <strong id="modal-citations">0</strong>
+            </div>
+            <div class="sidebar-stat" id="modal-doi-container">
+              <span>DOI Link</span>
+              <strong><a href="#" target="_blank" id="modal-doi-link" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan); max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block;">—</a></strong>
+            </div>
+            <a href="#" target="_blank" id="modal-github-link" class="sidebar-btn gh-link">View Repository</a>
+          </div>
+
+          <div class="sidebar-box lineage-box">
+            <h4>Connections</h4>
+            <div class="lineage-line">
+              <span>Parent:</span>
+              <strong id="modal-parent">None</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scraped Derivatives Section -->
+      <div class="derivatives-section">
+        <div class="derivatives-header">
+          <h3>🌿 Derivative Works & Downstream Influence</h3>
+        </div>
+        <div class="derivatives-grid">
+          <div class="derivatives-block">
+            <h4>Popular Repository Forks</h4>
+            <ul id="modal-forks-list" class="derivatives-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+          <div class="derivatives-block">
+            <h4>Top Citing Scientific Papers</h4>
+            <ul id="modal-papers-list" class="derivatives-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Alphafoldology Hub • Connected to the <a href="https://github.com/KarelBerka/alphafoldology" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">KarelBerka/alphafoldology</a> repository.</p>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="index.js?v=10"></script>
+</body>
+</html>
