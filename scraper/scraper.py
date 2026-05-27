@@ -1403,6 +1403,23 @@ def main():
     
     # Static Fallback Data for new tools in case of API failure / rate limits
     FALLBACK_DATA = {
+    "livia": {
+        "github_stars": 32,
+        "github_forks": 5,
+        "github_open_issues": 1,
+        "github_description": "LIVIA: Local Interaction Visualization and Analysis for predicted protein-protein interactions.",
+        "github_top_forks": [],
+        "citations_count": 1,
+        "citing_papers": [
+            {
+                "title": "LIVIA: a browser-based tool for assessing and visualizing predicted protein interactions",
+                "url": "https://doi.org/10.64898/2026.05.01.721633",
+                "citations": 1,
+                "year": 2026,
+                "authors": "Ah-Ram Kim et al."
+            }
+        ]
+    },
         "alphafold1": {
             "github_stars": 14607,
             "github_forks": 2622,
