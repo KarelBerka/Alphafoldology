@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <div class="card-actions">
             <button class="btn btn-secondary btn-details" data-id="${tool.id}">Explore Derivatives</button>
-            <a href="https://github.com/${tool.repo}" target="_blank" class="btn btn-primary">Repo</a>
+            ${tool.repo ? `<a href="https://github.com/${tool.repo}" target="_blank" class="btn btn-primary">Repo</a>` : `<span class="btn btn-secondary" style="opacity: 0.5; cursor: not-allowed;" title="No public repository available">No Repo</span>`}
           </div>
         </div>
       `;
@@ -635,7 +635,13 @@ document.addEventListener('DOMContentLoaded', () => {
     modalIssues.textContent = tool.github_open_issues ? tool.github_open_issues.toLocaleString() : '—';
     modalCitations.textContent = tool.citations_count ? tool.citations_count.toLocaleString() : '—';
     
-    modalGithubLink.href = `https://github.com/${tool.repo}`;
+    if (tool.repo) {
+      modalGithubLink.href = `https://github.com/${tool.repo}`;
+      modalGithubLink.style.display = 'block';
+    } else {
+      modalGithubLink.href = '#';
+      modalGithubLink.style.display = 'none';
+    }
 
     const modalDoiLink = document.getElementById('modal-doi-link');
     const modalDoiContainer = document.getElementById('modal-doi-container');
