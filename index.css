@@ -1450,3 +1450,51 @@ footer {
 .chip.cat-protein-docking { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.2); color: #06b6d4; }
 .chip.cat-databases { background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.2); color: #ec4899; }
 .chip.cat-visualization { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+
+/* ==========================================================================
+   Mobile Responsive Enhancements
+   ========================================================================== */
+@media (max-width: 768px) {
+  .logo-area h1 {
+    font-size: 2.2rem;
+  }
+  header {
+    padding: 1.5rem 1rem;
+  }
+  .tree-section {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+  .dashboard-content {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+  .tools-table-container {
+    overflow-x: auto;
+  }
+  .modal-card {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  .modal-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  .filter-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .metrics-bar {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .social-widget {
+    position: static;
+  }
+}
+
