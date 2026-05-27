@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toolsGrid = document.getElementById('tools-grid');
   const toolsTableContainer = document.getElementById('tools-table-container');
   const toolsTableBody = document.getElementById('tools-table-body');
+  const tableViewWrapper = document.getElementById('table-view-wrapper');
+  const floatingScrollbar = document.getElementById('floating-scrollbar');
+  const floatingScrollbarInner = document.getElementById('floating-scrollbar-inner');
+  const toolsTable = document.getElementById('tools-table');
   
   const btnViewGrid = document.getElementById('btn-view-grid');
   const btnViewTable = document.getElementById('btn-view-table');
@@ -599,6 +603,11 @@ document.addEventListener('DOMContentLoaded', () => {
       
       toolsTableBody.appendChild(row);
     });
+    
+    // Update scrollbar width after table render
+    if (activeView === 'table') {
+      setTimeout(updateFloatingScrollbar, 50);
+    }
   }
 
   function getCategoryClass(category) {
@@ -760,15 +769,48 @@ document.addEventListener('DOMContentLoaded', () => {
     btnViewGrid.classList.add('active');
     btnViewTable.classList.remove('active');
     toolsGrid.style.display = 'grid';
-    toolsTableContainer.style.display = 'none';
+    tableViewWrapper.style.display = 'none';
+    activeView = 'grid';
   });
 
   btnViewTable.addEventListener('click', () => {
     btnViewTable.classList.add('active');
     btnViewGrid.classList.remove('active');
     toolsGrid.style.display = 'none';
-    toolsTableContainer.style.display = 'block';
+    tableViewWrapper.style.display = 'block';
+    activeView = 'table';
+    setTimeout(updateFloatingScrollbar, 50);
   });
+
+  // Floating Scrollbar Synchronization Logic
+  function updateFloatingScrollbar() {
+    if (floatingScrollbarInner && toolsTable) {
+      floatingScrollbarInner.style.width = toolsTable.offsetWidth + 'px';
+    }
+  }
+
+  if (floatingScrollbar && toolsTableContainer) {
+    let isSyncingLeft = false;
+    let isSyncingRight = false;
+    
+    floatingScrollbar.addEventListener('scroll', () => {
+      if (!isSyncingLeft) {
+        isSyncingRight = true;
+        toolsTableContainer.scrollLeft = floatingScrollbar.scrollLeft;
+      }
+      isSyncingLeft = false;
+    });
+    
+    toolsTableContainer.addEventListener('scroll', () => {
+      if (!isSyncingRight) {
+        isSyncingLeft = true;
+        floatingScrollbar.scrollLeft = toolsTableContainer.scrollLeft;
+      }
+      isSyncingRight = false;
+    });
+    
+    window.addEventListener('resize', updateFloatingScrollbar);
+  }
 
   // Zoom and Pan Handlers for SVG Tree targeting the #viewport-group
   function applyTransform() {

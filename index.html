@@ -143,23 +143,28 @@
         </div>
 
         <!-- Table View (hidden by default) -->
-        <div class="tools-table-container" id="tools-table-container" style="display: none;">
-          <table class="tools-table">
-            <thead>
-              <tr>
-                <th>Tool</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Release Date</th>
-                <th>GitHub Stars</th>
-                <th>Citations</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="tools-table-body">
-              <!-- Dynamically populated -->
-            </tbody>
-          </table>
+        <div id="table-view-wrapper" style="display: none; position: relative;">
+          <div class="floating-scrollbar" id="floating-scrollbar">
+            <div id="floating-scrollbar-inner"></div>
+          </div>
+          <div class="tools-table-container" id="tools-table-container">
+            <table class="tools-table" id="tools-table">
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Release Date</th>
+                  <th>GitHub Stars</th>
+                  <th>Citations</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tools-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </div>
