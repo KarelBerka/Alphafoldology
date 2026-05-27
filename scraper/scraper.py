@@ -1403,6 +1403,23 @@ def main():
     
     # Static Fallback Data for new tools in case of API failure / rate limits
     FALLBACK_DATA = {
+    "molstar": {
+        "github_stars": 820,
+        "github_forks": 155,
+        "github_open_issues": 34,
+        "github_description": "Comprehensive library for molecular visualization and analysis.",
+        "github_top_forks": [],
+        "citations_count": 485,
+        "citing_papers": [
+            {
+                "title": "Mol* Viewer: modern web app for 3D visualization and analysis of large biomolecular structures",
+                "url": "https://doi.org/10.1093/nar/gkab314",
+                "citations": 485,
+                "year": 2021,
+                "authors": "David Sehnal et al."
+            }
+        ]
+    },
     "livia": {
         "github_stars": 32,
         "github_forks": 5,
