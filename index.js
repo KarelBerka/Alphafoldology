@@ -538,9 +538,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
-          <div class="card-citation" style="margin-bottom: 1.25rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted);">
-            <span style="font-weight: 600;">Paper:</span>
-            ${tool.paper_doi ? `<a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 190px;" title="DOI: ${tool.paper_doi}">DOI: ${tool.paper_doi}</a>` : '<span style="font-style: italic;">No DOI listed</span>'}
+          <div class="card-citation" style="margin-bottom: 1.25rem; font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-muted);">
+            ${tool.paper_doi ? `<div><span style="font-weight: 600; color: var(--text-main);">Journal:</span> <a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.paper_doi}">${tool.paper_doi}</a></div>` : ''}
+            ${tool.preprint_doi ? `<div><span style="font-weight: 600; color: var(--text-main);">Preprint:</span> <a href="https://doi.org/${tool.preprint_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.preprint_doi}">${tool.preprint_doi}</a></div>` : ''}
+            ${(!tool.paper_doi && !tool.preprint_doi) ? '<span style="font-style: italic;">No DOI listed</span>' : ''}
           </div>
 
           <div class="card-actions">
@@ -584,7 +585,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <td>${tool.github_stars ? tool.github_stars.toLocaleString() : '—'}</td>
         <td>
           ${tool.citations_count ? tool.citations_count.toLocaleString() : '—'}
-          ${tool.paper_doi ? `<a href="https://doi.org/${tool.paper_doi}" target="_blank" title="View Publication (DOI: ${tool.paper_doi})" style="color: var(--accent-cyan); text-decoration: none; margin-left: 0.5rem; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 4px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2);">🔗</a>` : ''}
+          ${tool.paper_doi ? `<a href="https://doi.org/${tool.paper_doi}" target="_blank" title="View Journal Publication (DOI: ${tool.paper_doi})" style="color: var(--accent-cyan); text-decoration: none; margin-left: 0.5rem; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 4px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2);">📄</a>` : ''}
+          ${tool.preprint_doi ? `<a href="https://doi.org/${tool.preprint_doi}" target="_blank" title="View Preprint (DOI: ${tool.preprint_doi})" style="color: #ec4899; text-decoration: none; margin-left: 0.35rem; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 4px; background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2);">✍️</a>` : ''}
         </td>
         <td>
           <button class="btn btn-secondary btn-details-table" data-id="${tool.id}" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">Details</button>
@@ -643,15 +645,26 @@ document.addEventListener('DOMContentLoaded', () => {
       modalGithubLink.style.display = 'none';
     }
 
-    const modalDoiLink = document.getElementById('modal-doi-link');
-    const modalDoiContainer = document.getElementById('modal-doi-container');
+    const modalPaperDoiLink = document.getElementById('modal-paper-doi-link');
+    const modalPaperDoiContainer = document.getElementById('modal-paper-doi-container');
     if (tool.paper_doi) {
-      modalDoiLink.href = `https://doi.org/${tool.paper_doi}`;
-      modalDoiLink.textContent = tool.paper_doi;
-      modalDoiLink.title = `DOI: ${tool.paper_doi}`;
-      modalDoiContainer.style.display = 'flex';
+      modalPaperDoiLink.href = `https://doi.org/${tool.paper_doi}`;
+      modalPaperDoiLink.textContent = tool.paper_doi;
+      modalPaperDoiLink.title = `Journal DOI: ${tool.paper_doi}`;
+      modalPaperDoiContainer.style.display = 'flex';
     } else {
-      modalDoiContainer.style.display = 'none';
+      modalPaperDoiContainer.style.display = 'none';
+    }
+
+    const modalPreprintDoiLink = document.getElementById('modal-preprint-doi-link');
+    const modalPreprintDoiContainer = document.getElementById('modal-preprint-doi-container');
+    if (tool.preprint_doi) {
+      modalPreprintDoiLink.href = `https://doi.org/${tool.preprint_doi}`;
+      modalPreprintDoiLink.textContent = tool.preprint_doi;
+      modalPreprintDoiLink.title = `Preprint DOI: ${tool.preprint_doi}`;
+      modalPreprintDoiContainer.style.display = 'flex';
+    } else {
+      modalPreprintDoiContainer.style.display = 'none';
     }
     
     // Parent connection

@@ -197,7 +197,9 @@ def generate_database():
             "repo": f"alpha-biology/{tid}",
             "category": category,
             "status": status,
-            "paper_doi": f"10.1101/202{random.randint(1, 6)}.{random.randint(1, 12):02d}.{random.randint(1, 28):02d}.{random.randint(100000, 999999)}",
+            "paper_doi": None,
+            "preprint_doi": None,
+            "preprint_link": None,
             "parent": parent_id,
             "usage": usage,
             "strengths": strengths,
@@ -215,16 +217,8 @@ def generate_database():
                     "stars": random.randint(1, 15)
                 }
             ] if random.random() > 0.5 else [],
-            "citations_count": citations,
-            "citing_papers": [
-                {
-                    "title": f"Application of {name} in structural analysis of protein complexes",
-                    "url": f"https://doi.org/10.1038/s41598-02{random.randint(1, 6)}-{random.randint(10000, 99999)}-z",
-                    "citations": random.randint(1, 30),
-                    "year": int(t_date.split("-")[0]) + random.randint(0, 1),
-                    "authors": "Research Group et al."
-                }
-            ] if citations > 0 else []
+            "citations_count": 0,
+            "citing_papers": []
         }
         
         updated_tools.append(new_tool)

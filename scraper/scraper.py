@@ -2348,7 +2348,7 @@ def main():
             "citing_papers": [
                 {
                     "title": "DiffDock-PP Primary Paper",
-                    "url": "https://doi.org/10.1101/2023.04.10.536281" if "10.1101/2023.04.10.536281" else "https://github.com/gcorso/DiffDock-PP",
+                    "url": "https://doi.org/10.48550/arXiv.2304.03889",
                     "citations": 25,
                     "year": 2021,
                     "authors": "Scientific Consortium et al."

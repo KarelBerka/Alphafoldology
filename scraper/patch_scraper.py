@@ -66,8 +66,48 @@ patch_code = """
         return (s_date + datetime.timedelta(days=random.randint(0, days_between))).isoformat()
 
     # Pre-process curated tools: fix RoseTTAFold parent, split Docking, add dates
+    
+    # Mappings of preprint vs peer-reviewed final papers and correct repos
+    publication_mappings = {
+        "rosettafold": ("10.1101/2021.06.14.448402", "10.1126/science.abj8754", "https://doi.org/10.1126/science.abj8754", "RosettaCommons/RoseTTAFold"),
+        "colabfold": ("10.1101/2021.08.15.456425", "10.1038/s41592-022-01432-1", "https://doi.org/10.1038/s41592-022-01432-1", "sokrypton/ColabFold"),
+        "openfold": ("10.1101/2022.11.20.517210", "10.1038/s41592-024-02272-z", "https://doi.org/10.1038/s41592-024-02272-z", "aqlaboratory/openfold"),
+        "esmfold": ("10.1101/2022.07.20.500802", "10.1126/science.ade2501", "https://doi.org/10.1126/science.ade2501", "facebookresearch/esm"),
+        "proteinmpnn": ("10.1101/2022.06.03.494563", "10.1126/science.add5091", "https://doi.org/10.1126/science.add5091", "dauparas/ProteinMPNN"),
+        "rfdiffusion": ("10.1101/2022.12.09.519715", "10.1038/s41586-023-06415-8", "https://doi.org/10.1038/s41586-023-06415-8", "RosettaCommons/RFdiffusion"),
+        "chroma": ("10.48550/arXiv.2212.04077", "10.1038/s41587-023-01992-4", "https://doi.org/10.1038/s41587-023-01992-4", "generatebio/chroma"),
+        "dynamicbind": ("10.1101/2023.09.25.558368", "10.1038/s41467-024-46032-z", "https://doi.org/10.1038/s41467-024-46032-z", "thu-ml/DynamicBind"),
+        "igfold": ("10.1101/2022.04.11.487918", "10.1038/s41467-023-38063-x", "https://doi.org/10.1038/s41467-023-38063-x", "Graylab/IgFold"),
+        "diffdock_pp": ("10.48550/arXiv.2304.03889", None, "https://doi.org/10.48550/arXiv.2304.03889", "ketatam/DiffDock-PP"),
+        "flowdock": (None, "10.1093/bioinformatics/btaf187", "https://doi.org/10.1093/bioinformatics/btaf187", "BioinfoMachineLearning/FlowDock"),
+        "lyra": (None, "10.1093/nar/gkv535", "https://doi.org/10.1093/nar/gkv535", None),
+        "abfold": ("10.1101/2023.04.20.537598", None, "https://doi.org/10.1101/2023.04.20.537598", None),
+        "lightfold": (None, None, None, None),
+        "colabdesign": (None, None, None, "sokrypton/ColabDesign"),
+        "bindcraft": (None, "10.1038/s41586-025-09429-6", "https://doi.org/10.1038/s41586-025-09429-6", "martinpacesa/BindCraft"),
+        "foldseek": ("10.1101/2022.02.07.479398", "10.1038/s41587-023-01773-0", "https://doi.org/10.1038/s41587-023-01773-0", "steineggerlab/foldseek"),
+        "rocket": ("10.1101/2025.02.18.638828", "10.1038/s41592-026-03914-y", "https://doi.org/10.1101/2025.02.18.638828", "alisiafadini/ROCKET")
+    }
     for tool in TOOLS_CURATED:
         tid = tool["id"]
+        # Apply correct repos and preprint/peer-reviewed DOIs
+        if tid in publication_mappings:
+            prep_doi, pap_doi, cit_url, correct_repo = publication_mappings[tid]
+            tool["preprint_doi"] = prep_doi
+            tool["preprint_link"] = f"https://doi.org/{prep_doi}" if prep_doi else None
+            tool["paper_doi"] = pap_doi
+            tool["doi_link"] = f"https://doi.org/{pap_doi}" if pap_doi else None
+            if correct_repo:
+                tool["repo"] = correct_repo
+            else:
+                tool["repo"] = None
+            if cit_url and tool.get("citing_papers"):
+                for paper in tool["citing_papers"]:
+                    if "Primary Paper" in paper["title"] or tid in paper["title"].lower() or "application" in paper["title"].lower():
+                        paper["url"] = cit_url
+                        break
+            elif not cit_url:
+                tool["citing_papers"] = []
         if tid == "rosettafold":
             tool["parent"] = "alphafold1"
         if tool["category"] == "Docking":
@@ -147,7 +187,9 @@ patch_code = """
             "repo": f"alpha-biology/{tid}",
             "category": category,
             "status": status,
-            "paper_doi": f"10.1101/202{random.randint(1, 6)}.{random.randint(1, 12):02d}.{random.randint(100000, 999999)}",
+            "paper_doi": None,
+            "preprint_doi": None,
+            "preprint_link": None,
             "parent": parent_id,
             "usage": usage,
             "strengths": strengths,
@@ -168,16 +210,8 @@ patch_code = """
                     "stars": random.randint(1, 15)
                 }
             ] if random.random() > 0.5 else [],
-            "citations_count": citations,
-            "citing_papers": [
-                {
-                    "title": f"Application of {name} in structural analysis of protein complexes",
-                    "url": f"https://doi.org/10.1038/s41598-02{random.randint(1, 6)}-{random.randint(10000, 99999)}-z",
-                    "citations": random.randint(1, 30),
-                    "year": int(t_date.split("-")[0]) + random.randint(0, 1),
-                    "authors": "Research Group et al."
-                }
-            ] if citations > 0 else []
+            "citations_count": 0,
+            "citing_papers": []
         }
         
         TOOLS_CURATED.append(new_tool)
