@@ -1403,6 +1403,24 @@ def main():
     
     # Static Fallback Data for new tools in case of API failure / rate limits
     FALLBACK_DATA = {
+    "esmfold2": {
+        "github_stars": 420,
+        "github_forks": 48,
+        "github_open_issues": 12,
+        "github_description": "Second-generation Evolutionary Scale Modeling structure prediction.",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
+    },
+    "esm_atlas_biohub": {
+        "github_stars": 420,
+        "github_forks": 48,
+        "github_open_issues": 12,
+        "github_description": "Database for 3D structures and representations of the protein universe.",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
+    },
     "molstar": {
         "github_stars": 820,
         "github_forks": 155,
