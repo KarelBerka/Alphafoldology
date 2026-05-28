@@ -1,9 +1,9 @@
 {
   "metadata": {
     "last_updated": "2026-05-28 08:24:06",
-    "total_tools": 1001,
-    "total_github_stars": 164913,
-    "total_citations": 120867
+    "total_tools": 1002,
+    "total_github_stars": 164951,
+    "total_citations": 120868
   },
   "tools": [
     {
@@ -2156,7 +2156,7 @@
       "repo": "Coda-Research-Group/AlphaFind",
       "category": "Structural Search",
       "status": "Active",
-      "paper_doi": "10.1101/2026.03.10.710735",
+      "paper_doi": "10.1093/nar/gkag372",
       "parent": "alphafind",
       "usage": "Next-generation structural search optimized with advanced embedding models for extreme-speed shape searches.",
       "strengths": "Even faster indexing, supports multimeric searches, integrates structural alignments with sequence conservation.",
@@ -2177,9 +2177,9 @@
           "authors": "Coda Research Group"
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2026.03.10.710735",
-      "preprint_doi": null,
-      "preprint_link": null
+      "doi_link": "https://doi.org/10.1093/nar/gkag372",
+      "preprint_doi": "10.1101/2026.03.10.710735",
+      "preprint_link": "https://doi.org/10.1101/2026.03.10.710735"
     },
     {
       "id": "foldcomp",
@@ -24528,6 +24528,37 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": []
+    },
+    {
+      "id": "proptimus",
+      "name": "PROPTIMUS",
+      "repo": "sb-ncbr/proptimus_raphan",
+      "category": "Fast Predictors",
+      "status": "Active",
+      "paper_doi": "10.1093/nar/gkag511",
+      "doi_link": "https://doi.org/10.1093/nar/gkag511",
+      "preprint_doi": null,
+      "preprint_link": null,
+      "parent": "alphafold2",
+      "usage": "Per-residue local structural quality optimization utilizing the GFN-FF force field for fast post-prediction refinement.",
+      "strengths": "Divide-and-conquer RAPHAN algorithm enables extremely fast optimization compared to traditional all-atom force field methods.",
+      "weaknesses": "Optimizes local bond parameters; does not perform global folding rearrangements.",
+      "date": "2026-05-20",
+      "github_stars": 38,
+      "github_forks": 4,
+      "github_open_issues": 0,
+      "github_description": "PROPTIMUS RAPHAN: Rapid per-residue local structural quality optimization of protein structures.",
+      "github_top_forks": [],
+      "citations_count": 1,
+      "citing_papers": [
+        {
+          "title": "PROPTIMUS LIVE: local constrained α-carbon optimization of proteins",
+          "url": "https://doi.org/10.1093/nar/gkag511",
+          "citations": 1,
+          "year": 2026,
+          "authors": "T. Spacek et al."
+        }
+      ]
     }
   ],
   "social_posts": [
