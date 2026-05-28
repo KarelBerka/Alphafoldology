@@ -507,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="card-cat-badge">${tool.category}</span>
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <span class="card-date-badge">${tool.date || '—'}</span>
+              ${tool.publication_type && tool.publication_type !== 'unknown' ? `<span class="pub-type-badge pub-type-${tool.publication_type}">${tool.publication_type === 'published' ? '📄 Published' : '📝 Preprint'}</span>` : ''}
               <span class="status-indicator ${tool.status.toLowerCase()}">
                 <span class="status-dot"></span>
                 ${tool.status}
@@ -636,6 +637,23 @@ document.addEventListener('DOMContentLoaded', () => {
     modalTitle.textContent = tool.name;
     modalStatus.textContent = tool.status;
     modalStatus.className = `status-badge ${tool.status.toLowerCase()}`;
+    
+    // Publication type badge in modal
+    let pubBadgeEl = document.getElementById('modal-pub-type-badge');
+    if (!pubBadgeEl) {
+      pubBadgeEl = document.createElement('span');
+      pubBadgeEl.id = 'modal-pub-type-badge';
+      modalStatus.parentNode.insertBefore(pubBadgeEl, modalStatus.nextSibling);
+    }
+    if (tool.publication_type && tool.publication_type !== 'unknown') {
+      pubBadgeEl.className = `pub-type-badge pub-type-${tool.publication_type}`;
+      pubBadgeEl.textContent = tool.publication_type === 'published' ? '📄 Published' : '📝 Preprint';
+      pubBadgeEl.style.display = 'inline-block';
+      pubBadgeEl.style.marginLeft = '0.5rem';
+    } else {
+      pubBadgeEl.style.display = 'none';
+    }
+    
     modalDescription.textContent = tool.github_description || tool.usage;
     modalStrengths.textContent = tool.strengths;
     modalWeaknesses.textContent = tool.weaknesses;
