@@ -17,7 +17,7 @@
   --card-border: rgba(15, 23, 42, 0.08);
   --card-glow-green: rgba(5, 150, 105, 0.08);
   --card-glow-cyan: rgba(8, 145, 178, 0.08);
-  --tree-link-color: #94a3b8;
+  --tree-link-color: #64748b;
 
   --font-family-title: 'Outfit', 'Inter', sans-serif;
   --font-family-body: 'Inter', sans-serif;
@@ -364,31 +364,54 @@ header {
   fill: var(--bg-secondary);
   stroke-width: 3px;
   transition: var(--transition-smooth);
-  filter: drop-shadow(0 2px 5px rgba(15, 23, 42, 0.08));
+  filter: drop-shadow(0 2px 6px rgba(15, 23, 42, 0.12));
+}
+
+.tree-node.node-major circle {
+  stroke-width: 4px;
+  filter: drop-shadow(0 3px 8px rgba(15, 23, 42, 0.18));
 }
 
 .tree-node text {
   font-family: var(--font-family-title);
   font-weight: 700;
-  font-size: 11px;
+  font-size: 10px;
   fill: var(--text-main);
   text-anchor: middle;
   pointer-events: none;
 }
 
+.tree-node.node-major text {
+  font-size: 14px;
+  font-weight: 800;
+  fill: #0f172a;
+}
+
 .tree-node .node-type {
-  font-size: 9px;
+  font-size: 8px;
   fill: var(--text-muted);
   font-weight: 600;
+}
+
+.tree-node.node-major .node-type {
+  font-size: 11px;
+  fill: #334155;
+  font-weight: 700;
 }
 
 /* Glowing connections */
 .tree-link {
   fill: none;
   stroke: var(--tree-link-color) !important;
-  stroke-width: 3.5px;
+  stroke-width: 2.5px;
   transition: var(--transition-smooth);
-  opacity: 0.9;
+  opacity: 0.7;
+}
+
+.tree-link.link-major {
+  stroke-width: 4px;
+  opacity: 1;
+  stroke: #475569 !important;
 }
 
 .tree-link.highlight {
@@ -426,8 +449,13 @@ header {
 }
 
 /* Hover effects for nodes */
-.tree-node:hover circle {
-  r: 36px !important;
+.tree-node.node-minor:hover circle {
+  r: 30px !important;
+  fill: var(--bg-secondary);
+}
+
+.tree-node.node-major:hover circle {
+  r: 42px !important;
   fill: var(--bg-secondary);
 }
 
@@ -442,14 +470,33 @@ header {
 .node-databases circle { stroke: #ec4899; } /* pink-500 */
 .node-visualization circle { stroke: #8b5cf6; } /* violet-500 */
 
+/* Subtle fill tints for major nodes */
+.node-major.node-core circle { fill: #f0fdfa; }
+.node-major.node-fast circle { fill: #ecfdf5; }
+.node-major.node-design circle { fill: #f5f3ff; }
+.node-major.node-variant circle { fill: #fff1f2; }
+.node-major.node-search circle { fill: #fffbeb; }
+.node-major.node-ligand-docking circle { fill: #eff6ff; }
+.node-major.node-protein-docking circle { fill: #ecfeff; }
+.node-major.node-databases circle { fill: #fdf2f8; }
+.node-major.node-visualization circle { fill: #f5f3ff; }
+
 .node-core text { fill: var(--text-main); }
-.node-active circle {
+.node-active.node-major circle {
+  animation: glowPulseMajor 2.5s infinite alternate;
+}
+.node-active.node-minor circle {
   animation: glowPulse 2.5s infinite alternate;
 }
 
 @keyframes glowPulse {
   0% { filter: drop-shadow(0 0 2px var(--accent-cyan)); }
   100% { filter: drop-shadow(0 0 10px var(--accent-cyan)); }
+}
+
+@keyframes glowPulseMajor {
+  0% { filter: drop-shadow(0 0 4px var(--accent-cyan)); }
+  100% { filter: drop-shadow(0 0 16px var(--accent-cyan)); }
 }
 
 /* ==========================================================================

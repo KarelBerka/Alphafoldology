@@ -351,20 +351,20 @@ document.addEventListener('DOMContentLoaded', () => {
       g.setAttribute("id", `node-${key}`);
       g.setAttribute("transform", `translate(${node.x}, ${node.y})`);
       
-      // Node circle
+      // Node circle - larger for major tools
       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      circle.setAttribute("r", "28");
+      circle.setAttribute("r", isMinor ? "22" : "36");
       g.appendChild(circle);
       
       // Node Label (First Line: Acronym)
       const text1 = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      text1.setAttribute("y", "1");
+      text1.setAttribute("y", isMinor ? "1" : "0");
       text1.textContent = node.label;
       g.appendChild(text1);
 
       // Sub-label (Category type label)
       const text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      text2.setAttribute("y", "12");
+      text2.setAttribute("y", isMinor ? "12" : "15");
       text2.setAttribute("class", "node-type");
       text2.textContent = node.type.toUpperCase();
       g.appendChild(text2);
