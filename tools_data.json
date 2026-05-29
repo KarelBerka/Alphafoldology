@@ -25593,6 +25593,16 @@
       "uri": "https://bsky.app/profile/sokrypton.bsky.social",
       "likes": 512,
       "reposts": 180
+    },
+    {
+      "author_name": "ELIXIR Czech Republic",
+      "author_handle": "elixir-czech-republic",
+      "avatar": "",
+      "text": "Check out the upcoming 'Advanced in silico Drug Design' workshop in Olomouc! Karel Berka will lead lectures on #alphafoldology and practical downstream analysis for structural biology.",
+      "created_at": "2025-01-10T11:00:00Z",
+      "uri": "https://www.linkedin.com/search/results/all/?keywords=alphafoldology",
+      "likes": 88,
+      "reposts": 14
     }
   ]
 }
