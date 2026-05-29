@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "last_updated": "2026-05-28 08:24:06",
-    "total_tools": 1002,
-    "total_github_stars": 164951,
-    "total_citations": 120868
+    "last_updated": "2026-05-29 11:15:00",
+    "total_tools": 1003,
+    "total_github_stars": 165057,
+    "total_citations": 120877
   },
   "tools": [
     {
@@ -3848,6 +3848,38 @@
       "doi_link": "https://doi.org/10.1038/s41592-022-01488-1",
       "preprint_doi": null,
       "preprint_link": null,
+      "publication_type": "published"
+    },
+    {
+      "id": "massivefold",
+      "name": "MassiveFold",
+      "repo": "GBLille/MassiveFold",
+      "category": "Fast Predictors",
+      "status": "Active",
+      "paper_doi": "10.1038/s43588-024-00714-4",
+      "doi_link": "https://doi.org/10.1038/s43588-024-00714-4",
+      "preprint_doi": null,
+      "preprint_link": null,
+      "parent": "alphafold2",
+      "usage": "Parallelized and optimized high-performance computing framework for massive sampling of structural configurations using AlphaFold engines.",
+      "strengths": "Highly efficient SLURM parallelization; supports massive structural sampling to discover alternative conformations; integrates AF3 and ColabFold.",
+      "weaknesses": "Requires high-performance computing (HPC) cluster infrastructure and SLURM workload manager for maximum efficiency.",
+      "date": "2024-11-11",
+      "github_stars": 106,
+      "github_forks": 12,
+      "github_open_issues": 3,
+      "github_description": "MassiveFold: unveiling AlphaFold's hidden potential with optimized and parallelized massive sampling",
+      "github_top_forks": [],
+      "citations_count": 9,
+      "citing_papers": [
+        {
+          "title": "MassiveFold: unveiling AlphaFold's hidden potential with optimized and parallelized massive sampling",
+          "url": "https://doi.org/10.1038/s43588-024-00714-4",
+          "citations": 9,
+          "year": 2024,
+          "authors": "MassiveFold Consortium et al."
+        }
+      ],
       "publication_type": "published"
     },
     {

@@ -1195,6 +1195,18 @@ TOOLS_CURATED = [
         "weaknesses": 'Prone to setup failures if workstation CUDA drivers are outdated.'
     },
     {
+        "id": "massivefold",
+        "name": "MassiveFold",
+        "repo": "GBLille/MassiveFold",
+        "category": "Fast Predictors",
+        "status": "Active",
+        "paper_doi": "10.1038/s43588-024-00714-4",
+        "parent": "alphafold2",
+        "usage": "Parallelized and optimized high-performance computing framework for massive sampling of structural configurations using AlphaFold engines.",
+        "strengths": "Highly efficient SLURM parallelization; supports massive structural sampling to discover alternative conformations; integrates AF3 and ColabFold.",
+        "weaknesses": "Requires high-performance computing (HPC) cluster infrastructure and SLURM workload manager for maximum efficiency."
+    },
+    {
         "id": "alphamap",
         "name": "AlphaMap",
         "repo": "KusterLab/AlphaMap",
@@ -3145,6 +3157,23 @@ def main():
                     "citations": 350,
                     "year": 2021,
                     "authors": "Scientific Consortium et al."
+                }
+            ]
+        },
+        "massivefold": {
+            "github_stars": 106,
+            "github_forks": 12,
+            "github_open_issues": 3,
+            "github_description": "MassiveFold: unveiling AlphaFold's hidden potential with optimized and parallelized massive sampling",
+            "github_top_forks": [],
+            "citations_count": 9,
+            "citing_papers": [
+                {
+                    "title": "MassiveFold: unveiling AlphaFold's hidden potential with optimized and parallelized massive sampling",
+                    "url": "https://doi.org/10.1038/s43588-024-00714-4",
+                    "citations": 9,
+                    "year": 2024,
+                    "authors": "MassiveFold Consortium et al."
                 }
             ]
         },
