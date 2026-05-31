@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalIssues = document.getElementById('modal-issues');
   const modalCitations = document.getElementById('modal-citations');
   const modalGithubLink = document.getElementById('modal-github-link');
+  const modalHfLink = document.getElementById('modal-hf-link');
   const modalParent = document.getElementById('modal-parent');
   const modalForksList = document.getElementById('modal-forks-list');
   const modalPapersList = document.getElementById('modal-papers-list');
@@ -515,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <div class="tool-name-container">
-            <h3>${tool.name}</h3>
+            <h3>${tool.name}${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</h3>
             <p class="tool-desc">${tool.github_description || tool.usage}</p>
           </div>
         </div>
@@ -583,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toolsList.forEach(tool => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td><strong>${tool.name}</strong></td>
+        <td><strong>${tool.name}</strong>${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</td>
         <td><span class="card-cat-badge">${tool.category}</span></td>
         <td><span class="status-badge ${tool.status.toLowerCase()}">${tool.status}</span></td>
         <td><span class="table-date">${tool.date || '—'}</span></td>
@@ -670,6 +671,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       modalGithubLink.href = '#';
       modalGithubLink.style.display = 'none';
+    }
+
+    if (tool.hf_repo) {
+      modalHfLink.href = `https://huggingface.co/${tool.hf_repo}`;
+      modalHfLink.style.display = 'block';
+    } else {
+      modalHfLink.href = '#';
+      modalHfLink.style.display = 'none';
     }
 
     const modalPaperDoiLink = document.getElementById('modal-paper-doi-link');
