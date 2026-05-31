@@ -1,4 +1,4 @@
-# 🧬 Alphafoldology
+# <img src="protein_emoji.svg" alt="Alphafoldology Logo" width="32" align="top"> Alphafoldology
 
 Welcome to the **Alphafoldology** project!
 
