@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const statTotalTools = document.getElementById('stat-total-tools');
   const statTotalStars = document.getElementById('stat-total-stars');
   const statTotalCitations = document.getElementById('stat-total-citations');
+  const statTotalPublished = document.getElementById('stat-total-published');
+  const statTotalPreprints = document.getElementById('stat-total-preprints');
   const statLastUpdate = document.getElementById('stat-last-update');
   
   const searchInput = document.getElementById('search-input');
@@ -273,6 +275,23 @@ document.addEventListener('DOMContentLoaded', () => {
     statTotalTools.textContent = appData.metadata.total_tools || 0;
     statTotalStars.textContent = formatNum(appData.metadata.total_github_stars || 0);
     statTotalCitations.textContent = formatNum(appData.metadata.total_citations || 0);
+    
+    // Compute or retrieve preprint/published counts
+    let publishedCount = appData.metadata.total_published_papers;
+    let preprintsCount = appData.metadata.total_preprints;
+    if (publishedCount === undefined || preprintsCount === undefined) {
+      publishedCount = 0;
+      preprintsCount = 0;
+      appData.tools.forEach(tool => {
+        if (tool.publication_type === 'published') {
+          publishedCount++;
+        } else if (tool.publication_type === 'preprint') {
+          preprintsCount++;
+        }
+      });
+    }
+    statTotalPublished.textContent = formatNum(publishedCount);
+    statTotalPreprints.textContent = formatNum(preprintsCount);
     
     // Format timestamp nicely
     const dateStr = appData.metadata.last_updated || 'Unknown';

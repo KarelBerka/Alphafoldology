@@ -3503,6 +3503,8 @@ def main():
     
     total_stars = 0
     total_citations = 0
+    total_preprints = 0
+    total_published_papers = 0
     
     for tool in TOOLS_CURATED:
         tool_id = tool["id"]
@@ -3584,6 +3586,11 @@ def main():
             
         total_stars += combined_tool["github_stars"]
         total_citations += combined_tool["citations_count"]
+        pub_type = combined_tool.get("publication_type")
+        if pub_type == "preprint":
+            total_preprints += 1
+        elif pub_type == "published":
+            total_published_papers += 1
         tools_output.append(combined_tool)
         
     # Compile the final database
