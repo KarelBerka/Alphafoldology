@@ -151,6 +151,18 @@ TOOLS_CURATED = [
         "weaknesses": 'Requires custom package environments; proprietary training set details are not fully disclosed.'
     },
     {
+        "id": "protenix",
+        "name": "Protenix",
+        "repo": "bytedance/Protenix",
+        "category": "Core Predictors",
+        "status": "Active",
+        "paper_doi": None,
+        "parent": "alphafold3",
+        "usage": "Open-source PyTorch-based reproduction and training framework of the AlphaFold 3 model for high-accuracy biomolecular complex structure prediction.",
+        "strengths": "Fully open-source and trainable; models proteins, nucleic acids, and small-molecule ligands; supports training protocols.",
+        "weaknesses": "High memory and GPU requirements for training and inference scaling."
+    },
+    {
         "id": "colabfold",
         "name": "ColabFold",
         "repo": "sokrypton/ColabFold",
@@ -1690,6 +1702,23 @@ def main():
                     "citations": 334,
                     "year": 2021,
                     "authors": "Scientific Consortium et al."
+                }
+            ]
+        },
+        "protenix": {
+            "github_stars": 1900,
+            "github_forks": 278,
+            "github_open_issues": 15,
+            "github_description": "ByteDance's open-source reproduction and training framework of the AlphaFold 3 model for high-accuracy biomolecular structure prediction",
+            "github_top_forks": [],
+            "citations_count": 112,
+            "citing_papers": [
+                {
+                    "title": "Protenix: Advancing Structure Prediction Through a Comprehensive AlphaFold3 Reproduction",
+                    "url": "https://doi.org/10.1101/2025.01.08.631967",
+                    "citations": 112,
+                    "year": 2025,
+                    "authors": "ByteDance AML AI4Science Team et al."
                 }
             ]
         },
