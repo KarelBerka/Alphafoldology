@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-29 11:15:00",
-    "total_tools": 1003,
-    "total_github_stars": 165057,
+    "last_updated": "2026-06-02 08:05:00",
+    "total_tools": 1004,
+    "total_github_stars": 165102,
     "total_citations": 120877
   },
   "tools": [
@@ -1369,6 +1369,38 @@
       "preprint_doi": null,
       "preprint_link": null,
       "publication_type": "unknown"
+    },
+    {
+      "id": "switchcraft",
+      "name": "SwitchCraft",
+      "repo": "bjing2016/switchcraft",
+      "category": "Protein Design",
+      "status": "Active",
+      "paper_doi": null,
+      "doi_link": null,
+      "preprint_doi": "10.48550/arXiv.2605.31236",
+      "preprint_link": "https://doi.org/10.48550/arXiv.2605.31236",
+      "parent": "colabdesign",
+      "usage": "Programmatic protein design framework optimizing state-switching and allosteric conformational changes via backpropagation on structure predictors.",
+      "strengths": "Enables multi-state conformational design (activating/deactivating states), optimizes fluorescent biosensors, uses differentiable constraint graphs.",
+      "weaknesses": "Requires complex custom parameterization of target state constraints and substantial GPU memory for backpropagation.",
+      "date": "2026-05-29",
+      "github_stars": 45,
+      "github_forks": 4,
+      "github_open_issues": 1,
+      "github_description": "SwitchCraft: A Programmatic Framework for Designing State-Switching Proteins",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [
+        {
+          "title": "SwitchCraft: A Programmatic Framework for Designing State-Switching Proteins",
+          "url": "https://doi.org/10.48550/arXiv.2605.31236",
+          "citations": 0,
+          "year": 2026,
+          "authors": "Bowen Jing et al."
+        }
+      ],
+      "publication_type": "preprint"
     },
     {
       "id": "bindcraft",
