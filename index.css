@@ -1647,3 +1647,8 @@ footer {
   border-color: var(--accent-cyan) !important;
 }
 
+.tool-title-click:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+

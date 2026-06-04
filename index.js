@@ -551,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <div class="tool-name-container">
-            <h3>${tool.name}${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</h3>
+            <h3 class="tool-title-click" data-id="${tool.id}" style="cursor: pointer; display: inline-block;" title="Click to view details">${tool.name}${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</h3>
             <p class="tool-desc">${tool.github_description || tool.usage}</p>
           </div>
         </div>
@@ -580,8 +580,22 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="card-citation" style="margin-bottom: 1.25rem; font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-muted);">
-            ${tool.paper_doi ? `<div><span style="font-weight: 600; color: var(--text-main);">doi:</span> <a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.paper_doi}">${tool.paper_doi}</a></div>` : ''}
-            ${tool.preprint_doi ? `<div><span style="font-weight: 600; color: var(--text-main);">preprint doi:</span> <a href="https://doi.org/${tool.preprint_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.preprint_doi}">${tool.preprint_doi}</a></div>` : ''}
+            ${tool.paper_doi ? (() => {
+              let paperShort = tool.short_citation;
+              if (!paperShort) {
+                const year = tool.date ? new Date(tool.date).getFullYear() : 'Unknown';
+                paperShort = `Journal, ${year}`;
+              }
+              return `<div><span style="font-weight: 600; color: var(--text-main);">${paperShort}</span> doi: <a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.paper_doi}">${tool.paper_doi}</a></div>`;
+            })() : ''}
+            ${tool.preprint_doi ? (() => {
+              let preprintShort = tool.preprint_short_citation;
+              if (!preprintShort) {
+                const year = tool.date ? new Date(tool.date).getFullYear() : 'Unknown';
+                preprintShort = `Preprint, ${year}`;
+              }
+              return `<div><span style="font-weight: 600; color: var(--text-main);">${preprintShort}</span> doi: <a href="https://doi.org/${tool.preprint_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.preprint_doi}">${tool.preprint_doi}</a></div>`;
+            })() : ''}
             ${(!tool.paper_doi && !tool.preprint_doi) ? '<span style="font-style: italic;">No DOI listed</span>' : ''}
           </div>
 
@@ -591,6 +605,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
+      
+      // Bind click on Tool Name
+      card.querySelector('.tool-title-click').addEventListener('click', () => {
+        openModal(tool.id);
+      });
       
       // Bind click on "Explore Derivatives"
       card.querySelector('.btn-details').addEventListener('click', () => {
@@ -619,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toolsList.forEach(tool => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td><strong>${tool.name}</strong>${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</td>
+        <td class="tool-title-click" data-id="${tool.id}" style="cursor: pointer;" title="Click to view details"><strong>${tool.name}</strong>${tool.hf_repo ? ' <span title="Available on HuggingFace" style="font-size: 0.9em; cursor: help;">🤗</span>' : ''}</td>
         <td><span class="card-cat-badge">${tool.category}</span></td>
         <td><span class="status-badge ${tool.status.toLowerCase()}">${tool.status}</span></td>
         <td><span class="table-date">${tool.date || '—'}</span></td>
@@ -633,6 +652,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="btn btn-secondary btn-details-table" data-id="${tool.id}" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">Details</button>
         </td>
       `;
+      
+      // Bind click on Name Cell
+      row.querySelector('.tool-title-click').addEventListener('click', () => {
+        openModal(tool.id);
+      });
       
       row.querySelector('.btn-details-table').addEventListener('click', () => {
         openModal(tool.id);
@@ -697,6 +721,26 @@ document.addEventListener('DOMContentLoaded', () => {
     modalStrengths.textContent = tool.strengths;
     modalWeaknesses.textContent = tool.weaknesses;
     modalUsage.textContent = tool.usage;
+    
+    // Populate Full Citation below weaknesses
+    const modalCitationSection = document.getElementById('modal-citation-section');
+    const modalFullCitation = document.getElementById('modal-full-citation');
+    if (modalCitationSection && modalFullCitation) {
+      let citationsHtml = [];
+      if (tool.full_citation) {
+        citationsHtml.push(`<div><strong>Journal Paper:</strong> ${tool.full_citation}</div>`);
+      }
+      if (tool.preprint_full_citation) {
+        citationsHtml.push(`<div><strong>Preprint:</strong> ${tool.preprint_full_citation}</div>`);
+      }
+      
+      if (citationsHtml.length > 0) {
+        modalFullCitation.innerHTML = citationsHtml.join('<div style="margin-top:0.5rem;"></div>');
+        modalCitationSection.style.display = 'block';
+      } else {
+        modalCitationSection.style.display = 'none';
+      }
+    }
     
     modalStars.textContent = tool.github_stars ? tool.github_stars.toLocaleString() : '—';
     modalForks.textContent = tool.github_forks ? tool.github_forks.toLocaleString() : '—';

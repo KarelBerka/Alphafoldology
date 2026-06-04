@@ -611,7 +611,7 @@ TOOLS_CURATED = [
         "name": "AlphaFind",
         "repo": "Coda-Research-Group/AlphaFind",
         "category": "Structural Search",
-        "status": "Active",
+        "status": "Completed",
         "paper_doi": "10.1093/nar/gkae397",
         "parent": 'alphafolddb',
         "usage": 'Fast shape-based structural comparison and search against predictions in the AlphaFold Database.',
