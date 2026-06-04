@@ -234,7 +234,7 @@
         <span class="status-badge" id="modal-status">Active</span>
       </div>
       
-      <div class="modal-body">
+      <div class="modal-body" id="modal-detail-body">
         <div class="modal-main-info">
           <h3>Description</h3>
           <p id="modal-description">Detailed description...</p>
@@ -284,6 +284,9 @@
             </div>
             <a href="#" target="_blank" id="modal-github-link" class="sidebar-btn gh-link">View Repository</a>
             <a href="#" target="_blank" id="modal-hf-link" class="sidebar-btn" style="background-color: #fbbf24; color: #000; border: 1px solid #d97706; display: none; margin-top: 0.5rem;">🤗 HuggingFace</a>
+            <button id="modal-suggest-edit-btn" class="sidebar-btn suggest-btn" style="background-color: rgba(6, 182, 212, 0.1); color: var(--accent-cyan); border: 1px solid rgba(6, 182, 212, 0.2); font-weight: 600; width: 100%; margin-top: 0.5rem; cursor: pointer; padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: var(--transition-fast);">
+              ✏️ Suggest Correction
+            </button>
           </div>
 
           <div class="sidebar-box lineage-box">
@@ -296,8 +299,74 @@
         </div>
       </div>
 
+      <!-- Correction Form View (hidden by default) -->
+      <div class="modal-edit-panel" id="modal-edit-panel" style="display: none; flex-direction: column; gap: 1.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem;">
+          <h3 style="font-family: var(--font-family-title); font-size: 1.3rem; font-weight: 700; color: var(--text-main);">Suggest Correction for <span id="edit-panel-tool-name" style="color: var(--accent-cyan);">Tool</span></h3>
+          <button id="btn-edit-back" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem; border-radius: 8px;">&larr; Back to Details</button>
+        </div>
+        
+        <div class="edit-form-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem; margin-top: 0.5rem;">
+          <!-- Left side: Form -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Field to Correct</label>
+              <select id="edit-field-select" style="padding: 0.6rem; border-radius: 8px; border: 1px solid var(--bg-tertiary); background: var(--bg-primary); color: var(--text-main); font-family: inherit; font-size: 0.9rem; outline: none; width: 100%;">
+                <option value="paper_doi">Journal DOI</option>
+                <option value="preprint_doi">Preprint DOI</option>
+                <option value="repo">GitHub Repository Path</option>
+                <option value="category">Category</option>
+                <option value="parent">Parent/Progenitor ID</option>
+                <option value="status">Status (Active/Completed)</option>
+                <option value="usage">Usage / Description</option>
+                <option value="strengths">Strengths</option>
+                <option value="weaknesses">Weaknesses</option>
+                <option value="other">Other Data Issue</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Current Database Value</label>
+              <input type="text" id="edit-current-value" readonly style="padding: 0.6rem; border-radius: 8px; border: 1px solid var(--bg-tertiary); background: rgba(15,23,42,0.04); color: var(--text-muted); font-family: monospace; font-size: 0.85rem; outline: none; width: 100%;" value="—">
+            </div>
+
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Proposed Corrected Value</label>
+              <input type="text" id="edit-proposed-value" placeholder="Enter corrected value here..." style="padding: 0.6rem; border-radius: 8px; border: 1px solid var(--bg-tertiary); background: var(--bg-primary); color: var(--text-main); font-family: inherit; font-size: 0.9rem; outline: none; width: 100%;">
+            </div>
+
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Sources / Verification Links</label>
+              <textarea id="edit-evidence" rows="3" placeholder="Provide URLs, DOI links, or explanations verifying this change..." style="padding: 0.6rem; border-radius: 8px; border: 1px solid var(--bg-tertiary); background: var(--bg-primary); color: var(--text-main); font-family: inherit; font-size: 0.88rem; outline: none; resize: vertical; width: 100%;"></textarea>
+            </div>
+          </div>
+
+          <!-- Right side: Actions & Preview -->
+          <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: space-between; background: rgba(15,23,42,0.02); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.25rem;">Correction Preview</h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">Verify your suggestion below. Submitting opens a GitHub issue on <strong style="color: var(--text-main);">KarelBerka/alphafoldology</strong> containing this change request.</p>
+              
+              <div style="background: var(--bg-secondary); border: 1px solid var(--card-border); padding: 0.75rem; border-radius: 8px; font-family: monospace; font-size: 0.8rem; overflow-x: auto; max-height: 120px; white-space: pre-wrap; word-break: break-all;" id="edit-patch-preview">
+Select a field and write correction to view diff...
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+              <button id="btn-submit-github-issue" class="sidebar-btn gh-link" style="background-color: var(--text-main); color: #fff; width: 100%; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer; border-radius: 8px; border: none; padding: 0.75rem; font-size: 0.88rem;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="vertical-align: middle;"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                Submit via GitHub Issue
+              </button>
+              <button id="btn-copy-edit-json" class="sidebar-btn" style="background-color: rgba(15, 23, 42, 0.05); color: var(--text-main); border: 1px solid var(--card-border); padding: 0.6rem; width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer; font-size: 0.85rem; font-weight: 600; margin-top: 0.25rem;">
+                📋 Copy Proposal Text
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Scraped Derivatives Section -->
-      <div class="derivatives-section">
+      <div class="derivatives-section" id="modal-derivatives-section">
         <div class="derivatives-header">
           <h3>🌿 Derivative Works & Downstream Influence</h3>
         </div>

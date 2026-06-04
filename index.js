@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   let activeView = 'grid'; // 'grid' or 'table'
+  let activeToolForEdit = null;
   
   // Lineage Tree Coordinates Configuration (computed dynamically at load time)
   let NODE_COORDINATES = {};
@@ -69,6 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalParent = document.getElementById('modal-parent');
   const modalForksList = document.getElementById('modal-forks-list');
   const modalPapersList = document.getElementById('modal-papers-list');
+  
+  // Suggest Correction Elements
+  const modalDetailBody = document.getElementById('modal-detail-body');
+  const modalDerivativesSection = document.getElementById('modal-derivatives-section');
+  const modalSuggestEditBtn = document.getElementById('modal-suggest-edit-btn');
+  const modalEditPanel = document.getElementById('modal-edit-panel');
+  const btnEditBack = document.getElementById('btn-edit-back');
+  const editFieldSelect = document.getElementById('edit-field-select');
+  const editCurrentValue = document.getElementById('edit-current-value');
+  const editProposedValue = document.getElementById('edit-proposed-value');
+  const editEvidence = document.getElementById('edit-evidence');
+  const editPatchPreview = document.getElementById('edit-patch-preview');
+  const btnSubmitGithubIssue = document.getElementById('btn-submit-github-issue');
+  const btnCopyEditJson = document.getElementById('btn-copy-edit-json');
+  const editPanelToolName = document.getElementById('edit-panel-tool-name');
 
   // Zoom State for Tree
   let zoomScale = 1.0;
@@ -651,6 +667,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const tool = appData.tools.find(t => t.id === id);
     if (!tool) return;
 
+    activeToolForEdit = tool;
+    resetEditPanel();
+
     modalCategory.textContent = tool.category;
     modalCategory.className = `chip cat-${getCategoryClass(tool.category)}`;
     modalDate.textContent = tool.date || '—';
@@ -773,12 +792,167 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     detailModal.classList.remove('active');
+    resetEditPanel();
   }
 
   modalCloseBtn.addEventListener('click', closeModal);
   detailModal.addEventListener('click', (e) => {
     if (e.target === detailModal) closeModal();
   });
+
+  // ==========================================================================
+  // Suggest Correction & Data Issue Flagging Logic
+  // ==========================================================================
+  function resetEditPanel() {
+    if (modalDetailBody && modalDerivativesSection && modalEditPanel) {
+      modalDetailBody.style.display = '';
+      modalDerivativesSection.style.display = '';
+      modalEditPanel.style.display = 'none';
+    }
+  }
+
+  if (modalSuggestEditBtn) {
+    modalSuggestEditBtn.addEventListener('click', () => {
+      if (!activeToolForEdit) return;
+      
+      // Toggle visibility
+      modalDetailBody.style.display = 'none';
+      modalDerivativesSection.style.display = 'none';
+      modalEditPanel.style.display = 'flex';
+      
+      // Set panel title
+      editPanelToolName.textContent = activeToolForEdit.name;
+      
+      // Reset form controls
+      editFieldSelect.value = 'paper_doi';
+      populateCurrentValue();
+      editProposedValue.value = '';
+      editEvidence.value = '';
+      updatePatchPreview();
+    });
+  }
+
+  if (btnEditBack) {
+    btnEditBack.addEventListener('click', resetEditPanel);
+  }
+
+  function populateCurrentValue() {
+    if (!activeToolForEdit) return;
+    const field = editFieldSelect.value;
+    let val = activeToolForEdit[field];
+    if (val === undefined || val === null) {
+      val = '—';
+    } else if (typeof val === 'object') {
+      val = JSON.stringify(val);
+    }
+    editCurrentValue.value = val;
+    updatePatchPreview();
+  }
+
+  if (editFieldSelect) {
+    editFieldSelect.addEventListener('change', () => {
+      populateCurrentValue();
+      editProposedValue.value = '';
+      updatePatchPreview();
+    });
+  }
+
+  if (editProposedValue) {
+    editProposedValue.addEventListener('input', updatePatchPreview);
+  }
+  if (editEvidence) {
+    editEvidence.addEventListener('input', updatePatchPreview);
+  }
+
+  function generateProposalMarkdown() {
+    if (!activeToolForEdit) return '';
+    const field = editFieldSelect.value;
+    const fieldLabel = editFieldSelect.options[editFieldSelect.selectedIndex].text;
+    const currentVal = activeToolForEdit[field] !== undefined ? activeToolForEdit[field] : null;
+    const proposedVal = editProposedValue.value.trim();
+    const evidence = editEvidence.value.trim();
+
+    return `### Tool Data Correction Proposal
+
+- **Tool:** ${activeToolForEdit.name} (ID: \`${activeToolForEdit.id}\`)
+- **Field to Correct:** \`${fieldLabel}\` (\`${field}\`)
+- **Current Value:** \`${currentVal !== null ? currentVal : 'None'}\`
+- **Proposed Value:** \`${proposedVal ? proposedVal : 'None'}\`
+- **Evidence / Verification:** ${evidence ? evidence : 'None specified.'}
+
+---
+#### Proposed JSON Patch:
+\`\`\`json
+{
+  "id": "${activeToolForEdit.id}",
+  "${field}": ${JSON.stringify(proposedVal)}
+}
+\`\`\``;
+  }
+
+  function updatePatchPreview() {
+    if (!activeToolForEdit) return;
+    const field = editFieldSelect.value;
+    let currentVal = activeToolForEdit[field];
+    if (currentVal === undefined || currentVal === null) {
+      currentVal = null;
+    }
+    const proposedVal = editProposedValue.value.trim();
+    
+    if (!proposedVal) {
+      editPatchPreview.innerHTML = `<span style="color: var(--text-muted); font-style: italic;">Enter proposed value to view patch preview...</span>`;
+      return;
+    }
+
+    const diffHtml = `// JSON Patch Proposal
+{
+  "id": "${activeToolForEdit.id}",
+<span style="color: #ef4444;">- "${field}": ${JSON.stringify(currentVal)}</span>
+<span style="color: #22c55e;">+ "${field}": ${JSON.stringify(proposedVal)}</span>
+}`;
+    editPatchPreview.innerHTML = diffHtml;
+  }
+
+  if (btnSubmitGithubIssue) {
+    btnSubmitGithubIssue.addEventListener('click', () => {
+      const proposedVal = editProposedValue.value.trim();
+      if (!proposedVal) {
+        alert('Please enter a proposed corrected value.');
+        return;
+      }
+      
+      const markdown = generateProposalMarkdown();
+      const title = `[Data Correction] Update ${editFieldSelect.options[editFieldSelect.selectedIndex].text} for ${activeToolForEdit.name}`;
+      const url = `https://github.com/KarelBerka/alphafoldology/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(markdown)}`;
+      window.open(url, '_blank');
+    });
+  }
+
+  if (btnCopyEditJson) {
+    btnCopyEditJson.addEventListener('click', () => {
+      const proposedVal = editProposedValue.value.trim();
+      if (!proposedVal) {
+        alert('Please enter a proposed corrected value.');
+        return;
+      }
+      const markdown = generateProposalMarkdown();
+      navigator.clipboard.writeText(markdown).then(() => {
+        const originalText = btnCopyEditJson.innerHTML;
+        btnCopyEditJson.innerHTML = 'Copied! ✓';
+        btnCopyEditJson.style.backgroundColor = 'rgba(34, 197, 94, 0.15)';
+        btnCopyEditJson.style.color = '#22c55e';
+        btnCopyEditJson.style.borderColor = 'rgba(34, 197, 94, 0.3)';
+        setTimeout(() => {
+          btnCopyEditJson.innerHTML = originalText;
+          btnCopyEditJson.style.backgroundColor = '';
+          btnCopyEditJson.style.color = '';
+          btnCopyEditJson.style.borderColor = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    });
+  }
 
   // Search & filter listeners
   searchInput.addEventListener('input', (e) => {

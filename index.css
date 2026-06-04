@@ -1599,3 +1599,51 @@ footer {
   }
 }
 
+/* Suggest Correction Form Styling */
+.suggest-btn:hover {
+  background-color: var(--accent-cyan) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 10px rgba(8, 145, 178, 0.3);
+}
+
+.edit-form-grid select,
+.edit-form-grid input[type="text"],
+.edit-form-grid textarea {
+  transition: var(--transition-fast);
+}
+
+.edit-form-grid select:focus,
+.edit-form-grid input[type="text"]:focus:not([readonly]),
+.edit-form-grid textarea:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.15) !important;
+}
+
+#btn-submit-github-issue {
+  transition: var(--transition-fast);
+}
+
+#btn-submit-github-issue:hover {
+  background-color: #1e293b !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+#btn-copy-edit-json {
+  transition: var(--transition-fast);
+}
+
+#btn-copy-edit-json:hover {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+#btn-edit-back {
+  transition: var(--transition-fast);
+}
+
+#btn-edit-back:hover {
+  background-color: var(--accent-cyan) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--accent-cyan) !important;
+}
+
