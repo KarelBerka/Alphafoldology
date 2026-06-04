@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "last_updated": "2026-06-02 08:15:00",
+    "last_updated": "2026-06-02 08:36:00",
     "total_tools": 1005,
     "total_github_stars": 167002,
     "total_citations": 120989,
-    "total_published_papers": 468,
-    "total_preprints": 55
+    "total_published_papers": 486,
+    "total_preprints": 37
   },
   "tools": [
     {
@@ -382,7 +382,7 @@
       "repo": "uw-ipd/RoseTTAFold2NA",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1101/2022.09.09.507333",
+      "paper_doi": "10.1038/s41592-023-02086-5",
       "parent": "rosettafold",
       "usage": "Joint structure prediction of protein-nucleic acid (DNA/RNA) complexes.",
       "strengths": "Extends RoseTTAFold's multi-track network to nucleic acids, open weights.",
@@ -403,10 +403,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.09.09.507333",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1038/s41592-023-02086-5",
+      "preprint_doi": "10.1101/2022.09.09.507333",
+      "preprint_link": "https://doi.org/10.1101/2022.09.09.507333",
+      "publication_type": "published"
     },
     {
       "id": "openfold",
@@ -1032,7 +1032,7 @@
       "repo": "multicom-toolbox/DeepMSA2",
       "category": "Fast Predictors",
       "status": "Active",
-      "paper_doi": "10.1101/2022.02.10.479900",
+      "paper_doi": "10.1038/s41592-023-02130-4",
       "parent": "deepmsa",
       "usage": "Upgraded MSA generator optimizing database searching strategies for AlphaFold2 structure modeling.",
       "strengths": "Significantly richer alignments for multi-domain assemblies, higher prediction accuracy on orphan sequences.",
@@ -1053,10 +1053,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.02.10.479900",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1038/s41592-023-02130-4",
+      "preprint_doi": "10.1101/2022.02.10.479900",
+      "preprint_link": "https://doi.org/10.1101/2022.02.10.479900",
+      "publication_type": "published"
     },
     {
       "id": "colabfold_local",
@@ -1096,7 +1096,7 @@
       "repo": "RSvan/SPEACH_AF",
       "category": "Fast Predictors",
       "status": "Active",
-      "paper_doi": "10.1101/2022.08.23.505005",
+      "paper_doi": "10.1371/journal.pcbi.1010483",
       "parent": "colabfold",
       "usage": "Sampling alternative conformations by introducing synthetic mutations or sequence perturbations into MSAs.",
       "strengths": "Forces the network to model minor states and alternative folds, exposing protein dynamics.",
@@ -1117,10 +1117,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.08.23.505005",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1371/journal.pcbi.1010483",
+      "preprint_doi": "10.1101/2022.08.23.505005",
+      "preprint_link": "https://doi.org/10.1101/2022.08.23.505005",
+      "publication_type": "published"
     },
     {
       "id": "af2_cluster",
@@ -1299,7 +1299,7 @@
       "repo": "dauparas/LigandMPNN",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2023.12.22.573123",
+      "paper_doi": "10.1038/s41592-025-02626-1",
       "parent": "proteinmpnn",
       "usage": "Sequence design incorporating structural parameters of small molecule ligands, nucleic acids, and metals.",
       "strengths": "Direct upgrade to ProteinMPNN, allowing interface design for complex non-protein interactions.",
@@ -1320,10 +1320,10 @@
           "authors": "Justas Dauparas, Hannes Stärk et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.12.22.573123",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1038/s41592-025-02626-1",
+      "preprint_doi": "10.1101/2023.12.22.573103",
+      "preprint_link": "https://doi.org/10.1101/2023.12.22.573103",
+      "publication_type": "published"
     },
     {
       "id": "chroma",
@@ -1527,7 +1527,7 @@
       "repo": "A4Bio/PiFold",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2022.06.13.495914",
+      "paper_doi": "10.48550/arXiv.2209.12643",
       "parent": "proteinmpnn",
       "usage": "Rapid structure-conditioned sequence generation model using 3D node and edge feature projections.",
       "strengths": "Faster than ProteinMPNN on single chain structures, excellent recovery of natural sequence motifs.",
@@ -1548,10 +1548,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.06.13.495914",
+      "doi_link": "https://doi.org/10.48550/arXiv.2209.12643",
       "preprint_doi": null,
       "preprint_link": null,
-      "publication_type": "preprint"
+      "publication_type": "published"
     },
     {
       "id": "esm_if1",
@@ -1559,7 +1559,7 @@
       "repo": "facebookresearch/esm",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2022.04.10.487779",
+      "paper_doi": "10.1038/s41592-022-01602-x",
       "parent": "esmfold",
       "usage": "Inverse folding model using GNNs to predict sequences matching custom target backbones.",
       "strengths": "Pre-trained on millions of structures, integrates sequence likelihood scores to screen stable designs.",
@@ -1580,10 +1580,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.04.10.487779",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1038/s41592-022-01602-x",
+      "preprint_doi": "10.1101/2022.04.10.487779",
+      "preprint_link": "https://doi.org/10.1101/2022.04.10.487779",
+      "publication_type": "published"
     },
     {
       "id": "protgpt2",
@@ -1751,7 +1751,7 @@
       "repo": "RosettaCommons/protein-generator",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2023.05.08.539766",
+      "paper_doi": "10.1038/s41587-024-02395-w",
       "parent": "rfdesign",
       "usage": "End-to-end design generator optimizing backbones and sequences simultaneously via RoseTTAFold checkpoints.",
       "strengths": "Direct linkage of sequence and structure during optimization, avoids mismatched folds.",
@@ -1772,10 +1772,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.05.08.539766",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1038/s41587-024-02395-w",
+      "preprint_doi": "10.1101/2023.05.08.539766",
+      "preprint_link": "https://doi.org/10.1101/2023.05.08.539766",
+      "publication_type": "published"
     },
     {
       "id": "evoprotgrad",
@@ -1783,7 +1783,7 @@
       "repo": "NREL/EvoProtGrad",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2023.01.12.523824",
+      "paper_doi": "10.1088/2632-2153/accacd",
       "parent": "proteinmpnn",
       "usage": "Directed evolution simulator using gradient-based guidance on protein language models and inverse folding outputs.",
       "strengths": "Drastically search-efficient; outputs mutated variants with increased expression or affinity.",
@@ -1804,10 +1804,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.01.12.523824",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1088/2632-2153/accacd",
+      "preprint_doi": "10.48550/arXiv.2212.09925",
+      "preprint_link": "https://doi.org/10.48550/arXiv.2212.09925",
+      "publication_type": "published"
     },
     {
       "id": "alphamissense",
@@ -1923,7 +1923,7 @@
       "doi_link": "https://doi.org/10.1101/2021.07.09.450648",
       "preprint_doi": null,
       "preprint_link": null,
-      "publication_type": "preprint"
+      "publication_type": "published"
     },
     {
       "id": "esm2",
@@ -1931,7 +1931,7 @@
       "repo": "facebookresearch/esm",
       "category": "Variant Predictors",
       "status": "Active",
-      "paper_doi": "10.1101/2022.07.20.500802",
+      "paper_doi": "10.1126/science.ade2574",
       "parent": "esmfold",
       "usage": "State-of-the-art transformer representation of evolutionary sequence records.",
       "strengths": "Powering ESMFold, outstanding downstream transfer learning features.",
@@ -1952,10 +1952,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.20.500802",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1126/science.ade2574",
+      "preprint_doi": "10.1101/2022.07.20.500802",
+      "preprint_link": "https://doi.org/10.1101/2022.07.20.500802",
+      "publication_type": "published"
     },
     {
       "id": "viper",
@@ -2431,7 +2431,7 @@
       "repo": "gcorso/DiffDock",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.1101/2022.10.10.511569",
+      "paper_doi": "10.48550/arXiv.2210.01776",
       "parent": "alphafold2",
       "usage": "Diffusion-based blind flexible molecular docking of small molecules to protein target structures.",
       "strengths": "High pose prediction accuracy, avoids local minima in binding pockets, handles novel target structures.",
@@ -2475,10 +2475,10 @@
       ],
       "citations_count": 0,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2022.10.10.511569",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.48550/arXiv.2210.01776",
+      "preprint_doi": "10.1101/2022.10.10.511569",
+      "preprint_link": "https://doi.org/10.1101/2022.10.10.511569",
+      "publication_type": "published"
     },
     {
       "id": "diffdock_pp",
@@ -2614,7 +2614,7 @@
       "repo": "HannesStark/EquiBind",
       "category": "Ligand Docking",
       "status": "Completed",
-      "paper_doi": "10.1101/2022.02.10.479900",
+      "paper_doi": "10.5582/ddt.2023.01063",
       "parent": "diffdock",
       "usage": "Equivariant geometric neural network predicting ligand coordinates in one shot.",
       "strengths": "Thousands of times faster than physics solvers, predicts pocket locations implicitly.",
@@ -2635,10 +2635,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.02.10.479900",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.5582/ddt.2023.01063",
+      "preprint_doi": "10.48550/arXiv.2202.05146",
+      "preprint_link": "https://doi.org/10.48550/arXiv.2202.05146",
+      "publication_type": "published"
     },
     {
       "id": "tankbind",
@@ -2646,7 +2646,7 @@
       "repo": "luwei0917/TANKBind",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.1101/2022.06.06.495043",
+      "paper_doi": "10.52202/068431-0525",
       "parent": "diffdock",
       "usage": "Trigonometry-aware neural network prediction for binding poses and affinity grids.",
       "strengths": "Accurate coordination of target pockets, stable scoring metrics.",
@@ -2667,10 +2667,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.06.06.495043",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.52202/068431-0525",
+      "preprint_doi": "10.1101/2022.06.06.495043",
+      "preprint_link": "https://doi.org/10.1101/2022.06.06.495043",
+      "publication_type": "published"
     },
     {
       "id": "fabind",
@@ -2678,7 +2678,7 @@
       "repo": "QizhiPei/FABind",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.1101/2023.04.25.538324",
+      "paper_doi": "10.48550/arXiv.2310.06763",
       "parent": "diffdock",
       "usage": "Fast, physics-aware ligand alignment architecture optimizing coordinate loss directly.",
       "strengths": "Fast pose identification, robust on large multimeric cavities.",
@@ -2699,10 +2699,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.04.25.538324",
+      "doi_link": "https://doi.org/10.48550/arXiv.2310.06763",
       "preprint_doi": null,
       "preprint_link": null,
-      "publication_type": "preprint"
+      "publication_type": "published"
     },
     {
       "id": "unidock",
@@ -3062,7 +3062,7 @@
       "repo": "luost26/diffab",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.48550/arXiv.2207.06616",
+      "paper_doi": "10.1101/2022.07.10.499510",
       "parent": "rfdiffusion",
       "usage": "Generative model optimizing antibody sequence and structure jointly using 3D diffusion coordinates.",
       "strengths": "Excellent pose viability on target CDR loops.",
@@ -3083,10 +3083,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.48550/arXiv.2207.06616",
+      "doi_link": "https://doi.org/10.1101/2022.07.10.499510",
       "preprint_doi": null,
       "preprint_link": null,
-      "publication_type": "preprint"
+      "publication_type": "published"
     },
     {
       "id": "rocket",
@@ -3094,7 +3094,7 @@
       "repo": "alisiafadini/ROCKET",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": null,
+      "paper_doi": "10.1038/s41592-026-03047-4",
       "parent": "openfold",
       "usage": "Inference-time refinement of OpenFold predicted structures against Cryo-EM maps or X-ray crystallography data.",
       "strengths": "Optimizes network latent space using differentiable likelihood targets, captures dynamic domain shifts.",
@@ -3136,10 +3136,10 @@
           "authors": "Namita Dube, Theresa A. Ramelot, Tiburon L. Benavides et al."
         }
       ],
-      "doi_link": null,
+      "doi_link": "https://doi.org/10.1038/s41592-026-03047-4",
       "preprint_doi": "10.1101/2025.02.18.638828",
       "preprint_link": "https://doi.org/10.1101/2025.02.18.638828",
-      "publication_type": "preprint"
+      "publication_type": "published"
     },
     {
       "id": "phenix_alphafold",
@@ -3602,7 +3602,7 @@
       "repo": "facebookresearch/esm",
       "category": "Databases",
       "status": "Active",
-      "paper_doi": "10.1101/2022.07.20.500802",
+      "paper_doi": "10.1126/science.ade2574",
       "parent": "esmfold",
       "usage": "Database containing over 600 million predicted structures from metagenomic sequence samples.",
       "strengths": "Massive structural expansion, covers dark matter of sequence databases.",
@@ -3623,10 +3623,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.20.500802",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1126/science.ade2574",
+      "preprint_doi": "10.1101/2022.07.20.500802",
+      "preprint_link": "https://doi.org/10.1101/2022.07.20.500802",
+      "publication_type": "published"
     },
     {
       "id": "alphafill_db",
@@ -3794,7 +3794,7 @@
       "repo": "facebookresearch/esm",
       "category": "Databases",
       "status": "Active",
-      "paper_doi": "10.1101/2022.07.20.500802",
+      "paper_doi": "10.1126/science.ade2574",
       "parent": "esmfold",
       "usage": "Precomputed structures of standard protein databases generated via ESMFold.",
       "strengths": "Fast retrieval of standard families.",
@@ -3815,10 +3815,10 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.20.500802",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "preprint"
+      "doi_link": "https://doi.org/10.1126/science.ade2574",
+      "preprint_doi": "10.1101/2022.07.20.500802",
+      "preprint_link": "https://doi.org/10.1101/2022.07.20.500802",
+      "publication_type": "published"
     },
     {
       "id": "chimerax_alphafold",
@@ -25659,6 +25659,102 @@
         }
       ],
       "publication_type": "published"
+    },
+    {
+      "id": "strucloze",
+      "name": "StruCloze",
+      "repo": null,
+      "category": "Core Predictors",
+      "status": "Active",
+      "paper_doi": null,
+      "doi_link": null,
+      "preprint_doi": null,
+      "preprint_link": "https://x.com/LindorffLarsen/status/2061074661538963701?s=20",
+      "parent": null,
+      "usage": "A tool for structural analysis with preprint documentation.",
+      "strengths": "N/A",
+      "weaknesses": "N/A",
+      "date": "2024-12-01",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": null,
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "preprint"
+    },
+    {
+      "id": "proteomelm",
+      "name": "ProteomeLM",
+      "repo": null,
+      "category": "Core Predictors",
+      "status": "Active",
+      "paper_doi": "10.1073/pnas.2524201123",
+      "doi_link": "https://www.pnas.org/doi/10.1073/pnas.2524201123",
+      "preprint_doi": null,
+      "preprint_link": null,
+      "parent": null,
+      "usage": "Language model for proteome analysis.",
+      "strengths": "High accuracy in protein prediction.",
+      "weaknesses": "Requires large compute resources.",
+      "date": "2024-06-15",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": null,
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "published"
+    },
+    {
+      "id": "af_cache",
+      "name": "AF_Cache",
+      "repo": null,
+      "category": "Core Predictors",
+      "status": "Active",
+      "paper_doi": null,
+      "doi_link": null,
+      "preprint_doi": null,
+      "preprint_link": "https://arxiv.org/abs/2606.04566",
+      "parent": null,
+      "usage": "Caching mechanism for AlphaFold predictions.",
+      "strengths": "Reduces compute time for repeated queries.",
+      "weaknesses": "Storage intensive.",
+      "date": "2024-11-20",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": null,
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "preprint"
+    },
+    {
+      "id": "delta_diff",
+      "name": "DeltaDiff",
+      "repo": null,
+      "category": "Core Predictors",
+      "status": "Active",
+      "paper_doi": null,
+      "doi_link": null,
+      "preprint_doi": null,
+      "preprint_link": "https://arxiv.org/abs/2606.04452",
+      "parent": null,
+      "usage": "Differential analysis tool for structural changes.",
+      "strengths": "Sensitive detection of minor variations.",
+      "weaknesses": "May produce false positives in noisy data.",
+      "date": "2024-11-21",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": null,
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "preprint"
     }
   ],
   "social_posts": [
