@@ -829,10 +829,20 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       papers.forEach(paper => {
         const li = document.createElement('li');
+        let titleHtml = `<span class="derivative-title" style="font-weight: 500; color: var(--text-main); display: block; margin-bottom: 0.15rem;">${paper.title}</span>`;
+        let linkHtml = '';
+        if (paper.url) {
+          if (paper.url.startsWith('https://doi.org/')) {
+            const doiVal = paper.url.substring('https://doi.org/'.length);
+            linkHtml = ` doi: <a href="${paper.url}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">${doiVal}</a>`;
+          } else {
+            linkHtml = ` link: <a href="${paper.url}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">link</a>`;
+          }
+        }
         li.innerHTML = `
-          <a href="${paper.url}" target="_blank">${paper.title}</a>
-          <span class="derivative-desc">by ${paper.authors} (${paper.year})</span>
-          <span class="derivative-meta">🔥 Cited by ${paper.citations} times</span>
+          ${titleHtml}
+          <span class="derivative-desc" style="display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.15rem;">by ${paper.authors} (${paper.year})${linkHtml}</span>
+          <span class="derivative-meta" style="display: block; font-size: 0.78rem; color: var(--accent-cyan); font-weight: 500;">🔥 Cited by ${paper.citations} times</span>
         `;
         modalPapersList.appendChild(li);
       });
