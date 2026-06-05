@@ -728,10 +728,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalCitationSection && modalFullCitation) {
       let citationsHtml = [];
       if (tool.full_citation) {
-        citationsHtml.push(`<div><strong>Journal Paper:</strong> ${tool.full_citation}</div>`);
+        let citation = tool.full_citation;
+        if (tool.paper_doi) {
+          citation += ` doi: <a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">${tool.paper_doi}</a>`;
+        }
+        citationsHtml.push(`<div><strong>Journal Paper:</strong> ${citation}</div>`);
       }
       if (tool.preprint_full_citation) {
-        citationsHtml.push(`<div><strong>Preprint:</strong> ${tool.preprint_full_citation}</div>`);
+        let citation = tool.preprint_full_citation;
+        if (tool.preprint_doi) {
+          citation += ` doi: <a href="https://doi.org/${tool.preprint_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">${tool.preprint_doi}</a>`;
+        }
+        citationsHtml.push(`<div><strong>Preprint:</strong> ${citation}</div>`);
       }
       
       if (citationsHtml.length > 0) {
