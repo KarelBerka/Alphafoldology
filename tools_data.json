@@ -27623,6 +27623,18 @@
       "parent": "alphafold2",
       "usage": "Protein design tool hosted on HuggingFace.",
       "date": "2026-06-05"
+    },
+    {
+      "id": "flashabb",
+      "name": "FlashABB",
+      "repo": "oxpig/FlashABB",
+      "category": "Protein Design",
+      "status": "Active",
+      "hf_repo": null,
+      "preprint_doi": "10.64898/2026.06.03.729879v1",
+      "parent": null,
+      "usage": "Antibody design and modeling tool.",
+      "date": "2026-06-05"
     }
   ],
   "social_posts": [
