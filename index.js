@@ -888,6 +888,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset form controls
       editFieldSelect.value = 'paper_doi';
       populateCurrentValue();
+      editProposedValue.placeholder = 'Enter corrected value here...';
+      editProposedValue.disabled = false;
+      editProposedValue.style.backgroundColor = '';
       editProposedValue.value = '';
       editEvidence.value = '';
       updatePatchPreview();
@@ -901,6 +904,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function populateCurrentValue() {
     if (!activeToolForEdit) return;
     const field = editFieldSelect.value;
+    if (field === 'remove') {
+      editCurrentValue.value = 'Entire tool entry';
+      updatePatchPreview();
+      return;
+    }
     let val = activeToolForEdit[field];
     if (val === undefined || val === null) {
       val = '—';
@@ -914,7 +922,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (editFieldSelect) {
     editFieldSelect.addEventListener('change', () => {
       populateCurrentValue();
-      editProposedValue.value = '';
+      const field = editFieldSelect.value;
+      if (field === 'remove') {
+        editProposedValue.value = '';
+        editProposedValue.placeholder = 'N/A (Reason for removal goes in Sources below)';
+        editProposedValue.disabled = true;
+        editProposedValue.style.backgroundColor = 'rgba(15,23,42,0.04)';
+      } else {
+        editProposedValue.placeholder = 'Enter corrected value here...';
+        editProposedValue.disabled = false;
+        editProposedValue.style.backgroundColor = '';
+        editProposedValue.value = '';
+      }
       updatePatchPreview();
     });
   }
@@ -930,9 +949,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!activeToolForEdit) return '';
     const field = editFieldSelect.value;
     const fieldLabel = editFieldSelect.options[editFieldSelect.selectedIndex].text;
+    const evidence = editEvidence.value.trim();
+
+    if (field === 'remove') {
+      return `### Tool/Method Removal Request
+
+- **Tool/Method Name:** ${activeToolForEdit.name} (ID: \`${activeToolForEdit.id}\`)
+- **Action:** Requesting removal of this entire tool entry from the database.
+- **GitHub Repository:** ${activeToolForEdit.repo ? `https://github.com/${activeToolForEdit.repo}` : 'N/A'}
+- **Reason for Removal / Evidence:** ${evidence ? evidence : 'None specified.'}
+
+---
+Proposed action: Delete the JSON object for \`${activeToolForEdit.id}\` from \`tools_data.json\`.`;
+    }
+
     const currentVal = activeToolForEdit[field] !== undefined ? activeToolForEdit[field] : null;
     const proposedVal = editProposedValue.value.trim();
-    const evidence = editEvidence.value.trim();
 
     return `### Tool Data Correction Proposal
 
@@ -955,6 +987,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function updatePatchPreview() {
     if (!activeToolForEdit) return;
     const field = editFieldSelect.value;
+
+    if (field === 'remove') {
+      editPatchPreview.innerHTML = `// Tool Removal Proposal
+{
+  "id": "${activeToolForEdit.id}",
+<span style="color: #ef4444;">- "action": "KEEP"</span>
+<span style="color: #22c55e;">+ "action": "REMOVE"</span>
+}`;
+      return;
+    }
+
     let currentVal = activeToolForEdit[field];
     if (currentVal === undefined || currentVal === null) {
       currentVal = null;
@@ -977,14 +1020,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnSubmitGithubIssue) {
     btnSubmitGithubIssue.addEventListener('click', () => {
-      const proposedVal = editProposedValue.value.trim();
-      if (!proposedVal) {
-        alert('Please enter a proposed corrected value.');
-        return;
+      const field = editFieldSelect.value;
+      if (field !== 'remove') {
+        const proposedVal = editProposedValue.value.trim();
+        if (!proposedVal) {
+          alert('Please enter a proposed corrected value.');
+          return;
+        }
       }
       
       const markdown = generateProposalMarkdown();
-      const title = `[Data Correction] Update ${editFieldSelect.options[editFieldSelect.selectedIndex].text} for ${activeToolForEdit.name}`;
+      const title = field === 'remove'
+        ? `[Data Removal] Remove tool/method: ${activeToolForEdit.name} (${activeToolForEdit.id})`
+        : `[Data Correction] Update ${editFieldSelect.options[editFieldSelect.selectedIndex].text} for ${activeToolForEdit.name}`;
       const url = `https://github.com/KarelBerka/alphafoldology/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(markdown)}`;
       window.open(url, '_blank');
     });
@@ -992,27 +1040,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnCopyEditJson) {
     btnCopyEditJson.addEventListener('click', () => {
-      const proposedVal = editProposedValue.value.trim();
-      if (!proposedVal) {
-        alert('Please enter a proposed corrected value.');
-        return;
-      }
-      const markdown = generateProposalMarkdown();
-      navigator.clipboard.writeText(markdown).then(() => {
-        const originalText = btnCopyEditJson.innerHTML;
-        btnCopyEditJson.innerHTML = 'Copied! ✓';
-        btnCopyEditJson.style.backgroundColor = 'rgba(34, 197, 94, 0.15)';
-        btnCopyEditJson.style.color = '#22c55e';
-        btnCopyEditJson.style.borderColor = 'rgba(34, 197, 94, 0.3)';
-        setTimeout(() => {
-          btnCopyEditJson.innerHTML = originalText;
-          btnCopyEditJson.style.backgroundColor = '';
-          btnCopyEditJson.style.color = '';
-          btnCopyEditJson.style.borderColor = '';
-        }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+      if (!activeToolForEdit) return;
+      const evidence = editEvidence.value.trim();
+      const title = `[Data Removal] Remove tool/method: ${activeToolForEdit.name} (${activeToolForEdit.id})`;
+      const markdown = `### Tool/Method Removal Request
+
+- **Tool/Method Name:** ${activeToolForEdit.name} (ID: \`${activeToolForEdit.id}\`)
+- **Action:** Requesting removal of this entire tool entry from the database.
+- **GitHub Repository:** ${activeToolForEdit.repo ? `https://github.com/${activeToolForEdit.repo}` : 'N/A'}
+- **Reason for Removal / Evidence:** ${evidence ? evidence : 'No reason provided. Please add context here.'}
+
+---
+Proposed action: Delete the JSON object for \`${activeToolForEdit.id}\` from \`tools_data.json\`.`;
+
+      const url = `https://github.com/KarelBerka/alphafoldology/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(markdown)}`;
+      window.open(url, '_blank');
     });
   }
 
