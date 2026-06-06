@@ -79,6 +79,8 @@ def validate_database(file_path="tools_data.json"):
                 seen_preprint_dois[doi_clean] = tool_id
 
     # Phase 2: Detailed Field Validations
+    has_children = {t.get("parent") for t in tools if t.get("parent")}
+
     for tool in tools:
         tool_id = tool.get("id")
         if not tool_id:
@@ -139,6 +141,38 @@ def validate_database(file_path="tools_data.json"):
         preprint_link = tool.get("preprint_link")
         if preprint_doi and preprint_link and preprint_doi not in preprint_link:
             warnings.append(f"Link mismatch: Tool '{tool_id}' preprint_link ('{preprint_link}') does not contain preprint_doi ('{preprint_doi}')")
+
+        # 8. Quality Signal Heuristics
+        # Heuristic 1: Scrape noise/URL-like artifacts in ID
+        id_noise_keywords = ['http', 'github_', 'blob_', 'authuser', 'ipynb']
+        if any(kw in tool_id.lower() for kw in id_noise_keywords):
+            warnings.append(f"Quality: Tool '{tool_id}' has URL-like or scraping noise fragments in its ID")
+
+        # Heuristic 2: Out-of-scope keywords in name, repo, or ID
+        project_noise_keywords = ['frontend', 'backend', 'homework', 'assignment', 'class-project', 'playground', 'sandbox', 'coursework']
+        name_lower = tool.get("name", "").lower()
+        repo_str = (tool.get("repo") or "").lower()
+        if any(kw in tool_id.lower() or kw in name_lower or kw in repo_str for kw in project_noise_keywords):
+            warnings.append(f"Quality: Tool '{tool_id}' indicates a student/class project, auxiliary component, or sandbox repo")
+
+        # Heuristic 3: Known scraping/API organizations
+        if "api-evangelist" in repo_str:
+            warnings.append(f"Quality: Tool '{tool_id}' is owned by a known scraping/API collection organization ('api-evangelist')")
+
+        # Heuristic 4: Low popularity, low impact, and isolated node
+        core_tools = {'alphafold1', 'alphafold2', 'rosettafold', 'colabfold', 'esmfold'}
+        stars = tool.get("github_stars", 0) or 0
+        citations = tool.get("citations_count", 0) or 0
+        citing_papers_count = len(tool.get("citing_papers", []) or [])
+        
+        # Check if the tool is completely isolated and has low metrics
+        if tool_id not in core_tools and tool_id not in has_children:
+            if stars <= 1 and citations == 0 and citing_papers_count == 0:
+                warnings.append(f"Quality: Tool '{tool_id}' has low impact (Stars: {stars}, Citations: {citations}) and is an isolated leaf node")
+
+        # Heuristic 5: Lack of pedigree/references
+        if not tool.get("repo") and not tool.get("paper_doi") and not tool.get("parent") and tool_id not in core_tools:
+            warnings.append(f"Quality: Tool '{tool_id}' has no repo, no paper_doi, and no parent node (isolated and unverified)")
 
     # Output Summary Report
     print("\n" + "="*50)
