@@ -7,7 +7,7 @@ def generate_database():
     random.seed(42)  # For reproducibility
 
     # Path to original tools_data.json
-    gather_dir = "e:/Dropbox/Antigravity/Alphafoldology gather"
+    gather_dir = "c:/Users/krapn/Dropbox/Antigravity/Alphafoldology gather"
     input_path = os.path.join(gather_dir, "tools_data.json")
     
     with open(input_path, "r", encoding="utf-8") as f:

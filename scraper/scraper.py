@@ -1253,7 +1253,71 @@ TOOLS_CURATED = [
         "usage": 'Interactive interface for engineering sequences with custom specifications using ESM weights.',
         "strengths": 'Provides fast screening feedback during design.',
         "weaknesses": 'Lacks specialized multi-track coordinate outputs.'
-    }]
+    },
+    {
+        "id": "decaf",
+        "name": "DeCAF",
+        "repo": "genesistherapeutics/decaf",
+        "category": "Fast Predictors",
+        "status": "Active",
+        "paper_doi": None,
+        "parent": 'boltz1',
+        "usage": 'Distills all-atom cofolding diffusion models into flow maps to generate high-quality structures in a few steps.',
+        "strengths": 'Reduces number of function evaluations (NFEs) significantly (e.g. 5x fewer steps), supports SE(3) rigid alignment, includes DeCAF-SEARCH reward-guided lookahead sampling.',
+        "weaknesses": 'Requires pretrained cofolding teacher models (like Boltz-1 or Pearl) for distillation.'
+    },
+    {
+        "id": "dynafold",
+        "name": "DynaFold",
+        "repo": "Zirui-Fan/DynaFold",
+        "category": "Fast Predictors",
+        "status": "Active",
+        "paper_doi": None,
+        "parent": 'alphafold2',
+        "usage": 'Generative framework using latent diffusion to predict and sample protein dynamic trajectories and conformational transition pathways.',
+        "strengths": 'Highly efficient alternative to traditional molecular dynamics simulations; models complex structural transitions and ensembles from sequence.',
+        "weaknesses": 'Limited to backbone trajectory predictions; requires pretrained structural autoencoders.'
+    },
+    {
+        "id": "dtsfm",
+        "name": "dtSFM",
+        "repo": "Reddy-BIIE-ETHZ/dtSFM",
+        "category": "Ligand Docking",
+        "status": "Active",
+        "paper_doi": "10.64898/2026.06.08.730844",
+        "parent": "alphafold3",
+        "usage": "Drug-Target Specificity Foundation Model coupling a sequence-native encoder and generative decoder to predict molecular binding compatibility as a thermodynamic quantity directly from sequence.",
+        "strengths": "High data efficiency (100,000x over non-physics baseline); screens off-targets at proteome scale; retrieves drug-target pairs with 95% recall-at-10.",
+        "weaknesses": "Strictly sequence-based predictions that bypass direct 3D structural modeling; requires wet-lab validation."
+    },
+    {
+        "id": "genloop",
+        "name": "GenLoop",
+        "repo": "Reddy-BIIE-ETHZ/GenLoop",
+        "category": "Ligand Docking",
+        "status": "Active",
+        "paper_doi": "10.64898/2026.06.08.730844",
+        "parent": "dtsfm",
+        "usage": "Closed generative drug-design loop using dtSFM that iteratively generates candidates, reranks via encoder, verifies with AlphaFold-3, and refines via LoRA.",
+        "strengths": "Automates the full pipeline from target sequence to candidate molecule with structural verification; LoRA-refinement improves binding compatibility.",
+        "weaknesses": "Highly dependent on the accuracy of the underlying dtSFM model and AlphaFold-3 validation; requires significant computational resources."
+    },
+    {
+        "id": "livia",
+        "name": "LIVIA",
+        "repo": "flyark/LIVIA",
+        "category": "Visualization",
+        "status": "Active",
+        "paper_doi": None,
+        "preprint_doi": "10.64898/2026.05.01.721633",
+        "preprint_link": "https://doi.org/10.64898/2026.05.01.721633",
+        "parent": "chimerax_alphafold",
+        "usage": "Browser-based interactive assessor and visualizer of predicted PPI interfaces embedding Mol* and exporting ChimeraX/PyMOL scripts.",
+        "strengths": "Runs locally in browser (no server uploads), embeds interactive Mol*, outputs visualization scripts for ChimeraX/PyMOL.",
+        "weaknesses": "Optimized for pairwise structures, memory constraints on large assemblies inside the browser.",
+        "date": "2026-05-10"
+    }
+]
 
 # Configure request headers (important for OpenAlex polite pool and GitHub API)
 HEADERS = {
@@ -1273,7 +1337,11 @@ def fetch_json(url, custom_headers=None):
                 if response.status == 200:
                     return json.loads(response.read().decode('utf-8'))
         except urllib.error.HTTPError as e:
-            if e.code in [403, 429]:  # Rate limits
+            if e.code == 401 and "Authorization" in req_headers:
+                print(f"Unauthorized (401) on {url} with GITHUB_TOKEN. Retrying without token...")
+                del req_headers["Authorization"]
+                req = urllib.request.Request(url, headers=req_headers)
+            elif e.code in [403, 429]:  # Rate limits
                 print(f"Rate limited or forbidden on {url}: {e.code}. Retrying after delay...")
                 time.sleep(2 * (attempt + 1))
             else:
@@ -3301,6 +3369,11 @@ def main():
         "alphafold3": "2024-05-08",
         "chai1": "2024-09-05",
         "boltz1": "2024-10-15",
+        "decaf": "2026-06-07",
+        "dynafold": "2025-09-14",
+        "promera": "2026-06-10",
+        "dtsfm": "2026-06-08",
+        "genloop": "2026-06-10",
     }
 
     start_date = datetime.date(2021, 8, 1)
@@ -3404,99 +3477,54 @@ def main():
 
     existing_ids = {t["id"] for t in TOOLS_CURATED}
     tool_counter = 0
-
-    while len(TOOLS_CURATED) < 1001:
-        pref = random.choice(prefixes)
-        suff = random.choice(suffixes)
-        ver = f" {random.randint(2, 4)}" if random.random() < 0.25 else ""
-        name = f"{pref}{suff}{ver}"
-        tid = name.lower().replace(" ", "_").replace("-", "_")
-        
-        if tid in existing_ids:
-            tool_counter += 1
-            name = f"{pref}{suff} v{tool_counter}"
-            tid = f"{tid}_v{tool_counter}"
-            
-        existing_ids.add(tid)
-        category = random.choice(categories)
-        
-        # Coherent parent assignment
-        related_parents = [t for t in TOOLS_CURATED if t["category"] == category or t["category"] == "Core Predictors"]
-        if not related_parents:
-            related_parents = TOOLS_CURATED
-        parent_tool = random.choice(related_parents)
-        parent_id = parent_tool["id"]
-        
-        parent_date_str = parent_tool.get("date", "2021-07-15")
-        t_date = get_random_date(parent_date_str)
-        
-        stars = random.randint(5, 800)
-        forks = random.randint(1, 150)
-        open_issues = random.randint(0, 30)
-        citations = random.randint(0, 180)
-        status = "Active" if random.random() > 0.15 else "Completed"
-        
-        usage = f"Predicts {category.lower()} tasks using deep learning modules."
-        strengths = "Extremely fast inference time, optimized memory layout."
-        weaknesses = "Reduced accuracy for disordered proteins or flexible loop regions."
-        
-        new_tool = {
-            "id": tid,
-            "name": name,
-            "repo": f"alpha-biology/{tid}",
-            "category": category,
-            "status": status,
-            "paper_doi": f"10.1101/202{random.randint(1, 6)}.{random.randint(1, 12):02d}.{random.randint(100000, 999999)}",
-            "parent": parent_id,
-            "usage": usage,
-            "strengths": strengths,
-            "weaknesses": weaknesses,
-            "date": t_date
-        }
-        
-        FALLBACK_DATA[tid] = {
-            "github_stars": stars,
-            "github_forks": forks,
-            "github_open_issues": open_issues,
-            "github_description": f"Official repository of {name} for advanced {category.lower()} application.",
-            "github_top_forks": [
-                {
-                    "name": f"fork-{random.randint(1,99)}/{tid}",
-                    "url": f"https://github.com/fork-{random.randint(1,99)}/{tid}",
-                    "description": f"Custom fork of {name} optimizing GPU parallelization.",
-                    "stars": random.randint(1, 15)
-                }
-            ] if random.random() > 0.5 else [],
-            "citations_count": citations,
-            "citing_papers": [
-                {
-                    "title": f"Application of {name} in structural analysis of protein complexes",
-                    "url": f"https://doi.org/10.1038/s41598-02{random.randint(1, 6)}-{random.randint(10000, 99999)}-z",
-                    "citations": random.randint(1, 30),
-                    "year": int(t_date.split("-")[0]) + random.randint(0, 1),
-                    "authors": "Research Group et al."
-                }
-            ] if citations > 0 else []
-        }
-        
-        TOOLS_CURATED.append(new_tool)
-    # ==========================================================================
+    pass
+    # Disabled simulated tool generator loop
+# ==========================================================================
 
     # 1. Gather social media
     social_posts = fetch_bluesky_posts()
     
-    # Load cached data if available
-    cached_data = {}
-    output_dir = "e:/Dropbox/Antigravity/Alphafoldology gather"
+    # Load cached data and all existing tools from tools_data.json
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if os.path.basename(script_dir) == "scraper":
+        output_dir = os.path.dirname(script_dir)
+    else:
+        output_dir = script_dir
     output_path = os.path.join(output_dir, "tools_data.json")
+    
+    existing_tools = []
     if os.path.exists(output_path):
         try:
             with open(output_path, "r", encoding="utf-8") as f:
                 old_db = json.load(f)
-                cached_data = {t["id"]: t for t in old_db.get("tools", [])}
-                print(f"Loaded {len(cached_data)} cached tools from {output_path}")
+                existing_tools = old_db.get("tools", [])
+                print(f"Loaded {len(existing_tools)} existing tools from {output_path}")
         except Exception as e:
-            print(f"Error loading cached data: {e}")
+            print(f"Error loading existing database: {e}")
+            
+    # Merge existing tools with curated tools
+    tools_map = {t["id"]: t for t in existing_tools}
+    for tool in TOOLS_CURATED:
+        tid = tool["id"]
+        if tid in tools_map:
+            # Merge and prioritize curated settings
+            for key in ["name", "repo", "category", "status", "parent", "usage", "strengths", "weaknesses", "date"]:
+                if key in tool:
+                    tools_map[tid][key] = tool[key]
+            if "paper_doi" in tool:
+                tools_map[tid]["paper_doi"] = tool["paper_doi"]
+                tools_map[tid]["doi_link"] = f"https://doi.org/{tool['paper_doi']}" if tool["paper_doi"] else None
+            if "preprint_doi" in tool:
+                tools_map[tid]["preprint_doi"] = tool["preprint_doi"]
+                tools_map[tid]["preprint_link"] = f"https://doi.org/{tool['preprint_doi']}" if tool["preprint_doi"] else None
+            if "publication_type" in tool:
+                tools_map[tid]["publication_type"] = tool["publication_type"]
+        else:
+            tools_map[tid] = tool
+            
+    tools_to_run = list(tools_map.values())
+    cached_data = {t["id"]: t for t in existing_tools}
             
     # 2. Gather tool details
     tools_output = []
@@ -3506,7 +3534,7 @@ def main():
     total_preprints = 0
     total_published_papers = 0
     
-    for tool in TOOLS_CURATED:
+    for tool in tools_to_run:
         tool_id = tool["id"]
         
         # Determine if we should fetch from API or reuse cache

@@ -14,11 +14,24 @@ def fetch_json(url, headers=None):
     if headers is None:
         headers = {}
     headers.setdefault("User-Agent", "AlphafoldologyWeeklyDaemon/1.0 (mailto:KarelBerka@users.noreply.github.com)")
+    
+    # Use environment GITHUB_TOKEN if present for github.com, unless we explicitly skipped it
+    if "api.github.com" in url and "Authorization" not in headers and not headers.get("Skip-Auth"):
+        import os
+        gh_token = os.environ.get("GITHUB_TOKEN")
+        if gh_token:
+            headers["Authorization"] = f"token {gh_token}"
+            
     req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=15) as response:
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
+        if e.code == 401 and "Authorization" in headers:
+            print(f"Unauthorized (401) on {url} with GITHUB_TOKEN. Retrying without token...", file=sys.stderr)
+            del headers["Authorization"]
+            headers["Skip-Auth"] = True
+            return fetch_json(url, headers)
         print(f"HTTP Error: {e.code} for URL: {url}", file=sys.stderr)
     except Exception as e:
         print(f"Error: {e} for URL: {url}", file=sys.stderr)
