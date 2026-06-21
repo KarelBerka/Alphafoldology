@@ -262,7 +262,7 @@ TOOLS_CURATED = [
         "id": "speach_af",
         "name": "SPEACH_AF",
         "repo": "harmslab/speach_af",
-        "category": "Fast Predictors",
+        "category": "Ensemble Generators",
         "status": "Active",
         "paper_doi": "10.1101/2022.08.23.505005",
         "parent": 'colabfold',
@@ -1270,7 +1270,7 @@ TOOLS_CURATED = [
         "id": "dynafold",
         "name": "DynaFold",
         "repo": "Zirui-Fan/DynaFold",
-        "category": "Fast Predictors",
+        "category": "Ensemble Generators",
         "status": "Active",
         "paper_doi": None,
         "parent": 'alphafold2',
@@ -1316,10 +1316,144 @@ TOOLS_CURATED = [
         "strengths": "Runs locally in browser (no server uploads), embeds interactive Mol*, outputs visualization scripts for ChimeraX/PyMOL.",
         "weaknesses": "Optimized for pairwise structures, memory constraints on large assemblies inside the browser.",
         "date": "2026-05-10"
+    },
+    {
+        "id": "esmflow",
+        "name": "ESMFlow",
+        "repo": "bjing2016/alphaflow",
+        "category": "Ensemble Generators",
+        "status": "Active",
+        "paper_doi": "10.48550/arXiv.2402.04845",
+        "parent": "esmfold",
+        "usage": "ESMFold fine-tuned under a flow matching framework for generating protein conformational ensembles.",
+        "strengths": "Faster than AlphaFlow; doesn't require MSAs (uses language model representations).",
+        "weaknesses": "Less accurate than AlphaFlow for complex structures; dependent on ESMFold quality."
+    },
+    {
+        "id": "alphaflow",
+        "name": "AlphaFlow",
+        "repo": "bjing2016/alphaflow",
+        "category": "Ensemble Generators",
+        "status": "Active",
+        "paper_doi": "10.48550/arXiv.2402.04845",
+        "parent": "alphafold2",
+        "usage": "AlphaFold fine-tuned under a flow matching framework for generating protein conformational ensembles.",
+        "strengths": "Generative modeling of conformational landscapes; repurposes AlphaFold's representations.",
+        "weaknesses": "Requires fine-tuning; conformational ensembles might not capture long-timescale transition dynamics."
+    },
+    {
+        "id": "af_calvados",
+        "name": "AF-Calvados",
+        "repo": "KULL-Centre/_2025_buelow_AF-CALVADOS",
+        "category": "Ensemble Generators",
+        "status": "Active",
+        "paper_doi": "10.1101/2025.10.19.683306",
+        "parent": "alphafold2",
+        "usage": "AlphaFold-guided simulations of multi-domain proteins at the proteome level, combining folded domains from AlphaFold and disordered regions.",
+        "strengths": "Coarse-grained simulations at the proteome scale; handles mixtures of disordered regions and folded domains.",
+        "weaknesses": "Dependent on AlphaFold prediction accuracy; limited resolution due to coarse-grained modeling."
+    },
+    {
+        "id": "folddisco",
+        "name": "Folddisco",
+        "repo": "steineggerlab/folddisco",
+        "category": "Structural Search",
+        "status": "Active",
+        "paper_doi": "10.1038/s41587-026-03162-9",
+        "parent": "foldseek",
+        "usage": "Structural motif search across the protein universe with Folddisco.",
+        "strengths": "Fast structural motif search, leverages foldseek's structural representation.",
+        "weaknesses": "Limited to structural motif search, requires 3D coordinates."
+    },
+    {
+        "id": "sampleworks",
+        "name": "SampleWorks",
+        "repo": "diff-use/sampleworks",
+        "category": "Benchmarks",
+        "status": "Active",
+        "paper_doi": "10.82153/jkxj-tw08",
+        "parent": "alphafold2",
+        "usage": "Modular platform for experimentally guided biomolecular ensemble generation, integrating generative structure models with physical and experimental observables.",
+        "strengths": "Flexible modular design; plugs diverse structure models into guidance pipelines; supports experimental constraints.",
+        "weaknesses": "Relatively new framework; requires physical coordinate handling and setup for specific experimental guidance types."
+    },
+    {
+        "id": "foldbench",
+        "name": "FoldBench",
+        "repo": "BEAM-Labs/FoldBench",
+        "category": "Benchmarks",
+        "status": "Active",
+        "paper_doi": "10.1038/s41467-025-67127-3",
+        "parent": "alphafold3",
+        "usage": "Comprehensive low-homology benchmark dataset for evaluating all-atom biomolecular structure prediction models across nine categories of proteins, nucleic acids, and ligands.",
+        "strengths": "Low-homology targets ensure generalization testing; broad coverage of assemblies, nucleic acids, and ligands.",
+        "weaknesses": "Heavy computational requirements for benchmarking large datasets; limited to structural similarity metrics."
+    },
+    {
+        "id": "promera",
+        "name": "Promera",
+        "repo": None,
+        "category": "Core Predictors",
+        "status": "Active",
+        "paper_doi": None,
+        "preprint_doi": "10.64898/2026.06.07.729267",
+        "preprint_link": "https://doi.org/10.64898/2026.06.07.729267",
+        "parent": "alphafold2",
+        "usage": "Unified generative model that integrates all-atom structure prediction (co-folding), confidence-based binder filtering, and controllable de novo design in a single architecture.",
+        "strengths": "Surpasses OpenFold3 and Boltz-2 on co-folding accuracy in therapeutically relevant categories; provides highly accurate confidence metrics to distinguish binders from non-binders for miniproteins and nanobodies.",
+        "weaknesses": "Initial code release is not yet fully public/open-source; limited real-world experimental validation compared to established tools."
+    },
+    {
+        "id": "ibex",
+        "name": "Ibex",
+        "repo": "prescient-design/ibex",
+        "category": "Core Predictors",
+        "status": "Active",
+        "paper_doi": "10.1080/19420862.2025.2602217",
+        "parent": "alphafold2",
+        "usage": "Pan-immunoglobulin structure prediction model for antibodies, nanobodies, and T-cell receptors that explicitly distinguishes between bound and unbound conformations.",
+        "strengths": "Trained on apo/holo pairs for conformation awareness; handles diverse immune receptor classes.",
+        "weaknesses": "Optimized specifically for immunoglobulins; requires separate model weights download."
+    },
+    {
+        "id": "igpose",
+        "name": "IgPose",
+        "repo": "arontier/igpose",
+        "category": "Protein Docking",
+        "status": "Active",
+        "paper_doi": "10.1093/bioinformatics/btag076",
+        "parent": "esm2",
+        "usage": "Generative data-augmented pipeline using Equivariant GNNs and ESM-2 embeddings for robust immunoglobulin-antigen binding pose prediction.",
+        "strengths": "Integrates geometric and evolutionary features; trained with decoy augmentation via Structural Immunoglobulin Decoy Database (SIDD).",
+        "weaknesses": "Dependent on quality of ESM-2 embeddings; specifically tailored for antibody-antigen interfaces."
+    },
+    {
+        "id": "proteindj",
+        "name": "ProteinDJ",
+        "repo": "PapenfussLab/proteindj",
+        "category": "Protein Design",
+        "status": "Active",
+        "paper_doi": "10.1002/pro.70464",
+        "parent": "rfdiffusion",
+        "usage": "High-performance, Nextflow-based modular protein design pipeline utilizing RFdiffusion, BindCraft, and ProteinMPNN with Apptainer containerization.",
+        "strengths": "HPC-scalable workflow; containerized setup for portability; automated mid-pipeline structural filtering.",
+        "weaknesses": "Requires high-performance cluster resource configurations; dependent on container software."
+    },
+    {
+        "id": "molas",
+        "name": "MolAS",
+        "repo": "BradWangW/MolAS",
+        "category": "Ligand Docking",
+        "status": "Active",
+        "paper_doi": "10.1186/s13321-026-01168-8",
+        "parent": "diffdock",
+        "usage": "Lightweight algorithm selection model predicting protein-ligand docking performance using molecular embeddings and attentional pooling.",
+        "strengths": "Lightweight architecture; improves overall docking pipeline success rates; useful diagnostic selector.",
+        "weaknesses": "Requires pre-computed embeddings; does not perform molecular docking directly."
     }
 ]
 
-# Configure request headers (important for OpenAlex polite pool and GitHub API)
+# Configure request headers (important for Europe PMC and GitHub API)
 HEADERS = {
     "User-Agent": "AlphafoldologyScraper/1.0 (mailto:alphafoldology@example.com)"
 }
@@ -1392,45 +1526,54 @@ def fetch_github_stats(repo):
             
     return stats
 
-def fetch_openalex_citations(doi):
-    """Fetch citation count and top citing papers from OpenAlex."""
+def fetch_europepmc_citations(doi):
+    """Fetch citation count and top citing papers from Europe PMC."""
     if not doi:
         return {"citations": 0, "citing_works": []}
     
-    print(f"Fetching OpenAlex literature data for DOI {doi}...")
-    work_url = f"https://api.openalex.org/works/https://doi.org/{doi}"
-    work_data = fetch_json(work_url)
+    # URL encode DOI to prevent search syntax conflicts
+    encoded_doi = urllib.parse.quote(doi)
+    print(f"Fetching Europe PMC literature data for DOI {doi}...")
+    
+    search_url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:{encoded_doi}&format=json&resultType=core"
+    search_data = fetch_json(search_url)
     
     citations = 0
     citing_works = []
     
-    if work_data:
-        citations = work_data.get("cited_by_count", 0)
-        work_id = work_data.get("id")
+    if search_data and "resultList" in search_data and search_data["resultList"]["result"]:
+        result = search_data["resultList"]["result"][0]
+        citations = result.get("citedByCount", 0)
+        source = result.get("source")
+        article_id = result.get("id")
         
-        # Get works citing this paper
-        if work_id:
-            cites_url = f"https://api.openalex.org/works?filter=cites:{work_id}&sort=cited_by_count:desc&per_page=4"
+        # Fetch works citing this paper
+        if source and article_id:
+            cites_url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/{source}/{article_id}/citations?format=json&pageSize=4"
             cites_data = fetch_json(cites_url)
-            if cites_data and "results" in cites_data:
-                for paper in cites_data["results"]:
-                    # Clean title
-                    title = paper.get("display_name") or paper.get("title") or "Untitled Paper"
-                    authors = []
-                    for author_inst in paper.get("authorships", []):
-                        author_name = author_inst.get("author", {}).get("display_name")
-                        if author_name:
-                            authors.append(author_name)
+            if cites_data and "citationList" in cites_data and "citation" in cites_data["citationList"]:
+                for paper in cites_data["citationList"]["citation"]:
+                    title = paper.get("title") or "Untitled Paper"
                     
-                    author_str = ", ".join(authors[:3])
-                    if len(authors) > 3:
-                        author_str += " et al."
-                        
+                    # Format authors: clean and truncate authorString
+                    author_str = paper.get("authorString") or ""
+                    if author_str.endswith("."):
+                        author_str = author_str[:-1]
+                    authors_list = [a.strip() for a in author_str.split(",") if a.strip()]
+                    if len(authors_list) > 3:
+                        author_str = ", ".join(authors_list[:3]) + " et al."
+                    else:
+                        author_str = ", ".join(authors_list)
+                    
+                    c_source = paper.get("source")
+                    c_id = paper.get("id")
+                    url = f"https://europepmc.org/article/{c_source}/{c_id}" if c_source and c_id else ""
+                    
                     citing_works.append({
                         "title": title,
-                        "url": paper.get("doi") or f"https://openalex.org/{paper.get('id').split('/')[-1]}",
-                        "citations": paper.get("cited_by_count", 0),
-                        "year": paper.get("publication_year"),
+                        "url": url,
+                        "citations": paper.get("citedByCount", 0),
+                        "year": paper.get("pubYear"),
                         "authors": author_str
                     })
                     
@@ -1568,6 +1711,144 @@ def main():
                 "authors": "Ah-Ram Kim et al."
             }
         ]
+    },
+    "esmflow": {
+        "github_stars": 90,
+        "github_forks": 15,
+        "github_open_issues": 2,
+        "github_description": "ESMFold flow matching for protein ensembles",
+        "github_top_forks": [],
+        "citations_count": 80,
+        "citing_papers": [
+            {
+                "title": "AlphaFold Meets Flow Matching for Generating Protein Ensembles",
+                "url": "https://doi.org/10.48550/arXiv.2402.04845",
+                "citations": 80,
+                "year": 2024,
+                "authors": "Bowen Jing et al."
+            }
+        ]
+    },
+    "alphaflow": {
+        "github_stars": 90,
+        "github_forks": 15,
+        "github_open_issues": 2,
+        "github_description": "AlphaFold flow matching for protein ensembles",
+        "github_top_forks": [],
+        "citations_count": 80,
+        "citing_papers": [
+            {
+                "title": "AlphaFold Meets Flow Matching for Generating Protein Ensembles",
+                "url": "https://doi.org/10.48550/arXiv.2402.04845",
+                "citations": 80,
+                "year": 2024,
+                "authors": "Bowen Jing et al."
+            }
+        ]
+    },
+    "af_calvados": {
+        "github_stars": 12,
+        "github_forks": 3,
+        "github_open_issues": 0,
+        "github_description": "AF-CALVADOS: AlphaFold-guided simulations of multi-domain proteins",
+        "github_top_forks": [],
+        "citations_count": 6,
+        "citing_papers": [
+            {
+                "title": "AF-CALVADOS: AlphaFold-guided simulations of multi-domain proteins at the proteome level",
+                "url": "https://doi.org/10.1101/2025.10.19.683306",
+                "citations": 6,
+                "year": 2025,
+                "authors": "Sören von Bülow et al."
+            }
+        ]
+    },
+    "folddisco": {
+        "github_stars": 35,
+        "github_forks": 5,
+        "github_open_issues": 1,
+        "github_description": "Structural motif search across the protein universe with Folddisco",
+        "github_top_forks": [],
+        "citations_count": 5,
+        "citing_papers": [
+            {
+                "title": "Structural motif search across the protein universe with Folddisco",
+                "url": "https://doi.org/10.1038/s41587-026-03162-9",
+                "citations": 5,
+                "year": 2026,
+                "authors": "Hyunbin Kim et al."
+            }
+        ]
+    },
+    "sampleworks": {
+        "github_stars": 8,
+        "github_forks": 1,
+        "github_open_issues": 0,
+        "github_description": "Sampleworks: A modular platform for experimentally guided biomolecular ensemble generation",
+        "github_top_forks": [],
+        "citations_count": 1,
+        "citing_papers": [
+            {
+                "title": "Sampleworks: A modular platform for experimentally guided biomolecular ensemble generation",
+                "url": "https://doi.org/10.82153/jkxj-tw08",
+                "citations": 1,
+                "year": 2026,
+                "authors": "Chrispens et al."
+            }
+        ]
+    },
+    "foldbench": {
+        "github_stars": 45,
+        "github_forks": 8,
+        "github_open_issues": 3,
+        "github_description": "Benchmarking all-atom biomolecular structure prediction with FoldBench",
+        "github_top_forks": [],
+        "citations_count": 12,
+        "citing_papers": [
+            {
+                "title": "Benchmarking all-atom biomolecular structure prediction with FoldBench",
+                "url": "https://doi.org/10.1038/s41467-025-67127-3",
+                "citations": 12,
+                "year": 2026,
+                "authors": "Feng, Q. & XU, S."
+            }
+        ]
+    },
+    "ibex": {
+        "github_stars": 37,
+        "github_forks": 3,
+        "github_open_issues": 0,
+        "github_description": "Antibody structure prediction",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
+    },
+    "igpose": {
+        "github_stars": 2,
+        "github_forks": 0,
+        "github_open_issues": 1,
+        "github_description": "Public repository for IGPose",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
+    },
+    "proteindj": {
+        "github_stars": 122,
+        "github_forks": 23,
+        "github_open_issues": 3,
+        "github_description": "Official repository for the ProteinDJ protein design pipeline",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
+    },
+    "molas": {
+        "github_stars": 3,
+        "github_forks": 1,
+        "github_open_issues": 0,
+        "github_description": "",
+        "github_top_forks": [],
+        "citations_count": 0,
+        "citing_papers": []
     },
         "alphafold1": {
             "github_stars": 14607,
@@ -3348,10 +3629,10 @@ def main():
 
     ligand_docking_ids = {
         "diffdock", "diffdock_l", "flowdock", "dynamicbind", "equibind", 
-        "tankbind", "fabind", "unidock"
+        "tankbind", "fabind", "unidock", "molas"
     }
     protein_docking_ids = {
-        "diffdock_pp", "af2complex", "folddock", "alphapulldown"
+        "diffdock_pp", "af2complex", "folddock", "alphapulldown", "igpose"
     }
 
     historical_dates = {
@@ -3374,6 +3655,16 @@ def main():
         "promera": "2026-06-10",
         "dtsfm": "2026-06-08",
         "genloop": "2026-06-10",
+        "esmflow": "2024-02-07",
+        "alphaflow": "2024-02-07",
+        "af_calvados": "2025-10-19",
+        "folddisco": "2025-07-06",
+        "sampleworks": "2026-03-10",
+        "foldbench": "2025-09-28",
+        "ibex": "2025-12-11",
+        "igpose": "2026-02-01",
+        "proteindj": "2026-02-01",
+        "molas": "2026-03-14",
     }
 
     start_date = datetime.date(2021, 8, 1)
@@ -3571,7 +3862,7 @@ def main():
             # Fetch GitHub Metrics
             gh_stats = fetch_github_stats(tool["repo"])
             # Fetch Literature citations
-            lit_stats = fetch_openalex_citations(tool["paper_doi"])
+            lit_stats = fetch_europepmc_citations(tool["paper_doi"])
             
             # Use fallback if API returned 0 stars and we have fallback data
             stars = gh_stats["stars"]

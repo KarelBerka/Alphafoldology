@@ -469,6 +469,8 @@ header {
 .node-protein-docking circle { stroke: #06b6d4; } /* cyan-500 */
 .node-databases circle { stroke: #ec4899; } /* pink-500 */
 .node-visualization circle { stroke: #8b5cf6; } /* violet-500 */
+.node-ensemble circle { stroke: #f97316; } /* orange-500 */
+.node-benchmarks circle { stroke: #10b981; } /* emerald-500 */
 
 /* Subtle fill tints for major nodes */
 .node-major.node-core circle { fill: #f0fdfa; }
@@ -480,6 +482,8 @@ header {
 .node-major.node-protein-docking circle { fill: #ecfeff; }
 .node-major.node-databases circle { fill: #fdf2f8; }
 .node-major.node-visualization circle { fill: #f5f3ff; }
+.node-major.node-ensemble circle { fill: #fff7ed; } /* orange-50 */
+.node-major.node-benchmarks circle { fill: #ecfdf5; } /* emerald-50 */
 
 .node-core text { fill: var(--text-main); }
 .node-active.node-major circle {
@@ -699,6 +703,8 @@ header {
 .tool-card.cat-protein-docking:hover::before { background: linear-gradient(90deg, #06b6d4, var(--accent-cyan)); }
 .tool-card.cat-databases:hover::before { background: linear-gradient(90deg, #ec4899, var(--accent-cyan)); }
 .tool-card.cat-visualization:hover::before { background: linear-gradient(90deg, #8b5cf6, var(--accent-cyan)); }
+.tool-card.cat-ensemble:hover::before { background: linear-gradient(90deg, #f97316, var(--accent-cyan)); }
+.tool-card.cat-benchmarks:hover::before { background: linear-gradient(90deg, #10b981, var(--accent-cyan)); }
 
 .card-top {
   display: flex;
@@ -734,6 +740,8 @@ header {
 .card-meta.cat-protein-docking .card-cat-badge { color: #06b6d4; border-color: rgba(6, 182, 212, 0.2); }
 .card-meta.cat-databases .card-cat-badge { color: #ec4899; border-color: rgba(236, 72, 153, 0.2); }
 .card-meta.cat-visualization .card-cat-badge { color: #8b5cf6; border-color: rgba(139, 92, 246, 0.2); }
+.card-meta.cat-ensemble .card-cat-badge { color: #f97316; border-color: rgba(249, 115, 22, 0.2); }
+.card-meta.cat-benchmarks .card-cat-badge { color: #10b981; border-color: rgba(16, 185, 129, 0.2); }
 
 .status-indicator {
   display: inline-flex;

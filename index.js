@@ -194,7 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'Variant Predictors': 5,
       'Ligand Docking': 6,
       'Protein Docking': 7,
-      'Protein Design': 8
+      'Protein Design': 8,
+      'Ensemble Generators': 9,
+      'Benchmarks': 10
     };
 
     // Staggering slots (5 slots per category lane)
@@ -266,6 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (cat === 'Protein Docking') nodeType = 'protein-docking';
       else if (cat === 'Databases') nodeType = 'databases';
       else if (cat === 'Visualization') nodeType = 'visualization';
+      else if (cat === 'Ensemble Generators') nodeType = 'ensemble';
+      else if (cat === 'Benchmarks') nodeType = 'benchmarks';
 
       NODE_COORDINATES[tool.id] = {
         x: x,
@@ -682,6 +686,8 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'Protein Docking': return 'cat-protein-docking';
       case 'Databases': return 'cat-databases';
       case 'Visualization': return 'cat-visualization';
+      case 'Ensemble Generators': return 'cat-ensemble';
+      case 'Benchmarks': return 'cat-benchmarks';
       default: return 'cat-other';
     }
   }
