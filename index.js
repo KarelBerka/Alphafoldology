@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentFilters = {
     search: '',
     category: 'all',
+    pub: 'all',
     sort: 'default'
   };
   
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const searchInput = document.getElementById('search-input');
   const categoryChips = document.getElementById('category-chips');
+  const pubChips = document.getElementById('pub-chips');
   const sortChips = document.getElementById('sort-chips');
   const resultsCount = document.getElementById('results-count');
   
@@ -457,6 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function filterAndRenderContent() {
     const query = currentFilters.search.toLowerCase().trim();
     const cat = currentFilters.category;
+    const pub = currentFilters.pub;
 
     // Filter tools
     const filteredTools = appData.tools.filter(tool => {
@@ -468,7 +471,12 @@ document.addEventListener('DOMContentLoaded', () => {
         tool.category.toLowerCase().includes(query);
 
       const matchCat = (cat === 'all' || tool.category === cat);
-      return matchSearch && matchCat;
+      
+      const matchPub = (pub === 'all' || 
+                        (pub === 'published' && (tool.publication_type === 'published' || tool.paper_doi)) || 
+                        (pub === 'preprint' && (tool.publication_type === 'preprint' || tool.preprint_doi)));
+
+      return matchSearch && matchCat && matchPub;
     });
 
     // Sort filtered tools
@@ -583,14 +591,17 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
-          <div class="card-citation" style="margin-bottom: 1.25rem; font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-muted);">
+          <div class="card-pub-buttons" style="margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
             ${tool.paper_doi ? (() => {
               let paperShort = tool.short_citation;
               if (!paperShort) {
                 const year = tool.date ? new Date(tool.date).getFullYear() : 'Unknown';
                 paperShort = `Journal, ${year}`;
               }
-              return `<div><span style="font-weight: 600; color: var(--text-main);">${paperShort}</span> doi: <a href="https://doi.org/${tool.paper_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.paper_doi}">${tool.paper_doi}</a></div>`;
+              return `<a href="https://doi.org/${tool.paper_doi}" target="_blank" class="btn-pub btn-pub-paper" title="View Journal Publication (DOI: ${tool.paper_doi})">
+                <span class="pub-icon">📄</span>
+                <span class="pub-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${paperShort}</span>
+              </a>`;
             })() : ''}
             ${tool.preprint_doi ? (() => {
               let preprintShort = tool.preprint_short_citation;
@@ -598,9 +609,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const year = tool.date ? new Date(tool.date).getFullYear() : 'Unknown';
                 preprintShort = `Preprint, ${year}`;
               }
-              return `<div><span style="font-weight: 600; color: var(--text-main);">${preprintShort}</span> doi: <a href="https://doi.org/${tool.preprint_doi}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);" title="DOI: ${tool.preprint_doi}">${tool.preprint_doi}</a></div>`;
+              return `<a href="https://doi.org/${tool.preprint_doi}" target="_blank" class="btn-pub btn-pub-preprint" title="View Preprint (DOI: ${tool.preprint_doi})">
+                <span class="pub-icon">📝</span>
+                <span class="pub-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${preprintShort}</span>
+              </a>`;
             })() : ''}
-            ${(!tool.paper_doi && !tool.preprint_doi) ? '<span style="font-style: italic;">No DOI listed</span>' : ''}
+            ${(!tool.paper_doi && !tool.preprint_doi) ? `
+              <div class="btn-pub btn-pub-none" style="opacity: 0.5; cursor: not-allowed;">
+                <span class="pub-icon">🚫</span>
+                <span class="pub-text">No Publication Listed</span>
+              </div>
+            ` : ''}
           </div>
 
           <div class="card-actions">
@@ -1078,6 +1097,18 @@ Proposed action: Delete the JSON object for \`${activeToolForEdit.id}\` from \`t
       chipBtn.classList.add('active');
       
       currentFilters.category = chipBtn.getAttribute('data-category');
+      filterAndRenderContent();
+    }
+  });
+
+  pubChips.addEventListener('click', (e) => {
+    const chipBtn = e.target.closest('.chip');
+    if (chipBtn) {
+      // Toggle active chip
+      pubChips.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chipBtn.classList.add('active');
+      
+      currentFilters.pub = chipBtn.getAttribute('data-pub');
       filterAndRenderContent();
     }
   });

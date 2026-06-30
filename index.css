@@ -1660,3 +1660,48 @@ footer {
   text-decoration: underline;
 }
 
+/* Styled publication buttons on tool cards */
+.btn-pub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.btn-pub-paper {
+  background: rgba(8, 145, 178, 0.08);
+  border-color: rgba(8, 145, 178, 0.2);
+  color: var(--accent-cyan);
+}
+
+.btn-pub-paper:hover {
+  background: rgba(8, 145, 178, 0.15);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 8px rgba(8, 145, 178, 0.2);
+}
+
+.btn-pub-preprint {
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.2);
+  color: var(--accent-purple);
+}
+
+.btn-pub-preprint:hover {
+  background: rgba(124, 58, 237, 0.15);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.2);
+}
+
+.btn-pub-none {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.08);
+  color: var(--text-muted);
+}
+
+

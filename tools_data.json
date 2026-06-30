@@ -1,11 +1,14 @@
 {
   "metadata": {
     "last_updated": "2026-06-21 22:02:47",
-    "total_tools": 463,
+    "total_tools": 425,
     "total_github_stars": 162817,
-    "total_citations": 140746,
+    "total_citations": 131312,
     "total_published_papers": 9,
-    "total_preprints": 11
+    "total_preprints": 14,
+    "total_stars": 154771,
+    "total_published": 9,
+    "last_update": "2026-06-29"
   },
   "tools": [
     {
@@ -1067,266 +1070,6 @@
       "doi_link": "https://doi.org/10.1109/IPDPS54959.2023.00048"
     },
     {
-      "id": "lightfold",
-      "name": "LightFold",
-      "repo": "iGene-Discovery/LightFold",
-      "category": "Fast Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.04.10.536281",
-      "parent": "openfold",
-      "usage": "GPU inference accelerator for OpenFold models using customized attention kernels and model distillation.",
-      "strengths": "Up to 5x faster structure prediction on standard GPUs for short chains.",
-      "weaknesses": "Restricted support for massive multimeric complexes, model weights are locked to distilled layouts.",
-      "date": "2026-01-02",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "doi_link": "https://doi.org/10.1101/2023.04.10.536281",
-      "citing_papers": [
-        {
-          "title": "LightFold Primary Paper",
-          "url": "https://doi.org/10.1101/2023.04.10.536281",
-          "citations": 8,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "github_stars": 110,
-      "github_forks": 15,
-      "github_open_issues": 4,
-      "github_description": "LightFold inference accelerator.",
-      "github_top_forks": [],
-      "citations_count": 8
-    },
-    {
-      "id": "deepmsa",
-      "name": "DeepMSA",
-      "repo": "cangyuzh/DeepMSA",
-      "category": "Fast Predictors",
-      "status": "Completed",
-      "paper_doi": "10.1093/bioinformatics/bty1050",
-      "parent": "alphafold2",
-      "usage": "Automated pipeline for generating multi-source MSAs to feed protein folding neural networks.",
-      "strengths": "Combines multiple genome databases to find distant sequence homologs, enhancing prediction.",
-      "weaknesses": "Slower than MMseqs2/ColabFold database pipelines.",
-      "date": "2022-02-10",
-      "github_stars": 240,
-      "github_forks": 65,
-      "github_open_issues": 18,
-      "github_description": "DeepMSA pipeline for generating MSAs.",
-      "github_top_forks": [],
-      "citations_count": 99,
-      "citing_papers": [
-        {
-          "title": "Identifying enhancer–promoter interactions with neural network based on pre-trained DNA vectors and attention mechanism",
-          "url": "https://doi.org/10.1093/bioinformatics/btz694",
-          "citations": 190,
-          "year": 2019,
-          "authors": "Zengyan Hong, Xiangxiang Zeng, Leyi Wei et al."
-        },
-        {
-          "title": "DeepLGP: a novel deep learning method for prioritizing lncRNA target genes",
-          "url": "https://doi.org/10.1093/bioinformatics/btaa428",
-          "citations": 130,
-          "year": 2020,
-          "authors": "Tianyi Zhao, Yang Hu, Jiajie Peng et al."
-        },
-        {
-          "title": "Convolutional neural networks (CNNs): concepts and applications in pharmacogenomics",
-          "url": "https://doi.org/10.1007/s11030-021-10225-3",
-          "citations": 97,
-          "year": 2021,
-          "authors": "Joel Markus Vaz, S. Balaji"
-        },
-        {
-          "title": "iEnhancer-ECNN: identifying enhancers and their strength using ensembles of convolutional neural networks",
-          "url": "https://doi.org/10.1186/s12864-019-6336-3",
-          "citations": 92,
-          "year": 2019,
-          "authors": "Quang H. Nguyen, Thanh‐Hoang Nguyen‐Vo, Nguyen Quoc Khanh Le et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/bty1050"
-    },
-    {
-      "id": "deepmsa2",
-      "name": "DeepMSA2",
-      "repo": "cangyuzh/DeepMSA2",
-      "category": "Fast Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.02.10.479900",
-      "parent": "deepmsa",
-      "usage": "Upgraded MSA generator optimizing database searching strategies for AlphaFold2 structure modeling.",
-      "strengths": "Significantly richer alignments for multi-domain assemblies, higher prediction accuracy on orphan sequences.",
-      "weaknesses": "High local disk storage footprint for sequence databases.",
-      "date": "2025-11-27",
-      "github_stars": 190,
-      "github_forks": 38,
-      "github_open_issues": 7,
-      "github_description": "DeepMSA2 alignment framework.",
-      "github_top_forks": [],
-      "citations_count": 124,
-      "citing_papers": [
-        {
-          "title": "Deep-learning-based single-domain and multidomain protein structure prediction with D-I-TASSER",
-          "url": "https://doi.org/10.1038/s41587-025-02654-4",
-          "citations": 80,
-          "year": 2025,
-          "authors": "Wei Zheng, Qiqige Wuyun, Yang Li et al."
-        },
-        {
-          "title": "Protein structure prediction via deep learning: an in-depth review",
-          "url": "https://doi.org/10.3389/fphar.2025.1498662",
-          "citations": 29,
-          "year": 2025,
-          "authors": "Yajie Meng, Zhuang Zhang, Chang Zhou et al."
-        },
-        {
-          "title": "STK19 is a transcription-coupled repair factor that participates in UVSSA ubiquitination and TFIIH loading",
-          "url": "https://doi.org/10.1093/nar/gkae787",
-          "citations": 28,
-          "year": 2024,
-          "authors": "Yuanqing Tan, Meng Gao, Yanchao Huang et al."
-        },
-        {
-          "title": "Recent Advances in Mass Spectrometry-Based Protein Interactome Studies",
-          "url": "https://doi.org/10.1016/j.mcpro.2024.100887",
-          "citations": 28,
-          "year": 2024,
-          "authors": "Shaowen Wu, Sheng Zhang, Chunming Liu et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.02.10.479900"
-    },
-    {
-      "id": "colabfold_local",
-      "name": "ColabFold-Local",
-      "repo": "ostrokach/colabfold-local",
-      "category": "Fast Predictors",
-      "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01432-1",
-      "parent": "colabfold",
-      "usage": "Local installer script to configure ColabFold pipelines on standalone clusters without Google Colab dependencies.",
-      "strengths": "Highly robust automated installation, allows localized batch processing on GPU farms.",
-      "weaknesses": "Requires manual maintenance and updating of databases and conda profiles.",
-      "date": "2025-04-20",
-      "github_stars": 480,
-      "github_forks": 112,
-      "github_open_issues": 34,
-      "github_description": "Local installation configuration for ColabFold.",
-      "github_top_forks": [],
-      "citations_count": 120,
-      "citing_papers": [
-        {
-          "title": "ColabFold-Local Primary Paper",
-          "url": "https://doi.org/10.1038/s41592-022-01432-1",
-          "citations": 120,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1038/s41592-022-01432-1"
-    },
-    {
-      "id": "speach_af",
-      "name": "SPEACH_AF",
-      "repo": "harmslab/speach_af",
-      "category": "Ensemble Generators",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.08.23.505005",
-      "parent": "colabfold",
-      "usage": "Sampling alternative conformations by introducing synthetic mutations or sequence perturbations into MSAs.",
-      "strengths": "Forces the network to model minor states and alternative folds, exposing protein dynamics.",
-      "weaknesses": "Predictions must be verified manually; some configurations yield unphysical intermediates.",
-      "date": "2022-09-25",
-      "github_stars": 120,
-      "github_forks": 18,
-      "github_open_issues": 3,
-      "github_description": "SPEACH_AF conformational sampling package.",
-      "github_top_forks": [],
-      "citations_count": 254,
-      "citing_papers": [
-        {
-          "title": "From nature to industry: Harnessing enzymes for biocatalysis",
-          "url": "https://doi.org/10.1126/science.adh8615",
-          "citations": 591,
-          "year": 2023,
-          "authors": "Rebecca Buller, Stefan Lutz, Romas J. Kazlauskas et al."
-        },
-        {
-          "title": "AlphaFold predictions are valuable hypotheses and accelerate but do not replace experimental structure determination",
-          "url": "https://doi.org/10.1038/s41592-023-02087-4",
-          "citations": 343,
-          "year": 2023,
-          "authors": "Thomas C. Terwilliger, Dorothée Liebschner, Tristan I. Croll et al."
-        },
-        {
-          "title": "High-throughput prediction of protein conformational distributions with subsampled AlphaFold2",
-          "url": "https://doi.org/10.1038/s41467-024-46715-9",
-          "citations": 187,
-          "year": 2024,
-          "authors": "Gabriel Monteiro da Silva, Jennifer Y. Cui, David C. Dalgarno et al."
-        },
-        {
-          "title": "Modeling conformational states of proteins with AlphaFold",
-          "url": "https://doi.org/10.1016/j.sbi.2023.102645",
-          "citations": 185,
-          "year": 2023,
-          "authors": "Davide Sala, Felipe Engelberger, Hassane S. Mchaourab et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.08.23.505005"
-    },
-    {
-      "id": "af2_cluster",
-      "name": "AF2-Cluster",
-      "repo": "waynative/AF2-Cluster",
-      "category": "Fast Predictors",
-      "status": "Active",
-      "paper_doi": "10.1038/s41592-023-02099-0",
-      "parent": "colabfold",
-      "usage": "Sampling alternative states of protein complexes by clustering MSAs before network input.",
-      "strengths": "Decouples active and inactive conformations of GPCRs, kinases, and transporters.",
-      "weaknesses": "Heavy computation requirements for multiple parallel clustering inference cycles.",
-      "date": "2025-07-22",
-      "github_stars": 290,
-      "github_forks": 42,
-      "github_open_issues": 9,
-      "github_description": "AF2-Cluster conformational landscape mapping.",
-      "github_top_forks": [],
-      "citations_count": 66,
-      "citing_papers": [
-        {
-          "title": "Accurate Prediction of Protein Structural Flexibility by Deep Learning Integrating Intricate Atomic Structures and Cryo-EM Density Information",
-          "url": "https://doi.org/10.1038/s41467-024-49858-x",
-          "citations": 75,
-          "year": 2024,
-          "authors": "Xintao Song, Lei Bao, Chenjie Feng et al."
-        },
-        {
-          "title": "De novo atomic protein structure modeling for cryoEM density maps using 3D transformer and HMM",
-          "url": "https://doi.org/10.1038/s41467-024-49647-6",
-          "citations": 44,
-          "year": 2024,
-          "authors": "Nabin Giri, Jianlin Cheng"
-        },
-        {
-          "title": "DiffModeler: large macromolecular structure modeling for cryo-EM maps using a diffusion model",
-          "url": "https://doi.org/10.1038/s41592-024-02479-0",
-          "citations": 36,
-          "year": 2024,
-          "authors": "Xiao Wang, Han Zhu, Genki Terashi et al."
-        },
-        {
-          "title": "CryoSegNet: accurate cryo-EM protein particle picking by integrating the foundational AI image segmentation model and attention-gated U-Net",
-          "url": "https://doi.org/10.1093/bib/bbae282",
-          "citations": 36,
-          "year": 2024,
-          "authors": "Rajan Gyawali, Ashwin Dhakal, Liguo Wang et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1038/s41592-023-02099-0"
-    },
-    {
       "id": "rfdiffusion",
       "name": "RFdiffusion",
       "repo": "RosettaCommons/RFdiffusion",
@@ -1739,56 +1482,6 @@
       "doi_link": "https://doi.org/10.1101/2025.11.27.691041"
     },
     {
-      "id": "pifold",
-      "name": "PiFold",
-      "repo": "gao-lab/PiFold",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.06.13.495914",
-      "parent": "proteinmpnn",
-      "usage": "Rapid structure-conditioned sequence generation model using 3D node and edge feature projections.",
-      "strengths": "Faster than ProteinMPNN on single chain structures, excellent recovery of natural sequence motifs.",
-      "weaknesses": "Limited support for multi-chain assemblies containing non-protein cofactors.",
-      "date": "2025-07-16",
-      "github_stars": 310,
-      "github_forks": 45,
-      "github_open_issues": 8,
-      "github_description": "PiFold: Physics-informed inverse folding.",
-      "github_top_forks": [],
-      "citations_count": 50,
-      "citing_papers": [
-        {
-          "title": "ProteinGym: Large-Scale Benchmarks for Protein Design and Fitness Prediction",
-          "url": "https://doi.org/10.1101/2023.12.07.570727",
-          "citations": 205,
-          "year": 2023,
-          "authors": "Pascal Notin, Aaron W. Kollasch, Daniel P. Ritter et al."
-        },
-        {
-          "title": "From sequence to function through structure: Deep learning for protein design",
-          "url": "https://doi.org/10.1016/j.csbj.2022.11.014",
-          "citations": 116,
-          "year": 2022,
-          "authors": "Noelia Ferruz, Michael Heinzinger, Mehmet Akdel et al."
-        },
-        {
-          "title": "A new age in protein design empowered by deep learning",
-          "url": "https://doi.org/10.1016/j.cels.2023.10.006",
-          "citations": 106,
-          "year": 2023,
-          "authors": "Hamed Khakzad, Ilia Igashov, Arne Schneuing et al."
-        },
-        {
-          "title": "Sparks of function by de novo protein design",
-          "url": "https://doi.org/10.1038/s41587-024-02133-2",
-          "citations": 104,
-          "year": 2024,
-          "authors": "Alexander E. Chu, Tianyu Lu, Po‐Ssu Huang"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.06.13.495914"
-    },
-    {
       "id": "esm_if1",
       "name": "ESM-IF1",
       "repo": "facebookresearch/esm",
@@ -1808,56 +1501,6 @@
       "citations_count": 480,
       "citing_papers": [],
       "doi_link": "https://doi.org/10.1101/2022.04.10.487769"
-    },
-    {
-      "id": "protgpt2",
-      "name": "ProtGPT2",
-      "repo": "nromano-chem/ProtGPT2",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1038/s41467-022-32007-7",
-      "parent": "esmfold",
-      "usage": "Generative transformer model to output novel de novo sequence profiles based on natural protein space.",
-      "strengths": "Requires zero input structures; designs highly soluble and folded chains directly from raw generation.",
-      "weaknesses": "Generates sequences without spatial constraint capabilities.",
-      "date": "2022-09-13",
-      "github_stars": 390,
-      "github_forks": 72,
-      "github_open_issues": 14,
-      "github_description": "ProtGPT2: Deep generative sequence model.",
-      "github_top_forks": [],
-      "citations_count": 764,
-      "citing_papers": [
-        {
-          "title": "ChatGPT: A comprehensive review on background, applications, key challenges, bias, ethics, limitations and future scope",
-          "url": "https://doi.org/10.1016/j.iotcps.2023.04.003",
-          "citations": 2344,
-          "year": 2023,
-          "authors": "Partha Pratim Ray"
-        },
-        {
-          "title": "De novo design of protein structure and function with RFdiffusion",
-          "url": "https://doi.org/10.1038/s41586-023-06415-8",
-          "citations": 1897,
-          "year": 2023,
-          "authors": "Joseph L. Watson, David Juergens, Nathaniel R. Bennett et al."
-        },
-        {
-          "title": "Large language models generate functional protein sequences across diverse families",
-          "url": "https://doi.org/10.1038/s41587-022-01618-2",
-          "citations": 1033,
-          "year": 2023,
-          "authors": "Ali Madani, Ben Krause, Eric R. Greene et al."
-        },
-        {
-          "title": "Simulating 500 million years of evolution with a language model",
-          "url": "https://doi.org/10.1126/science.ads0018",
-          "citations": 574,
-          "year": 2025,
-          "authors": "Thomas Hayes, Roshan Rao, Halil Akin et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1038/s41467-022-32007-7"
     },
     {
       "id": "progen",
@@ -1908,56 +1551,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1038/s41587-022-01618-2"
-    },
-    {
-      "id": "progen2",
-      "name": "ProGen 2",
-      "repo": "salesforce/progen2",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.06.27.497748",
-      "parent": "progen",
-      "usage": "Expanded protein language model suite optimized for de novo sequence creation and fitness landscape prediction.",
-      "strengths": "Trained on massive multi-genome databases; high sequence viability prediction.",
-      "weaknesses": "Lacks 3D structural backbone coordination capabilities.",
-      "date": "2025-11-02",
-      "github_stars": 490,
-      "github_forks": 75,
-      "github_open_issues": 16,
-      "github_description": "ProGen 2 sequence generation.",
-      "github_top_forks": [],
-      "citations_count": 413,
-      "citing_papers": [
-        {
-          "title": "ProtGPT2 is a deep unsupervised language model for protein design",
-          "url": "https://doi.org/10.1038/s41467-022-32007-7",
-          "citations": 764,
-          "year": 2022,
-          "authors": "Noelia Ferruz, Steffen Schmidt, Birte Höcker"
-        },
-        {
-          "title": "Simulating 500 million years of evolution with a language model",
-          "url": "https://doi.org/10.1126/science.ads0018",
-          "citations": 574,
-          "year": 2025,
-          "authors": "Thomas Hayes, Roshan Rao, Halil Akin et al."
-        },
-        {
-          "title": "Genome-wide prediction of disease variant effects with a deep protein language model",
-          "url": "https://doi.org/10.1038/s41588-023-01465-0",
-          "citations": 435,
-          "year": 2023,
-          "authors": "Nadav Brandes, Grant Goldman, Charlotte H. Wang et al."
-        },
-        {
-          "title": "Sequence modeling and design from molecular to genome scale with Evo",
-          "url": "https://doi.org/10.1126/science.ado9336",
-          "citations": 407,
-          "year": 2024,
-          "authors": "Eric Nguyen, Michael Poli, Matthew G. Durrant et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.06.27.497748"
     },
     {
       "id": "evodiff",
@@ -2058,106 +1651,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1126/science.abn2100"
-    },
-    {
-      "id": "proteingenerator",
-      "name": "ProteinGenerator",
-      "repo": "uw-ipd/ProteinGenerator",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.05.24.542171",
-      "parent": "rfdesign",
-      "usage": "End-to-end design generator optimizing backbones and sequences simultaneously via RoseTTAFold checkpoints.",
-      "strengths": "Direct linkage of sequence and structure during optimization, avoids mismatched folds.",
-      "weaknesses": "High GPU compute required; optimization can stall in local minima.",
-      "date": "2026-03-28",
-      "github_stars": 190,
-      "github_forks": 32,
-      "github_open_issues": 8,
-      "github_description": "ProteinGenerator simultaneous design model.",
-      "github_top_forks": [],
-      "citations_count": 104,
-      "citing_papers": [
-        {
-          "title": "Protein codes promote selective subcellular compartmentalization",
-          "url": "https://doi.org/10.1126/science.adq2634",
-          "citations": 80,
-          "year": 2025,
-          "authors": "Henry R. Kilgore, Itamar Chinn, Peter G. Mikhael et al."
-        },
-        {
-          "title": "How AI can help us beat AMR",
-          "url": "https://doi.org/10.1038/s44259-025-00085-4",
-          "citations": 42,
-          "year": 2025,
-          "authors": "Autumn Arnold, Stewart McLellan, Jonathan Stokes"
-        },
-        {
-          "title": "AI-driven protein design",
-          "url": "https://doi.org/10.1038/s44222-025-00349-8",
-          "citations": 42,
-          "year": 2025,
-          "authors": "Huan Yee Koh, Yizhen Zheng, M. Yang et al."
-        },
-        {
-          "title": "The Nobel Prize in Chemistry: past, present, and future of AI in biology",
-          "url": "https://doi.org/10.1038/s42003-024-07113-5",
-          "citations": 37,
-          "year": 2024,
-          "authors": "Luciano A. Abriata"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.05.24.542171"
-    },
-    {
-      "id": "evoprotgrad",
-      "name": "EvoProtGrad",
-      "repo": "wittmannlab/EvoProtGrad",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.01.12.523824",
-      "parent": "proteinmpnn",
-      "usage": "Directed evolution simulator using gradient-based guidance on protein language models and inverse folding outputs.",
-      "strengths": "Drastically search-efficient; outputs mutated variants with increased expression or affinity.",
-      "weaknesses": "Heavy dependence on quality of grading score models (e.g. ESM-1v).",
-      "date": "2025-01-22",
-      "github_stars": 110,
-      "github_forks": 15,
-      "github_open_issues": 4,
-      "github_description": "EvoProtGrad directed design solver.",
-      "github_top_forks": [],
-      "citations_count": 15,
-      "citing_papers": [
-        {
-          "title": "Multi-Objective Design of DNA-Stabilized Nanoclusters Using Variational Autoencoders With Automatic Feature Extraction",
-          "url": "https://doi.org/10.1021/acsnano.4c09640",
-          "citations": 18,
-          "year": 2024,
-          "authors": "Elham Sadeghi, Peter Mastracco, Anna Gonzàlez‐Rosell et al."
-        },
-        {
-          "title": "Pareto-optimal sampling for multi-objective protein sequence design",
-          "url": "https://doi.org/10.1016/j.isci.2025.112119",
-          "citations": 11,
-          "year": 2025,
-          "authors": "Jiaqi Luo, Kerr Ding, Yunan Luo"
-        },
-        {
-          "title": "Protein Design by Directed Evolution Guided by Large Language Models",
-          "url": "https://doi.org/10.1101/2023.11.28.568945",
-          "citations": 9,
-          "year": 2023,
-          "authors": "Trong Thanh Tran, Truong Son Hy"
-        },
-        {
-          "title": "Protein Design by Directed Evolution Guided by Large Language Models",
-          "url": "https://doi.org/10.1109/tevc.2024.3439690",
-          "citations": 9,
-          "year": 2024,
-          "authors": "Thanh Tran, Truong Son Hy"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.01.12.523824"
     },
     {
       "id": "alphamissense",
@@ -2339,145 +1832,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1126/science.ade2574"
-    },
-    {
-      "id": "viper",
-      "name": "VIPER",
-      "repo": "harmslab/viper",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1093/bioinformatics/btad302",
-      "parent": "esmfold",
-      "usage": "Visual inspector tool identifying variant clusters and mapping fitness predictions onto 3D structures.",
-      "strengths": "Highlights functional hotspots in protein assemblies dynamically.",
-      "weaknesses": "Lacks direct prediction modules; relies entirely on ESM/AlphaFold databases.",
-      "date": "2025-01-25",
-      "github_stars": 85,
-      "github_forks": 12,
-      "github_open_issues": 3,
-      "github_description": "VIPER mutational visualization.",
-      "github_top_forks": [],
-      "citations_count": 2,
-      "citing_papers": [
-        {
-          "title": "Deciphering gut microbial dynamics and multi-omics changes in yogurt-based dietary interventions",
-          "url": "https://doi.org/10.1016/j.scib.2025.05.021",
-          "citations": 3,
-          "year": 2025,
-          "authors": "Qiuwen He, Yaru Sun, Hao Jin et al."
-        },
-        {
-          "title": "mbtransfer: Microbiome intervention analysis using transfer functions and mirror statistics",
-          "url": "https://doi.org/10.1371/journal.pcbi.1012196",
-          "citations": 3,
-          "year": 2024,
-          "authors": "Kris Sankaran, Pratheepa Jeganathan"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btad302"
-    },
-    {
-      "id": "soluprot",
-      "name": "SoluProt",
-      "repo": "loschmidt/soluprot",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1093/bioinformatics/btab011",
-      "parent": "esmfold",
-      "usage": "Machine learning prediction of protein solubility in E. coli expression systems.",
-      "strengths": "Highly reliable classification for screening synthetic design candidates.",
-      "weaknesses": "Lacks structure-level interaction physics.",
-      "date": "2025-11-08",
-      "github_stars": 45,
-      "github_forks": 8,
-      "github_open_issues": 2,
-      "github_description": "SoluProt solubility predictor.",
-      "github_top_forks": [],
-      "citations_count": 39,
-      "citing_papers": [
-        {
-          "title": "Deep-4mCW2V: A sequence-based predictor to identify N4-methylcytosine sites in Escherichia coli",
-          "url": "https://doi.org/10.1016/j.ymeth.2021.07.011",
-          "citations": 59,
-          "year": 2021,
-          "authors": "Hasan Zulfiqar, Zi‐Jie Sun, Qin-Lai Huang et al."
-        },
-        {
-          "title": "iTTCA-RF: a random forest predictor for tumor T cell antigens",
-          "url": "https://doi.org/10.1186/s12967-021-03084-x",
-          "citations": 50,
-          "year": 2021,
-          "authors": "Shihu Jiao, Quan Zou, Huannan Guo et al."
-        },
-        {
-          "title": "Identify DNA-Binding Proteins Through the Extreme Gradient Boosting Algorithm",
-          "url": "https://doi.org/10.3389/fgene.2021.821996",
-          "citations": 35,
-          "year": 2022,
-          "authors": "Ziye Zhao, Wen Yang, Yixiao Zhai et al."
-        },
-        {
-          "title": "DrugRepoBank: a comprehensive database and discovery platform for accelerating drug repositioning",
-          "url": "https://doi.org/10.1093/database/baae051",
-          "citations": 22,
-          "year": 2024,
-          "authors": "Yixian Huang, Danhong Dong, Wenyang Zhang et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btab011"
-    },
-    {
-      "id": "mutcompute",
-      "name": "MutCompute",
-      "repo": "utexas-bme/MutCompute",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1038/s41467-021-27705-y",
-      "parent": "esmfold",
-      "usage": "CNN classifier trained on protein microenvironments to engineer stabilizing mutations.",
-      "strengths": "Successfully engineered highly stable PET-depolymerizing enzymes (FAST-PETase).",
-      "weaknesses": "Limited resolution on highly flexible loop structures.",
-      "date": "2024-02-10",
-      "github_stars": 110,
-      "github_forks": 18,
-      "github_open_issues": 4,
-      "github_description": "MutCompute protein engineering CNN.",
-      "github_top_forks": [],
-      "citations_count": 140,
-      "citing_papers": [],
-      "doi_link": "https://doi.org/10.1038/s41467-021-27705-y"
-    },
-    {
-      "id": "esm_finetune",
-      "name": "ESM-Finetune",
-      "repo": "wittmannlab/esm-finetune",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.01.12.523824",
-      "parent": "esm2",
-      "usage": "Finetuning pipelines for adapting ESM-2 checkpoints to specific enzymatic activity data.",
-      "strengths": "Allows highly customized fitness predictions with very small datasets.",
-      "weaknesses": "Prone to overfitting if sequence variation is too narrow.",
-      "date": "2022-08-03",
-      "github_stars": 130,
-      "github_forks": 22,
-      "github_open_issues": 5,
-      "github_description": "ESM-Finetune pipeline.",
-      "github_top_forks": [],
-      "citations_count": 1,
-      "citing_papers": [
-        {
-          "title": "Comprehensive analysis of Saccharomyces cerevisiae intron structures in vivo",
-          "url": "https://doi.org/10.1038/s41594-025-01565-x",
-          "citations": 7,
-          "year": 2025,
-          "authors": "Ramya Rangan, Rui Huang, Oarteze Hunter et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.01.12.523824",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "publication_type": "unknown"
     },
     {
       "id": "deepsequence",
@@ -2784,156 +2138,6 @@
       "doi_link": "https://doi.org/10.1093/bioinformatics/btad153"
     },
     {
-      "id": "usalign",
-      "name": "USalign",
-      "repo": "zhang-lab-comp-bio/USalign",
-      "category": "Structural Search",
-      "status": "Active",
-      "paper_doi": "10.1093/bioinformatics/btac462",
-      "parent": "foldseek",
-      "usage": "Universal structural alignment program aligning proteins, DNA, RNA, or mixed molecular complexes.",
-      "strengths": "Outstanding accuracy, handles completely mismatched sequence profiles using TM-score normalization.",
-      "weaknesses": "Slow on massive databases containing millions of structures compared to Foldseek.",
-      "date": "2024-04-04",
-      "github_stars": 140,
-      "github_forks": 32,
-      "github_open_issues": 8,
-      "github_description": "USalign structural alignment solver.",
-      "github_top_forks": [],
-      "citations_count": 18,
-      "citing_papers": [
-        {
-          "title": "Benchmarking machine learning methods for synthetic lethality prediction in cancer",
-          "url": "https://doi.org/10.1038/s41467-024-52900-7",
-          "citations": 27,
-          "year": 2024,
-          "authors": "Yimiao Feng, Yahui Long, He Wang et al."
-        },
-        {
-          "title": "KR4SL: knowledge graph reasoning for explainable prediction of synthetic lethality",
-          "url": "https://doi.org/10.1093/bioinformatics/btad261",
-          "citations": 24,
-          "year": 2023,
-          "authors": "Ke Zhang, Min Wu, Yong Liu et al."
-        },
-        {
-          "title": "ASTER: A Method to Predict Clinically Relevant Synthetic Lethal Genetic Interactions",
-          "url": "https://doi.org/10.1109/jbhi.2024.3354776",
-          "citations": 8,
-          "year": 2024,
-          "authors": "Herty Liany, Aishwarya Jayagopal, Dachuan Huang et al."
-        },
-        {
-          "title": "Using graph-based model to identify cell specific synthetic lethal effects",
-          "url": "https://doi.org/10.1016/j.csbj.2023.10.011",
-          "citations": 4,
-          "year": 2023,
-          "authors": "Mengchen Pu, Kaiyang Cheng, Xiaorong Li et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btac462"
-    },
-    {
-      "id": "tmalign",
-      "name": "TM-align",
-      "repo": "zhang-lab-comp-bio/TM-align",
-      "category": "Structural Search",
-      "status": "Active",
-      "paper_doi": "10.1093/nar/gki524",
-      "parent": "foldseek",
-      "usage": "Classical structural alignment program computing TM-scores between target chains.",
-      "strengths": "De facto standard metric for evaluating predicted structural quality.",
-      "weaknesses": "CPU-bound, not designed for web-scale database searches.",
-      "date": "2023-11-29",
-      "github_stars": 90,
-      "github_forks": 18,
-      "github_open_issues": 2,
-      "github_description": "TM-align structure comparison.",
-      "github_top_forks": [],
-      "citations_count": 3950,
-      "citing_papers": [
-        {
-          "title": "ColabFold: making protein folding accessible to all",
-          "url": "https://doi.org/10.1038/s41592-022-01488-1",
-          "citations": 9573,
-          "year": 2022,
-          "authors": "Milot Mirdita, Konstantin Schütze, Yoshitaka Moriwaki et al."
-        },
-        {
-          "title": "I-TASSER: a unified platform for automated protein structure and function prediction",
-          "url": "https://doi.org/10.1038/nprot.2010.5",
-          "citations": 6340,
-          "year": 2010,
-          "authors": "Ambrish Roy, Alper Küçükural, Yang Zhang"
-        },
-        {
-          "title": "I-TASSER server for protein 3D structure prediction",
-          "url": "https://doi.org/10.1186/1471-2105-9-40",
-          "citations": 5220,
-          "year": 2008,
-          "authors": "Yang Zhang"
-        },
-        {
-          "title": "Comparative Protein Structure Modeling Using Modeller",
-          "url": "https://doi.org/10.1002/0471250953.bi0506s15",
-          "citations": 4618,
-          "year": 2006,
-          "authors": "Narayanan Eswar, Ben Webb, Marc A. Martı́-Renom et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/nar/gki524"
-    },
-    {
-      "id": "dali",
-      "name": "Dali",
-      "repo": "leholm/dali",
-      "category": "Structural Search",
-      "status": "Active",
-      "paper_doi": "10.1093/nar/gki307",
-      "parent": "foldseek",
-      "usage": "Distance alignment matrix solver mapping structural contacts in 3D space.",
-      "strengths": "Identifies highly remote structural homology missed by coordinate superposition.",
-      "weaknesses": "Highly resource-intensive quadratic alignment search.",
-      "date": "2023-03-23",
-      "github_stars": 45,
-      "github_forks": 8,
-      "github_open_issues": 1,
-      "github_description": "Dali structural similarity engine.",
-      "github_top_forks": [],
-      "citations_count": 43,
-      "citing_papers": [
-        {
-          "title": "Whole-Genome Sequencing in Outbreak Analysis",
-          "url": "https://doi.org/10.1128/cmr.00075-13",
-          "citations": 287,
-          "year": 2015,
-          "authors": "Carol A. Gilchrist, Stephen Turner, Margaret Foster Riley et al."
-        },
-        {
-          "title": "Advances in mechanisms of genetic instability related to hereditary neurological diseases",
-          "url": "https://doi.org/10.1093/nar/gki697",
-          "citations": 207,
-          "year": 2005,
-          "authors": "Robert D. Wells"
-        },
-        {
-          "title": "Dissecting the role of low-complexity regions in the evolution of vertebrate proteins",
-          "url": "https://doi.org/10.1186/1471-2148-12-155",
-          "citations": 102,
-          "year": 2012,
-          "authors": "Núria Radó-Trilla, M. Mar Albà"
-        },
-        {
-          "title": "Chemical biology of non-canonical structures of nucleic acids for therapeutic applications",
-          "url": "https://doi.org/10.1039/c9cc09771f",
-          "citations": 91,
-          "year": 2020,
-          "authors": "Hisae Tateishi‐Karimata, Naoki Sugimoto"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/nar/gki307"
-    },
-    {
       "id": "diffdock",
       "name": "DiffDock",
       "repo": "gcorso/DiffDock",
@@ -3015,58 +2219,6 @@
       "doi_link": "https://doi.org/10.1101/2022.10.10.511569"
     },
     {
-      "id": "diffdock_pp",
-      "name": "DiffDock-PP",
-      "repo": "gcorso/DiffDock-PP",
-      "category": "Protein Docking",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.04.10.536281",
-      "parent": "diffdock",
-      "usage": "Rigid protein-protein docking using deep translation/rotation diffusion models.",
-      "strengths": "Handles huge assemblies quickly, avoids grid search calculations.",
-      "weaknesses": "Does not model interface side-chain conformational adjustments.",
-      "date": "2024-08-19",
-      "preprint_doi": "10.48550/arXiv.2304.03889",
-      "preprint_link": "https://doi.org/10.48550/arXiv.2304.03889",
-      "doi_link": "https://doi.org/10.1101/2023.04.10.536281",
-      "github_stars": 180,
-      "github_forks": 32,
-      "github_open_issues": 5,
-      "github_description": "DiffDock-PP protein docking.",
-      "github_top_forks": [],
-      "citations_count": 28,
-      "citing_papers": [
-        {
-          "title": "Diffusion models in protein structure and docking",
-          "url": "https://doi.org/10.1002/wcms.1711",
-          "citations": 59,
-          "year": 2024,
-          "authors": "Jason Yim, H. Stärk, Gabriele Corso et al."
-        },
-        {
-          "title": "AI-driven protein design",
-          "url": "https://doi.org/10.1038/s44222-025-00349-8",
-          "citations": 42,
-          "year": 2025,
-          "authors": "Huan Yee Koh, Yizhen Zheng, M. Yang et al."
-        },
-        {
-          "title": "HawkDock version 2: an updated web server to predict and analyze the structures of protein–protein complexes",
-          "url": "https://doi.org/10.1093/nar/gkaf379",
-          "citations": 26,
-          "year": 2025,
-          "authors": "Xujun Zhang, Linlong Jiang, Gaoqi Weng et al."
-        },
-        {
-          "title": "Reading the repertoire: Progress in adaptive immune receptor analysis using machine learning",
-          "url": "https://doi.org/10.1016/j.cels.2024.11.006",
-          "citations": 24,
-          "year": 2024,
-          "authors": "Timothy J. O’Donnell, Chakravarthi Kanduri, Giulio Isacchini et al."
-        }
-      ]
-    },
-    {
       "id": "diffdock_l",
       "name": "DiffDock-L",
       "repo": "gcorso/DiffDock",
@@ -3086,239 +2238,6 @@
       "citations_count": 12,
       "citing_papers": [],
       "doi_link": "https://doi.org/10.1101/2023.10.10.654321"
-    },
-    {
-      "id": "flowdock",
-      "name": "FlowDock",
-      "repo": "generatebio/flowdock",
-      "category": "Ligand Docking",
-      "status": "Active",
-      "paper_doi": "10.1101/2024.02.10.123456",
-      "parent": "diffdock",
-      "usage": "Flow matching protein-ligand docking model predicting co-complex layouts directly.",
-      "strengths": "Outperforms diffusion speeds, natively includes backbone adaptability.",
-      "weaknesses": "Demands high GPU memory profiles during multi-chain refinement.",
-      "date": "2023-04-07",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "doi_link": "https://doi.org/10.1101/2024.02.10.123456",
-      "github_stars": 290,
-      "github_forks": 38,
-      "github_open_issues": 12,
-      "github_description": "FlowDock flow matching poses.",
-      "github_top_forks": [],
-      "citations_count": 11,
-      "citing_papers": [
-        {
-          "title": "Advances and Challenges in Machine Learning for RNA-Small Molecule Interaction Modeling: Review",
-          "url": "https://doi.org/10.1021/acs.jctc.5c00973",
-          "citations": 37,
-          "year": 2025,
-          "authors": "Tingting Sun, Wentao Xia, Jiasai Shu et al."
-        },
-        {
-          "title": "Beyond rigid docking: deep learning approaches for fully flexible protein–ligand interactions",
-          "url": "https://doi.org/10.1093/bib/bbaf454",
-          "citations": 18,
-          "year": 2025,
-          "authors": "John J. Lee, Canh Hao Nguyen, Hiroshi Mamitsuka"
-        },
-        {
-          "title": "AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential",
-          "url": "https://doi.org/10.1038/s41746-025-02198-6",
-          "citations": 10,
-          "year": 2025,
-          "authors": "Chunyu Ma, Han Zhang, Yiwei Rao et al."
-        },
-        {
-          "title": "Assessing the potential of deep learning for protein–ligand docking",
-          "url": "https://doi.org/10.1038/s42256-025-01160-1",
-          "citations": 7,
-          "year": 2025,
-          "authors": "Alex Morehead, Nabin Giri, Jian Liu et al."
-        }
-      ]
-    },
-    {
-      "id": "dynamicbind",
-      "name": "DynamicBind",
-      "repo": "luost26/DynamicBind",
-      "category": "Ligand Docking",
-      "status": "Active",
-      "paper_doi": "10.1038/s41467-024-46032-z",
-      "parent": "diffdock",
-      "usage": "Flexible deep learning-based docking solver modeling induced-fit pocket changes.",
-      "strengths": "Handles side-chain coordinate shift predictions during ligand alignment.",
-      "weaknesses": "Can yield unrealistic conformational states on small pockets.",
-      "date": "2024-11-16",
-      "preprint_doi": "10.1101/2023.09.25.558368",
-      "preprint_link": "https://doi.org/10.1101/2023.09.25.558368",
-      "doi_link": "https://doi.org/10.1038/s41467-024-46032-z",
-      "github_stars": 410,
-      "github_forks": 62,
-      "github_open_issues": 14,
-      "github_description": "DynamicBind flexible pocket solver.",
-      "github_top_forks": [],
-      "citations_count": 163,
-      "citing_papers": [
-        {
-          "title": "Navigating the landscape of enzyme design: from molecular simulations to machine learning",
-          "url": "https://doi.org/10.1039/d4cs00196f",
-          "citations": 118,
-          "year": 2024,
-          "authors": "Jiahui Zhou, Meilan Huang"
-        },
-        {
-          "title": "GNINA 1.3: the next increment in molecular docking with deep learning",
-          "url": "https://doi.org/10.1186/s13321-025-00973-x",
-          "citations": 99,
-          "year": 2025,
-          "authors": "Andrew T. McNutt, Yanjing Li, Rocco Meli et al."
-        },
-        {
-          "title": "Graph Neural Networks in Modern AI-Aided Drug Discovery",
-          "url": "https://doi.org/10.1021/acs.chemrev.5c00461",
-          "citations": 44,
-          "year": 2025,
-          "authors": "Odin Zhang, Haitao Lin, Xujun Zhang et al."
-        },
-        {
-          "title": "AI-driven protein design",
-          "url": "https://doi.org/10.1038/s44222-025-00349-8",
-          "citations": 42,
-          "year": 2025,
-          "authors": "Huan Yee Koh, Yizhen Zheng, M. Yang et al."
-        }
-      ]
-    },
-    {
-      "id": "equibind",
-      "name": "EquiBind",
-      "repo": "hannes-stark/EquiBind",
-      "category": "Ligand Docking",
-      "status": "Completed",
-      "paper_doi": "10.1101/2022.02.10.479900",
-      "parent": "diffdock",
-      "usage": "Equivariant geometric neural network predicting ligand coordinates in one shot.",
-      "strengths": "Thousands of times faster than physics solvers, predicts pocket locations implicitly.",
-      "weaknesses": "Lacks refinement, prone to overlapping atoms without force field post-processing.",
-      "date": "2023-04-16",
-      "github_stars": 580,
-      "github_forks": 105,
-      "github_open_issues": 25,
-      "github_description": "EquiBind one-shot docking.",
-      "github_top_forks": [],
-      "citations_count": 19,
-      "citing_papers": [
-        {
-          "title": "Benchmarking AI-powered docking methods from the perspective of virtual screening",
-          "url": "https://doi.org/10.1038/s42256-025-00993-0",
-          "citations": 35,
-          "year": 2025,
-          "authors": "Shukai Gu, Chao Shen, Xujun Zhang et al."
-        },
-        {
-          "title": "Application of 3D, 4D, 5D, and 6D bioprinting in cancer research: what does the future look like?",
-          "url": "https://doi.org/10.1039/d4tb00310a",
-          "citations": 24,
-          "year": 2024,
-          "authors": "Danial Khorsandi, Dorsa Rezayat, Serap Sezen et al."
-        },
-        {
-          "title": "Artificial intelligence in drug development for delirium and Alzheimer’s disease",
-          "url": "https://doi.org/10.1016/j.apsb.2025.04.026",
-          "citations": 8,
-          "year": 2025,
-          "authors": "Ruixue Ai, Xianglu Xiao, Shenglong Deng et al."
-        },
-        {
-          "title": "Advancing active compound discovery for novel drug targets: insights from AI-driven approaches",
-          "url": "https://doi.org/10.1038/s41401-025-01591-x",
-          "citations": 5,
-          "year": 2025,
-          "authors": "Xing-You Wang, Yang Chen, Yufan Li et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.02.10.479900"
-    },
-    {
-      "id": "tankbind",
-      "name": "TankBind",
-      "repo": "bing1018/TankBind",
-      "category": "Ligand Docking",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.06.10.495544",
-      "parent": "diffdock",
-      "usage": "Trigonometry-aware neural network prediction for binding poses and affinity grids.",
-      "strengths": "Accurate coordination of target pockets, stable scoring metrics.",
-      "weaknesses": "Restricted performance when encountering novel metal cluster interfaces.",
-      "date": "2024-10-04",
-      "github_stars": 240,
-      "github_forks": 42,
-      "github_open_issues": 8,
-      "github_description": "TankBind structure-pose model.",
-      "github_top_forks": [],
-      "citations_count": 1,
-      "citing_papers": [
-        {
-          "title": "Equivariant Neural Networks for Protein–Ligand Pose Refinement Using Atomic Coordinates and Interaction Energies",
-          "url": "https://doi.org/10.51847/dvuc4ifnva",
-          "citations": 0,
-          "year": 2025,
-          "authors": "Ali Hassan, Noor Siddiqui, Bilal Khan et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.06.10.495544"
-    },
-    {
-      "id": "fabind",
-      "name": "FABind",
-      "repo": "susuSUSUsusu/FABind",
-      "category": "Ligand Docking",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.10.10.112233",
-      "parent": "diffdock",
-      "usage": "Fast, physics-aware ligand alignment architecture optimizing coordinate loss directly.",
-      "strengths": "Fast pose identification, robust on large multimeric cavities.",
-      "weaknesses": "Prone to errors on highly flexible open loops.",
-      "date": "2024-09-03",
-      "github_stars": 180,
-      "github_forks": 25,
-      "github_open_issues": 6,
-      "github_description": "FABind pocket alignment.",
-      "github_top_forks": [],
-      "citations_count": 4,
-      "citing_papers": [
-        {
-          "title": "Rag2Mol: structure-based drug design based on retrieval augmented generation",
-          "url": "https://doi.org/10.1093/bib/bbaf265",
-          "citations": 7,
-          "year": 2025,
-          "authors": "Peidong Zhang, Xingang Peng, Rong Han et al."
-        },
-        {
-          "title": "EMPDTA: An End-to-End Multimodal Representation Learning Framework with Pocket Online Detection for Drug–Target Affinity Prediction",
-          "url": "https://doi.org/10.3390/molecules29122912",
-          "citations": 2,
-          "year": 2024,
-          "authors": "Dingkai Huang, Jiang Xie"
-        },
-        {
-          "title": "Deep learning methods for protein representation and function prediction: A comprehensive overview",
-          "url": "https://doi.org/10.1016/j.engappai.2025.110977",
-          "citations": 2,
-          "year": 2025,
-          "authors": "Mingqing Wang, Zhiwei Nie, Yonghong He et al."
-        },
-        {
-          "title": "CGDock: Curvature-Aware Geometric Flow Framework for Protein-Ligand Docking",
-          "url": "https://doi.org/10.1021/acs.jcim.6c00700",
-          "citations": 0,
-          "year": 2026,
-          "authors": "Liyan Jia, Chuan-Xian Ren, Hong Yan"
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.10.10.112233"
     },
     {
       "id": "unidock",
@@ -3350,85 +2269,6 @@
       "doi_link": "https://doi.org/10.1093/bioinformatics/btae120"
     },
     {
-      "id": "af2complex",
-      "name": "AF2Complex",
-      "repo": "gzhang2016/af2complex",
-      "category": "Protein Docking",
-      "status": "Active",
-      "paper_doi": "10.1038/s41467-022-31742-1",
-      "parent": "alphafold2",
-      "usage": "Predicting multi-chain assemblies and screening protein-protein interaction networks using modified AF2 weights.",
-      "strengths": "Calculates interface metrics (pDockQ) to identify true interaction partners.",
-      "weaknesses": "Demands huge GPU clusters for comprehensive screening arrays.",
-      "date": "2023-01-08",
-      "github_stars": 160,
-      "github_forks": 38,
-      "github_open_issues": 11,
-      "github_description": "AF2Complex multimer predictor.",
-      "github_top_forks": [],
-      "citations_count": 21,
-      "citing_papers": [
-        {
-          "title": "CLK1/CLK2-driven signalling at the Leishmania kinetochore is captured by spatially referenced proximity phosphoproteomics",
-          "url": "https://doi.org/10.1038/s42003-022-04280-1",
-          "citations": 23,
-          "year": 2022,
-          "authors": "Vincent Geoghegan, Juliana B. T. Carnielli, Nathaniel G. Jones et al."
-        },
-        {
-          "title": "The paradigm of intracellular parasite survival and drug resistance in leishmanial parasite through genome plasticity and epigenetics: Perception and future perspective",
-          "url": "https://doi.org/10.3389/fcimb.2023.1001973",
-          "citations": 13,
-          "year": 2023,
-          "authors": "Mohd Kamran, Rahul Bhattacharjee, Sonali Das et al."
-        },
-        {
-          "title": "Genomic Occupancy of the Bromodomain Protein Bdf3 Is Dynamic during Differentiation of African Trypanosomes from Bloodstream to Procyclic Forms",
-          "url": "https://doi.org/10.1128/msphere.00023-22",
-          "citations": 11,
-          "year": 2022,
-          "authors": "Ethan Ashby, Lucinda Paddock, Hannah L. Betts et al."
-        },
-        {
-          "title": "Bromodomain Factor 5 as a Target for Antileishmanial Drug Discovery",
-          "url": "https://doi.org/10.1021/acsinfecdis.3c00431",
-          "citations": 10,
-          "year": 2023,
-          "authors": "Catherine N. Russell, Jennifer Carter, Juliet M. Borgia et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1038/s41467-022-31742-1"
-    },
-    {
-      "id": "folddock",
-      "name": "FoldDock",
-      "repo": "mElofssonlab/FoldDock",
-      "category": "Protein Docking",
-      "status": "Completed",
-      "paper_doi": "10.1093/bioinformatics/btab521",
-      "parent": "alphafold2",
-      "usage": "Docking of protein dimers using custom-built sequence alignment bridges directly inside AF2.",
-      "strengths": "Simple and fast multimer modeling before AF2-Multimer release.",
-      "weaknesses": "Struggles with large multimer assemblies (higher than trimers).",
-      "date": "2026-01-23",
-      "github_stars": 110,
-      "github_forks": 25,
-      "github_open_issues": 4,
-      "github_description": "FoldDock dimer docking.",
-      "github_top_forks": [],
-      "citations_count": 280,
-      "citing_papers": [
-        {
-          "title": "FoldDock Primary Paper",
-          "url": "https://doi.org/10.1093/bioinformatics/btab521",
-          "citations": 280,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btab521"
-    },
-    {
       "id": "alphapulldown",
       "name": "AlphaPulldown",
       "repo": "KosinskiLab/AlphaPulldown",
@@ -3456,313 +2296,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1093/bioinformatics/btad324"
-    },
-    {
-      "id": "igfold",
-      "name": "IgFold",
-      "repo": "corydillon/IgFold",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1038/s41467-023-38063-x",
-      "parent": "esmfold",
-      "usage": "Antibody structure prediction using pre-trained language models and specialized structural targets.",
-      "strengths": "Outstanding accuracy on flexible antibody loops (H3 loops), predicts structures in seconds.",
-      "weaknesses": "Restricted to immunoglobulin variable domains; cannot fold general proteins.",
-      "date": "2025-02-15",
-      "preprint_doi": "10.1101/2022.04.11.487918",
-      "preprint_link": "https://doi.org/10.1101/2022.04.11.487918",
-      "doi_link": "https://doi.org/10.1038/s41467-023-38063-x",
-      "github_stars": 310,
-      "github_forks": 42,
-      "github_open_issues": 11,
-      "github_description": "IgFold antibody predictor.",
-      "github_top_forks": [],
-      "citations_count": 305,
-      "citing_papers": [
-        {
-          "title": "ProGen2: Exploring the boundaries of protein language models",
-          "url": "https://doi.org/10.1016/j.cels.2023.10.002",
-          "citations": 413,
-          "year": 2023,
-          "authors": "Erik Nijkamp, Jeffrey A. Ruffolo, Eli N. Weinstein et al."
-        },
-        {
-          "title": "ImmuneBuilder: Deep-Learning models for predicting the structures of immune proteins",
-          "url": "https://doi.org/10.1038/s42003-023-04927-7",
-          "citations": 302,
-          "year": 2023,
-          "authors": "Brennan Abanades, Wing Ki Wong, Fergus Boyles et al."
-        },
-        {
-          "title": "Atomically accurate de novo design of antibodies with RFdiffusion",
-          "url": "https://doi.org/10.1101/2024.03.14.585103",
-          "citations": 186,
-          "year": 2024,
-          "authors": "Nathaniel R. Bennett, Joseph L. Watson, Robert J. Ragotte et al."
-        },
-        {
-          "title": "Computational and artificial intelligence-based methods for antibody development",
-          "url": "https://doi.org/10.1016/j.tips.2022.12.005",
-          "citations": 175,
-          "year": 2023,
-          "authors": "Ji‐Sun Kim, Matthew McFee, Qiao Fang et al."
-        }
-      ]
-    },
-    {
-      "id": "lyra",
-      "name": "LYRA",
-      "repo": "chaconlab/lyra",
-      "category": "Variant Predictors",
-      "status": "Completed",
-      "paper_doi": "10.1093/nar/gku367",
-      "parent": "esmfold",
-      "usage": "Antibody and T-cell receptor (TCR) structural modeling tool incorporating specialized templates.",
-      "strengths": "Fast modeling, incorporates canonical loop conformations.",
-      "weaknesses": "Lacks direct end-to-end deep learning backpropagation.",
-      "date": "2025-07-23",
-      "preprint_doi": null,
-      "preprint_link": null,
-      "doi_link": "https://doi.org/10.1093/nar/gku367",
-      "github_stars": 45,
-      "github_forks": 12,
-      "github_open_issues": 2,
-      "github_description": "LYRA TCR/Antibody modeler.",
-      "github_top_forks": [],
-      "citations_count": 93,
-      "citing_papers": [
-        {
-          "title": "BepiPred-2.0: improving sequence-based B-cell epitope prediction using conformational epitopes",
-          "url": "https://doi.org/10.1093/nar/gkx346",
-          "citations": 1777,
-          "year": 2017,
-          "authors": "Martin Closter Jespersen, Bjoern Peters, Morten Nielsen et al."
-        },
-        {
-          "title": "IEDB-AR: immune epitope database—analysis resource in 2019",
-          "url": "https://doi.org/10.1093/nar/gkz452",
-          "citations": 434,
-          "year": 2019,
-          "authors": "Sandeep Kumar Dhanda, Swapnil Mahajan, Sinu Paul et al."
-        },
-        {
-          "title": "<scp>BepiPred</scp> ‐3.0: Improved B‐cell epitope prediction using protein language models",
-          "url": "https://doi.org/10.1002/pro.4497",
-          "citations": 257,
-          "year": 2022,
-          "authors": "Joakim Nøddeskov Clifford, Magnus Haraldson Høie, Sebastian Deleuran et al."
-        },
-        {
-          "title": "Computational approaches to therapeutic antibody design: established methods and emerging trends",
-          "url": "https://doi.org/10.1093/bib/bbz095",
-          "citations": 233,
-          "year": 2019,
-          "authors": "Richard A. Norman, Francesco Ambrosetti, Alexandre M. J. J. Bonvin et al."
-        }
-      ]
-    },
-    {
-      "id": "abfold",
-      "name": "AbFold",
-      "repo": "uw-ipd/AbFold",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2022.05.20.123456",
-      "parent": "esmfold",
-      "usage": "Specialized antibody folding model utilizing template-matching constraints in conjunction with ESM weights.",
-      "strengths": "Highly accurate CDR loop structures, handles nanobodies.",
-      "weaknesses": "Slower than IgFold due to physics-based template checks.",
-      "date": "2023-04-02",
-      "preprint_doi": "10.1101/2023.04.20.537598",
-      "preprint_link": "https://doi.org/10.1101/2023.04.20.537598",
-      "doi_link": "https://doi.org/10.1101/2022.05.20.123456",
-      "github_stars": 110,
-      "github_forks": 18,
-      "github_open_issues": 4,
-      "github_description": "AbFold antibody folding system.",
-      "github_top_forks": [],
-      "citations_count": 3,
-      "citing_papers": [
-        {
-          "title": "Reading the repertoire: Progress in adaptive immune receptor analysis using machine learning",
-          "url": "https://doi.org/10.1016/j.cels.2024.11.006",
-          "citations": 24,
-          "year": 2024,
-          "authors": "Timothy J. O’Donnell, Chakravarthi Kanduri, Giulio Isacchini et al."
-        },
-        {
-          "title": "Applications of Artificial Intelligence in Biotech Drug Discovery and Product Development",
-          "url": "https://doi.org/10.1002/mco2.70317",
-          "citations": 12,
-          "year": 2025,
-          "authors": "Y Liu, Lele Zhang, Zi‐Ying Jiang et al."
-        },
-        {
-          "title": "Unveiling the influence of fastest nobel prize winner discovery: alphafold’s algorithmic intelligence in medical sciences",
-          "url": "https://doi.org/10.1007/s00894-025-06392-x",
-          "citations": 1,
-          "year": 2025,
-          "authors": "Niki Najafi, Reyhaneh Karbassian, Helia Hajihassani et al."
-        }
-      ]
-    },
-    {
-      "id": "nanobodyfold",
-      "name": "NanobodyFold",
-      "repo": "chaconlab/NanobodyFold",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1093/bioinformatics/btad120",
-      "parent": "esmfold",
-      "usage": "Refining and folding nanobody architectures with specific variable region parameters.",
-      "strengths": "Optimized for single-chain VHH designs.",
-      "weaknesses": "Limited capabilities when modeling complex multimeric antibody formats.",
-      "date": "2024-09-03",
-      "github_stars": 65,
-      "github_forks": 11,
-      "github_open_issues": 3,
-      "github_description": "NanobodyFold VHH modeler.",
-      "github_top_forks": [],
-      "citations_count": 16,
-      "citing_papers": [
-        {
-          "title": "PhageScope: a well-annotated bacteriophage database with automatic analyses and visualizations",
-          "url": "https://doi.org/10.1093/nar/gkad979",
-          "citations": 178,
-          "year": 2023,
-          "authors": "Ruo Han Wang, Shuo Yang, Zhixuan Liu et al."
-        },
-        {
-          "title": "Newly Isolated Virulent Salmophages for Biocontrol of Multidrug-Resistant Salmonella in Ready-to-Eat Plant-Based Food",
-          "url": "https://doi.org/10.3390/ijms241210134",
-          "citations": 25,
-          "year": 2023,
-          "authors": "Michał Wójcicki, Olga Świder, Paulina Średnicka et al."
-        },
-        {
-          "title": "Biological Characterization and Genomic Analysis of Three Novel Serratia- and Enterobacter-Specific Virulent Phages",
-          "url": "https://doi.org/10.3390/ijms25115944",
-          "citations": 12,
-          "year": 2024,
-          "authors": "Dziyana Shymialevich, Stanisław Błażejak, Paulina Średnicka et al."
-        },
-        {
-          "title": "Characterization and Genome Study of a Newly Isolated Temperate Phage Belonging to a New Genus Targeting Alicyclobacillus acidoterrestris",
-          "url": "https://doi.org/10.3390/genes14061303",
-          "citations": 9,
-          "year": 2023,
-          "authors": "Dziyana Shymialevich, Michał Wójcicki, Olga Świder et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btad120"
-    },
-    {
-      "id": "tcr_fold",
-      "name": "TCR-Fold",
-      "repo": "ostrokach/tcr-fold",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.05.10.654321",
-      "parent": "esmfold",
-      "usage": "Modeling T-cell receptor (TCR) binding loops and TCR-peptide assemblies.",
-      "strengths": "Provides critical annotations for immunotherapeutic development.",
-      "weaknesses": "Lower modeling accuracy on highly dynamic TCR-MHC interfaces.",
-      "date": "2022-12-29",
-      "github_stars": 110,
-      "github_forks": 18,
-      "github_open_issues": 5,
-      "github_description": "TCR-Fold receptor modeler.",
-      "github_top_forks": [],
-      "citations_count": 14,
-      "citing_papers": [
-        {
-          "title": "TCR-Fold Primary Paper",
-          "url": "https://doi.org/10.1101/2023.05.10.654321",
-          "citations": 14,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.05.10.654321"
-    },
-    {
-      "id": "alphatcr",
-      "name": "AlphaTCR",
-      "repo": "debbiemarkslab/AlphaTCR",
-      "category": "Variant Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2024.01.10.123456",
-      "parent": "esmfold",
-      "usage": "Predicting TCR-peptide-MHC interactions using structural embedding metrics.",
-      "strengths": "Integrates structural parameters directly with immunological screen logs.",
-      "weaknesses": "High rate of false positives in cross-reactive binding assays.",
-      "date": "2025-08-24",
-      "github_stars": 95,
-      "github_forks": 14,
-      "github_open_issues": 2,
-      "github_description": "AlphaTCR screening framework.",
-      "github_top_forks": [],
-      "citations_count": 8,
-      "citing_papers": [
-        {
-          "title": "AlphaTCR Primary Paper",
-          "url": "https://doi.org/10.1101/2024.01.10.123456",
-          "citations": 8,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2024.01.10.123456"
-    },
-    {
-      "id": "rfantibody",
-      "name": "RFantibody",
-      "repo": "uw-ipd/RFantibody",
-      "category": "Protein Design",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.03.10.112233",
-      "parent": "rosettafold",
-      "usage": "Antibody design using adapted RoseTTAFold weights to design variable loop scaffolds.",
-      "strengths": "Integrates with RFdiffusion for de novo antibody binder generation.",
-      "weaknesses": "CDR loop design success rates are lower than standard RFdiffusion binder pipelines.",
-      "date": "2023-03-08",
-      "github_stars": 190,
-      "github_forks": 24,
-      "github_open_issues": 6,
-      "github_description": "RFantibody designer.",
-      "github_top_forks": [],
-      "citations_count": 149,
-      "citing_papers": [
-        {
-          "title": "Foundation models in bioinformatics",
-          "url": "https://doi.org/10.1093/nsr/nwaf028",
-          "citations": 80,
-          "year": 2025,
-          "authors": "Fei Guo, Renchu Guan, Yaohang Li et al."
-        },
-        {
-          "title": "Active learning-assisted directed evolution",
-          "url": "https://doi.org/10.1038/s41467-025-55987-8",
-          "citations": 74,
-          "year": 2025,
-          "authors": "Jason Yang, Ravi Lal, James C. Bowden et al."
-        },
-        {
-          "title": "Integrated biotechnological and AI innovations for crop improvement",
-          "url": "https://doi.org/10.1038/s41586-025-09122-8",
-          "citations": 74,
-          "year": 2025,
-          "authors": "Guotian Li, Linna An, Wanneng Yang et al."
-        },
-        {
-          "title": "Advancing protein evolution with inverse folding models integrating structural and evolutionary constraints",
-          "url": "https://doi.org/10.1016/j.cell.2025.06.014",
-          "citations": 45,
-          "year": 2025,
-          "authors": "Hongyuan Fei, Yunjia Li, Yijing Liu et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.03.10.112233"
     },
     {
       "id": "diffab",
@@ -3867,27 +2400,6 @@
       ]
     },
     {
-      "id": "phenix_alphafold",
-      "name": "Phenix-AlphaFold",
-      "repo": "phenix-project/phenix",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1107/S205979832200342X",
-      "parent": "alphafold2",
-      "usage": "Integrating AlphaFold models into crystallographic molecular replacement and refinement pipelines inside Phenix.",
-      "strengths": "Automates template trimming, solves challenging molecular replacement cases where traditional structures fail.",
-      "weaknesses": "Proprietary license components inside Phenix; requires local installations.",
-      "date": "2022-08-13",
-      "github_stars": 120,
-      "github_forks": 25,
-      "github_open_issues": 8,
-      "github_description": "Phenix structural biology integration.",
-      "github_top_forks": [],
-      "citations_count": 350,
-      "citing_papers": [],
-      "doi_link": "https://doi.org/10.1107/S205979832200342X"
-    },
-    {
       "id": "cryoread",
       "name": "CryoREAD",
       "repo": "kiharalab/CryoREAD",
@@ -3907,107 +2419,6 @@
       "citations_count": 48,
       "citing_papers": [],
       "doi_link": "https://doi.org/10.1038/s41592-023-01880-9"
-    },
-    {
-      "id": "deepfold_em",
-      "name": "DeepFold-EM",
-      "repo": "kiharalab/DeepFold-EM",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1016/j.jmb.2022.167880",
-      "parent": "alphafold2",
-      "usage": "Refining protein coordinates in low-resolution Cryo-EM maps combining deep networks with physics refinement.",
-      "strengths": "Stabilizes secondary structure conformations, fits large assemblies accurately.",
-      "weaknesses": "High GPU compute required for iterative conformation searches.",
-      "date": "2021-12-05",
-      "github_stars": 110,
-      "github_forks": 15,
-      "github_open_issues": 3,
-      "github_description": "DeepFold-EM structures.",
-      "github_top_forks": [],
-      "citations_count": 3,
-      "citing_papers": [
-        {
-          "title": "Role of HIV-1 Tat Protein Interactions with Host Receptors in HIV Infection and Pathogenesis",
-          "url": "https://doi.org/10.3390/ijms25031704",
-          "citations": 27,
-          "year": 2024,
-          "authors": "Aurelio Cafaro, Ivan Schietroma, Leonardo Sernicola et al."
-        },
-        {
-          "title": "Nanodiscs and solution nuclear magnetic resonance",
-          "url": "https://doi.org/10.1016/j.sbi.2025.103067",
-          "citations": 4,
-          "year": 2025,
-          "authors": "Olga Vinogradova"
-        },
-        {
-          "title": "HIV Tat as a latency reversing agent: turning the tables on viral persistence",
-          "url": "https://doi.org/10.3389/fimmu.2025.1571151",
-          "citations": 4,
-          "year": 2025,
-          "authors": "Bridget M. Fisher, Paula M. Cevaal, Michael Roche et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1016/j.jmb.2022.167880"
-    },
-    {
-      "id": "cryofold",
-      "name": "CryoFold",
-      "repo": "uw-ipd/CryoFold",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.08.10.123456",
-      "parent": "alphafold2",
-      "usage": "Fitting AlphaFold predictions to dynamic Cryo-EM map densities using differentiable simulation blocks.",
-      "strengths": "Captures alternative active/inactive states directly from raw density profiles.",
-      "weaknesses": "Inference time is high, requires careful input constraint setups.",
-      "date": "2021-10-17",
-      "github_stars": 150,
-      "github_forks": 18,
-      "github_open_issues": 4,
-      "github_description": "CryoFold density-fitter.",
-      "github_top_forks": [],
-      "citations_count": 12,
-      "citing_papers": [
-        {
-          "title": "CryoFold Primary Paper",
-          "url": "https://doi.org/10.1101/2023.08.10.123456",
-          "citations": 12,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.08.10.123456"
-    },
-    {
-      "id": "af2_em",
-      "name": "AF2-EM",
-      "repo": "mElofssonlab/AF2-EM",
-      "category": "Core Predictors",
-      "status": "Completed",
-      "paper_doi": "10.1101/2022.06.12.123456",
-      "parent": "alphafold2",
-      "usage": "Rapid validation and scoring of AF2 structures against experimental Cryo-EM density maps.",
-      "strengths": "Identifies poorly folded domains or incorrect multimeric interfaces in predictions.",
-      "weaknesses": "Does not perform structural updates; validation-only tool.",
-      "date": "2025-03-31",
-      "github_stars": 85,
-      "github_forks": 11,
-      "github_open_issues": 2,
-      "github_description": "AF2-EM density validator.",
-      "github_top_forks": [],
-      "citations_count": 18,
-      "citing_papers": [
-        {
-          "title": "AF2-EM Primary Paper",
-          "url": "https://doi.org/10.1101/2022.06.12.123456",
-          "citations": 18,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2022.06.12.123456"
     },
     {
       "id": "isolde",
@@ -4058,198 +2469,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1107/S205979831800266X"
-    },
-    {
-      "id": "phaser_alphafold",
-      "name": "Phaser-AlphaFold",
-      "repo": "phaser-project/phaser",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1107/S205979832001358X",
-      "parent": "alphafold2",
-      "usage": "Using AlphaFold models directly for molecular replacement calculations inside Phaser solver.",
-      "strengths": "Integrates error estimates (pLDDT) into the likelihood targets for search templates.",
-      "weaknesses": "Templates require truncation of low-confidence loops beforehand.",
-      "date": "2025-11-15",
-      "github_stars": 110,
-      "github_forks": 15,
-      "github_open_issues": 4,
-      "github_description": "Phaser molecular replacement.",
-      "github_top_forks": [],
-      "citations_count": 420,
-      "citing_papers": [],
-      "doi_link": "https://doi.org/10.1107/S205979832001358X"
-    },
-    {
-      "id": "mrbump",
-      "name": "MrBump",
-      "repo": "ccp4/mrbump",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1107/S090904950604169X",
-      "parent": "alphafold2",
-      "usage": "Automated pipeline for molecular replacement using search models retrieved from AlphaFold DB.",
-      "strengths": "Saves hours of search preparation, pipelines multiple domains automatically.",
-      "weaknesses": "Dependent on the presence of related structural domains in databases.",
-      "date": "2023-02-28",
-      "github_stars": 75,
-      "github_forks": 18,
-      "github_open_issues": 2,
-      "github_description": "MrBump automated pipeline.",
-      "github_top_forks": [],
-      "citations_count": 1100,
-      "citing_papers": [],
-      "doi_link": "https://doi.org/10.1107/S090904950604169X"
-    },
-    {
-      "id": "ample",
-      "name": "AMPLE",
-      "repo": "ccp4/ample",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1107/S205979831901300X",
-      "parent": "alphafold2",
-      "usage": "Molecular replacement using clusters of truncated ab initio/AlphaFold structures.",
-      "strengths": "Solves structures with no known template structure homologs.",
-      "weaknesses": "Computationally intensive; requires trying many cluster variations.",
-      "date": "2021-12-26",
-      "github_stars": 60,
-      "github_forks": 12,
-      "github_open_issues": 3,
-      "github_description": "AMPLE molecular replacement.",
-      "github_top_forks": [],
-      "citations_count": 10,
-      "citing_papers": [
-        {
-          "title": "The <i>CCP</i>4 suite: integrative software for macromolecular crystallography",
-          "url": "https://doi.org/10.1107/s2059798323003595",
-          "citations": 845,
-          "year": 2023,
-          "authors": "Jon Agirre, Mihaela Atanasova, Haroldas Bagdonas et al."
-        },
-        {
-          "title": "<i>findMySequence</i> : a neural-network-based approach for identification of unknown proteins in X-ray crystallography and cryo-EM",
-          "url": "https://doi.org/10.1107/s2052252521011088",
-          "citations": 68,
-          "year": 2021,
-          "authors": "Grzegorz Chojnowski, Adam J. Simpkin, Diego A. Leonardo et al."
-        },
-        {
-          "title": "Recent developments in<i>MrBUMP</i>: better search-model preparation, graphical interaction with search models, and solution improvement and assessment",
-          "url": "https://doi.org/10.1107/s2059798318003455",
-          "citations": 42,
-          "year": 2018,
-          "authors": "Ronan M. Keegan, Stuart McNicholas, Jens M. H. Thomas et al."
-        },
-        {
-          "title": "Molecular replacement using structure predictions from databases",
-          "url": "https://doi.org/10.1107/s2059798319013962",
-          "citations": 19,
-          "year": 2019,
-          "authors": "Adam J. Simpkin, Jens M. H. Thomas, Felix Šimkovic et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1107/S205979831901300X"
-    },
-    {
-      "id": "simbad",
-      "name": "SIMBAD",
-      "repo": "ccp4/simbad",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1107/S205979831901345X",
-      "parent": "alphafold2",
-      "usage": "Sequence-independent molecular replacement scanning crystallographic database models.",
-      "strengths": "Solves structures when the sequence annotation is incorrect or missing.",
-      "weaknesses": "Requires searching thousands of models, high computation cost.",
-      "date": "2022-11-04",
-      "github_stars": 48,
-      "github_forks": 8,
-      "github_open_issues": 1,
-      "github_description": "SIMBAD independent MR.",
-      "github_top_forks": [],
-      "citations_count": 30,
-      "citing_papers": [
-        {
-          "title": "<i>CCP</i>4 Cloud for structure determination and project management in macromolecular crystallography",
-          "url": "https://doi.org/10.1107/s2059798322007987",
-          "citations": 78,
-          "year": 2022,
-          "authors": "Eugene Krissinel, Andrey A. Lebedev, Ville Uski et al."
-        },
-        {
-          "title": "<i>findMySequence</i> : a neural-network-based approach for identification of unknown proteins in X-ray crystallography and cryo-EM",
-          "url": "https://doi.org/10.1107/s2052252521011088",
-          "citations": 68,
-          "year": 2021,
-          "authors": "Grzegorz Chojnowski, Adam J. Simpkin, Diego A. Leonardo et al."
-        },
-        {
-          "title": "Advancements in macromolecular crystallography: from past to present",
-          "url": "https://doi.org/10.1042/etls20200316",
-          "citations": 25,
-          "year": 2021,
-          "authors": "Ishan Rathore, Vandana Mishra, Prasenjit Bhaumik"
-        },
-        {
-          "title": "Making routine native SAD a reality: lessons from beamline X06DA at the Swiss Light Source",
-          "url": "https://doi.org/10.1107/s2059798319003103",
-          "citations": 20,
-          "year": 2019,
-          "authors": "Shibom Basu, Aaron D. Finke, Laura Vera et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1107/S205979831901345X"
-    },
-    {
-      "id": "modelcraft",
-      "name": "Modelcraft",
-      "repo": "ccp4/modelcraft",
-      "category": "Core Predictors",
-      "status": "Active",
-      "paper_doi": "10.1101/2024.03.10.123456",
-      "parent": "alphafold2",
-      "usage": "Automated protein model building combining network coordinates with density fitting protocols.",
-      "strengths": "End-to-end building, drastically limits manual adjustment requirements.",
-      "weaknesses": "Lacks precision on heavily disordered chain regions.",
-      "date": "2022-02-07",
-      "github_stars": 35,
-      "github_forks": 6,
-      "github_open_issues": 1,
-      "github_description": "Modelcraft automated building.",
-      "github_top_forks": [],
-      "citations_count": 42,
-      "citing_papers": [
-        {
-          "title": "The <i>CCP</i>4 suite: integrative software for macromolecular crystallography",
-          "url": "https://doi.org/10.1107/s2059798323003595",
-          "citations": 845,
-          "year": 2023,
-          "authors": "Jon Agirre, Mihaela Atanasova, Haroldas Bagdonas et al."
-        },
-        {
-          "title": "Convergent evolution of SARS-CoV-2 Omicron subvariants leading to the emergence of BQ.1.1 variant",
-          "url": "https://doi.org/10.1038/s41467-023-38188-z",
-          "citations": 155,
-          "year": 2023,
-          "authors": "Jumpei Ito, Rigel Suzuki, Keiya Uriu et al."
-        },
-        {
-          "title": "<i>CCP</i>4 Cloud for structure determination and project management in macromolecular crystallography",
-          "url": "https://doi.org/10.1107/s2059798322007987",
-          "citations": 78,
-          "year": 2022,
-          "authors": "Eugene Krissinel, Andrey A. Lebedev, Ville Uski et al."
-        },
-        {
-          "title": "Accelerating crystal structure determination with iterative <i>AlphaFold</i> prediction",
-          "url": "https://doi.org/10.1107/s205979832300102x",
-          "citations": 58,
-          "year": 2023,
-          "authors": "Thomas C. Terwilliger, Pavel V. Afonine, Dorothée Liebschner et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2024.03.10.123456"
     },
     {
       "id": "alphafolddb",
@@ -4538,135 +2757,6 @@
       "doi_link": "https://doi.org/10.1093/bioinformatics/btad153"
     },
     {
-      "id": "fpocket_afdb",
-      "name": "Fpocket-AFDB",
-      "repo": "fpocket/fpocket",
-      "category": "Databases",
-      "status": "Active",
-      "paper_doi": "10.1093/nar/gkac999",
-      "parent": "alphafolddb",
-      "usage": "Binding pocket annotations mapped across predicted structures in the AlphaFold Database.",
-      "strengths": "Identifies cryptic or druggable pockets across structural variants.",
-      "weaknesses": "Relies on rigid predictions which may close transient pockets.",
-      "date": "2024-09-16",
-      "github_stars": 320,
-      "github_forks": 65,
-      "github_open_issues": 12,
-      "github_description": "Fpocket database annotations.",
-      "github_top_forks": [],
-      "citations_count": 96,
-      "citing_papers": [
-        {
-          "title": "Database Resources of the National Genomics Data Center, China National Center for Bioinformation in 2023",
-          "url": "https://doi.org/10.1093/nar/gkac1073",
-          "citations": 347,
-          "year": 2022,
-          "authors": "CNCB-NGDC Members and Partners, Yongbiao Xue, Yiming Bao et al."
-        },
-        {
-          "title": "Database Resources of the National Genomics Data Center, China National Center for Bioinformation in 2025",
-          "url": "https://doi.org/10.1093/nar/gkae978",
-          "citations": 303,
-          "year": 2024,
-          "authors": "CNCB-NGDC Members and Partners, Yīmíng Bào, Xue Bai et al."
-        },
-        {
-          "title": "Coding, or non-coding, that is the question",
-          "url": "https://doi.org/10.1038/s41422-024-00975-8",
-          "citations": 71,
-          "year": 2024,
-          "authors": "Laura Poliseno, Martina Lanza, Pier Paolo Pandolfi"
-        },
-        {
-          "title": "CodLncScape Provides a Self‐Enriching Framework for the Systematic Collection and Exploration of Coding LncRNAs",
-          "url": "https://doi.org/10.1002/advs.202400009",
-          "citations": 44,
-          "year": 2024,
-          "authors": "Tianyuan Liu, Huiyuan Qiao, Zixu Wang et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/nar/gkac999"
-    },
-    {
-      "id": "pocketminer",
-      "name": "PocketMiner",
-      "repo": "debbiemarkslab/PocketMiner",
-      "category": "Databases",
-      "status": "Active",
-      "paper_doi": "10.1101/2023.05.10.123456",
-      "parent": "alphafolddb",
-      "usage": "Rapid machine learning classifier to identify cryptic druggable pockets in AlphaFold models.",
-      "strengths": "Extremely fast, identifies pockets requiring small conformational shifts.",
-      "weaknesses": "Accuracy dependent on local structure quality scores (pLDDT).",
-      "date": "2024-08-31",
-      "github_stars": 140,
-      "github_forks": 25,
-      "github_open_issues": 4,
-      "github_description": "PocketMiner pocket prediction.",
-      "github_top_forks": [],
-      "citations_count": 18,
-      "citing_papers": [
-        {
-          "title": "PocketMiner Primary Paper",
-          "url": "https://doi.org/10.1101/2023.05.10.123456",
-          "citations": 18,
-          "year": 2021,
-          "authors": "Scientific Consortium et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2023.05.10.123456"
-    },
-    {
-      "id": "pocketomics",
-      "name": "PocketOmics",
-      "repo": "uw-ipd/pocketomics",
-      "category": "Databases",
-      "status": "Active",
-      "paper_doi": "10.1093/nar/gkae350",
-      "parent": "alphafolddb",
-      "usage": "Mapping human genomic variants onto binding pockets of AlphaFold models to infer functional disruption.",
-      "strengths": "Connects missense variants directly with structural drug pockets.",
-      "weaknesses": "Reliant on accuracy of pocket borders.",
-      "date": "2024-04-04",
-      "github_stars": 85,
-      "github_forks": 14,
-      "github_open_issues": 3,
-      "github_description": "PocketOmics genomic map.",
-      "github_top_forks": [],
-      "citations_count": 10,
-      "citing_papers": [
-        {
-          "title": "Hepatocyte targeting <i>via</i> the asialoglycoprotein receptor",
-          "url": "https://doi.org/10.1039/d4md00652f",
-          "citations": 40,
-          "year": 2024,
-          "authors": "Fabricio Ramírez-Cortés, Petra Ménová"
-        },
-        {
-          "title": "Targeted delivery systems of siRNA based on ionizable lipid nanoparticles and cationic polymer vectors",
-          "url": "https://doi.org/10.1016/j.biotechadv.2025.108546",
-          "citations": 31,
-          "year": 2025,
-          "authors": "Zhao Yao, Taiqing Liu, Jingwen Wang et al."
-        },
-        {
-          "title": "Metabolic Stability and Targeted Delivery of Oligonucleotides: Advancing RNA Therapeutics Beyond The Liver",
-          "url": "https://doi.org/10.1021/acs.jmedchem.4c02528",
-          "citations": 29,
-          "year": 2025,
-          "authors": "Puneet Anand, Yu Zhang, Suraj Patil et al."
-        },
-        {
-          "title": "The new era of siRNA therapy: Advances in cancer treatment",
-          "url": "https://doi.org/10.1002/ctm2.70363",
-          "citations": 4,
-          "year": 2025,
-          "authors": "Zhuan Zhang, Miaorong Yu, Guoqing Hu et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1093/nar/gkae350"
-    },
-    {
       "id": "esmfold_db",
       "name": "ESMFold DB",
       "repo": "facebookresearch/esm",
@@ -4915,38 +3005,6 @@
         }
       ],
       "doi_link": "https://doi.org/10.1038/s43588-024-00714-4"
-    },
-    {
-      "id": "alphamap",
-      "name": "AlphaMap",
-      "repo": "KusterLab/AlphaMap",
-      "category": "Visualization",
-      "status": "Active",
-      "paper_doi": "10.1101/2021.08.10.455792",
-      "parent": "alphafold2",
-      "usage": "Visualizing mass spectrometry peptide coverage maps overlaid onto AlphaFold 3D coordinates.",
-      "strengths": "Highlights which parts of predicted structures are covered by MS experiment assays.",
-      "weaknesses": "Requires MS experiment search tables as inputs.",
-      "date": "2021-12-09",
-      "github_stars": 75,
-      "github_forks": 12,
-      "github_open_issues": 3,
-      "github_description": "AlphaMap MS coordinate map.",
-      "github_top_forks": [],
-      "citations_count": 1,
-      "citing_papers": [
-        {
-          "title": "Assessing whether serum ceruloplasmin promotes non-alcoholic steatohepatitis via regulating iron metabolism",
-          "url": "https://doi.org/10.5937/jomb0-37597",
-          "citations": 11,
-          "year": 2022,
-          "authors": "Ziqiang Xia, Mei Hu, Liang Zheng et al."
-        }
-      ],
-      "doi_link": "https://doi.org/10.1101/2021.08.10.455792",
-      "preprint_doi": "10.1101/2021.07.30.454433",
-      "preprint_link": "https://doi.org/10.1101/2021.07.30.454433",
-      "publication_type": "published"
     },
     {
       "id": "esm_design",
@@ -13669,6 +11727,174 @@
       "github_forks": 7,
       "github_open_issues": 0,
       "github_description": "Evolla: A frontier protein-language generative model designed to decode the molecular language of proteins.",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "unknown"
+    },
+    {
+      "id": "foldify",
+      "name": "Foldify",
+      "repo": "CERIT-SC/foldify-open",
+      "category": "Visualization",
+      "status": "Completed",
+      "paper_doi": "10.1021/acs.jcim.6c01154",
+      "parent": "alphafold2",
+      "usage": "Web application that centralizes access to multiple structure prediction tools (AF3, AF2, ColabFold, OmegaFold, ESMFold).",
+      "strengths": "Simplifies hardware/technical setup for researchers; user-friendly UI; integrates multiple top predictors.",
+      "weaknesses": "Runs externally-hosted or locally-configured instances; limited customizeability for custom ML backends.",
+      "date": "2026-06-26",
+      "github_stars": 2,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Foldify: Web Application for Protein Structure Prediction",
+      "github_top_forks": [],
+      "citations_count": 1,
+      "citing_papers": [],
+      "doi_link": "https://doi.org/10.1021/acs.jcim.6c01154",
+      "publication_type": "published"
+    },
+    {
+      "id": "chromatin_af3_assessment",
+      "name": "Chromatin AF3 Assessment",
+      "repo": null,
+      "category": "Benchmarks",
+      "status": "Completed",
+      "preprint_doi": "10.1101/2026.06.26.734680",
+      "parent": "alphafold3",
+      "usage": "Systematic benchmark of AlphaFold3 on 115 post-training nucleosome-containing complexes.",
+      "strengths": "Highlights AF3 strengths in PTM readout/deposition and histone-driven interactions.",
+      "weaknesses": "Reveals AF3 struggles with transcription factors and chromatin remodelers engaging DNA.",
+      "date": "2026-06-26",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_link": "https://doi.org/10.1101/2026.06.26.734680",
+      "publication_type": "preprint"
+    },
+    {
+      "id": "dldn_bench",
+      "name": "DLDN-Bench",
+      "repo": "ddz-icb/DLDN-Bench",
+      "category": "Benchmarks",
+      "status": "Completed",
+      "preprint_doi": "10.1101/2026.06.10.728383",
+      "parent": "alphafold2",
+      "usage": "Standardized evaluation framework for deep learning-based de novo peptide sequencing in proteomics.",
+      "strengths": "Provides muscle biopsy mass spectrometry datasets and uniform comparison metrics.",
+      "weaknesses": "Focuses on de novo peptide sequencing, not full-length protein folding.",
+      "date": "2026-06-22",
+      "github_stars": 1,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "DLDN-Bench: A Benchmark Framework for Deep Learning De Novo Peptide Sequencing in Proteomics",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_link": "https://doi.org/10.1101/2026.06.10.728383",
+      "publication_type": "preprint"
+    },
+    {
+      "id": "battle_amp",
+      "name": "BATTLE-AMP",
+      "repo": "szczurek-lab/battleamp-snakemake",
+      "category": "Benchmarks",
+      "status": "Completed",
+      "preprint_doi": "10.1101/2026.06.19.733349",
+      "parent": "alphafold2",
+      "usage": "Antimicrobial peptide predictor benchmark evaluating MIC prediction accuracy and activity cliffs.",
+      "strengths": "Uses Snakemake pipeline; benchmarks 10 model families against experimental pathogen MIC data.",
+      "weaknesses": "Specifically targets antimicrobial peptides; not generalizable to large protein folds.",
+      "date": "2026-06-24",
+      "github_stars": 1,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "BATTLE-AMP: Benchmarking Antimicrobial Peptide Predictors",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_link": "https://doi.org/10.1101/2026.06.19.733349",
+      "publication_type": "preprint"
+    },
+    {
+      "id": "distomove",
+      "name": "DistoMove",
+      "repo": "wallnerlab/DistoMove",
+      "category": "Ensemble Generators",
+      "status": "Completed",
+      "parent": "alphafold2",
+      "usage": "Predicting structural movements and conformational transitions directly from AlphaFold distograms.",
+      "strengths": "Allows exploring protein flexibility and alternative conformations without full MD simulations.",
+      "weaknesses": "Dependent on the quality and information density of the input AlphaFold distograms.",
+      "date": "2026-06-23",
+      "github_stars": 2,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Predicting Structural Movements from AlphaFold Distograms",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "unknown"
+    },
+    {
+      "id": "corvo",
+      "name": "Corvo",
+      "repo": "PTenorioTFLeite/Corvo-covalent-boltz-ligand-preparator",
+      "category": "Ligand Docking",
+      "status": "Completed",
+      "parent": "boltz1",
+      "usage": "Ligand preparator for covalent co-folding and docking with Boltz-2 for any custom ligand.",
+      "strengths": "Facilitates covalent docking simulations with Boltz-2 by automating ligand structure preparation.",
+      "weaknesses": "Preprocessing utility rather than a standalone docking engine.",
+      "date": "2026-06-23",
+      "github_stars": 1,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Corvo: Ligand preparator for covalent co-folding with Boltz-2 for any ligand",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "unknown"
+    },
+    {
+      "id": "pinc",
+      "name": "Pinc",
+      "repo": "badonyi/Pinc",
+      "category": "Scoring",
+      "status": "Completed",
+      "parent": "alphafold2",
+      "usage": "Simple probabilistic interaction score for evaluating and filtering AlphaFold-Multimer interfaces.",
+      "strengths": "Provides a fast, probabilistic metric for assessing protein-protein interface quality.",
+      "weaknesses": "Heuristic score; does not simulate physical kinetics or folding thermodynamics.",
+      "date": "2026-06-27",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Pinc: a simple probabilistic AlphaFold interaction score",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "publication_type": "unknown"
+    },
+    {
+      "id": "oncopepdesign",
+      "name": "OncoPepDesign",
+      "repo": "adamlmu/OncoPepDesign",
+      "category": "Protein Design",
+      "status": "Completed",
+      "parent": "rfdiffusion",
+      "usage": "Target-agnostic pipeline designing mutant-selective peptides combining RFdiffusion generation with Boltz-2 folding.",
+      "strengths": "Integrates multiple scoring tools (DeepPpIScore, HADDOCK, MM-GBSA) for consensus selection.",
+      "weaknesses": "Computationally expensive; relies heavily on accurate co-folding predictions.",
+      "date": "2026-06-29",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Target-agnostic pipeline for designing peptides selective for oncogenic mutant proteins over wild-type.",
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
