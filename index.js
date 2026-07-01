@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let startX, startY;
 
   // Initialize Application
-  fetch('tools_data.json?v=11')
+  fetch('tools_data.json?v=12')
     .then(response => {
       if (!response.ok) throw new Error('Data file not found');
       return response.json();
@@ -198,7 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'Protein Docking': 7,
       'Protein Design': 8,
       'Ensemble Generators': 9,
-      'Benchmarks': 10
+      'Benchmarks': 10,
+      'Scoring': 11
     };
 
     // Staggering slots (5 slots per category lane)
@@ -272,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (cat === 'Visualization') nodeType = 'visualization';
       else if (cat === 'Ensemble Generators') nodeType = 'ensemble';
       else if (cat === 'Benchmarks') nodeType = 'benchmarks';
+      else if (cat === 'Scoring') nodeType = 'scoring';
 
       NODE_COORDINATES[tool.id] = {
         x: x,
@@ -707,6 +709,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'Visualization': return 'cat-visualization';
       case 'Ensemble Generators': return 'cat-ensemble';
       case 'Benchmarks': return 'cat-benchmarks';
+      case 'Scoring': return 'cat-scoring';
       default: return 'cat-other';
     }
   }

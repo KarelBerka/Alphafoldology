@@ -1704,4 +1704,21 @@ footer {
   color: var(--text-muted);
 }
 
+/* Category colors for Scoring */
+.chip.cat-scoring {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.2);
+  color: #14b8a6;
+}
+
+.tool-card.cat-scoring:hover::before {
+  background: linear-gradient(90deg, #14b8a6, var(--accent-cyan));
+}
+
+.card-meta.cat-scoring .card-cat-badge {
+  color: #14b8a6;
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+
 
