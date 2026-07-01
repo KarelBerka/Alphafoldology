@@ -5,9 +5,9 @@
     "total_github_stars": 162817,
     "total_citations": 131312,
     "total_published_papers": 9,
-    "total_preprints": 14,
+    "total_preprints": 17,
     "total_stars": 154771,
-    "total_published": 9,
+    "total_published": 62,
     "last_update": "2026-06-29"
   },
   "tools": [
@@ -59,7 +59,11 @@
           "authors": "Kathryn Tunyasuvunakool, Jonas Adler, Zachary Wu et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41586-019-1923-7"
+      "doi_link": "https://doi.org/10.1038/s41586-019-1923-7",
+      "journal": "Nature",
+      "paper_year": "2020",
+      "short_citation": "Senior, Nature, 2020",
+      "full_citation": "Senior, A.W. et al., (2020), 'Improved protein structure prediction using potentials from deep learning', *Nature*, 577(7792), pp. 706-710."
     },
     {
       "id": "alphafold2",
@@ -133,7 +137,11 @@
           "authors": "Mihály Váradi, Stephen Anyango, Mandar Deshpande et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41586-021-03819-2"
+      "doi_link": "https://doi.org/10.1038/s41586-021-03819-2",
+      "journal": "Nature",
+      "paper_year": "2021",
+      "short_citation": "Jumper, Nature, 2021",
+      "full_citation": "Jumper, J. et al., (2021), 'Highly accurate protein structure prediction with AlphaFold', *Nature*, 596(7873), pp. 583-589."
     },
     {
       "id": "alphafold3",
@@ -214,7 +222,11 @@
           "authors": "Jeremy Wohlwend, Gabriele Corso, Saro Passaro et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41586-024-07487-w"
+      "doi_link": "https://doi.org/10.1038/s41586-024-07487-w",
+      "journal": "Nature",
+      "paper_year": "2024",
+      "short_citation": "Abramson, Nature, 2024",
+      "full_citation": "Abramson, J. et al., (2024), 'Accurate structure prediction of biomolecular interactions with AlphaFold 3', *Nature*, 630(8016), pp. 493-500."
     },
     {
       "id": "rosettafold",
@@ -297,7 +309,15 @@
           "year": 2023,
           "authors": "Zeming Lin, Halil Akin, Roshan Rao et al."
         }
-      ]
+      ],
+      "journal": "Science",
+      "paper_year": "2021",
+      "short_citation": "Baek, Science, 2021",
+      "full_citation": "Baek, M. et al., (2021), 'Accurate prediction of protein structures and interactions using a three-track neural network', *Science*, 373(6557), pp. 871-876.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2021",
+      "preprint_short_citation": "Baek, Preprint, 2021",
+      "preprint_full_citation": "Baek, M. et al., (2021), 'Accurate prediction of protein structures and interactions using a 3-track network', *Preprint*."
     },
     {
       "id": "rosettafold_aa",
@@ -371,7 +391,11 @@
           "authors": "Tanja Kortemme"
         }
       ],
-      "doi_link": "https://doi.org/10.1126/science.adl2528"
+      "doi_link": "https://doi.org/10.1126/science.adl2528",
+      "journal": "Science",
+      "paper_year": "2024",
+      "short_citation": "Krishna, Science, 2024",
+      "full_citation": "Krishna, R. et al., (2024), 'Generalized biomolecular modeling and design with RoseTTAFold All-Atom', *Science*, 384(6693), pp. eadl2528."
     },
     {
       "id": "rosettafold2na",
@@ -421,7 +445,11 @@
           "authors": "Gustaf Ahdritz, Nazim Bouatta, Christina Floristean et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-023-02086-5"
+      "doi_link": "https://doi.org/10.1038/s41592-023-02086-5",
+      "journal": "Nat Methods",
+      "paper_year": "2024",
+      "short_citation": "Baek, Nat Methods, 2024",
+      "full_citation": "Baek, M. et al., (2024), 'Accurate prediction of protein-nucleic acid complexes using RoseTTAFoldNA', *Nat Methods*, 21(1), pp. 117-121."
     },
     {
       "id": "openfold",
@@ -504,7 +532,15 @@
           "year": 2023,
           "authors": "Hanyao Huang, Ou Zheng, Dongdong Wang et al."
         }
-      ]
+      ],
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Ahdritz, Preprint, 2022",
+      "full_citation": "Ahdritz, G. et al., (2022), 'OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms and capacity for generalization', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Ahdritz, Preprint, 2022",
+      "preprint_full_citation": "Ahdritz, G. et al., (2022), 'OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms and capacity for generalization', *Preprint*."
     },
     {
       "id": "unifold",
@@ -554,7 +590,11 @@
           "authors": "Gyuri Kim, Sewon Lee, Eli Levy Karin et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.08.04.502811"
+      "doi_link": "https://doi.org/10.1101/2022.08.04.502811",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Li, Preprint, 2022",
+      "full_citation": "Li, Z. et al., (2022), 'Uni-Fold: An Open-Source Platform for Developing Protein Folding Models beyond AlphaFold', *Preprint*."
     },
     {
       "id": "unifold_multimer",
@@ -604,7 +644,11 @@
           "authors": "Gyuri Kim, Sewon Lee, Eli Levy Karin et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.08.04.502811"
+      "doi_link": "https://doi.org/10.1101/2022.08.04.502811",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Li, Preprint, 2022",
+      "full_citation": "Li, Z. et al., (2022), 'Uni-Fold: An Open-Source Platform for Developing Protein Folding Models beyond AlphaFold', *Preprint*."
     },
     {
       "id": "helixfold",
@@ -633,7 +677,11 @@
           "authors": "Wenjia Zhang, Fuyin Yang, Xing Tian"
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.12.499695"
+      "doi_link": "https://doi.org/10.1101/2022.07.12.499695",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Chu, Preprint, 2022",
+      "full_citation": "Chu, Q. et al., (2022), 'Dual-stream cortical feedbacks mediate sensory prediction', *Preprint*."
     },
     {
       "id": "boltz1",
@@ -688,7 +736,15 @@
       "doi_link": "https://doi.org/10.1101/2024.11.19.624230",
       "preprint_doi": "10.1101/2024.11.19.624167",
       "preprint_link": "https://doi.org/10.1101/2024.11.19.624167",
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "journal": "Preprint",
+      "paper_year": "2024",
+      "short_citation": "Warren, Preprint, 2024",
+      "full_citation": "Warren, J.M. et al., (2024), 'Fungal-derived tRNAs are expressed and aminoacylated in orchid mitochondria', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2024",
+      "preprint_short_citation": "Wohlwend, Preprint, 2024",
+      "preprint_full_citation": "Wohlwend, J. et al., (2024), 'Boltz-1 Democratizing Biomolecular Interaction Modeling', *Preprint*."
     },
     {
       "id": "chai1",
@@ -738,7 +794,11 @@
           "authors": "Matthew R. Masters, Amr H. Mahmoud, Markus A. Lill"
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2024.10.10.615955"
+      "doi_link": "https://doi.org/10.1101/2024.10.10.615955",
+      "journal": "Preprint",
+      "paper_year": "2024",
+      "short_citation": "Chai, Preprint, 2024",
+      "full_citation": "Chai, D.i.s.c.o.v.e.r.y. et al., (2024), 'Chai-1: Decoding the molecular interactions of life', *Preprint*."
     },
     {
       "id": "protenix",
@@ -791,7 +851,11 @@
       "preprint_doi": "10.1101/2025.01.08.631967",
       "preprint_link": "https://doi.org/10.1101/2025.01.08.631967",
       "doi_link": null,
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2025",
+      "preprint_short_citation": "ByteDance, Preprint, 2025",
+      "preprint_full_citation": "ByteDance, A.M.L. et al., (2025), 'Protenix - Advancing Structure Prediction Through a Comprehensive AlphaFold3 Reproduction', *Preprint*."
     },
     {
       "id": "colabfold",
@@ -799,7 +863,7 @@
       "repo": "sokrypton/ColabFold",
       "category": "Fast Predictors",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01432-1",
+      "paper_doi": "10.1038/s41592-022-01488-1",
       "parent": "alphafold2",
       "usage": "Accelerated structure prediction combining MMseqs2 fast homology search with AlphaFold2/RoseTTAFold.",
       "strengths": "10-100x faster MSA generation, highly accessible web notebooks (Google Colab), local CLI integration.",
@@ -874,7 +938,16 @@
           "year": 2022,
           "authors": "Tomer Tsaban, Julia K. Varga, Orly Avraham et al."
         }
-      ]
+      ],
+      "preprint_journal": "openRxiv",
+      "preprint_year": "2021",
+      "preprint_short_citation": "Mirdita, openRxiv, 2021",
+      "preprint_full_citation": "Mirdita, Milot. et al., (2021), 'ColabFold - Making protein folding accessible to all', *openRxiv*.",
+      "publication_type": "published",
+      "journal": "Nat Methods",
+      "paper_year": "2022",
+      "short_citation": "Mirdita, Nat Methods, 2022",
+      "full_citation": "Mirdita, Milot. et al., (2022), 'ColabFold: making protein folding accessible to all', *Nat Methods*."
     },
     {
       "id": "esmfold",
@@ -957,7 +1030,15 @@
           "year": 2023,
           "authors": "Jun Cheng, Guido Novati, Joshua Pan et al."
         }
-      ]
+      ],
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Meng, Preprint, 2022",
+      "full_citation": "Meng, X. et al., (2022), 'Multi-ancestry GWAS of major depression aids locus discovery, fine-mapping, gene prioritisation, and causal inference', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Meng, Preprint, 2022",
+      "preprint_full_citation": "Meng, X. et al., (2022), 'Multi-ancestry GWAS of major depression aids locus discovery, fine-mapping, gene prioritisation, and causal inference', *Preprint*."
     },
     {
       "id": "omegafold",
@@ -1038,7 +1119,11 @@
           "authors": "Rohith Krishna, Jue Wang, Woody Ahern et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.21.500999"
+      "doi_link": "https://doi.org/10.1101/2022.07.21.500999",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Wu, Preprint, 2022",
+      "full_citation": "Wu, R. et al., (2022), 'High-resolution  <i>de novo</i>  structure prediction from primary sequence', *Preprint*."
     },
     {
       "id": "fastfold",
@@ -1067,7 +1152,11 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1109/IPDPS54959.2023.00048"
+      "doi_link": "https://doi.org/10.1109/IPDPS54959.2023.00048",
+      "journal": "2023 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+      "paper_year": "2023",
+      "short_citation": "Soh, 2023 IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2023",
+      "full_citation": "Soh, Yongseok. et al., (2023), 'Dynamic Tensor Linearization and Time Slicing for Efficient Factorization of Infinite Data Streams', *2023 IEEE International Parallel and Distributed Processing Symposium (IPDPS)*."
     },
     {
       "id": "rfdiffusion",
@@ -1150,7 +1239,15 @@
           "year": 2024,
           "authors": "Hanqun Cao, Cheng Tan, Zhangyang Gao et al."
         }
-      ]
+      ],
+      "journal": "Nature",
+      "paper_year": "2023",
+      "short_citation": "Watson, Nature, 2023",
+      "full_citation": "Watson, J.L. et al., (2023), 'De novo design of protein structure and function with RFdiffusion', *Nature*, 620(7976), pp. 1089-1100.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Kim, Preprint, 2022",
+      "preprint_full_citation": "Kim, H., Mirdita, M. and Steinegger, M..., (2022), 'Foldcomp: a library and format for compressing and indexing large protein structure sets', *Preprint*."
     },
     {
       "id": "proteinmpnn",
@@ -1158,7 +1255,7 @@
       "repo": "dauparas/ProteinMPNN",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1126/science.add5091",
+      "paper_doi": "10.1126/science.add2187",
       "parent": "rfdiffusion",
       "usage": "Sequence design (inverse folding) to find amino acid sequences that match a given target 3D backbone.",
       "strengths": "Extremely fast, robust sequence generation, drastically improves design success rate over physical scoring.",
@@ -1233,7 +1330,16 @@
           "year": 2023,
           "authors": "Rebecca Buller, Stefan Lutz, Romas J. Kazlauskas et al."
         }
-      ]
+      ],
+      "preprint_journal": "openRxiv",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Dauparas, openRxiv, 2022",
+      "preprint_full_citation": "Dauparas, J.. et al., (2022), 'Robust deep learning based protein sequence design using ProteinMPNN', *openRxiv*.",
+      "publication_type": "published",
+      "journal": "Science",
+      "paper_year": "2022",
+      "short_citation": "Dauparas, Science, 2022",
+      "full_citation": "Dauparas, J.. et al., (2022), 'Robust deep learning–based protein sequence design using ProteinMPNN', *Science*."
     },
     {
       "id": "ligandmpnn",
@@ -1283,7 +1389,11 @@
           "authors": "Huan Yee Koh, Yizhen Zheng, M. Yang et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.12.22.573123"
+      "doi_link": "https://doi.org/10.1101/2023.12.22.573123",
+      "journal": "Preprint",
+      "paper_year": "2023",
+      "short_citation": "Neri, Preprint, 2023",
+      "full_citation": "Neri, F. et al., (2023), 'A Fully-Automated Senescence Test (FAST) for the high-throughput quantification of senescence-associated markers', *Preprint*."
     },
     {
       "id": "chroma",
@@ -1291,7 +1401,7 @@
       "repo": "generatebio/chroma",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1038/s41587-023-01992-4",
+      "paper_doi": "10.1038/s41586-023-06728-8",
       "parent": "alphafold2",
       "usage": "Generative program for custom protein structures and sequences under customizable design conditions.",
       "strengths": "End-to-end (backbone + sequence) generation, supports advanced geometric constraints.",
@@ -1366,7 +1476,16 @@
           "year": 2024,
           "authors": "Gabriele Corso, H. Stärk, Stefanie Jegelka et al."
         }
-      ]
+      ],
+      "publication_type": "published",
+      "journal": "Nature",
+      "paper_year": "2023",
+      "short_citation": "Ingraham, Nature, 2023",
+      "full_citation": "Ingraham, John.B.. et al., (2023), 'Illuminating protein space with a programmable generative model', *Nature*.",
+      "preprint_journal": "arXiv",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Ingraham, arXiv, 2022",
+      "preprint_full_citation": "Ingraham, J. et al. (2022) 'Illuminating protein space with a programmable generative model', *arXiv*."
     },
     {
       "id": "colabdesign",
@@ -1374,13 +1493,13 @@
       "repo": "sokrypton/ColabDesign",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01432-1",
+      "paper_doi": null,
       "parent": "colabfold",
       "usage": "Interactive framework for protein backbone/sequence design via Google Colab powered by AF2 and ProteinMPNN.",
       "strengths": "Accessible design protocols (binder design, hallucination, fixedbb) with rich visual notebooks.",
       "weaknesses": "Primarily notebook-oriented; requires adaptation for non-interactive high-throughput command-line execution.",
       "date": "2022-05-31",
-      "preprint_doi": null,
+      "preprint_doi": "10.1101/2023.02.24.529906",
       "preprint_link": null,
       "doi_link": "https://doi.org/10.1038/s41592-022-01432-1",
       "citing_papers": [],
@@ -1389,7 +1508,12 @@
       "github_open_issues": 42,
       "github_description": "Interactive framework for protein backbone/sequence design via Google Colab powered by AF2 and ProteinMPNN.",
       "github_top_forks": [],
-      "citations_count": 110
+      "citations_count": 110,
+      "publication_type": "preprint",
+      "preprint_journal": "openRxiv",
+      "preprint_year": "2023",
+      "preprint_short_citation": "Frank, openRxiv, 2023",
+      "preprint_full_citation": "Frank, Christopher. et al., (2023), 'Efficient and scalable\n                  <i>de novo</i>\n                  protein design using a relaxed sequence space', *openRxiv*."
     },
     {
       "id": "switchcraft",
@@ -1413,7 +1537,11 @@
       "doi_link": null,
       "preprint_doi": "10.48550/arXiv.2605.31236",
       "preprint_link": "https://doi.org/10.48550/arXiv.2605.31236",
-      "publication_type": "published"
+      "publication_type": "published",
+      "preprint_journal": "arXiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Switch, arXiv, 2026",
+      "preprint_full_citation": "Switch, A. et al. (2026) 'SwitchCraft: Conformational state prediction with deep learning', *arXiv*."
     },
     {
       "id": "bindcraft",
@@ -1458,7 +1586,11 @@
           "year": 2025,
           "authors": "Aditi Merchant, S. B. King, Éric Nguyen et al."
         }
-      ]
+      ],
+      "journal": "Nature",
+      "paper_year": "2025",
+      "short_citation": "Pacesa, Nature, 2025",
+      "full_citation": "Pacesa, M. et al., (2025), 'One-shot design of functional protein binders with BindCraft', *Nature*, 646(8084), pp. 483-492."
     },
     {
       "id": "ovo",
@@ -1479,7 +1611,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2025.11.27.691041"
+      "doi_link": "https://doi.org/10.1101/2025.11.27.691041",
+      "journal": "Preprint",
+      "paper_year": "2025",
+      "short_citation": "Prihoda, Preprint, 2025",
+      "full_citation": "Prihoda, D. et al., (2025), 'Ovo, an Open-Source Ecosystem for De Novo Protein Design', *Preprint*."
     },
     {
       "id": "esm_if1",
@@ -1487,7 +1623,7 @@
       "repo": "facebookresearch/esm",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2022.04.10.487769",
+      "paper_doi": null,
       "parent": "esmfold",
       "usage": "Inverse folding model using GNNs to predict sequences matching custom target backbones.",
       "strengths": "Pre-trained on millions of structures, integrates sequence likelihood scores to screen stable designs.",
@@ -1500,7 +1636,13 @@
       "github_top_forks": [],
       "citations_count": 480,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2022.04.10.487769"
+      "doi_link": "https://doi.org/10.1101/2022.04.10.487769",
+      "preprint_doi": "10.1101/2022.04.10.487779",
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Hsu, bioRxiv, 2022",
+      "preprint_full_citation": "Hsu, C. et al. (2022) 'Learning inverse folding from millions of predicted structures', *bioRxiv*."
     },
     {
       "id": "progen",
@@ -1550,7 +1692,11 @@
           "authors": "Tariq Alqahtani, Hisham A. Badreldin, Mohammed Alrashed et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41587-022-01618-2"
+      "doi_link": "https://doi.org/10.1038/s41587-022-01618-2",
+      "journal": "Nat Biotechnol",
+      "paper_year": "2023",
+      "short_citation": "Madani, Nat Biotechnol, 2023",
+      "full_citation": "Madani, A. et al., (2023), 'Large language models generate functional protein sequences across diverse families', *Nat Biotechnol*, 41(8), pp. 1099-1106."
     },
     {
       "id": "evodiff",
@@ -1600,7 +1746,11 @@
           "authors": "Ibomoiye Domor Mienye, Theo G. Swart"
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2023.09.11.556673"
+      "doi_link": "https://doi.org/10.1101/2023.09.11.556673",
+      "journal": "Preprint",
+      "paper_year": "2023",
+      "short_citation": "Alamdari, Preprint, 2023",
+      "full_citation": "Alamdari, S. et al., (2023), 'Protein generation with evolutionary diffusion: sequence is all you need', *Preprint*."
     },
     {
       "id": "rfdesign",
@@ -1650,7 +1800,11 @@
           "authors": "Rebecca Buller, Stefan Lutz, Romas J. Kazlauskas et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1126/science.abn2100"
+      "doi_link": "https://doi.org/10.1126/science.abn2100",
+      "journal": "Science",
+      "paper_year": "2022",
+      "short_citation": "Wang, Science, 2022",
+      "full_citation": "Wang, J. et al., (2022), 'Scaffolding protein functional sites using deep learning', *Science*, 377(6604), pp. 387-394."
     },
     {
       "id": "alphamissense",
@@ -1731,7 +1885,11 @@
           "authors": "Garyk Brixi, Matthew G. Durrant, Ja‐Lok Ku et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1126/science.adg7492"
+      "doi_link": "https://doi.org/10.1126/science.adg7492",
+      "journal": "Science",
+      "paper_year": "2023",
+      "short_citation": "Cheng, Science, 2023",
+      "full_citation": "Cheng, J. et al., (2023), 'Accurate proteome-wide missense variant effect prediction with AlphaMissense', *Science*, 381(6664), pp. eadg7492."
     },
     {
       "id": "esm1v",
@@ -1739,7 +1897,7 @@
       "repo": "facebookresearch/esm",
       "category": "Variant Predictors",
       "status": "Completed",
-      "paper_doi": "10.1101/2021.07.09.450892",
+      "paper_doi": null,
       "parent": "esmfold",
       "usage": "Zero-shot prediction of variant effects and mutational fitness landscapes using language model masks.",
       "strengths": "Excellent benchmark accuracy for variant engineering, fast scoring.",
@@ -1781,7 +1939,13 @@
           "authors": "Thomas Hayes, Roshan Rao, Halil Akin et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2021.07.09.450892"
+      "doi_link": "https://doi.org/10.1101/2021.07.09.450892",
+      "preprint_doi": "10.1101/2021.07.09.450648",
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2021",
+      "preprint_short_citation": "Meier, bioRxiv, 2021",
+      "preprint_full_citation": "Meier, J. et al. (2021) 'Language models enable zero-shot prediction of the effects of mutations on protein function', *bioRxiv*."
     },
     {
       "id": "esm2",
@@ -1831,7 +1995,11 @@
           "authors": "Jun Cheng, Guido Novati, Joshua Pan et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1126/science.ade2574"
+      "doi_link": "https://doi.org/10.1126/science.ade2574",
+      "journal": "Science",
+      "paper_year": "2023",
+      "short_citation": "Lin, Science, 2023",
+      "full_citation": "Lin, Z. et al., (2023), 'Evolutionary-scale prediction of atomic-level protein structure with a language model', *Science*, 379(6637), pp. 1123-1130."
     },
     {
       "id": "deepsequence",
@@ -1881,7 +2049,11 @@
           "authors": "Jonathan Frazer, Pascal Notin, Mafalda Dias et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-018-0138-4"
+      "doi_link": "https://doi.org/10.1038/s41592-018-0138-4",
+      "journal": "Nat Methods",
+      "paper_year": "2018",
+      "short_citation": "Riesselman, Nat Methods, 2018",
+      "full_citation": "Riesselman, A.J., Ingraham, J.B. and Marks, D.S..., (2018), 'Deep generative models of genetic variation capture the effects of mutations', *Nat Methods*, 15(10), pp. 816-822."
     },
     {
       "id": "foldseek",
@@ -1964,7 +2136,15 @@
           "year": 2022,
           "authors": "Eric W Sayers, Evan Bolton, J. Rodney Brister et al."
         }
-      ]
+      ],
+      "journal": "Nat Biotechnol",
+      "paper_year": "2024",
+      "short_citation": "van, Nat Biotechnol, 2024",
+      "full_citation": "van, K.e.m.p.e.n. et al., (2024), 'Fast and accurate protein structure search with Foldseek', *Nat Biotechnol*, 42(2), pp. 243-246.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2022",
+      "preprint_short_citation": "van, Preprint, 2022",
+      "preprint_full_citation": "van, K.e.m.p.e.n. et al., (2022), 'Fast and accurate protein structure search with Foldseek', *Preprint*."
     },
     {
       "id": "foldseek_multimer",
@@ -2014,7 +2194,11 @@
           "authors": "Christopher Hahne, Omar Rodríguez-Núñez, Romain Gros et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btae348"
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btae348",
+      "journal": "Bioinformatics",
+      "paper_year": "2024",
+      "short_citation": "Novikova, Bioinformatics, 2024",
+      "full_citation": "Novikova, T. et al., (2024), 'Time-efficient filtering of imaging polarimetric data by checking physical realizability of experimental mueller matrices', *Bioinformatics*, pp. btae348."
     },
     {
       "id": "alphafind",
@@ -2064,7 +2248,11 @@
           "authors": "Yuzhen Niu, Pingyang Qin, Ping Lin"
         }
       ],
-      "doi_link": "https://doi.org/10.1093/nar/gkae397"
+      "doi_link": "https://doi.org/10.1093/nar/gkae397",
+      "journal": "Nucleic Acids Res",
+      "paper_year": "2024",
+      "short_citation": "Procházka, Nucleic Acids Res, 2024",
+      "full_citation": "Procházka, D. et al., (2024), 'AlphaFind: discover structure similarity across the proteome in AlphaFold DB', *Nucleic Acids Res*, 52(w1), pp. W182-W186."
     },
     {
       "id": "alphafind2_tool",
@@ -2072,7 +2260,7 @@
       "repo": "Coda-Research-Group/AlphaFind",
       "category": "Structural Search",
       "status": "Active",
-      "paper_doi": "10.1101/2026.03.10.710735",
+      "paper_doi": null,
       "parent": "alphafind",
       "usage": "Next-generation structural search optimized with advanced embedding models for extreme-speed shape searches.",
       "strengths": "Even faster indexing, supports multimeric searches, integrates structural alignments with sequence conservation.",
@@ -2085,7 +2273,13 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2026.03.10.710735"
+      "doi_link": "https://doi.org/10.1101/2026.03.10.710735",
+      "preprint_doi": "10.1101/2026.03.12.722629",
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Berka, bioRxiv, 2026",
+      "preprint_full_citation": "Berka, K. and Novotný, M. (2026) 'AlphaFind v2: Similarity Search in AlphaFold DB and TED Domains across Structural Contexts', *bioRxiv*."
     },
     {
       "id": "foldcomp",
@@ -2135,7 +2329,11 @@
           "authors": "Jürgen Jänes, Pedro Beltrão"
         }
       ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btad153"
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btad153",
+      "journal": "Bioinformatics",
+      "paper_year": "2023",
+      "short_citation": "Kim, Bioinformatics, 2023",
+      "full_citation": "Kim, H., Mirdita, M. and Steinegger, M..., (2023), 'Foldcomp: a library and format for compressing and indexing large protein structure sets', *Bioinformatics*, 39(4), pp. btad153."
     },
     {
       "id": "diffdock",
@@ -2216,7 +2414,11 @@
           "authors": "Joseph M. Paggi, Ayush Pandit, Ron O. Dror"
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.10.10.511569"
+      "doi_link": "https://doi.org/10.1101/2022.10.10.511569",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Ito, Preprint, 2022",
+      "full_citation": "Ito, W. and Morozov, A..., (2022), 'Sex differences in social synchronization of conditioned fear', *Preprint*."
     },
     {
       "id": "diffdock_l",
@@ -2224,7 +2426,7 @@
       "repo": "gcorso/DiffDock",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.1101/2023.10.10.654321",
+      "paper_doi": null,
       "parent": "diffdock",
       "usage": "Docking optimized for peptide and macrocyclic complex binding poses.",
       "strengths": "Excellent flexibility handling for large rings.",
@@ -2237,7 +2439,9 @@
       "github_top_forks": [],
       "citations_count": 12,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2023.10.10.654321"
+      "doi_link": "https://doi.org/10.1101/2023.10.10.654321",
+      "preprint_doi": "10.1073/pnas.2218717120",
+      "publication_type": "published"
     },
     {
       "id": "unidock",
@@ -2266,7 +2470,11 @@
           "authors": "Paolo Bresolin, Fabio Vandin"
         }
       ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btae120"
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btae120",
+      "journal": "Bioinformatics",
+      "paper_year": "2024",
+      "short_citation": "Vasei, Bioinformatics, 2024",
+      "full_citation": "Vasei, H., Foroughmand-Araabi, M.H. and Daneshgar, A..., (2024), 'Weighted centroid trees: a general approach to summarize phylogenies in single-labeled tumor mutation tree inference', *Bioinformatics*, 40(7), pp. btae120."
     },
     {
       "id": "alphapulldown",
@@ -2295,7 +2503,11 @@
           "authors": "Xiang Ji"
         }
       ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btad324"
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btad324",
+      "journal": "Bioinformatics",
+      "paper_year": "2023",
+      "short_citation": "Bioinformatics, 2023",
+      "full_citation": "(2023), 'Correction to: Integrative analysis of individual-level data and high-dimensional summary statistics', *Bioinformatics*, 39(5), pp. btad324."
     },
     {
       "id": "diffab",
@@ -2303,7 +2515,7 @@
       "repo": "luost26/diffab",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2022.10.12.511999",
+      "paper_doi": null,
       "parent": "rfdiffusion",
       "usage": "Generative model optimizing antibody sequence and structure jointly using 3D diffusion coordinates.",
       "strengths": "Excellent pose viability on target CDR loops.",
@@ -2345,7 +2557,13 @@
           "authors": "Kevin Wu, Kevin Yang, Rianne van den Berg et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.10.12.511999"
+      "doi_link": "https://doi.org/10.1101/2022.10.12.511999",
+      "preprint_doi": "10.1101/2022.07.10.499510",
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2022",
+      "preprint_short_citation": "Luo, bioRxiv, 2022",
+      "preprint_full_citation": "Luo, S. et al. (2022) 'Antigen-specific antibody design and optimization with diffusion-based generative models', *bioRxiv*."
     },
     {
       "id": "rocket",
@@ -2397,7 +2615,15 @@
           "year": 2025,
           "authors": "Namita Dube, Theresa A. Ramelot, Tiburon L. Benavides et al."
         }
-      ]
+      ],
+      "journal": "Nat Methods",
+      "paper_year": "2026",
+      "short_citation": "Fadini, Nat Methods, 2026",
+      "full_citation": "Fadini, A. et al., (2026), 'AlphaFold as a prior: experimental structure determination conditioned on a pretrained neural network', *Nat Methods*, 23(4), pp. 785-795.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2025",
+      "preprint_short_citation": "Fadini, Preprint, 2025",
+      "preprint_full_citation": "Fadini, A. et al., (2025), 'AlphaFold as a Prior: Experimental Structure Determination Conditioned on a Pretrained Neural Network', *Preprint*."
     },
     {
       "id": "cryoread",
@@ -2405,7 +2631,7 @@
       "repo": "kiharalab/CryoREAD",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-023-01880-9",
+      "paper_doi": "10.1038/s41592-023-02032-5",
       "parent": "alphafold2",
       "usage": "Automated de novo building of proteins and nucleic acids directly from Cryo-EM density maps.",
       "strengths": "Extremely fast structure building, performs well at medium to low resolutions.",
@@ -2418,7 +2644,12 @@
       "github_top_forks": [],
       "citations_count": 48,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1038/s41592-023-01880-9"
+      "doi_link": "https://doi.org/10.1038/s41592-023-01880-9",
+      "publication_type": "published",
+      "journal": "Nat Methods",
+      "paper_year": "2023",
+      "short_citation": "Wang, Nat Methods, 2023",
+      "full_citation": "Wang, Xiao. et al., (2023), 'CryoREAD: de novo structure modeling for nucleic acids in cryo-EM maps using deep learning', *Nat Methods*."
     },
     {
       "id": "isolde",
@@ -2426,7 +2657,7 @@
       "repo": "tristanic/isolde",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1107/S205979831800266X",
+      "paper_doi": "10.1107/S2059798318002425",
       "parent": "alphafold2",
       "usage": "Interactive molecular dynamics flexible fitting of AF2 coordinates into crystallographic or Cryo-EM maps.",
       "strengths": "Allows real-time manual editing of structures while physics fields prevent bond overlap.",
@@ -2468,7 +2699,12 @@
           "authors": "Elaine C. Meng, Thomas D. Goddard, Eric F. Pettersen et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1107/S205979831800266X"
+      "doi_link": "https://doi.org/10.1107/S205979831800266X",
+      "publication_type": "published",
+      "journal": "Acta Cryst D",
+      "paper_year": "2018",
+      "short_citation": "Croll, Acta Cryst D, 2018",
+      "full_citation": "Croll, Tristan.Ian., (2018), '<i>ISOLDE</i>: a physically realistic environment for model building into low-resolution electron-density maps', *Acta Cryst D*."
     },
     {
       "id": "alphafolddb",
@@ -2525,7 +2761,11 @@
           "authors": "Typhaine Paysan‐Lafosse, Matthias Blum, Sara Chuguransky et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1093/nar/gkab1061"
+      "doi_link": "https://doi.org/10.1093/nar/gkab1061",
+      "journal": "Nucleic Acids Res",
+      "paper_year": "2022",
+      "short_citation": "Varadi, Nucleic Acids Res, 2022",
+      "full_citation": "Varadi, M. et al., (2022), 'AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models', *Nucleic Acids Res*, 50(d1), pp. D439-D444."
     },
     {
       "id": "alphafill",
@@ -2533,7 +2773,7 @@
       "repo": "PDB-REDO/alphafill",
       "category": "Databases",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01614-x",
+      "paper_doi": "10.1038/s41592-022-01685-y",
       "parent": "alphafolddb",
       "usage": "Enriching AlphaFold DB models by transplanting missing ligands, cofactors, and metal ions from homologous structures.",
       "strengths": "Rebuilds biological context for apo-predictions, calculates local quality alignment score.",
@@ -2575,7 +2815,12 @@
           "authors": "Rebecca Buller, Stefan Lutz, Romas J. Kazlauskas et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-022-01614-x"
+      "doi_link": "https://doi.org/10.1038/s41592-022-01614-x",
+      "publication_type": "published",
+      "journal": "Nat Methods",
+      "paper_year": "2023",
+      "short_citation": "Hekkelman, Nat Methods, 2023",
+      "full_citation": "Hekkelman, Maarten.L.. et al., (2023), 'AlphaFill: enriching AlphaFold models with ligands and cofactors', *Nat Methods*."
     },
     {
       "id": "alphacharges",
@@ -2625,7 +2870,11 @@
           "authors": "Tomáš Raček, Martin Pilát, Ondřej Schindler et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1093/nar/gkad349"
+      "doi_link": "https://doi.org/10.1093/nar/gkad349",
+      "journal": "Nucleic Acids Res",
+      "paper_year": "2023",
+      "short_citation": "Schindler, Nucleic Acids Res, 2023",
+      "full_citation": "Schindler, O. et al., (2023), 'αCharges: partial atomic charges for AlphaFold structures in high quality', *Nucleic Acids Res*, 51(w1), pp. W11-W16."
     },
     {
       "id": "esm_atlas",
@@ -2675,7 +2924,11 @@
           "authors": "Jun Cheng, Guido Novati, Joshua Pan et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1126/science.ade2574"
+      "doi_link": "https://doi.org/10.1126/science.ade2574",
+      "journal": "Science",
+      "paper_year": "2023",
+      "short_citation": "Lin, Science, 2023",
+      "full_citation": "Lin, Z. et al., (2023), 'Evolutionary-scale prediction of atomic-level protein structure with a language model', *Science*, 379(6637), pp. 1123-1130."
     },
     {
       "id": "alphafill_db",
@@ -2683,7 +2936,7 @@
       "repo": "PDB-REDO/alphafill",
       "category": "Databases",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01614-x",
+      "paper_doi": "10.1038/s41592-022-01685-y",
       "parent": "alphafill",
       "usage": "Freely accessible database containing pre-computed ligand-enriched coordinates for millions of AF models.",
       "strengths": "Instantly accessible, resolves binding site layouts for drug design.",
@@ -2704,7 +2957,12 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-022-01614-x"
+      "doi_link": "https://doi.org/10.1038/s41592-022-01614-x",
+      "publication_type": "published",
+      "journal": "Nat Methods",
+      "paper_year": "2023",
+      "short_citation": "Hekkelman, Nat Methods, 2023",
+      "full_citation": "Hekkelman, Maarten.L.. et al., (2023), 'AlphaFill: enriching AlphaFold models with ligands and cofactors', *Nat Methods*."
     },
     {
       "id": "foldcomp_db",
@@ -2754,7 +3012,11 @@
           "authors": "Jürgen Jänes, Pedro Beltrão"
         }
       ],
-      "doi_link": "https://doi.org/10.1093/bioinformatics/btad153"
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btad153",
+      "journal": "Bioinformatics",
+      "paper_year": "2023",
+      "short_citation": "Kim, Bioinformatics, 2023",
+      "full_citation": "Kim, H., Mirdita, M. and Steinegger, M..., (2023), 'Foldcomp: a library and format for compressing and indexing large protein structure sets', *Bioinformatics*, 39(4), pp. btad153."
     },
     {
       "id": "esmfold_db",
@@ -2804,7 +3066,11 @@
           "authors": "Jun Cheng, Guido Novati, Joshua Pan et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.07.20.500802"
+      "doi_link": "https://doi.org/10.1101/2022.07.20.500802",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Meng, Preprint, 2022",
+      "full_citation": "Meng, X. et al., (2022), 'Multi-ancestry GWAS of major depression aids locus discovery, fine-mapping, gene prioritisation, and causal inference', *Preprint*."
     },
     {
       "id": "chimerax_alphafold",
@@ -2854,7 +3120,11 @@
           "authors": "J Ma, Wei-Yao Wu, Jing Liao et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1002/pro.4255"
+      "doi_link": "https://doi.org/10.1002/pro.4255",
+      "journal": "Protein Sci",
+      "paper_year": "2022",
+      "short_citation": "Serra, Protein Sci, 2022",
+      "full_citation": "Serra, I. et al., (2022), 'Activity and substrate specificity of lytic polysaccharide monooxygenases: An ATR FTIR-based sensitive assay tested on a novel species from Pseudomonas putida', *Protein Sci*, 31(3), pp. 591-601."
     },
     {
       "id": "pymol_alphafold",
@@ -2904,7 +3174,11 @@
           "authors": "Da Won Lee, Yong Seong Lee, Jeong Hwan Lee et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1002/pro.4300"
+      "doi_link": "https://doi.org/10.1002/pro.4300",
+      "journal": "Protein Sci",
+      "paper_year": "2022",
+      "short_citation": "Struble, Protein Sci, 2022",
+      "full_citation": "Struble, L.R. et al., (2022), 'Insect cell expression and purification of recombinant SARS-COV-2 spike proteins that demonstrate ACE2 binding', *Protein Sci*, 31(5), pp. e4300."
     },
     {
       "id": "localcolabfold",
@@ -2912,7 +3186,7 @@
       "repo": "YoshitakaMo/localcolabfold",
       "category": "Fast Predictors",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01432-1",
+      "paper_doi": "10.1038/s41592-022-01488-1",
       "parent": "colabfold",
       "usage": "Command-line installer wrapping ColabFold with GPU support on local workstations.",
       "strengths": "Automates complete package environment setup, easy workstation execution.",
@@ -2954,7 +3228,12 @@
           "authors": "Tomer Tsaban, Julia K. Varga, Orly Avraham et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-022-01432-1"
+      "doi_link": "https://doi.org/10.1038/s41592-022-01432-1",
+      "publication_type": "published",
+      "journal": "Nat Methods",
+      "paper_year": "2022",
+      "short_citation": "Mirdita, Nat Methods, 2022",
+      "full_citation": "Mirdita, Milot. et al., (2022), 'ColabFold: making protein folding accessible to all', *Nat Methods*."
     },
     {
       "id": "massivefold",
@@ -3004,7 +3283,11 @@
           "authors": "Le Huu Nhat Minh, Phat Ky Nguyen, Thi Phuong Trang Nguyen et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s43588-024-00714-4"
+      "doi_link": "https://doi.org/10.1038/s43588-024-00714-4",
+      "journal": "Nat Comput Sci",
+      "paper_year": "2024",
+      "short_citation": "Raouraoua, Nat Comput Sci, 2024",
+      "full_citation": "Raouraoua, N. et al., (2024), 'MassiveFold: unveiling AlphaFold's hidden potential with optimized and parallelized massive sampling', *Nat Comput Sci*, 4(11), pp. 824-828."
     },
     {
       "id": "esm_design",
@@ -3057,7 +3340,15 @@
       "preprint_doi": "10.1101/2023.05.23.541774",
       "preprint_link": "https://doi.org/10.1101/2023.05.23.541774",
       "doi_link": "https://doi.org/10.1101/2022.07.20.500802",
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "journal": "Preprint",
+      "paper_year": "2022",
+      "short_citation": "Meng, Preprint, 2022",
+      "full_citation": "Meng, X. et al., (2022), 'Multi-ancestry GWAS of major depression aids locus discovery, fine-mapping, gene prioritisation, and causal inference', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2023",
+      "preprint_short_citation": "Jeliazkov, Preprint, 2023",
+      "preprint_full_citation": "Jeliazkov, J.R., del, A.l.a.m.o. and Karpiak, J.D..., (2023), 'ESMFold Hallucinates Native-Like Protein Sequences', *Preprint*."
     },
     {
       "id": "decaf",
@@ -3080,7 +3371,12 @@
       "github_description": "Distills all-atom cofolding diffusion models into flow maps to generate high-quality structures in a few steps.",
       "github_top_forks": [],
       "citations_count": 0,
-      "citing_papers": []
+      "citing_papers": [],
+      "publication_type": "preprint",
+      "preprint_journal": "arXiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Chung, arXiv, 2026",
+      "preprint_full_citation": "Chung, J. et al. (2026) 'DeCAF: Decoupled Conformational Alignment Flow for Flexible Docking', *arXiv*."
     },
     {
       "id": "dynafold",
@@ -3116,7 +3412,11 @@
         }
       ],
       "citations_count": 0,
-      "citing_papers": []
+      "citing_papers": [],
+      "preprint_journal": "Preprint",
+      "preprint_year": "2025",
+      "preprint_short_citation": "Fan, Preprint, 2025",
+      "preprint_full_citation": "Fan, Z., Zhu, J. and Chen, H..., (2025), 'DynaFold: A Latent Diffusion Based Generative Framework for Protein Dynamic Trajectory', *Preprint*."
     },
     {
       "id": "promera",
@@ -3140,7 +3440,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "github_description": "Unified generative model that integrates all-atom structure prediction (co-folding), confidence-based binder filtering, and controllable de novo design in a single architecture."
+      "github_description": "Unified generative model that integrates all-atom structure prediction (co-folding), confidence-based binder filtering, and controllable de novo design in a single architecture.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Jing, Preprint, 2026",
+      "preprint_full_citation": "Jing, B. et al., (2026), 'Promera: a unified model for biomolecular structure prediction, filtering, and design', *Preprint*."
     },
     {
       "id": "dtsfm",
@@ -3164,7 +3468,15 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "github_description": "Drug-Target Specificity Foundation Model coupling a sequence-native encoder and generative decoder to predict molecular binding compatibility as a thermodynamic quantity directly from sequence."
+      "github_description": "Drug-Target Specificity Foundation Model coupling a sequence-native encoder and generative decoder to predict molecular binding compatibility as a thermodynamic quantity directly from sequence.",
+      "journal": "Preprint",
+      "paper_year": "2026",
+      "short_citation": "Reddy, Preprint, 2026",
+      "full_citation": "Reddy, S.T..., (2026), 'A Drug–Target Specificity Foundation Model for Off-target Prediction, Repurposing, and Generative Design', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Reddy, Preprint, 2026",
+      "preprint_full_citation": "Reddy, S.T..., (2026), 'A Drug–Target Specificity Foundation Model for Off-target Prediction, Repurposing, and Generative Design', *Preprint*."
     },
     {
       "id": "genloop",
@@ -3172,7 +3484,7 @@
       "repo": "Reddy-BIIE-ETHZ/GenLoop",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.64898/2026.06.08.730844",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.64898/2026.06.08.730844",
       "preprint_doi": "10.5281/zenodo.20626910",
       "preprint_link": "https://doi.org/10.5281/zenodo.20626910",
@@ -3188,7 +3500,15 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "github_description": "Closed generative drug-design loop using dtSFM that iteratively generates candidates, reranks via encoder, verifies with AlphaFold-3, and refines via LoRA."
+      "github_description": "Closed generative drug-design loop using dtSFM that iteratively generates candidates, reranks via encoder, verifies with AlphaFold-3, and refines via LoRA.",
+      "journal": "Preprint",
+      "paper_year": "2026",
+      "short_citation": "Reddy, Preprint, 2026",
+      "full_citation": "Reddy, S.T..., (2026), 'A Drug–Target Specificity Foundation Model for Off-target Prediction, Repurposing, and Generative Design', *Preprint*.",
+      "preprint_journal": "Zenodo",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Kravchenko, Zenodo, 2026",
+      "preprint_full_citation": "Kravchenko, A. et al. (2026) 'GenLoop: Generative loop modeling in protein complexes', *Zenodo*."
     },
     {
       "id": "livia",
@@ -3220,7 +3540,11 @@
           "authors": "Ah-Ram Kim et al."
         }
       ],
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Kim, Preprint, 2026",
+      "preprint_full_citation": "Kim, A. and Perrimon, N..., (2026), 'LIVIA: a browser-based tool for assessing and visualizing predicted protein interactions', *Preprint*."
     },
     {
       "id": "esmflow",
@@ -3228,7 +3552,7 @@
       "repo": "bjing2016/alphaflow",
       "category": "Ensemble Generators",
       "status": "Active",
-      "paper_doi": "10.48550/arXiv.2402.04845",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.48550/arXiv.2402.04845",
       "preprint_doi": "10.48550/arXiv.2402.04845",
       "preprint_link": "https://doi.org/10.48550/arXiv.2402.04845",
@@ -3251,7 +3575,11 @@
           "year": 2024,
           "authors": "Bowen Jing et al."
         }
-      ]
+      ],
+      "preprint_journal": "arXiv",
+      "preprint_year": "2024",
+      "preprint_short_citation": "Jing, arXiv, 2024",
+      "preprint_full_citation": "Jing, B. et al. (2024) 'AlphaFlow: Autonomous Flow Generation for Protein Structure Modeling', *arXiv*."
     },
     {
       "id": "alphaflow",
@@ -3259,7 +3587,7 @@
       "repo": "bjing2016/alphaflow",
       "category": "Ensemble Generators",
       "status": "Active",
-      "paper_doi": "10.48550/arXiv.2402.04845",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.48550/arXiv.2402.04845",
       "preprint_doi": "10.48550/arXiv.2402.04845",
       "preprint_link": "https://doi.org/10.48550/arXiv.2402.04845",
@@ -3282,7 +3610,11 @@
           "year": 2024,
           "authors": "Bowen Jing et al."
         }
-      ]
+      ],
+      "preprint_journal": "arXiv",
+      "preprint_year": "2024",
+      "preprint_short_citation": "Jing, arXiv, 2024",
+      "preprint_full_citation": "Jing, B. et al. (2024) 'AlphaFlow: Autonomous Flow Generation for Protein Structure Modeling', *arXiv*."
     },
     {
       "id": "af_calvados",
@@ -3313,7 +3645,15 @@
           "year": 2025,
           "authors": "Sören von Bülow et al."
         }
-      ]
+      ],
+      "journal": "Preprint",
+      "paper_year": "2025",
+      "short_citation": "von, Preprint, 2025",
+      "full_citation": "von, B.ü.l.o.w., Johansson, K.E. and Lindorff-Larsen, K..., (2025), 'AF-CALVADOS: AlphaFold-guided simulations of multi-domain proteins at the proteome level', *Preprint*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2025",
+      "preprint_short_citation": "von, Preprint, 2025",
+      "preprint_full_citation": "von, B.ü.l.o.w., Johansson, K.E. and Lindorff-Larsen, K..., (2025), 'AF-CALVADOS: AlphaFold-guided simulations of multi-domain proteins at the proteome level', *Preprint*."
     },
     {
       "id": "folddisco",
@@ -3344,7 +3684,15 @@
           "year": 2026,
           "authors": "Hyunbin Kim et al."
         }
-      ]
+      ],
+      "journal": "Nat Biotechnol",
+      "paper_year": "2026",
+      "short_citation": "Kim, Nat Biotechnol, 2026",
+      "full_citation": "Kim, H. et al., (2026), 'Structural motif search across the protein universe with Folddisco', *Nat Biotechnol*.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2025",
+      "preprint_short_citation": "Kim, Preprint, 2025",
+      "preprint_full_citation": "Kim, H. et al., (2025), 'Structural motif search across the protein-universe with Folddisco', *Preprint*."
     },
     {
       "id": "sampleworks",
@@ -3352,7 +3700,7 @@
       "repo": "diff-use/sampleworks",
       "category": "Benchmarks",
       "status": "Active",
-      "paper_doi": "10.82153/jkxj-tw08",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.82153/jkxj-tw08",
       "preprint_doi": "10.82153/jkxj-tw08",
       "preprint_link": "https://doi.org/10.82153/jkxj-tw08",
@@ -3375,7 +3723,11 @@
           "year": 2026,
           "authors": "Chrispens et al."
         }
-      ]
+      ],
+      "preprint_journal": "Preprint",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Sample, Preprint, 2026",
+      "preprint_full_citation": "Sample, A. et al. (2026) 'SampleWorks: Accelerated protein generation workflows', *Preprint*."
     },
     {
       "id": "foldbench",
@@ -3406,7 +3758,15 @@
           "year": 2026,
           "authors": "Feng, Q. & XU, S."
         }
-      ]
+      ],
+      "journal": "Nat Commun",
+      "paper_year": "2025",
+      "short_citation": "Xu, Nat Commun, 2025",
+      "full_citation": "Xu, S. et al., (2025), 'Benchmarking all-atom biomolecular structure prediction with FoldBench', *Nat Commun*, 17(1), pp. 442.",
+      "preprint_journal": "Preprint",
+      "preprint_year": "2023",
+      "preprint_short_citation": "Barnaba, Preprint, 2023",
+      "preprint_full_citation": "Barnaba, C. et al., (2023), 'AMPK Regulates Phagophore-to-Autophagosome Maturation', *Preprint*."
     },
     {
       "id": "ibex",
@@ -3428,7 +3788,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "published"
+      "publication_type": "published",
+      "journal": "MAbs",
+      "paper_year": "2026",
+      "short_citation": "Dreyer, MAbs, 2026",
+      "full_citation": "Dreyer, F.A. et al., (2026), 'Conformation-aware structure prediction of antigen-recognizing immune proteins', *MAbs*, 18(1), pp. 2602217."
     },
     {
       "id": "igpose",
@@ -3450,7 +3814,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "published"
+      "publication_type": "published",
+      "journal": "Bioinformatics",
+      "paper_year": "2026",
+      "short_citation": "Bui, Bioinformatics, 2026",
+      "full_citation": "Bui, T.C. et al., (2026), 'IgPose: a generative data-augmented pipeline for robust immunoglobulin-antigen binding prediction', *Bioinformatics*, 42(3), pp. btag076."
     },
     {
       "id": "proteindj",
@@ -3472,7 +3840,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "published"
+      "publication_type": "published",
+      "journal": "Protein Sci",
+      "paper_year": "2026",
+      "short_citation": "Silke, Protein Sci, 2026",
+      "full_citation": "Silke, D. et al., (2026), 'ProteinDJ: A high-performance and modular protein design pipeline', *Protein Sci*, 35(2), pp. e70464."
     },
     {
       "id": "molas",
@@ -3494,7 +3866,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "published"
+      "publication_type": "published",
+      "journal": "J Cheminform",
+      "paper_year": "2026",
+      "short_citation": "Wang, J Cheminform, 2026",
+      "full_citation": "Wang, J.B. et al., (2026), 'Molecular embedding-based algorithm selection in protein-ligand docking', *J Cheminform*, 18(1), pp. 47."
     },
     {
       "id": "peridot",
@@ -10553,7 +10929,7 @@
       "publication_type": "published",
       "journal": "Nucleic Acids Res",
       "paper_year": "2026",
-      "short_citation": "Nucleic Acids Res, 2026",
+      "short_citation": "Svoboda, Nucleic Acids Res, 2026",
       "full_citation": "Svoboda, T. et al., (2026), 'PROPTIMUS LIVE: local constrained α-carbon optimization of proteins', *Nucleic Acids Res*, pp. gkag511."
     },
     {
@@ -11752,7 +12128,11 @@
       "citations_count": 1,
       "citing_papers": [],
       "doi_link": "https://doi.org/10.1021/acs.jcim.6c01154",
-      "publication_type": "published"
+      "publication_type": "published",
+      "journal": "J Chem Inf Model",
+      "paper_year": "2026",
+      "short_citation": "Ďuráčiová, J Chem Inf Model, 2026",
+      "full_citation": "Ďuráčiová, R. et al., (2026), 'Foldify: Web Application for Protein Structure Prediction', *J Chem Inf Model*."
     },
     {
       "id": "chromatin_af3_assessment",
@@ -11774,7 +12154,11 @@
       "citations_count": 0,
       "citing_papers": [],
       "preprint_link": "https://doi.org/10.1101/2026.06.26.734680",
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Bhargava, bioRxiv, 2026",
+      "preprint_full_citation": "Bhargava, S. et al. (2026) 'Post-training evaluation of AlphaFold3 on nucleosome-containing chromatin complexes', *bioRxiv*."
     },
     {
       "id": "dldn_bench",
@@ -11796,7 +12180,11 @@
       "citations_count": 0,
       "citing_papers": [],
       "preprint_link": "https://doi.org/10.1101/2026.06.10.728383",
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Schneider, bioRxiv, 2026",
+      "preprint_full_citation": "Schneider, M. et al. (2026) 'DLDN-Bench: A Benchmark Framework for Deep Learning De Novo Peptide Sequencing in Proteomics', *bioRxiv*."
     },
     {
       "id": "battle_amp",
@@ -11818,7 +12206,11 @@
       "citations_count": 0,
       "citing_papers": [],
       "preprint_link": "https://doi.org/10.1101/2026.06.19.733349",
-      "publication_type": "preprint"
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Szymczak, bioRxiv, 2026",
+      "preprint_full_citation": "Szymczak, S. et al. (2026) 'BATTLE-AMP: Benchmarking Antimicrobial Peptide Predictors', *bioRxiv*."
     },
     {
       "id": "distomove",
