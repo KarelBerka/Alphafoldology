@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let startX, startY;
 
   // Initialize Application
-  fetch('tools_data.json?v=15')
+  fetch('tools_data.json?v=16')
     .then(response => {
       if (!response.ok) throw new Error('Data file not found');
       return response.json();
@@ -199,7 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'Protein Design': 8,
       'Ensemble Generators': 9,
       'Benchmarks': 10,
-      'Scoring': 11
+      'Scoring': 11,
+      'Training': 12
     };
 
     // Staggering slots (5 slots per category lane)
@@ -236,6 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Find available slot (0-4) using greedy spacing
+      if (!lastPlacedX[cat]) {
+        lastPlacedX[cat] = Array(5).fill(-Infinity);
+      }
       const slots = lastPlacedX[cat];
       let chosenSlot = 0;
       let minLastX = Infinity;
@@ -710,6 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'Ensemble Generators': return 'cat-ensemble';
       case 'Benchmarks': return 'cat-benchmarks';
       case 'Scoring': return 'cat-scoring';
+      case 'Training': return 'cat-training';
       default: return 'cat-other';
     }
   }

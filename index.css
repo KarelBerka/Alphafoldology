@@ -1720,5 +1720,21 @@ footer {
   border-color: rgba(20, 184, 166, 0.2);
 }
 
+/* Category colors for Training */
+.chip.cat-training {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+}
+
+.tool-card.cat-training:hover::before {
+  background: linear-gradient(90deg, #f97316, var(--accent-orange, #ffedd5));
+}
+
+.card-meta.cat-training .card-cat-badge {
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.2);
+}
+
 
 
