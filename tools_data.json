@@ -1,14 +1,14 @@
 {
   "metadata": {
     "last_updated": "2026-06-21 22:02:47",
-    "total_tools": 422,
+    "total_tools": 423,
     "total_github_stars": 162817,
     "total_citations": 131312,
     "total_published_papers": 9,
     "total_preprints": 26,
-    "total_stars": 158726,
-    "total_published": 18,
-    "last_update": "2026-07-05"
+    "total_stars": 158761,
+    "total_published": 19,
+    "last_update": "2026-07-06"
   },
   "tools": [
     {
@@ -12218,6 +12218,32 @@
       "usage": "140M-parameter conditional flow matching model for fast all-atom enzyme scaffold generation.",
       "strengths": "Low training compute cost (~682 GPU-hours); generates scaffolds around catalytic residues and ligands.",
       "weaknesses": "Relies on sparse geometric constraints; limited co-evolutionary context integration."
+    },
+    {
+      "id": "tess",
+      "name": "TeSS",
+      "repo": "elixir-europe/tess",
+      "category": "Training",
+      "status": "Active",
+      "parent": null,
+      "date": "2015-01-15",
+      "github_stars": 35,
+      "github_forks": 25,
+      "github_open_issues": 12,
+      "github_description": "ELIXIR Training e-Support System (TeSS)",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "paper_doi": "10.1093/bioinformatics/btaa047",
+      "doi_link": "https://doi.org/10.1093/bioinformatics/btaa047",
+      "journal": "Bioinformatics",
+      "paper_year": "2020",
+      "short_citation": "Beard, Bioinformatics, 2020",
+      "full_citation": "Beard, N. et al., (2020), 'TeSS: a platform for discovering life science training opportunities', *Bioinformatics*, 36(10), 3292–3293.",
+      "publication_type": "published",
+      "usage": "ELIXIR Training e-Support Service (TeSS), a portal aggregating life science training events, materials, and learning workflows.",
+      "strengths": "Comprehensive aggregation of ELIXIR and community training resources; supports widgets and open programmatic API access.",
+      "weaknesses": "Acts as an aggregator registry rather than hosting training content directly."
     }
   ],
   "social_posts": [
