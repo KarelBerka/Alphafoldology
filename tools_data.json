@@ -5,10 +5,10 @@
     "total_github_stars": 162817,
     "total_citations": 131312,
     "total_published_papers": 9,
-    "total_preprints": 26,
+    "total_preprints": 23,
     "total_stars": 158761,
-    "total_published": 19,
-    "last_update": "2026-07-06"
+    "total_published": 22,
+    "last_update": "2026-07-07"
   },
   "tools": [
     {
@@ -1531,11 +1531,15 @@
       "doi_link": null,
       "preprint_doi": "10.48550/arXiv.2605.31236",
       "preprint_link": "https://doi.org/10.48550/arXiv.2605.31236",
-      "publication_type": "published",
+      "publication_type": "preprint",
       "preprint_journal": "arXiv",
       "preprint_year": "2026",
       "preprint_short_citation": "Switch, arXiv, 2026",
-      "preprint_full_citation": "Switch, A. et al. (2026) 'SwitchCraft: Conformational state prediction with deep learning', *arXiv*."
+      "preprint_full_citation": "Switch, A. et al. (2026) 'SwitchCraft: Conformational state prediction with deep learning', *arXiv*.",
+      "journal": null,
+      "paper_year": null,
+      "short_citation": null,
+      "full_citation": null
     },
     {
       "id": "bindcraft",
@@ -1617,7 +1621,7 @@
       "repo": "facebookresearch/esm",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": null,
+      "paper_doi": "10.1101/2022.04.10.487779",
       "parent": "esmfold",
       "usage": "Inverse folding model using GNNs to predict sequences matching custom target backbones.",
       "strengths": "Pre-trained on millions of structures, integrates sequence likelihood scores to screen stable designs.",
@@ -1632,11 +1636,15 @@
       "citing_papers": [],
       "doi_link": "https://doi.org/10.1101/2022.04.10.487769",
       "preprint_doi": "10.1101/2022.04.10.487779",
-      "publication_type": "preprint",
+      "publication_type": "published",
       "preprint_journal": "bioRxiv",
       "preprint_year": "2022",
       "preprint_short_citation": "Hsu, bioRxiv, 2022",
-      "preprint_full_citation": "Hsu, C. et al. (2022) 'Learning inverse folding from millions of predicted structures', *bioRxiv*."
+      "preprint_full_citation": "Hsu, C. et al. (2022) 'Learning inverse folding from millions of predicted structures', *bioRxiv*.",
+      "journal": "PMLR",
+      "paper_year": "2022",
+      "short_citation": "Hsu, ICML, 2022",
+      "full_citation": "Hsu, C. et al. (2022) 'Learning inverse folding from millions of predicted structures', *Proceedings of the 39th International Conference on Machine Learning*, PMLR 162:8946-8970."
     },
     {
       "id": "progen",
@@ -1891,7 +1899,7 @@
       "repo": "facebookresearch/esm",
       "category": "Variant Predictors",
       "status": "Completed",
-      "paper_doi": null,
+      "paper_doi": "10.1101/2021.07.09.450648",
       "parent": "esmfold",
       "usage": "Zero-shot prediction of variant effects and mutational fitness landscapes using language model masks.",
       "strengths": "Excellent benchmark accuracy for variant engineering, fast scoring.",
@@ -1935,11 +1943,15 @@
       ],
       "doi_link": "https://doi.org/10.1101/2021.07.09.450892",
       "preprint_doi": "10.1101/2021.07.09.450648",
-      "publication_type": "preprint",
+      "publication_type": "published",
       "preprint_journal": "bioRxiv",
       "preprint_year": "2021",
       "preprint_short_citation": "Meier, bioRxiv, 2021",
-      "preprint_full_citation": "Meier, J. et al. (2021) 'Language models enable zero-shot prediction of the effects of mutations on protein function', *bioRxiv*."
+      "preprint_full_citation": "Meier, J. et al. (2021) 'Language models enable zero-shot prediction of the effects of mutations on protein function', *bioRxiv*.",
+      "journal": "NeurIPS",
+      "paper_year": "2021",
+      "short_citation": "Meier, NeurIPS, 2021",
+      "full_citation": "Meier, J. et al. (2021) 'Language models enable zero-shot prediction of the effects of mutations on protein function', *Advances in Neural Information Processing Systems*, 34:29287-29303."
     },
     {
       "id": "esm2",
@@ -2254,7 +2266,7 @@
       "repo": "Coda-Research-Group/AlphaFind",
       "category": "Structural Search",
       "status": "Active",
-      "paper_doi": null,
+      "paper_doi": "10.1093/nar/gkag372",
       "parent": "alphafind",
       "usage": "Next-generation structural search optimized with advanced embedding models for extreme-speed shape searches.",
       "strengths": "Even faster indexing, supports multimeric searches, integrates structural alignments with sequence conservation.",
@@ -2267,13 +2279,17 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "doi_link": "https://doi.org/10.1101/2026.03.10.710735",
+      "doi_link": "https://doi.org/10.1093/nar/gkag372",
       "preprint_doi": "10.1101/2026.03.12.722629",
-      "publication_type": "preprint",
+      "publication_type": "published",
       "preprint_journal": "bioRxiv",
       "preprint_year": "2026",
       "preprint_short_citation": "Berka, bioRxiv, 2026",
-      "preprint_full_citation": "Berka, K. and Novotný, M. (2026) 'AlphaFind v2: Similarity Search in AlphaFold DB and TED Domains across Structural Contexts', *bioRxiv*."
+      "preprint_full_citation": "Berka, K. and Novotný, M. (2026) 'AlphaFind v2: Similarity Search in AlphaFold DB and TED Domains across Structural Contexts', *bioRxiv*.",
+      "journal": "Nucleic Acids Research",
+      "paper_year": "2026",
+      "short_citation": "Slanináková, Nucleic Acids Research, 2026",
+      "full_citation": "Slanináková T., Rošinec A., Čillík J. et al. (2026), 'AlphaFind v2: similarity search in AlphaFold DB and TED domains across structural contexts', *Nucleic Acids Research*."
     },
     {
       "id": "foldcomp",
@@ -2509,7 +2525,7 @@
       "repo": "luost26/diffab",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": null,
+      "paper_doi": "10.52202/068431-0709",
       "parent": "rfdiffusion",
       "usage": "Generative model optimizing antibody sequence and structure jointly using 3D diffusion coordinates.",
       "strengths": "Excellent pose viability on target CDR loops.",
@@ -2551,13 +2567,17 @@
           "authors": "Kevin Wu, Kevin Yang, Rianne van den Berg et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1101/2022.10.12.511999",
+      "doi_link": "https://doi.org/10.52202/068431-0709",
       "preprint_doi": "10.1101/2022.07.10.499510",
-      "publication_type": "preprint",
+      "publication_type": "published",
       "preprint_journal": "bioRxiv",
       "preprint_year": "2022",
       "preprint_short_citation": "Luo, bioRxiv, 2022",
-      "preprint_full_citation": "Luo, S. et al. (2022) 'Antigen-specific antibody design and optimization with diffusion-based generative models', *bioRxiv*."
+      "preprint_full_citation": "Luo, S. et al. (2022) 'Antigen-specific antibody design and optimization with diffusion-based generative models', *bioRxiv*.",
+      "journal": "Advances in Neural Information Processing Systems 35",
+      "paper_year": "2022",
+      "short_citation": "Luo, NeurIPS, 2022",
+      "full_citation": "Luo S., Su Y., Peng X. et al. (2022), 'Antigen-Specific Antibody Design and Optimization with Diffusion-Based Generative Models for Protein Structures', *Advances in Neural Information Processing Systems 35*, 9754-9767."
     },
     {
       "id": "rocket",
@@ -3289,7 +3309,7 @@
       "repo": "facebookresearch/esm",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1101/2022.07.20.500802",
+      "paper_doi": null,
       "parent": "esmfold",
       "usage": "Interactive interface for engineering sequences with custom specifications using ESM weights.",
       "strengths": "Provides fast screening feedback during design.",
@@ -3446,7 +3466,7 @@
       "repo": "Reddy-BIIE-ETHZ/dtSFM",
       "category": "Ligand Docking",
       "status": "Active",
-      "paper_doi": "10.64898/2026.06.08.730844",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.64898/2026.06.08.730844",
       "preprint_doi": "10.64898/2026.06.08.730844",
       "preprint_link": "https://doi.org/10.64898/2026.06.08.730844",
@@ -3616,7 +3636,7 @@
       "repo": "KULL-Centre/_2025_buelow_AF-CALVADOS",
       "category": "Ensemble Generators",
       "status": "Active",
-      "paper_doi": "10.1101/2025.10.19.683306",
+      "paper_doi": null,
       "doi_link": "https://doi.org/10.1101/2025.10.19.683306",
       "preprint_doi": "10.1101/2025.10.19.683306",
       "preprint_link": "https://doi.org/10.1101/2025.10.19.683306",
