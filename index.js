@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     sort: 'default'
   };
   
+  let activeWeekFilter = null;
+  
   let activeView = 'grid'; // 'grid' or 'table'
   let activeToolForEdit = null;
   
@@ -469,6 +471,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter tools
     const filteredTools = appData.tools.filter(tool => {
+      // If week filter is active, check if tool belongs to that week
+      if (activeWeekFilter && tool.date) {
+        const dateObj = new Date(tool.date);
+        if (!isNaN(dateObj.getTime())) {
+          const day = dateObj.getDay();
+          const diff = dateObj.getDate() - day + (day === 0 ? -6 : 1);
+          const monday = new Date(dateObj.setDate(diff));
+          monday.setHours(0,0,0,0);
+          const mondayStr = monday.toISOString().split('T')[0];
+          if (mondayStr !== activeWeekFilter) {
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+
       const matchSearch = 
         tool.name.toLowerCase().includes(query) ||
         tool.usage.toLowerCase().includes(query) ||
@@ -627,6 +646,26 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             ` : ''}
           </div>
+          
+          ${(() => {
+            let fullCitationHtml = '';
+            if (currentFilters.pub === 'published' && tool.full_citation) {
+              fullCitationHtml = `
+                <div class="card-full-citation" style="margin-top: 0.5rem; margin-bottom: 1.25rem; padding: 0.75rem; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); border-radius: 10px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+                  <strong style="color: var(--accent-cyan); display: block; margin-bottom: 0.25rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;">Full Citation:</strong>
+                  ${tool.full_citation}
+                </div>
+              `;
+            } else if (currentFilters.pub === 'preprint' && tool.preprint_full_citation) {
+              fullCitationHtml = `
+                <div class="card-full-citation" style="margin-top: 0.5rem; margin-bottom: 1.25rem; padding: 0.75rem; background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: 10px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+                  <strong style="color: var(--accent-purple); display: block; margin-bottom: 0.25rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;">Full Preprint Citation:</strong>
+                  ${tool.preprint_full_citation}
+                </div>
+              `;
+            }
+            return fullCitationHtml;
+          })()}
 
           <div class="card-actions">
             <button class="btn btn-secondary btn-details" data-id="${tool.id}">Explore Derivatives</button>
@@ -1285,4 +1324,286 @@ Proposed action: Delete the JSON object for \`${activeToolForEdit.id}\` from \`t
     panY = e.clientY - startY;
     applyTransform();
   });
+
+  // ==========================================================================
+  // Interactive Metrics & Weekly Scraper Statistics Logic
+  // ==========================================================================
+  const metricTotalTools = document.getElementById('metric-total-tools');
+  const metricTotalStars = document.getElementById('metric-total-stars');
+  const metricTotalCitations = document.getElementById('metric-total-citations');
+  const metricTotalPublished = document.getElementById('metric-total-published');
+  const metricTotalPreprints = document.getElementById('metric-total-preprints');
+  const metricLastUpdate = document.getElementById('metric-last-update');
+  
+  const statsModal = document.getElementById('stats-modal');
+  const statsModalCloseBtn = document.getElementById('stats-modal-close');
+  const statsModalContent = document.getElementById('stats-modal-content');
+
+  function applyFilterState(search, category, pub, sort) {
+    currentFilters.search = search;
+    currentFilters.category = category;
+    currentFilters.pub = pub;
+    currentFilters.sort = sort;
+    
+    activeWeekFilter = null;
+    const banner = document.getElementById('active-filters-bar');
+    if (banner) banner.style.display = 'none';
+
+    searchInput.value = search;
+
+    categoryChips.querySelectorAll('.chip').forEach(c => {
+      if (c.getAttribute('data-category') === category) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+
+    pubChips.querySelectorAll('.chip').forEach(c => {
+      if (c.getAttribute('data-pub') === pub) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+
+    sortChips.querySelectorAll('.chip').forEach(c => {
+      if (c.getAttribute('data-sort') === sort) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+
+    filterAndRenderContent();
+
+    document.querySelector('.dashboard-content').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Bind Metrics Clicks
+  if (metricTotalTools) {
+    metricTotalTools.addEventListener('click', () => {
+      applyFilterState('', 'all', 'all', 'default');
+    });
+  }
+  if (metricTotalStars) {
+    metricTotalStars.addEventListener('click', () => {
+      applyFilterState('', 'all', 'all', 'stars-desc');
+    });
+  }
+  if (metricTotalCitations) {
+    metricTotalCitations.addEventListener('click', () => {
+      applyFilterState('', 'all', 'all', 'citations-desc');
+    });
+  }
+  if (metricTotalPublished) {
+    metricTotalPublished.addEventListener('click', () => {
+      applyFilterState('', 'all', 'published', 'date-desc');
+    });
+  }
+  if (metricTotalPreprints) {
+    metricTotalPreprints.addEventListener('click', () => {
+      applyFilterState('', 'all', 'preprint', 'date-desc');
+    });
+  }
+  if (metricLastUpdate) {
+    metricLastUpdate.addEventListener('click', openStatsModal);
+  }
+
+  function openStatsModal() {
+    const weeksMap = {};
+    appData.tools.forEach(tool => {
+      if (!tool.date) return;
+      const dateObj = new Date(tool.date);
+      if (isNaN(dateObj.getTime())) return;
+      
+      // Get Monday of the week
+      const day = dateObj.getDay();
+      const diff = dateObj.getDate() - day + (day === 0 ? -6 : 1);
+      const monday = new Date(dateObj.setDate(diff));
+      monday.setHours(0,0,0,0);
+      const mondayStr = monday.toISOString().split('T')[0];
+      
+      if (!weeksMap[mondayStr]) {
+        weeksMap[mondayStr] = [];
+      }
+      weeksMap[mondayStr].push(tool);
+    });
+    
+    const sortedWeeks = Object.keys(weeksMap).sort((a, b) => b.localeCompare(a));
+    
+    renderStatsOverview(sortedWeeks, weeksMap);
+    statsModal.classList.add('active');
+  }
+
+  function closeStatsModal() {
+    statsModal.classList.remove('active');
+  }
+
+  if (statsModalCloseBtn) {
+    statsModalCloseBtn.addEventListener('click', closeStatsModal);
+  }
+  if (statsModal) {
+    statsModal.addEventListener('click', (e) => {
+      if (e.target === statsModal) closeStatsModal();
+    });
+  }
+
+  function renderStatsOverview(sortedWeeks, weeksMap) {
+    let html = `
+      <h2 style="margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif; color: var(--text-main);">Weekly Scraper Statistics</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Select any week below to see details of tools added or modified during that period.</p>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; max-height: 50vh; overflow-y: auto; padding-right: 0.5rem; margin-bottom: 1.5rem;">
+    `;
+    
+    let maxToolsInWeek = 1;
+    sortedWeeks.forEach(w => {
+      maxToolsInWeek = Math.max(maxToolsInWeek, weeksMap[w].length);
+    });
+    
+    sortedWeeks.forEach(weekStr => {
+      const monday = new Date(weekStr + 'T00:00:00');
+      const sunday = new Date(monday.getTime() + 6 * 24 * 60 * 60 * 1000);
+      const options = { month: 'short', day: 'numeric', year: 'numeric' };
+      const rangeLabel = `${monday.toLocaleDateString('en-US', options)} - ${sunday.toLocaleDateString('en-US', options)}`;
+      
+      const count = weeksMap[weekStr].length;
+      const pct = (count / maxToolsInWeek) * 100;
+      
+      html += `
+        <div class="stats-week-row" data-week="${weekStr}" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+          <div style="flex: 1;">
+            <div style="font-weight: 500; font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-main);">${rangeLabel}</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+                <div style="height: 100%; width: ${pct}%; background: linear-gradient(90deg, var(--accent-cyan), #06b6d4); border-radius: 3px;"></div>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 0.35rem 0.75rem; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 8px; font-weight: 600; color: var(--accent-cyan); font-size: 0.85rem; min-width: 65px; text-align: center;">
+            ${count} ${count === 1 ? 'tool' : 'tools'}
+          </div>
+        </div>
+      `;
+    });
+    
+    html += `</div>`;
+    
+    statsModalContent.innerHTML = html;
+    
+    statsModalContent.querySelectorAll('.stats-week-row').forEach(row => {
+      row.addEventListener('click', () => {
+        const weekStr = row.dataset.week;
+        renderWeekDetail(weekStr, weeksMap[weekStr], sortedWeeks, weeksMap);
+      });
+    });
+  }
+
+  function renderWeekDetail(weekStr, weekTools, sortedWeeks, weeksMap) {
+    const monday = new Date(weekStr + 'T00:00:00');
+    const sunday = new Date(monday.getTime() + 6 * 24 * 60 * 60 * 1000);
+    const options = { month: 'short', day: 'numeric', year: 'numeric' };
+    const rangeLabel = `${monday.toLocaleDateString('en-US', options)} - ${sunday.toLocaleDateString('en-US', options)}`;
+    
+    let html = `
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+        <button id="btn-stats-back" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem; display: flex; align-items: center; gap: 0.35rem;">
+          <span>←</span> Back to Overview
+        </button>
+        <button id="btn-stats-apply-filter" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem; background: var(--accent-cyan); border-color: var(--accent-cyan); color: #0f172a; font-weight: 500;">
+          Filter Main Page
+        </button>
+      </div>
+      <h3 style="margin-bottom: 0.35rem; font-family: 'Outfit', sans-serif; color: var(--text-main);">Scraped Tools for ${rangeLabel}</h3>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">Found ${weekTools.length} ${weekTools.length === 1 ? 'tool' : 'tools'} added or updated during this week.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; max-height: 45vh; overflow-y: auto; padding-right: 0.5rem; margin-bottom: 1rem;">
+    `;
+    
+    weekTools.forEach(tool => {
+      const catClass = getCategoryClass(tool.category);
+      html += `
+        <div style="padding: 1rem; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+              <strong class="stats-tool-link" data-id="${tool.id}" style="cursor: pointer; color: var(--text-main); font-size: 0.95rem;">${tool.name}</strong>
+              <span class="chip cat-${catClass}" style="padding: 0.15rem 0.45rem; font-size: 0.72rem; border-radius: 6px;">${tool.category}</span>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4;">
+              ${tool.github_description || tool.usage}
+            </p>
+          </div>
+          <button class="btn btn-secondary btn-stats-tool-details" data-id="${tool.id}" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; white-space: nowrap;">
+            Details
+          </button>
+        </div>
+      `;
+    });
+    
+    html += `</div>`;
+    
+    statsModalContent.innerHTML = html;
+    
+    document.getElementById('btn-stats-back').addEventListener('click', () => {
+      renderStatsOverview(sortedWeeks, weeksMap);
+    });
+    
+    document.getElementById('btn-stats-apply-filter').addEventListener('click', () => {
+      closeStatsModal();
+      applyWeekFilter(weekStr, rangeLabel);
+    });
+    
+    statsModalContent.querySelectorAll('.stats-tool-link, .btn-stats-tool-details').forEach(el => {
+      el.addEventListener('click', () => {
+        const id = el.dataset.id;
+        closeStatsModal();
+        openModal(id);
+      });
+    });
+  }
+
+  function applyWeekFilter(weekStr, rangeLabel) {
+    activeWeekFilter = weekStr;
+    
+    searchInput.value = '';
+    currentFilters.search = '';
+    
+    document.querySelectorAll('#category-chips .chip').forEach(c => c.classList.remove('active'));
+    const allChip = document.querySelector('#category-chips .chip[data-category="all"]');
+    if (allChip) allChip.classList.add('active');
+    currentFilters.category = 'all';
+    
+    document.querySelectorAll('#pub-chips .chip').forEach(c => c.classList.remove('active'));
+    const allPubChip = document.querySelector('#pub-chips .chip[data-pub="all"]');
+    if (allPubChip) allPubChip.classList.add('active');
+    currentFilters.pub = 'all';
+    
+    const banner = document.getElementById('active-filters-bar');
+    if (banner) {
+      banner.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); font-weight: 500;">
+          <span style="color: var(--accent-cyan); font-size: 1.1rem;">📅</span> Showing tools added/changed: <span style="color: var(--accent-cyan); font-weight: 600;">${rangeLabel}</span>
+        </div>
+        <button id="btn-clear-week-filter" class="btn btn-secondary" style="padding: 0.25rem 0.65rem; font-size: 0.78rem; border-color: rgba(249, 115, 22, 0.2); background: rgba(249, 115, 22, 0.1); color: #f97316; cursor: pointer; transition: all 0.2s ease; font-weight: 500;">
+          Clear Filter
+        </button>
+      `;
+      banner.style.display = 'flex';
+      
+      document.getElementById('btn-clear-week-filter').addEventListener('click', () => {
+        clearWeekFilter();
+      });
+    }
+    
+    filterAndRenderContent();
+    
+    document.querySelector('.dashboard-content').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function clearWeekFilter() {
+    activeWeekFilter = null;
+    const banner = document.getElementById('active-filters-bar');
+    if (banner) banner.style.display = 'none';
+    filterAndRenderContent();
+  }
 });

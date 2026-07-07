@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="index.css?v=17">
+  <link rel="stylesheet" href="index.css?v=18">
   <!-- Favicon -->
   <link rel="icon" href="protein_emoji.svg" type="image/svg+xml">
 </head>
@@ -41,32 +41,32 @@
 
   <!-- Metrics Overview Bar -->
   <section class="metrics-bar">
-    <div class="metric-item">
+    <div class="metric-item" id="metric-total-tools">
       <span class="metric-val" id="stat-total-tools">—</span>
       <span class="metric-label">Analyzed Tools</span>
     </div>
     <div class="metric-divider"></div>
-    <div class="metric-item">
+    <div class="metric-item" id="metric-total-stars">
       <span class="metric-val" id="stat-total-stars">—</span>
       <span class="metric-label">GitHub Stars</span>
     </div>
     <div class="metric-divider"></div>
-    <div class="metric-item">
+    <div class="metric-item" id="metric-total-citations">
       <span class="metric-val" id="stat-total-citations">—</span>
       <span class="metric-label">Academic Citations</span>
     </div>
     <div class="metric-divider"></div>
-    <div class="metric-item">
+    <div class="metric-item" id="metric-total-published">
       <span class="metric-val" id="stat-total-published">—</span>
       <span class="metric-label">Published Papers</span>
     </div>
     <div class="metric-divider"></div>
-    <div class="metric-item">
+    <div class="metric-item" id="metric-total-preprints">
       <span class="metric-val" id="stat-total-preprints">—</span>
       <span class="metric-label">Preprints</span>
     </div>
     <div class="metric-divider"></div>
-    <div class="metric-item">
+    <div class="metric-item" id="metric-last-update">
       <span class="metric-val" id="stat-last-update">—</span>
       <span class="metric-label">Last Database Scrape</span>
     </div>
@@ -162,6 +162,9 @@
 
       <!-- Tools Display -->
       <section class="tools-container">
+        <!-- Active Filters Banner Bar -->
+        <div id="active-filters-bar" style="display: none; margin-bottom: 1.5rem; padding: 0.75rem 1.25rem; background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.15); border-radius: 12px; align-items: center; justify-content: space-between; font-size: 0.9rem;"></div>
+
         <!-- Grid View -->
         <div class="tools-grid" id="tools-grid">
           <!-- Dynamically populated -->
@@ -407,11 +410,21 @@ Select a field and write correction to view diff...
     </div>
   </div>
 
+  <!-- Scraper Statistics Modal -->
+  <div id="stats-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 700px;">
+      <button class="modal-close" id="stats-modal-close">&times;</button>
+      <div id="stats-modal-content">
+        <!-- Content will be rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2026 Alphafoldology Hub • Connected to the <a href="https://github.com/KarelBerka/alphafoldology" target="_blank" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px dashed var(--accent-cyan);">KarelBerka/alphafoldology</a> repository.</p>
   </footer>
 
   <!-- Javascript -->
-  <script src="index.js?v=17"></script>
+  <script src="index.js?v=18"></script>
 </body>
 </html>
