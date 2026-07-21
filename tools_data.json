@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "last_updated": "2026-07-20 09:56:15",
-    "total_tools": 429,
-    "total_github_stars": 162681,
+    "last_updated": "2026-07-21 22:27:22",
+    "total_tools": 431,
+    "total_github_stars": 162698,
     "total_citations": 131312,
     "total_published_papers": 27,
-    "total_preprints": 36,
-    "total_stars": 162681,
+    "total_preprints": 39,
+    "total_stars": 162698,
     "total_published": 27,
-    "last_update": "2026-07-20"
+    "last_update": "2026-07-21"
   },
   "tools": [
     {
@@ -4834,8 +4834,8 @@
       "status": "Active",
       "paper_doi": null,
       "doi_link": null,
-      "preprint_doi": null,
-      "preprint_link": null,
+      "preprint_doi": "10.1101/2025.05.19.654846",
+      "preprint_link": "https://doi.org/10.1101/2025.05.19.654846",
       "parent": "alphafold2",
       "usage": "Structure prediction and design of proteins with noncanonical amino acids",
       "strengths": "Direct access to official codebase, active development.",
@@ -4848,7 +4848,11 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "unknown"
+      "publication_type": "preprint",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2025",
+      "preprint_short_citation": "Bryant, bioRxiv, 2025",
+      "preprint_full_citation": "Bryant P. et al. (2025). RareFold: Deep learning structure prediction and design with canonical and non-canonical amino acids. *bioRxiv*."
     },
     {
       "id": "protocycle",
@@ -12484,6 +12488,58 @@
       "preprint_year": "2026",
       "preprint_short_citation": "Qian, bioRxiv, 2026",
       "preprint_full_citation": "Qian R., Zhan R., Song Z., & Huang J. (2026). Zero-Shot Generation of Protein Conformational Ensembles Through AlphaFold Latent Flooding. *bioRxiv*."
+    },
+    {
+      "id": "flashabb",
+      "name": "FlashABB",
+      "repo": "oxpig/FlashABB",
+      "category": "Fast Predictors",
+      "status": "Active",
+      "publication_type": "preprint",
+      "parent": null,
+      "usage": "Ultra-fast antibody structure prediction model implementing Flashpoint Attention, achieving speeds faster than sequence-only embeddings.",
+      "strengths": "",
+      "weaknesses": "",
+      "date": "2026-06-03",
+      "github_stars": 17,
+      "github_forks": 3,
+      "github_open_issues": 0,
+      "github_description": "Ultra-fast antibody structure prediction model implementing Flashpoint Attention, achieving speeds faster than sequence-only embeddings.",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_doi": "10.64898/2026.06.03.729879",
+      "preprint_link": "https://doi.org/10.64898/2026.06.03.729879",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "OPIG, bioRxiv, 2026",
+      "preprint_full_citation": "Oxford Protein Informatics Group (2026). Fast antibody structure prediction with FlashABB using Flashpoint Attention. *bioRxiv*."
+    },
+    {
+      "id": "proteinsketch",
+      "name": "ProteinSketch",
+      "repo": "HParklab/ProteinSketch",
+      "category": "Protein Design",
+      "status": "Active",
+      "publication_type": "preprint",
+      "parent": null,
+      "usage": "Bimanual virtual reality platform integrating human spatial intuition with generative AI (RFdiffusion) for interactive backbone and volume sketching.",
+      "strengths": "",
+      "weaknesses": "",
+      "date": "2026-07-21",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "github_description": "Bimanual virtual reality platform integrating human spatial intuition with generative AI (RFdiffusion) for interactive backbone and volume sketching.",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_doi": "10.64898/2026.07.19.739460",
+      "preprint_link": "https://doi.org/10.64898/2026.07.19.739460",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Park, bioRxiv, 2026",
+      "preprint_full_citation": "Park H. et al. (2026). ProteinSketch translates spatial intuition into protein design with bimanual interaction in VR. *bioRxiv*."
     }
   ],
   "social_posts": [
