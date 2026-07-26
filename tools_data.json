@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "last_updated": "2026-07-22 13:28:44",
-    "total_tools": 433,
-    "total_github_stars": 162711,
+    "last_updated": "2026-07-26 17:43:08",
+    "total_tools": 434,
+    "total_github_stars": 162722,
     "total_citations": 131312,
     "total_published_papers": 27,
-    "total_preprints": 41,
-    "total_stars": 162711,
+    "total_preprints": 42,
+    "total_stars": 162722,
     "total_published": 27,
-    "last_update": "2026-07-22"
+    "last_update": "2026-07-26"
   },
   "tools": [
     {
@@ -12592,6 +12592,32 @@
       "preprint_year": "2026",
       "preprint_short_citation": "THGLab, bioRxiv, 2026",
       "preprint_full_citation": "THGLab (2026). KinConfBench: Evaluation of kinase conformational states in cofolding models. *bioRxiv*."
+    },
+    {
+      "id": "dynamode",
+      "name": "DynaMode",
+      "repo": "HPuntu/DynaMode",
+      "category": "Ensemble Generators",
+      "status": "Active",
+      "publication_type": "preprint",
+      "parent": null,
+      "usage": "Simulation-free prediction of protein dynamics using a spectral diffusion model in the Fourier domain.",
+      "strengths": "Fast generation of temporally coherent trajectories (256 structures in ~1s); Separates slow conformational modes from fast jitter.",
+      "weaknesses": "",
+      "date": "2026-07-08",
+      "github_stars": 11,
+      "github_forks": 1,
+      "github_open_issues": 0,
+      "github_description": "Spectral Diffusion for Protein Dynamics (DynaMode).",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_doi": "10.48550/arXiv.2607.04134",
+      "preprint_link": "https://doi.org/10.48550/arXiv.2607.04134",
+      "preprint_journal": "arXiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Phipps, arXiv, 2026",
+      "preprint_full_citation": "Phipps H., Cagiada M., Villalba S. D., & Deane C. (2026). Spectral Diffusion for Protein Dynamics. *arXiv*, 2607.04134."
     }
   ],
   "social_posts": [
