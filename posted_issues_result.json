@@ -1,0 +1,62 @@
+[
+  {
+    "number": 55,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/55",
+    "title": "[Tool Submission]: RFdiffusion2 - Next-Gen All-Atom Generative Protein Design Pipeline"
+  },
+  {
+    "number": 56,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/56",
+    "title": "[Tool Submission]: Boltz-1 / Boltz-2 & BoltzGen - Open-Source Biomolecular Complex Predictor and Design Framework"
+  },
+  {
+    "number": 57,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/57",
+    "title": "[Tool Submission]: Protenix-Dock - End-to-End Trainable Protein-Ligand Docking Framework"
+  },
+  {
+    "number": 58,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/58",
+    "title": "[Tool Submission]: BoltzDesign1 - De Novo Generative Binder Design Model Based on Boltz-1"
+  },
+  {
+    "number": 59,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/59",
+    "title": "[Tool Submission]: tt-bio - High-Performance Hardware-Accelerated Inference Engine for Boltz-2 & ESMFold2"
+  },
+  {
+    "number": 60,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/60",
+    "title": "[Tool Submission]: blatant-why - Multi-Agent AI Biologics Design Campaign Orchestrator"
+  },
+  {
+    "number": 61,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/61",
+    "title": "[Tool Submission]: alphafold-sovereign-mcp - Model Context Protocol (MCP) Server for AlphaFold Structures"
+  },
+  {
+    "number": 62,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/62",
+    "title": "[Tool Submission]: biohub/ESMFold2 - Next-Gen Ultra-Fast Protein Folding Models on HuggingFace Hub"
+  },
+  {
+    "number": 63,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/63",
+    "title": "[Tool Submission]: GitLab AlphaFold Pipelines: HT-Colabfold & binder_design"
+  },
+  {
+    "number": 64,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/64",
+    "title": "[Preprint Submission]: bioRxiv Breakthroughs: ProteinSketch VR & Prosculpt Design Interfaces"
+  },
+  {
+    "number": 65,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/65",
+    "title": "[Literature Submission]: AntiConf & Deep Learning Structure Evaluation on Antibody-Antigen Complexes"
+  },
+  {
+    "number": 66,
+    "url": "https://github.com/KarelBerka/Alphafoldology/issues/66",
+    "title": "[Tool Submission]: EnzyMM & patchr - Catalytic Motif Miner and Biomolecular Inpainting Utilities"
+  }
+]

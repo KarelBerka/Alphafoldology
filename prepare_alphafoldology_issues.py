@@ -1,0 +1,339 @@
+import os
+import sys
+import json
+
+# Define the curated issues with complete metadata across all 6 platforms
+issues_data = [
+    {
+        "issue_num": 1,
+        "filename": "issue_01_rfdiffusion2.md",
+        "title": "[Tool Submission]: RFdiffusion2 - Next-Gen All-Atom Generative Protein Design Pipeline",
+        "platform": "GitHub",
+        "category": "Protein Design",
+        "parent_node": "RFdiffusion (Baker Lab / RosettaCommons)",
+        "url": "https://github.com/RosettaCommons/RFdiffusion2",
+        "doi": "https://github.com/RosettaCommons/RFdiffusion2",
+        "tags": ["protein-design", "all-atom", "diffusion", "binder-design", "de-novo"],
+        "stars": 439,
+        "forks": 69,
+        "description": "RFdiffusion2 is the next-generation inference release for generative protein design from RosettaCommons and the Baker Laboratory. It advances beyond backbone-only diffusion to support full all-atom generative precision, ligand-aware binder design, and complex multi-chain motif scaffolding.",
+        "innovations": [
+            "Full all-atom generative diffusion replacing classical backbone-only generation.",
+            "Ligand-conditioned protein binder design capability.",
+            "Advanced multi-chain motif scaffolding for active site engineering."
+        ],
+        "strengths": "State-of-the-art accuracy; direct all-atom generation without mandatory separate sidechain repacking.",
+        "limitations": "High GPU memory requirements for multi-chain all-atom diffusion."
+    },
+    {
+        "issue_num": 2,
+        "filename": "issue_02_boltz1_boltz2.md",
+        "title": "[Tool Submission]: Boltz-1 / Boltz-2 & BoltzGen - Open-Source Biomolecular Complex Predictor and Design Framework",
+        "platform": "HuggingFace & GitHub",
+        "category": "Core Predictors",
+        "parent_node": "AlphaFold 3",
+        "url": "https://huggingface.co/boltz-community/boltz-1",
+        "doi": "https://huggingface.co/boltzgen/boltzgen-1",
+        "tags": ["open-weights", "alphafold3-alternative", "biomolecular-complexes", "protein-ligand", "huggingface"],
+        "stars": 320,
+        "downloads": 388371,
+        "description": "Boltz-1 and Boltz-2 are fully open-source biomolecular structure prediction models licensed under Apache 2.0. They predict 3D structures of proteins, RNA, DNA, and small molecule complexes with performance competitive to AlphaFold 3. Accompanied by BoltzGen-1 on HuggingFace Hub for generative target-conditioned binder design.",
+        "innovations": [
+            "100% open weights, open training dataset pipeline, and Apache 2.0 code.",
+            "Supports protein, nucleic acid, small molecule, and post-translational modification complexes.",
+            "Ecosystem support including HuggingFace Spaces (`simonduerr/boltz-1`) and `boltzgen-1` design model."
+        ],
+        "strengths": "Completely open for commercial and academic use; rich community extensions.",
+        "limitations": "Inference time for large multi-ligand complexes requires modern GPU hardware."
+    },
+    {
+        "issue_num": 3,
+        "filename": "issue_03_protenix_dock.md",
+        "title": "[Tool Submission]: Protenix-Dock - End-to-End Trainable Protein-Ligand Docking Framework",
+        "platform": "GitHub",
+        "category": "Ligand Docking",
+        "parent_node": "Protenix (ByteDance)",
+        "url": "https://github.com/bytedance/Protenix-Dock",
+        "doi": "https://github.com/bytedance/Protenix-Dock",
+        "tags": ["protein-docking", "ligand-binding", "deep-learning", "end-to-end"],
+        "stars": 140,
+        "forks": 17,
+        "description": "Protenix-Dock is ByteDance's accurate, end-to-end trainable deep learning framework for protein-ligand docking and complex structure prediction. It circumvents traditional grid search scoring functions by directly learning docking poses from biomolecular representations.",
+        "innovations": [
+            "Trainable end-to-end deep learning framework for protein-ligand docking.",
+            "Outperforms classical docking programs on flexible binding pocket scenarios.",
+            "Integrated into ByteDance's open structural biology stack."
+        ],
+        "strengths": "Eliminates rigid receptor assumptions and classical scoring function grid errors.",
+        "limitations": "Requires pre-computed protein structure or co-prediction."
+    },
+    {
+        "issue_num": 4,
+        "filename": "issue_04_boltzdesign1.md",
+        "title": "[Tool Submission]: BoltzDesign1 - De Novo Generative Binder Design Model Based on Boltz-1",
+        "platform": "GitHub",
+        "category": "Protein Design",
+        "parent_node": "Boltz-1",
+        "url": "https://github.com/yehlincho/BoltzDesign1",
+        "doi": "https://github.com/yehlincho/BoltzDesign1",
+        "tags": ["de-novo", "binder-design", "boltz-1", "generative-ai"],
+        "stars": 257,
+        "forks": 46,
+        "description": "BoltzDesign1 is a de novo generative protein binder design architecture built on top of the Boltz-1 biomolecular representation. It enables target-focused binder sequence and structure co-design using open-weights biomolecular embeddings.",
+        "innovations": [
+            "Direct generative design using Boltz-1 all-atom embeddings.",
+            "Sequence-structure co-design optimized for target surface binding.",
+            "Full compatibility with open biomolecular prediction stacks."
+        ],
+        "strengths": "Fast binder candidate generation without relying on proprietary AF3 servers.",
+        "limitations": "Emerging repository; relies on Boltz-1 backbone checkpoint."
+    },
+    {
+        "issue_num": 5,
+        "filename": "issue_05_tt_bio.md",
+        "title": "[Tool Submission]: tt-bio - High-Performance Hardware-Accelerated Inference Engine for Boltz-2 & ESMFold2",
+        "platform": "GitHub",
+        "category": "Fast Predictors",
+        "parent_node": "Boltz-2 / ESMFold2",
+        "url": "https://github.com/moritztng/tt-bio",
+        "doi": "https://github.com/moritztng/tt-bio",
+        "tags": ["hardware-acceleration", "risc-v", "tenstorrent", "fast-inference", "embeddings"],
+        "stars": 115,
+        "forks": 11,
+        "description": "tt-bio is a dedicated high-performance inference engine for running protein structure prediction (Boltz-2, ESMFold2, Protenix-v2), binder design, and protein embeddings on Tenstorrent RISC-V AI hardware.",
+        "innovations": [
+            "RISC-V and specialized AI hardware acceleration for structural biology models.",
+            "Sub-second protein embedding and rapid batch structure prediction.",
+            "Open hardware-software stack for bio-compute clusters."
+        ],
+        "strengths": "Dramatic cost and energy reduction for ultra-high-throughput protein screening.",
+        "limitations": "Optimized specifically for Tenstorrent RISC-V hardware architecture."
+    },
+    {
+        "issue_num": 6,
+        "filename": "issue_06_blatant_why.md",
+        "title": "[Tool Submission]: blatant-why - Multi-Agent AI Biologics Design Campaign Orchestrator",
+        "platform": "GitHub",
+        "category": "Agents & Workflows",
+        "parent_node": "BoltzGen / Protenix / RFdiffusion",
+        "url": "https://github.com/001TMF/blatant-why",
+        "doi": "https://github.com/001TMF/blatant-why",
+        "tags": ["agentic-ai", "multi-agent", "biologics-design", "automation", "campaign-manager"],
+        "stars": 103,
+        "forks": 10,
+        "description": "blatant-why is an autonomous AI-powered biologics design campaign agent. It orchestrates multi-agent execution across BoltzGen, PXDesign, Protenix, RFdiffusion, and over 200 cloud computational biology tools.",
+        "innovations": [
+            "Autonomous multi-agent campaign planning for therapeutic antibody and binder design.",
+            "Unified tool wrapper integrating modern open-source models with cloud execution.",
+            "Automated filtering, docking verification, and candidate prioritization."
+        ],
+        "strengths": "Reduces manual orchestration effort in multi-step protein engineering campaigns.",
+        "limitations": "Requires configuration of API keys and compute backend nodes."
+    },
+    {
+        "issue_num": 7,
+        "filename": "issue_07_alphafold_sovereign_mcp.md",
+        "title": "[Tool Submission]: alphafold-sovereign-mcp - Model Context Protocol (MCP) Server for AlphaFold Structures",
+        "platform": "GitHub",
+        "category": "Visualization & MCP",
+        "parent_node": "AlphaFold 2 / MCP Protocol",
+        "url": "https://github.com/smaniches/alphafold-sovereign-mcp",
+        "doi": "https://github.com/smaniches/alphafold-sovereign-mcp",
+        "tags": ["mcp-server", "agentic-ai", "alphafold-db", "plddt", "antigravity"],
+        "stars": 4,
+        "forks": 1,
+        "description": "alphafold-sovereign-mcp is a Model Context Protocol (MCP) server enabling AI coding agents (such as Antigravity IDE, Claude, Cursor) to directly search, fetch, parse, and analyze AlphaFold structural predictions, pLDDT scores, and domain boundaries within conversational sessions.",
+        "innovations": [
+            "Native MCP tool integration for structural biology AI agents.",
+            "Direct query interface for AlphaFold Database coordinates and quality metrics.",
+            "Facilitates automated structure analysis in agentic pairs."
+        ],
+        "strengths": "Clean agentic protocol implementation for modern AI assistant workflows.",
+        "limitations": "Requires MCP-compliant client environment."
+    },
+    {
+        "issue_num": 8,
+        "filename": "issue_08_esfold2_huggingface.md",
+        "title": "[Tool Submission]: biohub/ESMFold2 - Next-Gen Ultra-Fast Protein Folding Models on HuggingFace Hub",
+        "platform": "HuggingFace Hub",
+        "category": "Fast Predictors",
+        "parent_node": "ESMFold (Meta AI / Chan Zuckerberg Biohub)",
+        "url": "https://huggingface.co/biohub/ESMFold2",
+        "doi": "https://huggingface.co/biohub/ESMFold2",
+        "tags": ["esmfold2", "huggingface-model", "ultra-fast", "single-sequence", "open-weights"],
+        "downloads": 388371,
+        "likes": 48,
+        "description": "biohub/ESMFold2 and its family of experimental variants (ESMFold2-Fast, ESMFold2-Experimental-Cutoff2025) represent the next-generation single-sequence protein structure prediction model hosted on HuggingFace Hub. With nearly 400,000 downloads, it delivers ultra-fast monomer predictions directly from language model embeddings.",
+        "innovations": [
+            "Significantly improved accuracy over original ESMFold v1 while maintaining single-sequence speed.",
+            "Available in multiple model sizes (300M, 600M parameters) and speed-optimized checkpoints.",
+            "Direct integration with HuggingFace `transformers` ecosystem."
+        ],
+        "strengths": "Extremely fast single-sequence prediction; high community adoption.",
+        "limitations": "Limited complex multi-mer support compared to AF3/Boltz."
+    },
+    {
+        "issue_num": 9,
+        "filename": "issue_09_gitlab_ht_colabfold_binderdesign.md",
+        "title": "[Tool Submission]: GitLab AlphaFold Pipelines: HT-Colabfold & binder_design",
+        "platform": "GitLab",
+        "category": "Workflows & Pipelines",
+        "parent_node": "ColabFold / ESM-1b",
+        "url": "https://gitlab.com/BrenneckeLab/ht-colabfold",
+        "doi": "https://gitlab.com/patrickbryant1/binder_design",
+        "tags": ["gitlab-repository", "high-throughput", "colabfold", "binder-design", "esm-1b"],
+        "stars": 1,
+        "description": "A collection of curated high-throughput structural biology pipelines hosted on GitLab: `BrenneckeLab/ht-colabfold` (High-Throughput AlphaFold2 Screening Pipeline) and `patrickbryant1/binder_design` (Evolutionary guided sequence search from ESM-1b for target binder design).",
+        "innovations": [
+            "Automated high-throughput screening pipeline utilizing ColabFold backends.",
+            "Evolutionary sequence optimization conditioned on ESM language model likelihoods.",
+            "Expands Alphafoldology coverage beyond GitHub into GitLab open repositories."
+        ],
+        "strengths": "Tested in experimental laboratory screening campaigns.",
+        "limitations": "Smaller GitLab star visibility compared to GitHub repositories."
+    },
+    {
+        "issue_num": 10,
+        "filename": "issue_10_biorxiv_proteinsketch_prosculpt.md",
+        "title": "[Preprint Submission]: bioRxiv Breakthroughs: ProteinSketch VR & Prosculpt Design Interfaces",
+        "platform": "bioRxiv",
+        "category": "Preprints & Design Interfaces",
+        "parent_node": "De Novo Protein Design / VR Interfaces",
+        "url": "https://doi.org/10.64898/2026.07.19.739460",
+        "doi": "10.64898/2026.07.19.739460",
+        "tags": ["biorxiv-preprint", "vr-interface", "proteinsketch", "prosculpt", "interactive-design"],
+        "description": "Featured 2026 bioRxiv preprints pushing the boundaries of interactive protein design: 1) *ProteinSketch translates spatial intuition into protein design with bimanual interaction in VR* (DOI: 10.64898/2026.07.19.739460), and 2) *Prosculpt: Lowering the Barrier to Computational Protein Design* (DOI: 10.64898/2026.06.25.732351).",
+        "innovations": [
+            "Bimanual Virtual Reality (VR) interface for intuitive spatial protein backbone manipulation.",
+            "Prosculpt streamlined user interface reducing technical barriers for experimental biologists.",
+            "Direct integration of deep learning structure prediction feedback loops into design sessions."
+        ],
+        "strengths": "Bridges complex generative AI models with intuitive human spatial interaction.",
+        "limitations": "Requires specialized VR hardware (Meta Quest / Vision Pro) for ProteinSketch."
+    },
+    {
+        "issue_num": 11,
+        "filename": "issue_11_europepmc_openalex_anticonf.md",
+        "title": "[Literature Submission]: AntiConf & Deep Learning Structure Evaluation on Antibody-Antigen Complexes",
+        "platform": "EuropePMC & OpenAlex",
+        "category": "Benchmarks & Literature",
+        "parent_node": "AlphaFold Multimer / Antibody Benchmarks",
+        "url": "https://doi.org/10.1093/bib/bbag137",
+        "doi": "10.1093/bib/bbag137",
+        "tags": ["europepmc", "openalex", "anticonf", "antibody-antigen", "benchmarking"],
+        "description": "Key 2026 peer-reviewed literature indexed in EuropePMC and OpenAlex evaluating deep learning protein structure prediction accuracy on complex targets: 1) *Confidence scoring for deep learning-predicted antibody-antigen complexes: AntiConf as a precision-driven framework* (Brief Bioinform 2026, DOI: 10.1093/bib/bbag137), and 2) *Evaluating deep learning based structure prediction methods on antibody-antigen complexes* (Bioinformatics 2026, DOI: 10.1093/bioinformatics/btag136).",
+        "innovations": [
+            "AntiConf precision confidence scoring framework dedicated to antibody-antigen interface evaluation.",
+            "Comprehensive benchmarking of AF2, AF3, ESMFold, and RoseTTAFold on complex paratope-epitope prediction.",
+            "Identifies key confidence metrics distinguishing true binders from false positives."
+        ],
+        "strengths": "Rigorously benchmarked metric framework for therapeutic antibody evaluation.",
+        "limitations": "Specifically tailored to immunoglobulins and nanobodies."
+    },
+    {
+        "issue_num": 12,
+        "filename": "issue_12_enzymm_patchr.md",
+        "title": "[Tool Submission]: EnzyMM & patchr - Catalytic Motif Miner and Biomolecular Inpainting Utilities",
+        "platform": "GitHub",
+        "category": "Structural Utilities & Search",
+        "parent_node": "AlphaFold DB / PDB Search",
+        "url": "https://github.com/RayHackett/enzymm",
+        "doi": "https://github.com/DeepFoldProtein/patchr",
+        "tags": ["catalytic-motifs", "enzyme-mining", "inpainting", "structure-repair", "alphafold-db"],
+        "stars": 67,
+        "description": "Two essential structural biology software tools: 1) `RayHackett/enzymm` (Enzyme Motif Miner - Geometric matching and discovery of catalytic active site motifs across predicted protein structures), and 2) `DeepFoldProtein/patchr` (3D structure inpainting and simulation-ready setup for proteins, DNA, RNA, and molecular complexes).",
+        "innovations": [
+            "3D geometric active site motif searching across millions of AlphaFold DB models.",
+            "Biomolecular structure inpainting for missing loops, sidechains, and multi-entity complex gaps.",
+            "Prepares predicted models for molecular dynamics (MD) simulation."
+        ],
+        "strengths": "Direct utility for enzyme design and computational biophysics simulation prep.",
+        "limitations": "EnzyMM relies on accurate sidechain predictions for active site geometry."
+    }
+]
+
+# Ensure issues directory exists
+os.makedirs("issues", exist_ok=True)
+
+# Generate individual issue files and consolidated NEW_ALPHAFOLDOLOGY_ISSUES.md
+all_issues_md = """# 🧬 Alphafoldology New Projects & Tools GitHub Issues
+
+This document contains **12 curated GitHub Issues** prepared for the **[KarelBerka/Alphafoldology](https://github.com/KarelBerka/Alphafoldology)** repository.
+
+The issues cover newly discovered projects, preprints, repositories, models, and literature identified across **GitHub, GitLab, HuggingFace, bioRxiv, OpenAlex, and EuropePMC**.
+
+---
+
+## 📋 Table of Prepared Issues
+
+| # | Title | Category | Primary Platform | Parent / Predecessor | Key Tags |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| **01** | [RFdiffusion2 - All-Atom Generative Design](#issue-1-rfdiffusion2---next-gen-all-atom-generative-protein-design-pipeline) | Protein Design | GitHub (439⭐) | RFdiffusion | `all-atom`, `diffusion`, `binder-design` |
+| **02** | [Boltz-1 / Boltz-2 & BoltzGen](#issue-2-boltz-1--boltz-2--boltzgen---open-source-biomolecular-complex-predictor) | Core Predictors | HuggingFace / GitHub | AlphaFold 3 | `open-weights`, `alphafold3`, `all-atom` |
+| **03** | [Protenix-Dock](#issue-3-protenix-dock---end-to-end-trainable-protein-ligand-docking-framework) | Ligand Docking | GitHub (140⭐) | Protenix | `docking`, `end-to-end`, `ligand` |
+| **04** | [BoltzDesign1](#issue-4-boltzdesign1---de-novo-generative-binder-design-model-based-on-boltz-1) | Protein Design | GitHub (257⭐) | Boltz-1 | `de-novo`, `binder-design`, `boltz-1` |
+| **05** | [tt-bio RISC-V Acceleration](#issue-5-tt-bio---high-performance-hardware-accelerated-inference-engine) | Fast Predictors | GitHub (115⭐) | Boltz-2 / ESMFold2 | `hardware-acceleration`, `risc-v` |
+| **06** | [blatant-why Biologics Agent](#issue-6-blatant-why---multi-agent-ai-biologics-design-campaign-orchestrator) | Agents & Workflows | GitHub (103⭐) | BoltzGen / Protenix | `agentic-ai`, `multi-agent`, `biologics` |
+| **07** | [alphafold-sovereign-mcp](#issue-7-alphafold-sovereign-mcp---model-context-protocol-mcp-server) | MCP / Integration | GitHub | AlphaFold 2 / MCP | `mcp-server`, `agentic-ai`, `antigravity` |
+| **08** | [biohub/ESMFold2](#issue-8-biohubesmfold2---next-gen-ultra-fast-protein-folding-models) | Fast Predictors | HuggingFace (388k dl) | ESMFold | `esmfold2`, `huggingface`, `single-sequence` |
+| **09** | [GitLab Pipelines (HT-Colabfold & binder_design)](#issue-9-gitlab-alphafold-pipelines-ht-colabfold--binder_design) | Pipelines | GitLab | ColabFold / ESM-1b | `gitlab`, `ht-colabfold`, `binder-design` |
+| **10** | [bioRxiv VR & Prosculpt Interfaces](#issue-10-biorxiv-breakthroughs-proteinsketch-vr--prosculpt-design-interfaces) | Preprints / VR | bioRxiv | De Novo Design | `biorxiv`, `vr-interface`, `proteinsketch` |
+| **11** | [AntiConf & Antibody Benchmarks](#issue-11-anticonf--deep-learning-structure-evaluation-on-antibody-antigen-complexes) | Literature | EuropePMC / OpenAlex | AF Multimer | `europepmc`, `openalex`, `antibody` |
+| **12** | [EnzyMM & patchr Utilities](#issue-12-enzymm--patchr---catalytic-motif-miner-and-biomolecular-inpainting-utilities) | Structural Utilities | GitHub | AlphaFold DB | `catalytic-motifs`, `inpainting`, `alphafold-db` |
+
+---
+
+"""
+
+for issue in issues_data:
+    tags_str = ", ".join([f"`{t}`" for t in issue["tags"]])
+    innovations_str = "\n".join([f"- {inn}" for inn in issue["innovations"]])
+    
+    issue_md = f"""# Issue #{issue['issue_num']}: {issue['title']}
+
+**Platform Source:** {issue['platform']}  
+**Category:** {issue['category']}  
+**Parent Node / Genealogy:** {issue['parent_node']}  
+**Target Tags:** {tags_str}  
+
+---
+
+## 📌 Description & Context
+{issue['description']}
+
+## 🔗 Key Links & References
+- **Primary Link:** [{issue['url']}]({issue['url']})
+- **Reference / DOI:** [{issue['doi']}]({issue['doi']})
+
+## ✨ Key Features & Innovations
+{innovations_str}
+
+## ⚖️ Strengths & Limitations
+- **Strengths:** {issue['strengths']}
+- **Limitations:** {issue['limitations']}
+
+## 📋 Suggested Action Items for Alphafoldology Repository
+- [ ] Add tool entry to `tools_data_updated.json` under `{issue['category']}`.
+- [ ] Connect parent edge to `{issue['parent_node']}` in `index.js` interactive genealogy map.
+- [ ] Update badge indicators (GitHub stars, HuggingFace downloads, DOI links).
+- [ ] Tag entry with: {tags_str}.
+"""
+
+    # Write individual issue file
+    issue_path = os.path.join("issues", issue["filename"])
+    with open(issue_path, "w", encoding="utf-8") as f:
+        f.write(issue_md)
+        
+    all_issues_md += issue_md + "\n---\n\n"
+
+# Write master compiled issues report
+master_file = "NEW_ALPHAFOLDOLOGY_ISSUES.md"
+with open(master_file, "w", encoding="utf-8") as f:
+    f.write(all_issues_md)
+
+# Write JSON metadata summary
+with open("issues_summary.json", "w", encoding="utf-8") as f:
+    json.dump(issues_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {len(issues_data)} individual issues in 'issues/' directory.")
+print(f"Master compiled issues report saved to '{master_file}' ({len(all_issues_md)} bytes).")

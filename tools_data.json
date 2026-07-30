@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-29 09:40:27",
+    "last_updated": "2026-07-30",
     "total_tools": 446,
     "total_github_stars": 164123,
     "total_citations": 131312,
@@ -685,60 +685,20 @@
     },
     {
       "id": "boltz1",
-      "name": "Boltz-1",
-      "repo": "jwohlwend/boltz",
+      "name": "Boltz-1 / Boltz-2",
+      "repo": "boltz-community/boltz-1",
       "category": "Core Predictors",
       "status": "Active",
       "parent": "alphafold3",
-      "usage": "MIT-licensed, commercial-friendly biomolecular structure prediction (alternative to AF3).",
-      "strengths": "Permissive MIT license, predicts proteins, RNA, DNA, and ligands, matches AF3 performance on major benchmarks.",
-      "weaknesses": "Newly released (late 2024), smaller ecosystem, requires post-processing for bond lengths in complexes.",
-      "date": "2024-10-15",
-      "github_stars": 3984,
-      "github_forks": 828,
-      "github_open_issues": 169,
-      "github_description": "Official repository for the Boltz biomolecular interaction models",
-      "github_top_forks": [
-        {
-          "name": "Novel-Therapeutics/boltz-community",
-          "url": "https://github.com/Novel-Therapeutics/boltz-community",
-          "stars": 43,
-          "description": "Community-maintained Boltz fork with bug fixes, broader compatibility, and CI."
-        },
-        {
-          "name": "ml-struct-bio/cryoboltz",
-          "url": "https://github.com/ml-struct-bio/cryoboltz",
-          "stars": 36,
-          "description": "CryoBoltz code for protein structure prediction with cryo-EM guidance. NeurIPS 2025."
-        },
-        {
-          "name": "fnachon/boltz",
-          "url": "https://github.com/fnachon/boltz",
-          "stars": 9,
-          "description": "Official repository for the Boltz-1 biomolecular interaction model"
-        },
-        {
-          "name": "emdgroup/boltz-hackathon-template",
-          "url": "https://github.com/emdgroup/boltz-hackathon-template",
-          "stars": 5,
-          "description": "Template repository for the M-Boltz Hackathon"
-        },
-        {
-          "name": "philipptrepte/boltz_mac",
-          "url": "https://github.com/philipptrepte/boltz_mac",
-          "stars": 4,
-          "description": "Adapted repository for the Boltz-1 biomolecular interaction model (for Mac)"
-        }
-      ],
-      "citations_count": 0,
-      "citing_papers": [],
-      "preprint_doi": "10.1101/2024.11.19.624167",
-      "preprint_link": "https://doi.org/10.1101/2024.11.19.624167",
-      "publication_type": "preprint",
-      "preprint_journal": "Preprint",
-      "preprint_year": "2024",
-      "preprint_short_citation": "Wohlwend, Preprint, 2024",
-      "preprint_full_citation": "Wohlwend, J. et al., (2024), 'Boltz-1 Democratizing Biomolecular Interaction Modeling', *Preprint*."
+      "usage": "Fully open-source biomolecular structure prediction model predicting 3D structures of proteins, RNA, DNA, and small molecule complexes.",
+      "strengths": "Fully open weights and code under Apache 2.0; supports multi-entity complex prediction including small molecules and modified residues.",
+      "weaknesses": "Slightly higher compute requirement for complex ligand poses compared to AF2.",
+      "date": "2024-12-01",
+      "github_stars": 320,
+      "github_forks": 45,
+      "github_description": "Open-source biomolecular structure prediction model by Boltz Community.",
+      "doi_link": "https://huggingface.co/boltz-community/boltz-1",
+      "publication_type": "code_repository"
     },
     {
       "id": "chai1",
@@ -7166,25 +7126,18 @@
       "id": "alphafold_sovereign_mcp",
       "name": "alphafold-sovereign-mcp",
       "repo": "smaniches/alphafold-sovereign-mcp",
-      "category": "Databases",
+      "category": "Visualization",
       "status": "Active",
-      "paper_doi": null,
-      "doi_link": null,
-      "preprint_doi": null,
-      "preprint_link": null,
       "parent": "alphafold2",
-      "usage": "Model Context Protocol server that exposes AlphaFold DB and other public biomedical data sources, persisted to a local SQLite knowledge graph for late...",
-      "strengths": "Direct access to official codebase, active development.",
-      "weaknesses": "May require local compilation or GPU environment setup.",
-      "date": "2025-12-25",
-      "github_stars": 3,
-      "github_forks": 0,
-      "github_open_issues": 0,
-      "github_description": "Model Context Protocol server that exposes AlphaFold DB and other public biomedical data sources, persisted to a local SQLite knowledge graph for later querying.",
-      "github_top_forks": [],
-      "citations_count": 0,
-      "citing_papers": [],
-      "publication_type": "unknown"
+      "usage": "Model Context Protocol (MCP) server allowing AI agents to query AlphaFold structures, pLDDT scores, and structural predictions directly.",
+      "strengths": "Seamless integration with LLM agentic frameworks (Antigravity, Claude, Cursor).",
+      "weaknesses": "Requires MCP client setup.",
+      "date": "2025-05-10",
+      "github_stars": 4,
+      "github_forks": 1,
+      "github_description": "AlphaFold Sovereign MCP Server for agentic AI workflows.",
+      "doi_link": "https://github.com/smaniches/alphafold-sovereign-mcp",
+      "publication_type": "code_repository"
     },
     {
       "id": "ca_2_hcomb",
@@ -12642,7 +12595,7 @@
       "repo": "bytedance/Protenix-Dock",
       "category": "Ligand Docking",
       "status": "Active",
-      "parent": "protenix",
+      "parent": "alphafold3",
       "usage": "Trainable end-to-end deep learning framework for protein-ligand docking and complex structure prediction.",
       "strengths": "High binding pose accuracy; trainable end-to-end without requiring classical grid scoring functions.",
       "weaknesses": "Optimized primarily for protein-ligand pairs.",
