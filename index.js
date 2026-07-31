@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let startX, startY;
 
   // Initialize Application
-  fetch('tools_data.json?v=31')
+  fetch('tools_data.json?v=32')
     .then(response => {
       if (!response.ok) throw new Error('Data file not found');
       return response.json();
@@ -306,20 +306,17 @@ document.addEventListener('DOMContentLoaded', () => {
     statTotalStars.textContent = formatNum(appData.metadata.total_github_stars || 0);
     statTotalCitations.textContent = formatNum(appData.metadata.total_citations || 0);
     
-    // Compute or retrieve preprint/published counts
-    let publishedCount = appData.metadata.total_published_papers;
-    let preprintsCount = appData.metadata.total_preprints;
-    if (publishedCount === undefined || preprintsCount === undefined) {
-      publishedCount = 0;
-      preprintsCount = 0;
-      appData.tools.forEach(tool => {
-        if (tool.publication_type === 'published') {
-          publishedCount++;
-        } else if (tool.publication_type === 'preprint') {
-          preprintsCount++;
-        }
-      });
-    }
+    // Compute preprint/published counts client-side based on actual search/filter criteria
+    let publishedCount = 0;
+    let preprintsCount = 0;
+    appData.tools.forEach(tool => {
+      if (tool.publication_type === 'published' || tool.paper_doi) {
+        publishedCount++;
+      }
+      if (tool.publication_type === 'preprint' || tool.preprint_doi) {
+        preprintsCount++;
+      }
+    });
     statTotalPublished.textContent = formatNum(publishedCount);
     statTotalPreprints.textContent = formatNum(preprintsCount);
     
