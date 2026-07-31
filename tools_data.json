@@ -1500,7 +1500,7 @@
       "repo": "facebookresearch/esm",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-022-01602-x",
+      "paper_doi": "10.1126/science.adc9637",
       "parent": "esmfold",
       "usage": "Inverse folding model using GNNs to predict sequences matching custom target backbones.",
       "strengths": "Pre-trained on millions of structures, integrates sequence likelihood scores to screen stable designs.",
@@ -1521,7 +1521,7 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-022-01602-x",
+      "doi_link": "https://doi.org/10.1126/science.adc9637",
       "preprint_doi": "10.1101/2022.04.10.487779",
       "preprint_link": "https://doi.org/10.1101/2022.04.10.487779",
       "publication_type": "published"
@@ -1968,7 +1968,7 @@
       "repo": "Kuhlman-Lab/MutCompute",
       "category": "Variant Predictors",
       "status": "Active",
-      "paper_doi": "10.1038/s41467-023-43088-5",
+      "paper_doi": "10.1038/s41586-022-04599-z",
       "parent": "esmfold",
       "usage": "CNN classifier trained on protein microenvironments to engineer stabilizing mutations.",
       "strengths": "Successfully engineered highly stable PET-depolymerizing enzymes (FAST-PETase).",
@@ -1989,7 +1989,7 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41467-023-43088-5",
+      "doi_link": "https://doi.org/10.1038/s41586-022-04599-z",
       "preprint_doi": "10.21203/rs.3.rs-5258661/v1",
       "preprint_link": "https://doi.org/10.21203/rs.3.rs-5258661/v1",
       "publication_type": "published"
@@ -2864,7 +2864,7 @@
       "repo": "google-deepmind/alphafold",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1107/S2059798322007313",
+      "paper_doi": "10.1107/S2059798322010026",
       "parent": "alphafold2",
       "usage": "Integrating AlphaFold models into crystallographic molecular replacement and refinement pipelines inside Phenix.",
       "strengths": "Automates template trimming, solves challenging molecular replacement cases where traditional structures fail.",
@@ -2885,7 +2885,7 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1107/S2059798322007313",
+      "doi_link": "https://doi.org/10.1107/S2059798322010026",
       "preprint_doi": null,
       "preprint_link": null,
       "publication_type": "published"
@@ -2896,7 +2896,7 @@
       "repo": "kiharalab/CryoREAD",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1038/s41592-023-02100-4",
+      "paper_doi": "10.1038/s41592-023-02032-5",
       "parent": "alphafold2",
       "usage": "Automated de novo building of proteins and nucleic acids directly from Cryo-EM density maps.",
       "strengths": "Extremely fast structure building, performs well at medium to low resolutions.",
@@ -2917,7 +2917,7 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1038/s41592-023-02100-4",
+      "doi_link": "https://doi.org/10.1038/s41592-023-02032-5",
       "preprint_doi": "10.1101/2025.09.09.675185",
       "preprint_link": "https://doi.org/10.1101/2025.09.09.675185",
       "publication_type": "published"
@@ -2992,7 +2992,7 @@
       "repo": "google-deepmind/alphafold",
       "category": "Core Predictors",
       "status": "Active",
-      "paper_doi": "10.1107/S2059798320013972",
+      "paper_doi": "10.1107/S205979832101155X",
       "parent": "alphafold2",
       "usage": "Using AlphaFold models directly for molecular replacement calculations inside Phaser solver.",
       "strengths": "Integrates error estimates (pLDDT) into the likelihood targets for search templates.",
@@ -3013,7 +3013,7 @@
           "authors": "Scientific Consortium et al."
         }
       ],
-      "doi_link": "https://doi.org/10.1107/S2059798320013972",
+      "doi_link": "https://doi.org/10.1107/S205979832101155X",
       "preprint_doi": null,
       "preprint_link": null,
       "publication_type": "published"
@@ -14786,9 +14786,14 @@
       "github_stars": 45,
       "github_forks": 6,
       "github_description": "Open Deep Learning Framework for Protein Dynamics by Aureka Research.",
-      "doi_link": "https://github.com/aurekaresearch/OpenDDE",
-      "preprint_link": "https://github.com/aurekaresearch/OpenDDE/blob/main/docs/OpenDDE_Technical_reports.pdf",
-      "publication_type": "code_repository"
+      "doi_link": "https://doi.org/10.48550/arXiv.2607.03787",
+      "preprint_link": "https://arxiv.org/abs/2607.03787",
+      "publication_type": "preprint",
+      "preprint_doi": "10.48550/arXiv.2607.03787",
+      "preprint_journal": "arXiv",
+      "preprint_year": "2026",
+      "preprint_short_citation": "Aureka, arXiv, 2026",
+      "preprint_full_citation": "Aureka AI Research. (2026). Folding, Reasoning, and Scaling with Open-source Drug Discovery Engine. *arXiv preprint arXiv:2607.03787*."
     },
     {
       "id": "boltzmol1",
