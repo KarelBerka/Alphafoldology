@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "last_updated": "2026-07-31 07:23:51",
-    "total_tools": 566,
-    "total_github_stars": 163464,
+    "last_updated": "2026-07-31 07:28:16",
+    "total_tools": 567,
+    "total_github_stars": 164380,
     "total_citations": 109606,
     "total_published_papers": 77,
-    "total_preprints": 17,
+    "total_preprints": 18,
     "total_published": 77,
-    "total_stars": 163464,
+    "total_stars": 164380,
     "last_update": "2026-07-31"
   },
   "tools": [
@@ -14873,6 +14873,32 @@
       "preprint_year": "2026",
       "preprint_short_citation": "Vilya, arXiv, 2026",
       "preprint_full_citation": "Vilya Team (2026). Accurate structural modeling of chemically diverse molecular interfaces with Vilya-2. *arXiv*, 2607.25156."
+    },
+    {
+      "id": "rfdiffusion3",
+      "name": "RFdiffusion 3",
+      "repo": "RosettaCommons/foundry",
+      "category": "Protein Design",
+      "status": "Active",
+      "publication_type": "preprint",
+      "parent": "rfdiffusion",
+      "usage": "De novo design of all-atom biomolecular interactions (DNA, RNA, small molecules, metals) using a diffusion transformer.",
+      "strengths": "All-atom representation; precision control of atomic coordinates; 10x faster inference speed than previous iterations.",
+      "weaknesses": "Requires GPU resources and configuration within the RosettaCommons Foundry environment.",
+      "date": "2025-09-18",
+      "github_stars": 916,
+      "github_forks": 168,
+      "github_open_issues": 0,
+      "github_description": "Biomolecular foundation models from the Institute for Protein Design, including RFdiffusion3.",
+      "github_top_forks": [],
+      "citations_count": 0,
+      "citing_papers": [],
+      "preprint_doi": "10.1101/2025.09.18.676967",
+      "preprint_link": "https://doi.org/10.1101/2025.09.18.676967",
+      "preprint_journal": "bioRxiv",
+      "preprint_year": "2025",
+      "preprint_short_citation": "Butcher, bioRxiv, 2025",
+      "preprint_full_citation": "Butcher J., Krishna R., Mitra R., Brent R. I. et al. (2025). De novo Design of All-atom Biomolecular Interactions with RFdiffusion3. *bioRxiv*."
     }
   ],
   "social_posts": [
