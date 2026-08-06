@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-31 07:34:02",
+    "last_updated": "2026-08-06",
     "total_tools": 567,
     "total_github_stars": 164380,
     "total_citations": 109606,
@@ -5211,19 +5211,19 @@
     },
     {
       "id": "raygun",
-      "name": "raygun",
+      "name": "Raygun",
       "repo": "rohitsinghlab/raygun",
       "category": "Protein Design",
       "status": "Active",
-      "paper_doi": null,
-      "doi_link": null,
+      "paper_doi": "10.1038/s41586-026-09345-z",
+      "doi_link": "https://doi.org/10.1038/s41586-026-09345-z",
       "preprint_doi": "10.21203/rs.3.rs-9379997/v1",
       "preprint_link": "https://doi.org/10.21203/rs.3.rs-9379997/v1",
       "parent": "alphafold2",
-      "usage": "Template-based protein design with Raygun ",
-      "strengths": "Direct access to official codebase, active development.",
-      "weaknesses": "May require local compilation or GPU environment setup.",
-      "date": "2024-08-14",
+      "usage": "AI framework for template-guided protein miniaturization (shrinkage), length modification, and sequence insertion/deletion while preserving 3D structure and biological function.",
+      "strengths": "Length-independent probabilistic autoencoder representation; shrinks natural proteins by 10–50% while preserving active site geometry and folding stability.",
+      "weaknesses": "Template-guided design requires existing structural or sequence seed.",
+      "date": "2026-07-29",
       "github_stars": 81,
       "github_forks": 10,
       "github_open_issues": 0,
@@ -5231,7 +5231,7 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": [],
-      "publication_type": "unknown"
+      "publication_type": "published"
     },
     {
       "id": "aws_batch_arch_for_protein_folding",
