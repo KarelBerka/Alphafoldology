@@ -15267,10 +15267,10 @@
       "preprint_year": "2026",
       "preprint_short_citation": "Warraich, arXiv, 2026",
       "preprint_full_citation": "Warraich J. et al. (2026). PhyFold: Environment Aware Physics Informed Neural Network for Protein Folding Dynamics. *arXiv preprint*.",
-      "github_stars": 0,
+      "github_stars": 2,
       "github_forks": 0,
       "github_open_issues": 0,
-      "github_description": "PhyFold tool entry.",
+      "github_description": "Environment Aware Physics Informed Neural Network for Protein Folding Dynamics",
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": []
