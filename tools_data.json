@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19 18:06:40",
-    "total_tools": 1152,
+    "last_updated": "2026-08-22",
+    "total_tools": 1154,
     "total_github_stars": 164427,
     "total_citations": 120989,
-    "total_published_papers": 527,
-    "total_preprints": 316,
+    "total_published_papers": 648,
+    "total_preprints": 298,
     "total_published": 527,
     "total_stars": 164427,
     "last_update": "2026-08-19"
@@ -28131,6 +28131,41 @@
       "github_top_forks": [],
       "citations_count": 0,
       "citing_papers": []
+    },
+    {
+      "id": "litemol_1",
+      "name": "LiteMol-1",
+      "repo": "https://huggingface.co/LiteFold",
+      "category": "De novo design",
+      "status": "Active",
+      "publication_type": "Preprint",
+      "usage": "Generative foundation model for multi-modal molecular design: small molecules, linear/cyclic peptides, non-canonical amino acids, depsipeptides, macrocycles, PROTACs. Supports unconditional generation or protein-conditioned generation, property-steered sampling, and multi-objective optimization via Monte Carlo Tree Search (MCTS).",
+      "strengths": "Single model covering diverse molecular modalities; protein-conditioned generation; MCTS-based multi-objective optimization maintaining Pareto-optimal candidates; supports medicinal chemistry design loop",
+      "weaknesses": "No peer-reviewed publication yet; limited independent benchmarking; primarily accessible via LiteFold platform (litefold.in)",
+      "date": "2025-01-01",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "citations_count": 0,
+      "citing_papers": []
+    },
+    {
+      "id": "openbind_0",
+      "name": "OpenBind-0",
+      "repo": "OpenBind-Consortium/OpenBind-0-model-release-info",
+      "category": "Protein-ligand docking",
+      "status": "Active",
+      "publication_type": "Preprint",
+      "usage": "Fully open protein-ligand co-folding model built on OpenFold3. Predicts protein-small molecule complex structures. Introduces inference-time chemical steering for improved ligand physical validity. Trained on PDB data through June 2025. Evaluated via Runs N Poses benchmark.",
+      "strengths": "Fully open weights and datasets; built on OpenFold3 architecture; inference-time chemical steering; released with 717-structure experimental dataset spanning three drug targets; clean benchmark design (no leakage into training)",
+      "weaknesses": "Model v0 baseline quality; no published peer-reviewed paper yet; primarily focused on small molecules (not macrocycles or other modalities)",
+      "date": "2026-08-21",
+      "github_stars": 0,
+      "github_forks": 0,
+      "github_open_issues": 0,
+      "citations_count": 0,
+      "citing_papers": [],
+      "parent": "openfold_3"
     }
   ]
 }
