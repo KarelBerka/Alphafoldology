@@ -1,8 +1,8 @@
 {
   "metadata": {
     "last_updated": "2026-08-29",
-    "total_tools": 1247,
-    "total_github_stars": 166285,
+    "total_tools": 1249,
+    "total_github_stars": 166746,
     "total_citations": 120989,
     "total_published_papers": 650,
     "total_preprints": 301,
@@ -11,6 +11,40 @@
     "last_update": "2026-08-19"
   },
   "tools": [
+    {
+      "id": "placer",
+      "name": "PLACER",
+      "repo": "https://github.com/baker-laboratory/PLACER",
+      "category": "Other",
+      "status": "Active",
+      "publication_type": "None",
+      "usage": "PLACER is a geometric deep learning framework developed by the Baker Laboratory for rapid and accurate local prediction of protein-ligand conformational ensembles and binding pose distributions.",
+      "strengths": "Fast inference with realistic ensemble diversity capturing binding site plasticity.",
+      "weaknesses": "Requires pre-localized binding pocket definition.",
+      "date": "2024-01-01",
+      "github_stars": 263,
+      "github_forks": 40,
+      "github_open_issues": 9,
+      "citations_count": 0,
+      "citing_papers": []
+    },
+    {
+      "id": "ppiflow",
+      "name": "PPIFlow",
+      "repo": "https://github.com/Mingchenchen/PPIFlow",
+      "category": "Other",
+      "status": "Active",
+      "publication_type": "None",
+      "usage": "PPIFlow is a continuous geometric flow matching model for de novo generation of high-affinity protein binders, achieving continuous SE(3) trajectory sampling for complex interfaces.",
+      "strengths": "Superior generation throughput and interface contact geometry.",
+      "weaknesses": "High GPU memory consumption during long target-binder generation runs.",
+      "date": "2024-01-01",
+      "github_stars": 198,
+      "github_forks": 41,
+      "github_open_issues": 12,
+      "citations_count": 0,
+      "citing_papers": []
+    },
     {
       "id": "conformflow",
       "name": "ConformFlow",
