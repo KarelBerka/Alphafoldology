@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let startX, startY;
 
   // Initialize Application
-  fetch('tools_data.json?v=38')
+  fetch('tools_data.json?v=39')
     .then(response => {
       if (!response.ok) throw new Error('Data file not found');
       return response.json();
