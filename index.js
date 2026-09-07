@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let startX, startY;
 
   // Initialize Application
-  fetch('tools_data.json?v=47')
+  fetch('tools_data.json?v=48')
     .then(response => {
       if (!response.ok) throw new Error('Data file not found');
       return response.json();
@@ -280,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (cat === 'Ensemble Generators') nodeType = 'ensemble';
       else if (cat === 'Benchmarks') nodeType = 'benchmarks';
       else if (cat === 'Scoring') nodeType = 'scoring';
+      else if (cat === 'Training') nodeType = 'training';
 
       NODE_COORDINATES[tool.id] = {
         x: x,

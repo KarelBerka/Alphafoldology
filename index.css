@@ -491,6 +491,8 @@ header {
 .node-visualization circle { stroke: #8b5cf6; } /* violet-500 */
 .node-ensemble circle { stroke: #f97316; } /* orange-500 */
 .node-benchmarks circle { stroke: #10b981; } /* emerald-500 */
+.node-scoring circle { stroke: #0ea5e9; } /* sky-500 */
+.node-training circle { stroke: #eab308; } /* yellow-500 */
 
 /* Subtle fill tints for major nodes */
 .node-major.node-core circle { fill: #f0fdfa; }
@@ -504,6 +506,8 @@ header {
 .node-major.node-visualization circle { fill: #f5f3ff; }
 .node-major.node-ensemble circle { fill: #fff7ed; } /* orange-50 */
 .node-major.node-benchmarks circle { fill: #ecfdf5; } /* emerald-50 */
+.node-major.node-scoring circle { fill: #f0f9ff; } /* sky-50 */
+.node-major.node-training circle { fill: #fefce8; } /* yellow-50 */
 
 .node-core text { fill: var(--text-main); }
 .node-active.node-major circle {
@@ -762,6 +766,8 @@ header {
 .card-meta.cat-visualization .card-cat-badge { color: #8b5cf6; border-color: rgba(139, 92, 246, 0.2); }
 .card-meta.cat-ensemble .card-cat-badge { color: #f97316; border-color: rgba(249, 115, 22, 0.2); }
 .card-meta.cat-benchmarks .card-cat-badge { color: #10b981; border-color: rgba(16, 185, 129, 0.2); }
+.card-meta.cat-scoring .card-cat-badge { color: #0ea5e9; border-color: rgba(14, 165, 233, 0.2); }
+.card-meta.cat-training .card-cat-badge { color: #eab308; border-color: rgba(234, 179, 8, 0.2); }
 
 .status-indicator {
   display: inline-flex;
